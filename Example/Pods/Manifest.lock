@@ -1,0 +1,63 @@
+PODS:
+  - BeeKit (1.0.0):
+    - BeeKit/AppDelegate (= 1.0.0)
+    - BeeKit/Compatible (= 1.0.0)
+    - BeeKit/Core (= 1.0.0)
+    - BeeKit/Extension (= 1.0.0)
+    - BeeKit/Navigator (= 1.0.0)
+    - BeeKit/Theme (= 1.0.0)
+  - BeeKit/AppDelegate (1.0.0)
+  - BeeKit/Compatible (1.0.0)
+  - BeeKit/Core (1.0.0):
+    - BeeKit/AppDelegate
+    - BeeKit/Compatible
+    - BeeKit/Extension
+    - BeeKit/Navigator
+  - BeeKit/Extension (1.0.0):
+    - Device
+    - SwifterSwift
+  - BeeKit/Navigator (1.0.0)
+  - BeeKit/Theme (1.0.0)
+  - Device (3.2.1)
+  - SwifterSwift (5.1.0):
+    - SwifterSwift/AppKit (= 5.1.0)
+    - SwifterSwift/CoreGraphics (= 5.1.0)
+    - SwifterSwift/CoreLocation (= 5.1.0)
+    - SwifterSwift/Dispatch (= 5.1.0)
+    - SwifterSwift/Foundation (= 5.1.0)
+    - SwifterSwift/MapKit (= 5.1.0)
+    - SwifterSwift/SceneKit (= 5.1.0)
+    - SwifterSwift/SpriteKit (= 5.1.0)
+    - SwifterSwift/SwiftStdlib (= 5.1.0)
+    - SwifterSwift/UIKit (= 5.1.0)
+  - SwifterSwift/AppKit (5.1.0)
+  - SwifterSwift/CoreGraphics (5.1.0)
+  - SwifterSwift/CoreLocation (5.1.0)
+  - SwifterSwift/Dispatch (5.1.0)
+  - SwifterSwift/Foundation (5.1.0)
+  - SwifterSwift/MapKit (5.1.0)
+  - SwifterSwift/SceneKit (5.1.0)
+  - SwifterSwift/SpriteKit (5.1.0)
+  - SwifterSwift/SwiftStdlib (5.1.0)
+  - SwifterSwift/UIKit (5.1.0)
+
+DEPENDENCIES:
+  - BeeKit (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Device
+    - SwifterSwift
+
+EXTERNAL SOURCES:
+  BeeKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BeeKit: 4786bbd87855d414010460362b4514835d2b7246
+  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
+
+PODFILE CHECKSUM: 17589201794a0e93d43c2794cd2b7228c9e2b022
+
+COCOAPODS: 1.9.1

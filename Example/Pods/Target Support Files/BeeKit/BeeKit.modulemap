@@ -1,0 +1,6 @@
+framework module BeeKit {
+  umbrella header "BeeKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
