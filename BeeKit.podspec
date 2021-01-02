@@ -19,20 +19,20 @@ Pod::Spec.new do |s|
   s.subspec 'Core' do |ss|
     ss.source_files = 'BeeModules/BeeCore/Source/*.swift'
     ss.dependency 'BeeKit/Extension'
-    ss.dependency 'BeeKit/Compatible'
-    ss.dependency 'BeeKit/Compatible'
     ss.dependency 'BeeKit/AppDelegate'
     ss.dependency 'BeeKit/Navigator'
+    ss.dependency 'BeeKit/Logger'
+    ss.dependency 'EachNavigationBar'
   end
 
-
   s.subspec 'Extension' do |ss|
-    ss.source_files = 'BeeModules/BeeExtension/Source/*.swift'
+    ss.source_files = 'BeeModules/BeeExtension/Source/**/*.swift'/
+    ss.dependency 'BeeKit/Compatible'
     ss.dependency 'SwifterSwift'
 #    ss.dependency 'SwiftyAttributes'
     ss.dependency 'Device'
   end
-
+  
   s.subspec 'Compatible' do |ss|
     ss.source_files = 'BeeModules/BeeCompatible/Source/*.swift'
   end
@@ -47,6 +47,16 @@ Pod::Spec.new do |s|
 
   s.subspec 'Theme' do |ss|
     ss.source_files = 'BeeModules/BeeTheme/Source/**/*.swift'
+  end
+  
+  s.subspec 'Logger' do |ss|
+    ss.source_files = 'BeeModules/BeeLog/Source/**/*.swift'
+    ss.dependency 'CocoaLumberjack/Swift'
+  end
+  
+  s.subspec 'Refresh' do |ss|
+    ss.source_files = 'BeeModules/BeeRefresh/Source/**/*.swift'
+    ss.dependency 'MJRefresh'
   end
 
 #  s.subspec 'Form' do |ss|

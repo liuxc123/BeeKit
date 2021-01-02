@@ -4,7 +4,9 @@ PODS:
     - BeeKit/Compatible (= 1.0.0)
     - BeeKit/Core (= 1.0.0)
     - BeeKit/Extension (= 1.0.0)
+    - BeeKit/Logger (= 1.0.0)
     - BeeKit/Navigator (= 1.0.0)
+    - BeeKit/Refresh (= 1.0.0)
     - BeeKit/Theme (= 1.0.0)
   - BeeKit/AppDelegate (1.0.0)
   - BeeKit/Compatible (1.0.0)
@@ -12,13 +14,24 @@ PODS:
     - BeeKit/AppDelegate
     - BeeKit/Compatible
     - BeeKit/Extension
+    - BeeKit/Logger
     - BeeKit/Navigator
+    - EachNavigationBar
   - BeeKit/Extension (1.0.0):
     - Device
     - SwifterSwift
+  - BeeKit/Logger (1.0.0):
+    - CocoaLumberjack/Swift
   - BeeKit/Navigator (1.0.0)
+  - BeeKit/Refresh (1.0.0):
+    - MJRefresh
   - BeeKit/Theme (1.0.0)
+  - CocoaLumberjack/Core (3.7.0)
+  - CocoaLumberjack/Swift (3.7.0):
+    - CocoaLumberjack/Core
   - Device (3.2.1)
+  - EachNavigationBar (1.14.5)
+  - MJRefresh (3.5.0)
   - SwifterSwift (5.1.0):
     - SwifterSwift/AppKit (= 5.1.0)
     - SwifterSwift/CoreGraphics (= 5.1.0)
@@ -45,6 +58,10 @@ DEPENDENCIES:
   - BeeKit (from `../`)
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - CocoaLumberjack
+    - EachNavigationBar
+    - MJRefresh
   trunk:
     - Device
     - SwifterSwift
@@ -54,10 +71,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BeeKit: 4786bbd87855d414010460362b4514835d2b7246
+  BeeKit: b7b45c7495cb20dfc1ca0c84eeccd76cef9258b3
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  EachNavigationBar: 5a35d264688f7463042c7eb71799cb232ee44df1
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
 PODFILE CHECKSUM: 17589201794a0e93d43c2794cd2b7228c9e2b022
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0

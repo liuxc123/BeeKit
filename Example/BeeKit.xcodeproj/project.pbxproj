@@ -15,6 +15,11 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		7F3DFE195529583D18E593AA /* Pods_BeeKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD7D56D530BA622B1F7FC73 /* Pods_BeeKit_Tests.framework */; };
 		A9AEE593089E79A21581C381 /* Pods_BeeKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8B5B5023F00AA8D75ACE93 /* Pods_BeeKit_Example.framework */; };
+		F196B20225A03DC1005D5DE3 /* EnvConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196B20125A03DC1005D5DE3 /* EnvConfig.swift */; };
+		F196B20E25A04172005D5DE3 /*  RootApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196B20D25A04172005D5DE3 /*  RootApplicationService.swift */; };
+		F196B24825A04317005D5DE3 /* NavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196B24625A04316005D5DE3 /* NavigationMap.swift */; };
+		F196B24925A04317005D5DE3 /* CommonNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196B24725A04317005D5DE3 /* CommonNavigationMap.swift */; };
+		F196B24D25A04370005D5DE3 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F196B24C25A04370005D5DE3 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,12 @@
 		9DD7D56D530BA622B1F7FC73 /* Pods_BeeKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A363684CA05C49129AA68CBE /* Pods-BeeKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BeeKit_Tests/Pods-BeeKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2CD60F8864F95B8385EC9F4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F196B20125A03DC1005D5DE3 /* EnvConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvConfig.swift; sourceTree = "<group>"; };
+		F196B20D25A04172005D5DE3 /*  RootApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " RootApplicationService.swift"; sourceTree = "<group>"; };
+		F196B24625A04316005D5DE3 /* NavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationMap.swift; sourceTree = "<group>"; };
+		F196B24725A04317005D5DE3 /* CommonNavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonNavigationMap.swift; sourceTree = "<group>"; };
+		F196B24C25A04370005D5DE3 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		F196B2D525A050C1005D5DE3 /* BeeRefreshHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BeeRefreshHeader.h; path = ../BeeModules/BeeRefresh/Source/BeeRefreshHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +124,11 @@
 		607FACD21AFB9204008FA782 /* Example for BeeKit */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				F196B24425A0427B005D5DE3 /* Container */,
+				F196B1FE25A03D69005D5DE3 /* Application */,
+				F196B20025A03D9C005D5DE3 /* Config */,
+				F196B1FF25A03D85005D5DE3 /* Modules */,
+				F196B20625A03E30005D5DE3 /* Assest */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for BeeKit";
@@ -153,10 +164,81 @@
 			isa = PBXGroup;
 			children = (
 				51F55130B59791861A6941B0 /* BeeKit.podspec */,
+				F196B2D525A050C1005D5DE3 /* BeeRefreshHeader.h */,
 				1934F318C5D4D977B6069B08 /* README.md */,
 				C2CD60F8864F95B8385EC9F4 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		F196B1FE25A03D69005D5DE3 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				F196B20D25A04172005D5DE3 /*  RootApplicationService.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		F196B1FF25A03D85005D5DE3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				F196B24C25A04370005D5DE3 /* TestViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F196B20025A03D9C005D5DE3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F196B20125A03DC1005D5DE3 /* EnvConfig.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F196B20625A03E30005D5DE3 /* Assest */ = {
+			isa = PBXGroup;
+			children = (
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+			);
+			path = Assest;
+			sourceTree = "<group>";
+		};
+		F196B24425A0427B005D5DE3 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				F196B2B425A04C0B005D5DE3 /* Theme */,
+				F196B25025A043A0005D5DE3 /* Controller */,
+				F196B24525A042B7005D5DE3 /* Navigation */,
+			);
+			name = Container;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		F196B24525A042B7005D5DE3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F196B24725A04317005D5DE3 /* CommonNavigationMap.swift */,
+				F196B24625A04316005D5DE3 /* NavigationMap.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		F196B25025A043A0005D5DE3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F196B2B425A04C0B005D5DE3 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,13 +374,19 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BeeKit_Example/Pods-BeeKit_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BeeKit/BeeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
+				"${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EachNavigationBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,8 +423,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F196B24D25A04370005D5DE3 /* TestViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				F196B24925A04317005D5DE3 /* CommonNavigationMap.swift in Sources */,
+				F196B20E25A04172005D5DE3 /*  RootApplicationService.swift in Sources */,
+				F196B20225A03DC1005D5DE3 /* EnvConfig.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				F196B24825A04317005D5DE3 /* NavigationMap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

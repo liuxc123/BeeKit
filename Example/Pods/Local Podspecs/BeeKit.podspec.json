@@ -39,12 +39,18 @@
         ],
         "BeeKit/Navigator": [
 
+        ],
+        "BeeKit/Logger": [
+
+        ],
+        "EachNavigationBar": [
+
         ]
       }
     },
     {
       "name": "Extension",
-      "source_files": "BeeModules/BeeExtension/Source/*.swift",
+      "source_files": "BeeModules/BeeExtension/Source/**/*.swift",
       "dependencies": {
         "SwifterSwift": [
 
@@ -69,6 +75,24 @@
     {
       "name": "Theme",
       "source_files": "BeeModules/BeeTheme/Source/**/*.swift"
+    },
+    {
+      "name": "Logger",
+      "source_files": "BeeModules/BeeLog/Source/**/*.swift",
+      "dependencies": {
+        "CocoaLumberjack/Swift": [
+
+        ]
+      }
+    },
+    {
+      "name": "Refresh",
+      "source_files": "BeeModules/BeeRefresh/Source/**/*.swift",
+      "dependencies": {
+        "MJRefresh": [
+
+        ]
+      }
     }
   ],
   "swift_version": "5.3"
