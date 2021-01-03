@@ -9,7 +9,12 @@
 import UIKit
 import BeeKit
 
-class TestViewController: ViewController {
+class TestViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigation.item.title = "Test"
+        view.backgroundColor = .yellow
+    }
     
 }

@@ -3,8 +3,7 @@ Pod::Spec.new do |s|
   s.version          = '1.0.0'
   s.summary          = 'A short description of BeeKit.'
   s.description      = <<-DESC
-  TODO：iOS项目开发通用&非通用型模块代码，多功能组件，可快速集成使用以大幅减少基础工作量；便利性扩展&链式扩展、UI排班组件Form、正则表达式扩展RegEx、计时器管理Timer、简易提示窗HUD、AppDelegate解耦方案、分页控制Page、自定义导航栏TopBar、阿里矢量图标管理IconFonts、MJRefresh扩展、Alamofire扩展......
-  附.各种类库使用示例demo.
+  TODO：iOS项目开发通用&非通用型模块代码，多功能组件，可快速集成使用以大幅减少基础工作量；便利性扩展&链式扩展
                        DESC
 
   s.homepage         = 'https://github.com/liuxc123/BeeKit'
@@ -16,53 +15,63 @@ Pod::Spec.new do |s|
   s.swift_version = ['5.0', '5.1', '5.3']
   # s.default_subspec = 'Core'
 
-  s.subspec 'Core' do |ss|
+  s.subspec 'BeeCore' do |ss|
     ss.source_files = 'BeeModules/BeeCore/Source/*.swift'
-    ss.dependency 'BeeKit/Extension'
-    ss.dependency 'BeeKit/AppDelegate'
-    ss.dependency 'BeeKit/Navigator'
-    ss.dependency 'BeeKit/Logger'
+    ss.dependency 'BeeKit/BeeExtension'
+    ss.dependency 'BeeKit/BeeAppDelegate'
+    ss.dependency 'BeeKit/BeeNavigator'
+    ss.dependency 'BeeKit/BeeLog'
     ss.dependency 'EachNavigationBar'
-  end
-
-  s.subspec 'Extension' do |ss|
-    ss.source_files = 'BeeModules/BeeExtension/Source/**/*.swift'/
-    ss.dependency 'BeeKit/Compatible'
-    ss.dependency 'SwifterSwift'
-#    ss.dependency 'SwiftyAttributes'
     ss.dependency 'Device'
   end
+
+  s.subspec 'BeeExtension' do |ss|
+    ss.source_files = 'BeeModules/BeeExtension/Source/**/*.swift'
+    ss.dependency 'BeeKit/BeeCompatible'
+    ss.dependency 'SwifterSwift'
+#    ss.dependency 'SwiftyAttributes'
+  end
   
-  s.subspec 'Compatible' do |ss|
+  s.subspec 'BeeCompatible' do |ss|
     ss.source_files = 'BeeModules/BeeCompatible/Source/*.swift'
   end
 
-  s.subspec 'AppDelegate' do |ss|
+  s.subspec 'BeeAppDelegate' do |ss|
     ss.source_files = 'BeeModules/BeeAppDelegate/Source/*.swift'
   end
 
-  s.subspec 'Navigator' do |ss|
+  s.subspec 'BeeNavigator' do |ss|
     ss.source_files = 'BeeModules/BeeNavigator/Source/**/*.swift'
   end
 
-  s.subspec 'Theme' do |ss|
+  s.subspec 'BeeTheme' do |ss|
     ss.source_files = 'BeeModules/BeeTheme/Source/**/*.swift'
   end
   
-  s.subspec 'Logger' do |ss|
+  s.subspec 'BeeLog' do |ss|
     ss.source_files = 'BeeModules/BeeLog/Source/**/*.swift'
     ss.dependency 'CocoaLumberjack/Swift'
   end
   
-  s.subspec 'Refresh' do |ss|
-    ss.source_files = 'BeeModules/BeeRefresh/Source/**/*.swift'
-    ss.dependency 'MJRefresh'
-  end
-
-#  s.subspec 'Form' do |ss|
-#    ss.source_files = 'BeeModules/BeeForm/Source/*.{h}'
-#    ss.dependency 'TableKit'
-#    ss.dependency 'FormKit'
+#  s.subspec 'BeeRefresh' do |ss|
+#    ss.source_files = 'BeeModules/BeeRefresh/Source/**/*'
+#    ss.dependency 'BeeKit/BeeExtension'
+#    ss.dependency 'MJRefresh'
 #  end
+
+
+#  s.subspec 'BeeTable' do |ss|
+#    ss.source_files = 'BeeModules/BeeTable/Source/**/*'
+#  end
+  
+  s.subspec 'BeeForm' do |ss|
+    ss.source_files = 'BeeModules/BeeForm/Source/**/*'
+  end
+  
+  s.subspec 'BeePopGesture' do |ss|
+    ss.source_files = 'BeeModules/BeePopGesture/Source/**/*'
+    ss.dependency 'FDFullscreenPopGesture'
+  end
+  
  
 end

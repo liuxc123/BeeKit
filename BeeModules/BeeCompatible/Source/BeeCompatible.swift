@@ -1,6 +1,6 @@
 import Foundation
 
-public struct Bee<Base> {
+public class Bee<Base> {
     public let base: Base
     public init(_ base: Base) {
         self.base = base
@@ -21,3 +21,6 @@ extension BeeCompatible {
 }
 
 extension NSObject: BeeCompatible {}
+
+
+

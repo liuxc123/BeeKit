@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "UICollectionView+ARDynamicCacheHeightLayoutCell.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
-FOUNDATION_EXPORT double BeeKitVersionNumber;
-FOUNDATION_EXPORT const unsigned char BeeKitVersionString[];
+FOUNDATION_EXPORT double FDFullscreenPopGestureVersionNumber;
+FOUNDATION_EXPORT const unsigned char FDFullscreenPopGestureVersionString[];
 

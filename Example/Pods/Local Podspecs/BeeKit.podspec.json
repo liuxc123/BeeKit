@@ -2,7 +2,7 @@
   "name": "BeeKit",
   "version": "1.0.0",
   "summary": "A short description of BeeKit.",
-  "description": "TODO：iOS项目开发通用&非通用型模块代码，多功能组件，可快速集成使用以大幅减少基础工作量；便利性扩展&链式扩展、UI排班组件Form、正则表达式扩展RegEx、计时器管理Timer、简易提示窗HUD、AppDelegate解耦方案、分页控制Page、自定义导航栏TopBar、阿里矢量图标管理IconFonts、MJRefresh扩展、Alamofire扩展......\n附.各种类库使用示例demo.",
+  "description": "TODO：iOS项目开发通用&非通用型模块代码，多功能组件，可快速集成使用以大幅减少基础工作量；便利性扩展&链式扩展",
   "homepage": "https://github.com/liuxc123/BeeKit",
   "license": {
     "type": "MIT",
@@ -25,34 +25,22 @@
   ],
   "subspecs": [
     {
-      "name": "Core",
+      "name": "BeeCore",
       "source_files": "BeeModules/BeeCore/Source/*.swift",
       "dependencies": {
-        "BeeKit/Extension": [
+        "BeeKit/BeeExtension": [
 
         ],
-        "BeeKit/Compatible": [
+        "BeeKit/BeeAppDelegate": [
 
         ],
-        "BeeKit/AppDelegate": [
+        "BeeKit/BeeNavigator": [
 
         ],
-        "BeeKit/Navigator": [
-
-        ],
-        "BeeKit/Logger": [
+        "BeeKit/BeeLog": [
 
         ],
         "EachNavigationBar": [
-
-        ]
-      }
-    },
-    {
-      "name": "Extension",
-      "source_files": "BeeModules/BeeExtension/Source/**/*.swift",
-      "dependencies": {
-        "SwifterSwift": [
 
         ],
         "Device": [
@@ -61,23 +49,35 @@
       }
     },
     {
-      "name": "Compatible",
+      "name": "BeeExtension",
+      "source_files": "BeeModules/BeeExtension/Source/**/*.swift",
+      "dependencies": {
+        "BeeKit/BeeCompatible": [
+
+        ],
+        "SwifterSwift": [
+
+        ]
+      }
+    },
+    {
+      "name": "BeeCompatible",
       "source_files": "BeeModules/BeeCompatible/Source/*.swift"
     },
     {
-      "name": "AppDelegate",
+      "name": "BeeAppDelegate",
       "source_files": "BeeModules/BeeAppDelegate/Source/*.swift"
     },
     {
-      "name": "Navigator",
+      "name": "BeeNavigator",
       "source_files": "BeeModules/BeeNavigator/Source/**/*.swift"
     },
     {
-      "name": "Theme",
+      "name": "BeeTheme",
       "source_files": "BeeModules/BeeTheme/Source/**/*.swift"
     },
     {
-      "name": "Logger",
+      "name": "BeeLog",
       "source_files": "BeeModules/BeeLog/Source/**/*.swift",
       "dependencies": {
         "CocoaLumberjack/Swift": [
@@ -86,10 +86,14 @@
       }
     },
     {
-      "name": "Refresh",
-      "source_files": "BeeModules/BeeRefresh/Source/**/*.swift",
+      "name": "BeeForm",
+      "source_files": "BeeModules/BeeForm/Source/**/*"
+    },
+    {
+      "name": "BeePopGesture",
+      "source_files": "BeeModules/BeePopGesture/Source/**/*",
       "dependencies": {
-        "MJRefresh": [
+        "FDFullscreenPopGesture": [
 
         ]
       }

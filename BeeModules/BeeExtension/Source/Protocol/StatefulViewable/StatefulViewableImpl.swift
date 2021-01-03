@@ -123,7 +123,7 @@ extension StatefulViewable {
 
 private var stateMachineKey: String = "stateMachineKey"
 
-// MARK: ProtNameSpace
+// MARK: NameSpace
 
 public extension Bee where Base: StatefulViewable {
 
