@@ -79,5 +79,21 @@ Pod::Spec.new do |s|
     ss.dependency 'SwiftyJSON'
     ss.dependency 'ObjectMapper'
   end
+
+  s.subspec 'BeePermission' do |ss|
+    ss.source_files = 'BeeModules/BeePermission/Source/**/*'
+    ss.dependency 'BeeKit/BeeExtension'
+    ss.dependency 'Moya'
+    ss.dependency 'SwiftyJSON'
+    ss.dependency 'ObjectMapper'
+  end
+
+  s.subspec 'BeeValue' do |ss|
+    ss.source_files = 'BeeModules/BeeAuto/Source/**/*'
+  end
+
+  s.subspec 'BeeAuto' do |ss|
+    ss.source_files = 'BeeModules/BeeAuto/Source/**/*'
+  end
  
 end

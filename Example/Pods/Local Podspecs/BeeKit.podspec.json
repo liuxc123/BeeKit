@@ -134,6 +134,32 @@
 
         ]
       }
+    },
+    {
+      "name": "BeePermission",
+      "source_files": "BeeModules/BeePermission/Source/**/*",
+      "dependencies": {
+        "BeeKit/BeeExtension": [
+
+        ],
+        "Moya": [
+
+        ],
+        "SwiftyJSON": [
+
+        ],
+        "ObjectMapper": [
+
+        ]
+      }
+    },
+    {
+      "name": "BeeValue",
+      "source_files": "BeeModules/BeeAuto/Source/**/*"
+    },
+    {
+      "name": "BeeAuto",
+      "source_files": "BeeModules/BeeAuto/Source/**/*"
     }
   ],
   "swift_version": "5.3"

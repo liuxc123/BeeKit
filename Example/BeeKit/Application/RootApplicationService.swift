@@ -16,7 +16,9 @@ class RootApplicationService: NSObject, ApplicationService {
         setupNavigator()
         
         setupWindow()
-        
+
+        setupTheme()
+
         return true
     }
     
@@ -28,6 +30,14 @@ class RootApplicationService: NSObject, ApplicationService {
         let nav = UINavigationController(rootViewController: ViewController())
         nav.navigation.configuration.isEnabled = true
         self.window?.rootViewController = nav
+    }
+
+    func setupTheme() {
+        if #available(iOS 13.0, *), UITraitCollection.current.userInterfaceStyle == .dark {
+            ThemeManager.shared.changeTheme(to: .dark)
+        } else {
+            ThemeManager.shared.changeTheme(to: .light)
+        }
     }
     
 }

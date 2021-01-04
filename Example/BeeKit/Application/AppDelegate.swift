@@ -20,7 +20,7 @@ class AppDelegate: BeeApplicationDelegate {
     
     override init() {
         super.init()
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = Window(frame: UIScreen.main.bounds)
     }
 }
 

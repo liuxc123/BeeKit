@@ -1,11 +1,3 @@
-//
-//  FDFullscreenPopGesture+Bee.swift
-//  BeeKit
-//
-//  Created by liuxc on 2021/1/3.
-//  Copyright © 2021 CocoaPods. All rights reserved.
-//
-
 import UIKit
 
 public extension Bee where Base: UINavigationController {

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>light</key>
+	<dict>
+		<key>primaryColor</key>
+		<string>#FFCC00</string>
+		<key>primaryColorVariant</key>
+		<string>#FA7D00</string>
+		<key>secondaryColor</key>
+		<string>#2E8EE2</string>
+		<key>thirdColor</key>
+		<string>#00B9CE</string>
+		<key>backgroundColor</key>
+		<string>#F0F0F0</string>
+		<key>surfaceColor</key>
+		<string>#ffffff</string>
+		<key>onPrimaryColor</key>
+		<string>#272727</string>
+		<key>onSecondaryColor</key>
+		<string>#666666</string>
+		<key>onThirdColor</key>
+		<string>#999999</string>
+		<key>onPlaceholderColor</key>
+		<string>#AAAAAA</string>
+		<key>borderColor</key>
+		<string>#BDBDBD</string>
+	</dict>
+	<key>dark</key>
+	<dict>
+		<key>primaryColor</key>
+		<string>#191919</string>
+		<key>primaryColorVariant</key>
+		<string>#191919</string>
+		<key>secondaryColor</key>
+		<string>#191919</string>
+		<key>thirdColor</key>
+		<string>#191919</string>
+		<key>backgroundColor</key>
+		<string>#191919</string>
+		<key>surfaceColor</key>
+		<string>#191919</string>
+		<key>onPrimaryColor</key>
+		<string>#f0f0f0</string>
+		<key>onSecondaryColor</key>
+		<string>#f0f0f0</string>
+		<key>onThirdColor</key>
+		<string>#f0f0f0</string>
+		<key>onPlaceholderColor</key>
+		<string>#AAAAAA</string>
+		<key>borderColor</key>
+		<string>#BDBDBD</string>
+	</dict>
+</dict>
+</plist>

@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.9.1)
   - BeeKit (1.0.0):
     - BeeKit/BeeAppDelegate (= 1.0.0)
+    - BeeKit/BeeAuto (= 1.0.0)
     - BeeKit/BeeCompatible (= 1.0.0)
     - BeeKit/BeeCore (= 1.0.0)
     - BeeKit/BeeExtension (= 1.0.0)
@@ -10,10 +11,13 @@ PODS:
     - BeeKit/BeeNavigationBar (= 1.0.0)
     - BeeKit/BeeNavigator (= 1.0.0)
     - BeeKit/BeeNetwork (= 1.0.0)
+    - BeeKit/BeePermission (= 1.0.0)
     - BeeKit/BeeRefresh (= 1.0.0)
     - BeeKit/BeeTable (= 1.0.0)
     - BeeKit/BeeTheme (= 1.0.0)
+    - BeeKit/BeeValue (= 1.0.0)
   - BeeKit/BeeAppDelegate (1.0.0)
+  - BeeKit/BeeAuto (1.0.0)
   - BeeKit/BeeCompatible (1.0.0)
   - BeeKit/BeeCore (1.0.0):
     - BeeKit/BeeAppDelegate
@@ -37,11 +41,17 @@ PODS:
     - Moya
     - ObjectMapper
     - SwiftyJSON
+  - BeeKit/BeePermission (1.0.0):
+    - BeeKit/BeeExtension
+    - Moya
+    - ObjectMapper
+    - SwiftyJSON
   - BeeKit/BeeRefresh (1.0.0):
     - BeeKit/BeeExtension
     - MJRefresh
   - BeeKit/BeeTable (1.0.0)
   - BeeKit/BeeTheme (1.0.0)
+  - BeeKit/BeeValue (1.0.0)
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
@@ -110,7 +120,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  BeeKit: d078286d51f6408708b10f0fe33ccad63a3667a3
+  BeeKit: 0495c62ce7bf9e6811b45f6d185a2672b7bb34af
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
   EachNavigationBar: 5a35d264688f7463042c7eb71799cb232ee44df1

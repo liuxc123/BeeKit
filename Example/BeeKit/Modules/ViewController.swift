@@ -16,8 +16,9 @@ class ViewController: UITableViewController, RefreshControllable, Refreshable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigation.item.title = "Main"
-        view.backgroundColor = .white
-
+        view.theme.backgroundColor = UIColorMake(.backgroundColor)
+        tableView.theme.backgroundColor = UIColorMake(.backgroundColor)
+        
         self.bee.setupRefresh(self, tableView)
         tableView.bee.headerNormal { [weak self] in
             log.info("headerNormal")

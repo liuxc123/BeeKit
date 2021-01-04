@@ -85,7 +85,7 @@ public class ThemeManager {
 //MARK: - Store
 extension ThemeManager {
     private var currentThemeStyleUserDefaultsKey: String {
-        return "com.jiaxin.theme.currentThemeStyleUserDefaultsKey:" + storeConfigsIdentifierKey
+        return "com.bee.theme.currentThemeStyleUserDefaultsKey:" + storeConfigsIdentifierKey
     }
 
     fileprivate func storeCurrentThemeStyle() {
