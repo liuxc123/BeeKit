@@ -21,7 +21,6 @@ Pod::Spec.new do |s|
     ss.dependency 'BeeKit/BeeAppDelegate'
     ss.dependency 'BeeKit/BeeNavigator'
     ss.dependency 'BeeKit/BeeLog'
-    ss.dependency 'EachNavigationBar'
     ss.dependency 'Device'
   end
 
@@ -53,24 +52,24 @@ Pod::Spec.new do |s|
     ss.dependency 'CocoaLumberjack/Swift'
   end
   
-#  s.subspec 'BeeRefresh' do |ss|
-#    ss.source_files = 'BeeModules/BeeRefresh/Source/**/*'
-#    ss.dependency 'BeeKit/BeeExtension'
-#    ss.dependency 'MJRefresh'
-#  end
+  s.subspec 'BeeRefresh' do |ss|
+    ss.source_files = 'BeeModules/BeeRefresh/Source/**/*'
+    ss.dependency 'BeeKit/BeeExtension'
+    ss.dependency 'MJRefresh'
+  end
 
 
-#  s.subspec 'BeeTable' do |ss|
-#    ss.source_files = 'BeeModules/BeeTable/Source/**/*'
-#  end
+  s.subspec 'BeeTable' do |ss|
+    ss.source_files = 'BeeModules/BeeTable/Source/**/*'
+  end
   
   s.subspec 'BeeForm' do |ss|
     ss.source_files = 'BeeModules/BeeForm/Source/**/*'
   end
   
-  s.subspec 'BeePopGesture' do |ss|
-    ss.source_files = 'BeeModules/BeePopGesture/Source/**/*'
-    ss.dependency 'FDFullscreenPopGesture'
+  s.subspec 'BeeNavigationBar' do |ss|
+    ss.source_files = 'BeeModules/BeeNavigationBar/Source/**/*'
+    ss.dependency 'EachNavigationBar'
   end
   
  

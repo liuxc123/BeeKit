@@ -9,16 +9,30 @@
 import UIKit
 import BeeKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController, RefreshControllable, Refreshable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigation.item.title = "Main"
         view.backgroundColor = .white
+
+        self.bee.setupRefresh(self, tableView)
+        tableView.bee.headerNormal {
+            log.info("headerNormal")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.bee.refreshStatus([.tEndRefresh(false)])
+            }
+        }
+        .footerAuto {
+            log.info("footerAuto")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.bee.refreshStatus([.tEndRefresh(true)])
+            }
+        }
+
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        navigator.present("http://www.baidu.com")
         navigator.push("app://test")
     }
 }

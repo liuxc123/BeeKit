@@ -28,13 +28,13 @@ public struct RefreshModel {
     /// 下拉刷新状态的Label字体
     public var down_txtFont:UIFont = UIFont.systemFont(ofSize: 14)
     /// 下拉刷新状态的Label文字颜色
-    public var down_txtColor:UIColor = UIColor.cd_hex("d3", dark: "f0")
+    public var down_txtColor:UIColor = UIColor.gray
     /// 下拉刷新状态的Label是否隐藏
     public var down_txtHidden:Bool = true
     /// 下拉刷新状态的Label字体
     public var down_timeFont:UIFont = UIFont.systemFont(ofSize: 12)
     /// 下拉刷新状态的Label文字颜色
-    public var down_timeColor:UIColor = UIColor.cd_hex("d3", dark: "f0")
+    public var down_timeColor:UIColor = UIColor.gray
     /// 下拉刷新状态的Label是否隐藏
     public var down_timeHidden:Bool = true
     /// 下拉文字和图片间的距离
@@ -59,7 +59,7 @@ public struct RefreshModel {
     /// 上拉刷新状态的Label字体
     public var up_txtFont:UIFont = UIFont.systemFont(ofSize: 14)
     /// 上拉刷新状态的Label文字颜色
-    public var up_txtColor:UIColor = UIColor.cd_hex("d3", dark: "f0")
+    public var up_txtColor:UIColor = UIColor.gray
     /// 上拉刷新状态的Label是否隐藏
     public var up_txtHidden:Bool = false
     /// 上拉文字和图片间的距离
@@ -114,18 +114,18 @@ public struct RefreshModel {
     
     
     //MARK:--- 刷新状态更新 ----------
-    public enum RefreshType {
-        case tBegin
-        case tEnd
+    public enum RefreshStatus {
+        case tBeginRefresh
+        case tEndRefresh(_ noMoreData: Bool)
         case tNoMoreDataEnd
         case tNoMoreDataReset
         case tHiddenFoot(_ b:Bool)
         
         var intValue:Int {
             switch self {
-            case .tBegin:
+            case .tBeginRefresh:
                 return 0
-            case .tEnd:
+            case .tEndRefresh:
                 return 1
             case .tNoMoreDataEnd:
                 return 2

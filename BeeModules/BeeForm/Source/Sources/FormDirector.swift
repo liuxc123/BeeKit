@@ -172,9 +172,7 @@ open class FormDirector: NSObject, UICollectionViewDataSource, UICollectionViewD
             formRegisterer?.register(cellType: item.cellType, forCellReuseIdentifier: item.reuseIdentifier, for: indexPath)
         }
 
-        return item.defaultSize
-            ?? itemSizeCalculator?.size(forItem: item, at: indexPath)
-            ?? .zero
+        return  itemSizeCalculator?.size(forItem: item, at: indexPath) ?? .zero
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -186,9 +184,7 @@ open class FormDirector: NSObject, UICollectionViewDataSource, UICollectionViewD
             formRegisterer?.register(elementKindType: item.elementKindType, kind: item.kind, reuseIdentifier: item.reuseIdentifier, for: IndexPath(item: 0, section: section))
         }
 
-        return item.defaultSize
-            ?? itemSizeCalculator?.size(forItem: item, at: IndexPath(item: 0, section: section))
-            ?? .zero
+        return itemSizeCalculator?.size(forItem: item, at: IndexPath(item: 0, section: section)) ?? .zero
     }
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
@@ -200,9 +196,7 @@ open class FormDirector: NSObject, UICollectionViewDataSource, UICollectionViewD
             formRegisterer?.register(elementKindType: item.elementKindType, kind: item.kind, reuseIdentifier: item.reuseIdentifier, for: IndexPath(item: 0, section: section))
         }
 
-        return item.defaultSize
-            ?? itemSizeCalculator?.size(forItem: item, at: IndexPath(item: 0, section: section))
-            ?? .zero
+        return itemSizeCalculator?.size(forItem: item, at: IndexPath(item: 0, section: section)) ?? .zero
     }
     
 

@@ -1,6 +1,6 @@
 import UIKit
 
-open class FormElementKindItem<ElementKindType: ConfigurableElementKind>: ElementKindItem where ElementKindType: UICollectionReusableView {
+open class FormElementKindItem<ElementKindType: FormConfigurableElementKind>: ElementKindItem where ElementKindType: UICollectionReusableView {
 
     open var value: ElementKindType.ElementKindData
     public var kind: String
@@ -14,12 +14,8 @@ open class FormElementKindItem<ElementKindType: ConfigurableElementKind>: Elemen
         return ElementKindType.reuseIdentifier
     }
 
-    open var defaultSize: CGSize? {
-        return ElementKindType.defaultSize
-    }
-
-    open var estimatedSize: FormItemLayoutSize {
-        return ElementKindType.estimatedSize
+    open var itemSize: FormItemLayoutSize {
+        return ElementKindType.itemSize
     }
 
     open var cacheSize: Bool {

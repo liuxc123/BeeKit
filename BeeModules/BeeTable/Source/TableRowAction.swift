@@ -20,7 +20,7 @@
 
 import UIKit
 
-open class TableRowActionOptions<CellType: ConfigurableCell> where CellType: UITableViewCell {
+open class TableRowActionOptions<CellType: TableConfigurableCell> where CellType: UITableViewCell {
 
     public let value: CellType.CellData
     public let cell: CellType?
@@ -36,7 +36,7 @@ open class TableRowActionOptions<CellType: ConfigurableCell> where CellType: UIT
     }
 }
 
-private enum TableRowActionHandler<CellType: ConfigurableCell> where CellType: UITableViewCell {
+private enum TableRowActionHandler<CellType: TableConfigurableCell> where CellType: UITableViewCell {
 
     case voidAction((TableRowActionOptions<CellType>) -> Void)
     case action((TableRowActionOptions<CellType>) -> Any?)
@@ -52,7 +52,7 @@ private enum TableRowActionHandler<CellType: ConfigurableCell> where CellType: U
     }
 }
 
-open class TableRowAction<CellType: ConfigurableCell> where CellType: UITableViewCell {
+open class TableRowAction<CellType: TableConfigurableCell> where CellType: UITableViewCell {
 
     open var id: String?
     public let type: TableRowActionType

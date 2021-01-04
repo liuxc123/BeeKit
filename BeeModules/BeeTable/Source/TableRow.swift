@@ -20,7 +20,7 @@
 
 import UIKit
 
-open class TableRow<CellType: ConfigurableCell>: Row where CellType: UITableViewCell {
+open class TableRow<CellType: TableConfigurableCell>: Row where CellType: UITableViewCell {
     
     public var value: CellType.CellData
     private lazy var actions = [String: [TableRowAction<CellType>]]()
@@ -52,7 +52,7 @@ open class TableRow<CellType: ConfigurableCell>: Row where CellType: UITableView
         self.editingActions = editingActions
         
         /// 更新value数据事件
-        let updateAction = TableRowAction<CellType>("table_row_update_key") { [weak self] (options) in
+        let updateAction = TableRowAction<CellType>("table_row_update") { [weak self] (options) in
             if let value = options.userInfo?["value"] as? CellType.CellData {
                 self?.value = value
             }

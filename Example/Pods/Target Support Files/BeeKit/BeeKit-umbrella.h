@@ -11,6 +11,9 @@
 #endif
 
 #import "UICollectionView+ARDynamicCacheHeightLayoutCell.h"
+#import "BeeNavigationBar.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
+#import "BeeRefreshHeader.h"
 
 FOUNDATION_EXPORT double BeeKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char BeeKitVersionString[];

@@ -44,7 +44,7 @@ open class TableCellAction {
     
     public init(sender: UITableViewCell, value: Any) {
 
-        self.key = "table_row_update_key"
+        self.key = "table_row_update"
         self.cell = sender
         self.userInfo = ["value": value]
     }

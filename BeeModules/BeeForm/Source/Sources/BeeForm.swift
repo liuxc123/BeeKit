@@ -41,8 +41,7 @@ public protocol Item: ItemConfigurable, ItemActionable, ItemHashable {
     var reuseIdentifier: String { get }
     var cellType: AnyClass { get }
 
-    var estimatedSize: FormItemLayoutSize { get }
-    var defaultSize: CGSize? { get }
+    var itemSize: FormItemLayoutSize { get }
     var cacheSize: Bool { get }
 }
 
@@ -108,8 +107,7 @@ public protocol ElementKindItem: ElementKindItemConfigurable, ElementKindItemHas
     var reuseIdentifier: String { get }
     var elementKindType: AnyClass { get }
 
-    var estimatedSize: FormItemLayoutSize { get }
-    var defaultSize: CGSize? { get }
+    var itemSize: FormItemLayoutSize { get }
     var cacheSize: Bool { get }
 
 }

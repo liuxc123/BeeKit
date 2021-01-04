@@ -1,6 +1,6 @@
 import UIKit
 
-open class FormElementKindItemActionOptions<ElementKindType: ConfigurableElementKind> where ElementKindType: UICollectionReusableView {
+open class FormElementKindItemActionOptions<ElementKindType: FormConfigurableElementKind> where ElementKindType: UICollectionReusableView {
 
     public let value: ElementKindType.ElementKindData
     public let view: ElementKindType?
@@ -18,7 +18,7 @@ open class FormElementKindItemActionOptions<ElementKindType: ConfigurableElement
     }
 }
 
-private enum FormElementKindItemActionHandler<ElementKindType: ConfigurableElementKind> where ElementKindType: UICollectionReusableView {
+private enum FormElementKindItemActionHandler<ElementKindType: FormConfigurableElementKind> where ElementKindType: UICollectionReusableView {
 
     case voidAction((FormElementKindItemActionOptions<ElementKindType>) -> Void)
     case action((FormElementKindItemActionOptions<ElementKindType>) -> Any?)
@@ -34,7 +34,7 @@ private enum FormElementKindItemActionHandler<ElementKindType: ConfigurableEleme
     }
 }
 
-open class FormElementKindItemAction<ElementKindType: ConfigurableElementKind> where ElementKindType: UICollectionReusableView {
+open class FormElementKindItemAction<ElementKindType: FormConfigurableElementKind> where ElementKindType: UICollectionReusableView {
 
     open var id: String?
     public let type: FormElementKindItemActionType

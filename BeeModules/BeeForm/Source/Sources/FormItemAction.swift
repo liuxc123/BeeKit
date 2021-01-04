@@ -1,6 +1,6 @@
 import UIKit
 
-open class FormItemActionOptions<CellType: ConfigurableCell> where CellType: UICollectionViewCell {
+open class FormItemActionOptions<CellType: FormConfigurableCell> where CellType: UICollectionViewCell {
 
     public let value: CellType.CellData
     public let cell: CellType?
@@ -16,7 +16,7 @@ open class FormItemActionOptions<CellType: ConfigurableCell> where CellType: UIC
     }
 }
 
-private enum FormItemActionHandler<CellType: ConfigurableCell> where CellType: UICollectionViewCell {
+private enum FormItemActionHandler<CellType: FormConfigurableCell> where CellType: UICollectionViewCell {
 
     case voidAction((FormItemActionOptions<CellType>) -> Void)
     case action((FormItemActionOptions<CellType>) -> Any?)
@@ -32,7 +32,7 @@ private enum FormItemActionHandler<CellType: ConfigurableCell> where CellType: U
     }
 }
 
-open class FormItemAction<CellType: ConfigurableCell> where CellType: UICollectionViewCell {
+open class FormItemAction<CellType: FormConfigurableCell> where CellType: UICollectionViewCell {
 
     open var id: String?
     public let type: FormItemActionType

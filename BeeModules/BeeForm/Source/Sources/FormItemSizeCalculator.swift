@@ -12,7 +12,7 @@ open class FormItemSizeCalculator: ItemSizeCalculator {
 
         guard let collectionView = collectionView else { return .zero }
 
-        let estimatedSize  = item.estimatedSize
+        let estimatedSize  = item.itemSize
         let isCacheSize = item.cacheSize
         var size = collectionView.bounds.size
 
@@ -60,7 +60,7 @@ open class FormItemSizeCalculator: ItemSizeCalculator {
 
         guard let collectionView = collectionView else { return .zero }
 
-        let estimatedSize  = item.estimatedSize
+        let estimatedSize  = item.itemSize
         let isCacheSize = item.cacheSize
 
         var size = collectionView.bounds.size

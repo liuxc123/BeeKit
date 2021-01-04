@@ -6,8 +6,10 @@ PODS:
     - BeeKit/BeeExtension (= 1.0.0)
     - BeeKit/BeeForm (= 1.0.0)
     - BeeKit/BeeLog (= 1.0.0)
+    - BeeKit/BeeNavigationBar (= 1.0.0)
     - BeeKit/BeeNavigator (= 1.0.0)
-    - BeeKit/BeePopGesture (= 1.0.0)
+    - BeeKit/BeeRefresh (= 1.0.0)
+    - BeeKit/BeeTable (= 1.0.0)
     - BeeKit/BeeTheme (= 1.0.0)
   - BeeKit/BeeAppDelegate (1.0.0)
   - BeeKit/BeeCompatible (1.0.0)
@@ -17,23 +19,26 @@ PODS:
     - BeeKit/BeeLog
     - BeeKit/BeeNavigator
     - Device
-    - EachNavigationBar
   - BeeKit/BeeExtension (1.0.0):
     - BeeKit/BeeCompatible
     - SwifterSwift
   - BeeKit/BeeForm (1.0.0)
   - BeeKit/BeeLog (1.0.0):
     - CocoaLumberjack/Swift
+  - BeeKit/BeeNavigationBar (1.0.0):
+    - EachNavigationBar
   - BeeKit/BeeNavigator (1.0.0)
-  - BeeKit/BeePopGesture (1.0.0):
-    - FDFullscreenPopGesture
+  - BeeKit/BeeRefresh (1.0.0):
+    - BeeKit/BeeExtension
+    - MJRefresh
+  - BeeKit/BeeTable (1.0.0)
   - BeeKit/BeeTheme (1.0.0)
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
   - Device (3.2.1)
   - EachNavigationBar (1.14.5)
-  - FDFullscreenPopGesture (1.1)
+  - MJRefresh (3.5.0)
   - SwifterSwift (5.1.0):
     - SwifterSwift/AppKit (= 5.1.0)
     - SwifterSwift/CoreGraphics (= 5.1.0)
@@ -63,7 +68,7 @@ SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - CocoaLumberjack
     - EachNavigationBar
-    - FDFullscreenPopGesture
+    - MJRefresh
   trunk:
     - Device
     - SwifterSwift
@@ -73,13 +78,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BeeKit: 7beda78cfe885f23dea7c7cfaf026c05049a5ee2
+  BeeKit: 2f227d6ff0ea1f6289c5b1c0fdf2437b0280f378
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
   EachNavigationBar: 5a35d264688f7463042c7eb71799cb232ee44df1
-  FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
 PODFILE CHECKSUM: 17589201794a0e93d43c2794cd2b7228c9e2b022
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.9.1

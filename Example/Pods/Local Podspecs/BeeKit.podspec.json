@@ -40,9 +40,6 @@
         "BeeKit/BeeLog": [
 
         ],
-        "EachNavigationBar": [
-
-        ],
         "Device": [
 
         ]
@@ -86,14 +83,30 @@
       }
     },
     {
+      "name": "BeeRefresh",
+      "source_files": "BeeModules/BeeRefresh/Source/**/*",
+      "dependencies": {
+        "BeeKit/BeeExtension": [
+
+        ],
+        "MJRefresh": [
+
+        ]
+      }
+    },
+    {
+      "name": "BeeTable",
+      "source_files": "BeeModules/BeeTable/Source/**/*"
+    },
+    {
       "name": "BeeForm",
       "source_files": "BeeModules/BeeForm/Source/**/*"
     },
     {
-      "name": "BeePopGesture",
-      "source_files": "BeeModules/BeePopGesture/Source/**/*",
+      "name": "BeeNavigationBar",
+      "source_files": "BeeModules/BeeNavigationBar/Source/**/*",
       "dependencies": {
-        "FDFullscreenPopGesture": [
+        "EachNavigationBar": [
 
         ]
       }

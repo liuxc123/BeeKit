@@ -1,6 +1,6 @@
 import UIKit
 
-open class FormItem<CellType: ConfigurableCell>: Item where CellType: UICollectionViewCell {
+open class FormItem<CellType: FormConfigurableCell>: Item where CellType: UICollectionViewCell {
 
     open var value: CellType.CellData
     private lazy var actions = [String: [FormItemAction<CellType>]]()
@@ -13,12 +13,8 @@ open class FormItem<CellType: ConfigurableCell>: Item where CellType: UICollecti
         return CellType.reuseIdentifier
     }
 
-    open var estimatedSize: FormItemLayoutSize {
-        return CellType.estimatedSize
-    }
-
-    open var defaultSize: CGSize? {
-        return CellType.defaultSize
+    open var itemSize: FormItemLayoutSize {
+        return CellType.itemSize
     }
 
     open var cacheSize: Bool {
