@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (4.9.1)
   - BeeKit (1.0.0):
     - BeeKit/BeeAppDelegate (= 1.0.0)
     - BeeKit/BeeCompatible (= 1.0.0)
@@ -8,6 +9,7 @@ PODS:
     - BeeKit/BeeLog (= 1.0.0)
     - BeeKit/BeeNavigationBar (= 1.0.0)
     - BeeKit/BeeNavigator (= 1.0.0)
+    - BeeKit/BeeNetwork (= 1.0.0)
     - BeeKit/BeeRefresh (= 1.0.0)
     - BeeKit/BeeTable (= 1.0.0)
     - BeeKit/BeeTheme (= 1.0.0)
@@ -21,6 +23,8 @@ PODS:
     - Device
   - BeeKit/BeeExtension (1.0.0):
     - BeeKit/BeeCompatible
+    - RxCocoa (>= 5.0.0)
+    - RxSwift (>= 5.0.0)
     - SwifterSwift
   - BeeKit/BeeForm (1.0.0)
   - BeeKit/BeeLog (1.0.0):
@@ -28,6 +32,11 @@ PODS:
   - BeeKit/BeeNavigationBar (1.0.0):
     - EachNavigationBar
   - BeeKit/BeeNavigator (1.0.0)
+  - BeeKit/BeeNetwork (1.0.0):
+    - BeeKit/BeeExtension
+    - Moya
+    - ObjectMapper
+    - SwiftyJSON
   - BeeKit/BeeRefresh (1.0.0):
     - BeeKit/BeeExtension
     - MJRefresh
@@ -39,6 +48,19 @@ PODS:
   - Device (3.2.1)
   - EachNavigationBar (1.14.5)
   - MJRefresh (3.5.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - ObjectMapper (4.2.0)
+  - Result (4.1.0)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
   - SwifterSwift (5.1.0):
     - SwifterSwift/AppKit (= 5.1.0)
     - SwifterSwift/CoreGraphics (= 5.1.0)
@@ -60,15 +82,24 @@ PODS:
   - SwifterSwift/SpriteKit (5.1.0)
   - SwifterSwift/SwiftStdlib (5.1.0)
   - SwifterSwift/UIKit (5.1.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - BeeKit (from `../`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Alamofire
     - CocoaLumberjack
     - EachNavigationBar
     - MJRefresh
+    - Moya
+    - ObjectMapper
+    - Result
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SwiftyJSON
   trunk:
     - Device
     - SwifterSwift
@@ -78,12 +109,20 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BeeKit: 2f227d6ff0ea1f6289c5b1c0fdf2437b0280f378
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  BeeKit: d078286d51f6408708b10f0fe33ccad63a3667a3
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
   EachNavigationBar: 5a35d264688f7463042c7eb71799cb232ee44df1
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
 PODFILE CHECKSUM: 17589201794a0e93d43c2794cd2b7228c9e2b022
 

@@ -25,10 +25,11 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'BeeExtension' do |ss|
-    ss.source_files = 'BeeModules/BeeExtension/Source/**/*.swift'
+    ss.source_files = 'BeeModules/BeeExtension/Source/**/*'
     ss.dependency 'BeeKit/BeeCompatible'
     ss.dependency 'SwifterSwift'
-#    ss.dependency 'SwiftyAttributes'
+    ss.dependency 'RxSwift', '>= 5.0.0'
+    ss.dependency 'RxCocoa', '>= 5.0.0'
   end
   
   s.subspec 'BeeCompatible' do |ss|
@@ -51,13 +52,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'BeeModules/BeeLog/Source/**/*.swift'
     ss.dependency 'CocoaLumberjack/Swift'
   end
-  
-  s.subspec 'BeeRefresh' do |ss|
-    ss.source_files = 'BeeModules/BeeRefresh/Source/**/*'
-    ss.dependency 'BeeKit/BeeExtension'
-    ss.dependency 'MJRefresh'
-  end
-
 
   s.subspec 'BeeTable' do |ss|
     ss.source_files = 'BeeModules/BeeTable/Source/**/*'
@@ -71,6 +65,19 @@ Pod::Spec.new do |s|
     ss.source_files = 'BeeModules/BeeNavigationBar/Source/**/*'
     ss.dependency 'EachNavigationBar'
   end
-  
+
+  s.subspec 'BeeRefresh' do |ss|
+    ss.source_files = 'BeeModules/BeeRefresh/Source/**/*'
+    ss.dependency 'BeeKit/BeeExtension'
+    ss.dependency 'MJRefresh'
+  end
+
+  s.subspec 'BeeNetwork' do |ss|
+    ss.source_files = 'BeeModules/BeeNetwork/Source/**/*'
+    ss.dependency 'BeeKit/BeeExtension'
+    ss.dependency 'Moya'
+    ss.dependency 'SwiftyJSON'
+    ss.dependency 'ObjectMapper'
+  end
  
 end

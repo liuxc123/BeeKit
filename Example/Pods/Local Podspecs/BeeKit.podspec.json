@@ -47,13 +47,19 @@
     },
     {
       "name": "BeeExtension",
-      "source_files": "BeeModules/BeeExtension/Source/**/*.swift",
+      "source_files": "BeeModules/BeeExtension/Source/**/*",
       "dependencies": {
         "BeeKit/BeeCompatible": [
 
         ],
         "SwifterSwift": [
 
+        ],
+        "RxSwift": [
+          ">= 5.0.0"
+        ],
+        "RxCocoa": [
+          ">= 5.0.0"
         ]
       }
     },
@@ -83,18 +89,6 @@
       }
     },
     {
-      "name": "BeeRefresh",
-      "source_files": "BeeModules/BeeRefresh/Source/**/*",
-      "dependencies": {
-        "BeeKit/BeeExtension": [
-
-        ],
-        "MJRefresh": [
-
-        ]
-      }
-    },
-    {
       "name": "BeeTable",
       "source_files": "BeeModules/BeeTable/Source/**/*"
     },
@@ -107,6 +101,36 @@
       "source_files": "BeeModules/BeeNavigationBar/Source/**/*",
       "dependencies": {
         "EachNavigationBar": [
+
+        ]
+      }
+    },
+    {
+      "name": "BeeRefresh",
+      "source_files": "BeeModules/BeeRefresh/Source/**/*",
+      "dependencies": {
+        "BeeKit/BeeExtension": [
+
+        ],
+        "MJRefresh": [
+
+        ]
+      }
+    },
+    {
+      "name": "BeeNetwork",
+      "source_files": "BeeModules/BeeNetwork/Source/**/*",
+      "dependencies": {
+        "BeeKit/BeeExtension": [
+
+        ],
+        "Moya": [
+
+        ],
+        "SwiftyJSON": [
+
+        ],
+        "ObjectMapper": [
 
         ]
       }

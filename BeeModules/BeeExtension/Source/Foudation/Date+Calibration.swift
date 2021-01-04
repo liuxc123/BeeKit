@@ -1,6 +1,6 @@
 import Foundation
 
-// MARK: - 时间校验
+// MARK: - 时间校准
 
 extension Date {
 

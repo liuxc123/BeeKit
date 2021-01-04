@@ -19,26 +19,3 @@ class TestViewController: UIViewController {
     
 }
 
-class TestCell: UICollectionViewCell, FormConfigurableCell {
-
-    static var estimatedSize: FormItemLayoutSize {
-        return .init(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(50))
-    }
-
-    func configure(with text: String) {
-
-    }
-
-}
-
-class TestTableCell: UITableViewCell, TableConfigurableCell {
-
-    static var estimatedHeight: CGFloat? {
-        return 50
-    }
-
-    func configure(with text: String) {
-
-    }
-
-}

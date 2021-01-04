@@ -108,15 +108,6 @@ public extension ThemeWrapper where Base: UILabel {
         }
         get { return self.base.providers["UILabel.textColor"] as? ThemeProvider<UIColor> }
     }
-    var shadowColor: ThemeProvider<UIColor>? {
-        set(new) {
-            let baseItem = self.base
-            setupViewThemeProperty(view: self.base, key: "UILabel.shadowColor", provider: new) {[weak baseItem] (style) in
-                baseItem?.shadowColor = new?.provider(style)
-            }
-        }
-        get { return self.base.providers["UILabel.shadowColor"] as? ThemeProvider<UIColor> }
-    }
     var highlightedTextColor: ThemeProvider<UIColor>? {
         set(new) {
             let baseItem = self.base

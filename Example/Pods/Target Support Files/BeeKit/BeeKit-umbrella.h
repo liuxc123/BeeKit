@@ -10,9 +10,11 @@
 #endif
 #endif
 
+#import "BeeExtensionHeader.h"
 #import "UICollectionView+ARDynamicCacheHeightLayoutCell.h"
 #import "BeeNavigationBar.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
+#import "BeeNetworkHeader.h"
 #import "BeeRefreshHeader.h"
 
 FOUNDATION_EXPORT double BeeKitVersionNumber;
