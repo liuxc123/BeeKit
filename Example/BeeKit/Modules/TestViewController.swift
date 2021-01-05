@@ -11,10 +11,14 @@ import BeeKit
 
 class TestViewController: UIViewController {
     
+    let textView = LimitTextView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigation.item.title = "Test"
         view.backgroundColor = .yellow
+        
+        textView.
     }
     
 }

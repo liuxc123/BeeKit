@@ -7,6 +7,7 @@ PODS:
     - BeeKit/BeeCore (= 1.0.0)
     - BeeKit/BeeExtension (= 1.0.0)
     - BeeKit/BeeForm (= 1.0.0)
+    - BeeKit/BeeLimitInput (= 1.0.0)
     - BeeKit/BeeLog (= 1.0.0)
     - BeeKit/BeeNavigationBar (= 1.0.0)
     - BeeKit/BeeNavigator (= 1.0.0)
@@ -15,7 +16,6 @@ PODS:
     - BeeKit/BeeRefresh (= 1.0.0)
     - BeeKit/BeeTable (= 1.0.0)
     - BeeKit/BeeTheme (= 1.0.0)
-    - BeeKit/BeeValue (= 1.0.0)
   - BeeKit/BeeAppDelegate (1.0.0)
   - BeeKit/BeeAuto (1.0.0)
   - BeeKit/BeeCompatible (1.0.0)
@@ -31,6 +31,8 @@ PODS:
     - RxSwift (>= 5.0.0)
     - SwifterSwift
   - BeeKit/BeeForm (1.0.0)
+  - BeeKit/BeeLimitInput (1.0.0):
+    - Smile
   - BeeKit/BeeLog (1.0.0):
     - CocoaLumberjack/Swift
   - BeeKit/BeeNavigationBar (1.0.0):
@@ -51,7 +53,6 @@ PODS:
     - MJRefresh
   - BeeKit/BeeTable (1.0.0)
   - BeeKit/BeeTheme (1.0.0)
-  - BeeKit/BeeValue (1.0.0)
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
@@ -71,6 +72,7 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - Smile (2.0.0)
   - SwifterSwift (5.1.0):
     - SwifterSwift/AppKit (= 5.1.0)
     - SwifterSwift/CoreGraphics (= 5.1.0)
@@ -109,6 +111,7 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - Smile
     - SwiftyJSON
   trunk:
     - Device
@@ -120,7 +123,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  BeeKit: 0495c62ce7bf9e6811b45f6d185a2672b7bb34af
+  BeeKit: 8098912de7d37b4d6d77719e79462569fad74699
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
   EachNavigationBar: 5a35d264688f7463042c7eb71799cb232ee44df1
@@ -131,9 +134,10 @@ SPEC CHECKSUMS:
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  Smile: 21ff6c48e06ecfcee605cca32aedd74d5810e34a
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
 PODFILE CHECKSUM: 17589201794a0e93d43c2794cd2b7228c9e2b022
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0

@@ -22,6 +22,7 @@ Pod::Spec.new do |s|
     ss.dependency 'BeeKit/BeeNavigator'
     ss.dependency 'BeeKit/BeeLog'
     ss.dependency 'Device'
+    ss.dependency 'SnapKit'
   end
 
   s.subspec 'BeeExtension' do |ss|
@@ -88,12 +89,13 @@ Pod::Spec.new do |s|
     ss.dependency 'ObjectMapper'
   end
 
-  s.subspec 'BeeValue' do |ss|
-    ss.source_files = 'BeeModules/BeeAuto/Source/**/*'
-  end
-
   s.subspec 'BeeAuto' do |ss|
     ss.source_files = 'BeeModules/BeeAuto/Source/**/*'
+  end
+  
+  s.subspec 'BeeLimitInput' do |ss|
+    ss.source_files = 'BeeModules/BeeLimitInput/Source/**/*'
+    ss.dependency 'Smile'
   end
  
 end

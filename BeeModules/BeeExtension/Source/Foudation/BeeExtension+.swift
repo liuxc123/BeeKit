@@ -7,6 +7,41 @@
 
 import Foundation
 
+//MARK:--- 打印 ----------
+public var bee_printOpen:Bool = true
+#if DEBUG
+public func print_bee(_ items: Any..., file:Any = #file, function:Any = #function, line: Any = #line){
+    guard bee_printOpen else { return }
+    debugPrint("---👉👉👉")
+    debugPrint(file, function, line)
+    debugPrint(items)
+    debugPrint("----------  👻")
+}
+#else
+public func print_bee(_ items: Any...){}
+#endif
+
+#if DEBUG
+public func print_address(_ value:AnyObject){
+    guard bee_printOpen else { return }
+    debugPrint("---👉👉👉 内存地址-->", value)
+    debugPrint(Unmanaged.passUnretained(value).toOpaque())
+    debugPrint("---------- 👻")
+}
+#else
+public func print_address(_ value:AnyObject){}
+#endif
+
+//MARK:--- 耗时 ----------
+/// 耗时
+public func bee_timeConsuming(_ name:String = " 👻👉👉耗时：", call:(()->Void)? = nil) {
+    //let startTime = CFAbsoluteTimeGetCurrent()
+    //let endTime = CACurrentMediaTime()
+    let start = CACurrentMediaTime()
+    call?()
+    let end = CACurrentMediaTime()
+    print_bee(name, String(format: "%.7f", (end - start)*1000))
+}
 
 public struct BEE {
 

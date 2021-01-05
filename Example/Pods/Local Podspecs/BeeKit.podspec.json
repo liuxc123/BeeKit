@@ -154,12 +154,17 @@
       }
     },
     {
-      "name": "BeeValue",
+      "name": "BeeAuto",
       "source_files": "BeeModules/BeeAuto/Source/**/*"
     },
     {
-      "name": "BeeAuto",
-      "source_files": "BeeModules/BeeAuto/Source/**/*"
+      "name": "BeeLimitInput",
+      "source_files": "BeeModules/BeeLimitInput/Source/**/*",
+      "dependencies": {
+        "Smile": [
+
+        ]
+      }
     }
   ],
   "swift_version": "5.3"

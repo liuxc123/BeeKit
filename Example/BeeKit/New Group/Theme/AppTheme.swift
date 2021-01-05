@@ -72,6 +72,4 @@ func UIColorMake(_ level: ThemeLevel) -> ThemeProvider<UIColor> {
     return ThemeProvider({ AppThemeService.shared.themeColor(style: $0, level: level) })
 }
 
-func UIFontMake(_ size: CGFloat) -> UIFont {
-    return UIFont.systemFont(ofSize: <#T##CGFloat#>)
-}
+
