@@ -41,23 +41,7 @@ class ViewController: UITableViewController, RefreshControllable, Refreshable {
 
     func loadData() {
 
-//        NetworkManager.default.provider
-//            .rx
-//            .request(MultiTarget.target(Api.category))
-//            .map(BaseModel<ListData>.self)
-//            .map {$0.data.list}
-//            .subscribe(onSuccess: { [weak self] (list) in
-//                log.info(list)
-//                self?.bee.refreshStatus([.tEndRefresh(true)])
-//            }, onError: { [weak self] (error) in
-//                log.info(error.localizedDescription)
-//                self?.bee.refreshStatus([.tEndRefresh(true)])
-//            })
-//            .disposed(by: disposeBag)
-
-
-        NetworkManager.default.provider
-            .rx
+        NetworkManager.default.provider.rx
             .onCache(MultiTarget(Api.category))
             .distinctUntilChanged()
             .map(BaseModel<ListData>.self)

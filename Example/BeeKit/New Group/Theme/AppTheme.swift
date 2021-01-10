@@ -68,8 +68,9 @@ class AppThemeService {
     }
 }
 
-func UIColorMake(_ level: ThemeLevel) -> ThemeProvider<UIColor> {
+func UIColorTheme(_ level: ThemeLevel) -> ThemeProvider<UIColor> {
     return ThemeProvider({ AppThemeService.shared.themeColor(style: $0, level: level) })
 }
+
 
 

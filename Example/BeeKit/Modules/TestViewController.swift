@@ -17,8 +17,6 @@ class TestViewController: UIViewController {
         super.viewDidLoad()
         self.navigation.item.title = "Test"
         view.backgroundColor = .yellow
-        
-        textView.
     }
     
 }

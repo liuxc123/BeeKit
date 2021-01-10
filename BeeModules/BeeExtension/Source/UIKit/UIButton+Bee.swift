@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 
 public extension Bee where Base: UIButton {
+    
     @discardableResult
     ///addTarget(_ target: Any?, action: Selector, for controlEvents: UIControl.Event)
     func target(add target: Any?, action: Selector, event: UIControl.Event = .touchUpInside) -> Bee {
