@@ -13,6 +13,7 @@ PODS:
     - BeeKit/BeeCore (= 1.0.0)
     - BeeKit/BeeExtension (= 1.0.0)
     - BeeKit/BeeLimitInput (= 1.0.0)
+    - BeeKit/BeeLinearView (= 1.0.0)
     - BeeKit/BeeLog (= 1.0.0)
     - BeeKit/BeeNavigationBar (= 1.0.0)
     - BeeKit/BeeNavigator (= 1.0.0)
@@ -37,6 +38,7 @@ PODS:
     - SwifterSwift
   - BeeKit/BeeLimitInput (1.0.0):
     - Smile
+  - BeeKit/BeeLinearView (1.0.0)
   - BeeKit/BeeLog (1.0.0):
     - CocoaLumberjack/Swift
   - BeeKit/BeeNavigationBar (1.0.0):
@@ -170,7 +172,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit: 2cca5e129539cdaf6553f44707bbe25f1ee98d5a
+  BeeKit: c12aae797dd82f225020972d5b077d819e12014e
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5

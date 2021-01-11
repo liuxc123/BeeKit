@@ -41,16 +41,13 @@ open class LimitTextView: UITextView,LimitInputProtocol {
         item.font = UIFont.systemFont(ofSize: 15)
         item.textColor = UIColor.gray.withAlphaComponent(0.7)
         self.addSubview(item)
-        self.setValue(item, forKey: "_placeholderLabel")
+        self.setValue(item, forKeyPath: "_placeholderLabel")
         return item
     }()
 
     /// 占位颜色
     open var placeholderColor: UIColor{
-        set{
-            placeholderLabel.textColor = newValue
-            setNeedsLayout()
-        }
+        set{ placeholderLabel.textColor = newValue }
         get{ return placeholderLabel.textColor }
     }
 
@@ -62,10 +59,7 @@ open class LimitTextView: UITextView,LimitInputProtocol {
 
     /// 占位文本
     open var placeholder: String? {
-        set{
-            placeholderLabel.text = newValue
-            setNeedsLayout()
-        }
+        set{ placeholderLabel.text = newValue }
         get{ return placeholderLabel.text }
     }
 
@@ -124,6 +118,7 @@ extension LimitTextView{
         delegate = nil
         inset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         buildNotifications()
+        buildPlaceHolder()
     }
 
     fileprivate func buildNotifications() {
@@ -131,6 +126,10 @@ extension LimitTextView{
                                                selector: #selector(textView(changed:)),
                                                name: UITextView.textDidChangeNotification,
                                                object: nil)
+    }
+
+    fileprivate func buildPlaceHolder() {
+        self.rx.text.map({ !($0?.isEmpty ?? true) } ).bind(to: placeholderLabel.rx.isHidden).disposed(by: disposeBag)
     }
 }
 

@@ -74,5 +74,9 @@ Pod::Spec.new do |s|
     ss.source_files = 'BeeModules/BeeLimitInput/Source/**/*'
     ss.dependency 'Smile'
   end
+
+  s.subspec 'BeeLinearView' do |ss|
+    ss.source_files = 'BeeModules/BeeLinearView/Source/**/*'
+  end
  
 end

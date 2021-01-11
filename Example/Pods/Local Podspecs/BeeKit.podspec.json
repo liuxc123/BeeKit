@@ -131,6 +131,10 @@
 
         ]
       }
+    },
+    {
+      "name": "BeeLinearView",
+      "source_files": "BeeModules/BeeLinearView/Source/**/*"
     }
   ],
   "swift_version": "5.0"
