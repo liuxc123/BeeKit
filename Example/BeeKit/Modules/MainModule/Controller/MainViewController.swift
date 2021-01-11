@@ -8,16 +8,23 @@
 
 import UIKit
 import BeeKit
+import SnapKit
 
 class MainViewController: UIViewController {
     
-    let textView = LimitTextView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigation.item.title = "Main"
         view.theme.backgroundColor = UIColorTheme(.backgroundColor)
+
+        let textView = LimitTextView()
+        textView.placeholder = "placeholder"
+        view.addSubview(textView)
+        textView.snp.makeConstraints { (make) in
+            make.edges.equalTo(UIEdgeInsets(inset: 10))
+        }
     }
-    
+
 }
 
