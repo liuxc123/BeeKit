@@ -1,20 +1,23 @@
 PODS:
   - Alamofire (4.9.1)
+  - BEEFormKit (1.0.0):
+    - BEEFormKit/Core (= 1.0.0)
+    - BEEFormKit/Extension (= 1.0.0)
+  - BEEFormKit/Core (1.0.0):
+    - BEEFormKit/Extension
+  - BEEFormKit/Extension (1.0.0)
   - BeeKit (1.0.0):
     - BeeKit/BeeAppDelegate (= 1.0.0)
     - BeeKit/BeeAuto (= 1.0.0)
     - BeeKit/BeeCompatible (= 1.0.0)
     - BeeKit/BeeCore (= 1.0.0)
     - BeeKit/BeeExtension (= 1.0.0)
-    - BeeKit/BeeForm (= 1.0.0)
     - BeeKit/BeeLimitInput (= 1.0.0)
     - BeeKit/BeeLog (= 1.0.0)
     - BeeKit/BeeNavigationBar (= 1.0.0)
     - BeeKit/BeeNavigator (= 1.0.0)
-    - BeeKit/BeeNetwork (= 1.0.0)
     - BeeKit/BeePermission (= 1.0.0)
     - BeeKit/BeeRefresh (= 1.0.0)
-    - BeeKit/BeeTable (= 1.0.0)
     - BeeKit/BeeTheme (= 1.0.0)
   - BeeKit/BeeAppDelegate (1.0.0)
   - BeeKit/BeeAuto (1.0.0)
@@ -25,12 +28,13 @@ PODS:
     - BeeKit/BeeLog
     - BeeKit/BeeNavigator
     - Device
+    - PinLayout
+    - SnapKit
   - BeeKit/BeeExtension (1.0.0):
     - BeeKit/BeeCompatible
     - RxCocoa (>= 5.0.0)
     - RxSwift (>= 5.0.0)
     - SwifterSwift
-  - BeeKit/BeeForm (1.0.0)
   - BeeKit/BeeLimitInput (1.0.0):
     - Smile
   - BeeKit/BeeLog (1.0.0):
@@ -38,25 +42,41 @@ PODS:
   - BeeKit/BeeNavigationBar (1.0.0):
     - EachNavigationBar
   - BeeKit/BeeNavigator (1.0.0)
-  - BeeKit/BeeNetwork (1.0.0):
-    - BeeKit/BeeExtension
-    - Moya
-    - ObjectMapper
-    - SwiftyJSON
   - BeeKit/BeePermission (1.0.0):
     - BeeKit/BeeExtension
-    - Moya
-    - ObjectMapper
-    - SwiftyJSON
   - BeeKit/BeeRefresh (1.0.0):
     - BeeKit/BeeExtension
     - MJRefresh
-  - BeeKit/BeeTable (1.0.0)
   - BeeKit/BeeTheme (1.0.0)
+  - BEENetwork (1.0.0):
+    - BEENetwork/Core (= 1.0.0)
+  - BEENetwork/Core (1.0.0):
+    - BEENetwork/MoyaSugar
+    - BEENetwork/RxMoya
+    - BEENetwork/RxObjectMapper
+    - Moya
+  - BEENetwork/MoyaSugar (1.0.0):
+    - Moya
+  - BEENetwork/RxMoya (1.0.0):
+    - Moya
+    - RxSwift (>= 5.0.0)
+  - BEENetwork/RxObjectMapper (1.0.0):
+    - Moya
+    - ObjectMapper
+    - RxSwift (>= 5.0.0)
+  - BEETableKit (1.0.0)
+  - CocoaLumberjack (3.7.0):
+    - CocoaLumberjack/Core (= 3.7.0)
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
   - Device (3.2.1)
+  - DoraemonKit/Core (3.0.2)
+  - DoraemonKit/WithLogger (3.0.2):
+    - CocoaLumberjack
+    - DoraemonKit/Core
+  - DoraemonKit/WithMLeaksFinder (3.0.2):
+    - DoraemonKit/Core
   - EachNavigationBar (1.14.5)
   - MJRefresh (3.5.0)
   - Moya (13.0.1):
@@ -65,6 +85,7 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - ObjectMapper (4.2.0)
+  - PinLayout (1.9.3)
   - Result (4.1.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -72,7 +93,11 @@ PODS:
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - RxWebKit (1.0.2):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - Smile (2.0.0)
+  - SnapKit (4.2.0)
   - SwifterSwift (5.1.0):
     - SwifterSwift/AppKit (= 5.1.0)
     - SwifterSwift/CoreGraphics (= 5.1.0)
@@ -94,25 +119,38 @@ PODS:
   - SwifterSwift/SpriteKit (5.1.0)
   - SwifterSwift/SwiftStdlib (5.1.0)
   - SwifterSwift/UIKit (5.1.0)
-  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - BEEFormKit
   - BeeKit (from `../`)
+  - BEENetwork
+  - BEETableKit
+  - DoraemonKit/Core (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
+  - DoraemonKit/WithLogger (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
+  - DoraemonKit/WithMLeaksFinder (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
+  - RxCocoa
+  - RxSwift
+  - RxWebKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - BEEFormKit
+    - BEENetwork
+    - BEETableKit
     - CocoaLumberjack
     - EachNavigationBar
     - MJRefresh
     - Moya
     - ObjectMapper
+    - PinLayout
     - Result
     - RxCocoa
     - RxRelay
     - RxSwift
+    - RxWebKit
     - Smile
-    - SwiftyJSON
+    - SnapKit
   trunk:
     - Device
     - SwifterSwift
@@ -120,24 +158,38 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   BeeKit:
     :path: "../"
+  DoraemonKit:
+    :git: https://gitee.com/yixiangboy/DoraemonKit.git
+    :tag: 3.0.2
+
+CHECKOUT OPTIONS:
+  DoraemonKit:
+    :git: https://gitee.com/yixiangboy/DoraemonKit.git
+    :tag: 3.0.2
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
-  BeeKit: 8098912de7d37b4d6d77719e79462569fad74699
+  BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
+  BeeKit: 2cca5e129539cdaf6553f44707bbe25f1ee98d5a
+  BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
+  BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
+  DoraemonKit: 0740089a373899c8d462df9ee824fcdd97a68da3
   EachNavigationBar: 5a35d264688f7463042c7eb71799cb232ee44df1
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PinLayout: 4d8733121f8687edcc8f00c19bf1379d12808767
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxWebKit: a3085e7cd8b57182b452692686675702474014dd
   Smile: 21ff6c48e06ecfcee605cca32aedd74d5810e34a
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
-  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 17589201794a0e93d43c2794cd2b7228c9e2b022
+PODFILE CHECKSUM: 91d76f5aeb60d2e5d41ff59c9a20b500f4fcc2cb
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.9.1

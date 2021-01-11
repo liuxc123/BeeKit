@@ -1,8 +1,7 @@
 {
   "name": "BeeKit",
   "version": "1.0.0",
-  "summary": "A short description of BeeKit.",
-  "description": "TODO：iOS项目开发通用&非通用型模块代码，多功能组件，可快速集成使用以大幅减少基础工作量；便利性扩展&链式扩展",
+  "summary": "BeeKit 功能组件集合",
   "homepage": "https://github.com/liuxc123/BeeKit",
   "license": {
     "type": "MIT",
@@ -18,11 +17,7 @@
   "platforms": {
     "ios": "9.0"
   },
-  "swift_versions": [
-    "5.0",
-    "5.1",
-    "5.3"
-  ],
+  "swift_versions": "5.0",
   "subspecs": [
     {
       "name": "BeeCore",
@@ -41,6 +36,12 @@
 
         ],
         "Device": [
+
+        ],
+        "SnapKit": [
+
+        ],
+        "PinLayout": [
 
         ]
       }
@@ -89,14 +90,6 @@
       }
     },
     {
-      "name": "BeeTable",
-      "source_files": "BeeModules/BeeTable/Source/**/*"
-    },
-    {
-      "name": "BeeForm",
-      "source_files": "BeeModules/BeeForm/Source/**/*"
-    },
-    {
       "name": "BeeNavigationBar",
       "source_files": "BeeModules/BeeNavigationBar/Source/**/*",
       "dependencies": {
@@ -118,37 +111,10 @@
       }
     },
     {
-      "name": "BeeNetwork",
-      "source_files": "BeeModules/BeeNetwork/Source/**/*",
-      "dependencies": {
-        "BeeKit/BeeExtension": [
-
-        ],
-        "Moya": [
-
-        ],
-        "SwiftyJSON": [
-
-        ],
-        "ObjectMapper": [
-
-        ]
-      }
-    },
-    {
       "name": "BeePermission",
       "source_files": "BeeModules/BeePermission/Source/**/*",
       "dependencies": {
         "BeeKit/BeeExtension": [
-
-        ],
-        "Moya": [
-
-        ],
-        "SwiftyJSON": [
-
-        ],
-        "ObjectMapper": [
 
         ]
       }
@@ -167,5 +133,5 @@
       }
     }
   ],
-  "swift_version": "5.3"
+  "swift_version": "5.0"
 }

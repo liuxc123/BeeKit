@@ -11,33 +11,17 @@ import BeeKit
 
 class RootApplicationService: NSObject, ApplicationService {
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-            
-        setupNavigator()
-        
-        setupWindow()
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
-        setupTheme()
+        setupWindow()
 
         return true
     }
     
-    func setupNavigator() {
-        NavigationMap.initialize(navigator: navigator)
-    }
-    
     func setupWindow() {
-        let nav = UINavigationController(rootViewController: ViewController())
+        let nav = UINavigationController(rootViewController: MainViewController())
         nav.navigation.configuration.isEnabled = true
         self.window?.rootViewController = nav
     }
 
-    func setupTheme() {
-        if #available(iOS 13.0, *), UITraitCollection.current.userInterfaceStyle == .dark {
-            ThemeManager.shared.changeTheme(to: .dark)
-        } else {
-            ThemeManager.shared.changeTheme(to: .light)
-        }
-    }
-    
 }

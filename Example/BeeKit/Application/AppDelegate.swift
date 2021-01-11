@@ -14,6 +14,9 @@ class AppDelegate: BeeApplicationDelegate {
 
     override var services: [ApplicationService] {
         return [
+            DebugingApplicationService(),
+            ThemeApplicationService(),
+            NavigationApplicationService(),
             RootApplicationService()
         ]
     }
