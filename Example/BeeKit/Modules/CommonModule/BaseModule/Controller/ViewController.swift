@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     }
 
     open func setupTheme() {
-        view.backgroundColor = .white
+        view.theme.backgroundColor = UIColorTheme(.backgroundColor)
     }
 
     open func setupNavigationBar() {

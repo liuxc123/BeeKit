@@ -10,13 +10,12 @@ import UIKit
 import BeeKit
 import SnapKit
 
-class MainViewController: UIViewController {
+class MainViewController: ViewController {
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigation.item.title = "Main"
-        view.theme.backgroundColor = UIColorTheme(.backgroundColor)
 
         let linearView = LinearView()
         view.addSubview(linearView)
@@ -51,6 +50,10 @@ class MainViewController: UIViewController {
                 c.isHidden = true
             }
         }
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        navigator.push("http://www.baidu.com")
     }
 
 }

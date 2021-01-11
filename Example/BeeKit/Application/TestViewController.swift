@@ -11,4 +11,14 @@ import BeeKit
 
 class TestViewController: ViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigation.item.title = "test"
+        self.bee.pop(disabled: true)
+
+        navigation.bar.backBarButtonItem?.shouldBack = { [weak self] item in
+            return self?.bee.popDisabled ?? false
+        }
+    }
+
 }

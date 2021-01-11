@@ -7,7 +7,6 @@
 
 import UIKit
 import BeeKit
-import SafariServices
 
 struct CommonNavigationMap {
 
@@ -44,7 +43,7 @@ struct CommonNavigationMap {
         context: Any?
     ) -> UIViewController? {
         guard let url = url.urlValue else { return nil }
-        return SFSafariViewController(url:url)
+        return WebViewController(url: url, callback: context as? CallBackBlock)
     }
 
     private static func alert(navigator: NavigatorType) -> URLOpenHandlerFactory {
