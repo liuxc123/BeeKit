@@ -41,12 +41,16 @@ open class LimitTextView: UITextView,LimitInputProtocol {
         item.font = UIFont.systemFont(ofSize: 15)
         item.textColor = UIColor.gray.withAlphaComponent(0.7)
         self.addSubview(item)
+        self.setValue(item, forKey: "_placeholderLabel")
         return item
     }()
 
     /// 占位颜色
     open var placeholderColor: UIColor{
-        set{ placeholderLabel.textColor = newValue }
+        set{
+            placeholderLabel.textColor = newValue
+            setNeedsLayout()
+        }
         get{ return placeholderLabel.textColor }
     }
 
@@ -58,7 +62,10 @@ open class LimitTextView: UITextView,LimitInputProtocol {
 
     /// 占位文本
     open var placeholder: String? {
-        set{ placeholderLabel.text = newValue }
+        set{
+            placeholderLabel.text = newValue
+            setNeedsLayout()
+        }
         get{ return placeholderLabel.text }
     }
 
@@ -81,14 +88,6 @@ open class LimitTextView: UITextView,LimitInputProtocol {
             contentOffset = .zero
             textContainerInset = inset
             textContainer.lineFragmentPadding = 0
-            placeholderLabel.translatesAutoresizingMaskIntoConstraints = false
-            placeholderLabel.removeConstraints(placeholderLabel.constraints)
-            
-            placeholderLabel.addConstraint(NSLayoutConstraint(item: placeholderLabel, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: inset.top))
-            
-            placeholderLabel.addConstraint(NSLayoutConstraint(item: placeholderLabel, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1.0, constant: inset.left))
-
-            placeholderLabel.addConstraint(NSLayoutConstraint(item: placeholderLabel, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: -inset.right))
         }
     }
 
@@ -125,7 +124,6 @@ extension LimitTextView{
         delegate = nil
         inset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         buildNotifications()
-        buildPlaceHolder()
     }
 
     fileprivate func buildNotifications() {
@@ -133,10 +131,6 @@ extension LimitTextView{
                                                selector: #selector(textView(changed:)),
                                                name: UITextView.textDidChangeNotification,
                                                object: nil)
-    }
-
-    fileprivate func buildPlaceHolder() {
-        self.rx.text.map({ !($0?.isEmpty ?? true) } ).bind(to: placeholderLabel.rx.isHidden).disposed(by: disposeBag)
     }
 }
 

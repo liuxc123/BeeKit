@@ -1,19 +1,14 @@
 Pod::Spec.new do |s|
   s.name             = 'BeeKit'
   s.version          = '1.0.0'
-  s.summary          = 'A short description of BeeKit.'
-  s.description      = <<-DESC
-  TODO：iOS项目开发通用&非通用型模块代码，多功能组件，可快速集成使用以大幅减少基础工作量；便利性扩展&链式扩展
-                       DESC
-
+  s.summary          = 'BeeKit 功能组件集合'
   s.homepage         = 'https://github.com/liuxc123/BeeKit'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liuxc123' => 'lxc_work@126.com' }
   s.source           = { :git => 'https://github.com/liuxc123/BeeKit.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
-  s.swift_version = ['5.0', '5.1', '5.3']
-  # s.default_subspec = 'Core'
+  s.swift_version = '5.0'
 
   s.subspec 'BeeCore' do |ss|
     ss.source_files = 'BeeModules/BeeCore/Source/*.swift'
@@ -23,6 +18,7 @@ Pod::Spec.new do |s|
     ss.dependency 'BeeKit/BeeLog'
     ss.dependency 'Device'
     ss.dependency 'SnapKit'
+    ss.dependency 'PinLayout'
   end
 
   s.subspec 'BeeExtension' do |ss|
@@ -53,14 +49,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'BeeModules/BeeLog/Source/**/*.swift'
     ss.dependency 'CocoaLumberjack/Swift'
   end
-
-  s.subspec 'BeeTable' do |ss|
-    ss.source_files = 'BeeModules/BeeTable/Source/**/*'
-  end
-  
-  s.subspec 'BeeForm' do |ss|
-    ss.source_files = 'BeeModules/BeeForm/Source/**/*'
-  end
   
   s.subspec 'BeeNavigationBar' do |ss|
     ss.source_files = 'BeeModules/BeeNavigationBar/Source/**/*'
@@ -72,21 +60,10 @@ Pod::Spec.new do |s|
     ss.dependency 'BeeKit/BeeExtension'
     ss.dependency 'MJRefresh'
   end
-
-  s.subspec 'BeeNetwork' do |ss|
-    ss.source_files = 'BeeModules/BeeNetwork/Source/**/*'
-    ss.dependency 'BeeKit/BeeExtension'
-    ss.dependency 'Moya'
-    ss.dependency 'SwiftyJSON'
-    ss.dependency 'ObjectMapper'
-  end
-
+  
   s.subspec 'BeePermission' do |ss|
     ss.source_files = 'BeeModules/BeePermission/Source/**/*'
     ss.dependency 'BeeKit/BeeExtension'
-    ss.dependency 'Moya'
-    ss.dependency 'SwiftyJSON'
-    ss.dependency 'ObjectMapper'
   end
 
   s.subspec 'BeeAuto' do |ss|
