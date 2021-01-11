@@ -10,8 +10,11 @@ import UIKit
 
 extension AppThemeService {
 
-    func themeNavigationBar() {
-        
+    func themeNavigationBar(nav: UINavigationController) {
+
     }
-    
+
+    func themeNavigationBar(vc: UIViewController) {
+
+    }
 }

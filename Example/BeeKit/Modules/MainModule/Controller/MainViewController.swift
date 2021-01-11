@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigation.item.title = "Main"
-        view.backgroundColor = .yellow
+        view.theme.backgroundColor = UIColorTheme(.backgroundColor)
     }
     
 }

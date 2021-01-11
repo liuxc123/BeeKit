@@ -181,6 +181,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0457FFDD25AC5A67009BD675 /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				0457FFDE25AC5A78009BD675 /* Controller */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		0457FFDE25AC5A78009BD675 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F196B24C25A04370005D5DE3 /* MainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		344010E39597992E76D1C412 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,8 +247,8 @@
 				F196B24525A042B7005D5DE3 /* Navigation */,
 				F196B24425A0427B005D5DE3 /* General */,
 				F196B1FF25A03D85005D5DE3 /* Modules */,
-				607FACD31AFB9204008FA782 /* Supporting Files */,
 				F196B20625A03E30005D5DE3 /* Assest */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for BeeKit";
 			path = BeeKit;
@@ -288,7 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				0457FF7625AC5332009BD675 /* CommonModule */,
-				F196B24C25A04370005D5DE3 /* MainViewController.swift */,
+				0457FFDD25AC5A67009BD675 /* MainModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
