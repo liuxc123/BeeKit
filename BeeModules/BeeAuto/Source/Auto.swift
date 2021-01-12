@@ -1,14 +1,3 @@
-//
-//  Auto.swift
-//  ┌─┐      ┌───────┐ ┌───────┐
-//  │ │      │ ┌─────┘ │ ┌─────┘
-//  │ │      │ └─────┐ │ └─────┐
-//  │ │      │ ┌─────┘ │ ┌─────┘
-//  │ └─────┐│ └─────┐ │ └─────┐
-//  └───────┘└───────┘ └───────┘
-//
-//  Created by lee on 2018/11/2.
-//  Copyright © 2018年 lee. All rights reserved.
 //  https://github.com/lixiang1994/AutoInch
 
 #if canImport(Foundation)

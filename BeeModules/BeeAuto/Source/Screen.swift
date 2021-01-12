@@ -1,14 +1,3 @@
-//
-//  Screen.swift
-//  ┌─┐      ┌───────┐ ┌───────┐
-//  │ │      │ ┌─────┘ │ ┌─────┘
-//  │ │      │ └─────┐ │ └─────┐
-//  │ │      │ ┌─────┘ │ ┌─────┘
-//  │ └─────┐│ └─────┐ │ └─────┐
-//  └───────┘└───────┘ └───────┘
-//
-//  Created by lee on 2018/1/22.
-//  Copyright © 2018年 lee. All rights reserved.
 //  https://github.com/lixiang1994/AutoInch
 
 import Foundation
