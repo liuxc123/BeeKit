@@ -136,8 +136,8 @@
 		0457FF4C25AC50C0009BD675 /* BaseModule */ = {
 			isa = PBXGroup;
 			children = (
-				0457FF8E25AC5404009BD675 /* Model */,
 				0457FF8D25AC53E4009BD675 /* Controller */,
+				0457FF8E25AC5404009BD675 /* Model */,
 			);
 			path = BaseModule;
 			sourceTree = "<group>";
@@ -145,8 +145,8 @@
 		0457FF7625AC5332009BD675 /* CommonModule */ = {
 			isa = PBXGroup;
 			children = (
-				0457FF7725AC538B009BD675 /* WebModule */,
 				0457FF4C25AC50C0009BD675 /* BaseModule */,
+				0457FF7725AC538B009BD675 /* WebModule */,
 			);
 			path = CommonModule;
 			sourceTree = "<group>";

@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.subspec 'BeeCore' do |ss|
     ss.source_files = 'BeeModules/BeeCore/Source/**/*'
     ss.dependency 'CocoaLumberjack/Swift'
+    ss.dependency 'SwifterSwift'
     ss.dependency 'MJRefresh'
   end
 

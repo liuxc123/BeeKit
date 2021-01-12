@@ -1,9 +1,6 @@
 import Foundation
 import UIKit
 
-/// BEEKit version string.
-public let BEEKitVersion = "1.0.0"
-
 /// Font typealias.
 public typealias Font = UIFont
 /// Color typealias.

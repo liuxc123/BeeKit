@@ -20,6 +20,7 @@ PODS:
   - BeeKit/BeeCore (1.0.0):
     - CocoaLumberjack/Swift
     - MJRefresh
+    - SwifterSwift
   - BeeKit/BeeLimitInput (1.0.0):
     - Smile
   - BeeKit/BeeNavigationBar (1.0.0):
@@ -111,7 +112,6 @@ DEPENDENCIES:
   - RxSwift
   - RxWebKit
   - SnapKit
-  - SwifterSwift
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -149,7 +149,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit: 7376f22e2c41dac59f84044c0e057f8694c2b707
+  BeeKit: 2f423b7196eed5b4f0a5185f1b82318650950732
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
@@ -168,6 +168,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
-PODFILE CHECKSUM: 1722ea5279137a2607f9d7d0bd00609a0c8089f4
+PODFILE CHECKSUM: d46e92b6685457092e01490aca84359a122ae641
 
 COCOAPODS: 1.9.1

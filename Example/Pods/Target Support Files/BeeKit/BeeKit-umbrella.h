@@ -11,6 +11,7 @@
 #endif
 
 #import "RefreshHeader.h"
+#import "BEECoreHeader.h"
 #import "BeeNavigationBar.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
 

@@ -11,6 +11,10 @@ import BeeKit
 
 class TestViewController: ViewController {
 
+    deinit {
+        Time.remove("test_timer")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigation.item.title = "test"
@@ -19,6 +23,11 @@ class TestViewController: ViewController {
         navigation.bar.backBarButtonItem?.shouldBack = { [weak self] item in
             return self?.bee.popDisabled ?? false
         }
+
+        let remainTime = Time.remainTime(Date.now().adding(.minute, value: 1))
+        Time.make(.callBack("test_timer", remainTime, 1, { (model) in
+            print(model.remainTime.int)
+        }))
     }
 
 }
