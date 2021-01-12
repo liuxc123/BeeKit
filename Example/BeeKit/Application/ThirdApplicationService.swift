@@ -8,5 +8,16 @@
 
 import Foundation
 import UIKit
-import SnapKit
-import PinLayout
+@_exported import SnapKit
+@_exported import PinLayout
+@_exported import BEEFormKit
+@_exported import BEETableKit
+
+class ThirdApplicationService: NSObject, ApplicationService {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+
+        return true
+    }
+
+}

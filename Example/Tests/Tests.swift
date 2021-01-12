@@ -15,6 +15,7 @@ class Tests: XCTestCase {
     
     func testExample() {
         // This is an example of a functional test case.
+        log.info("log info something.")
         XCTAssert(true, "Pass")
     }
     

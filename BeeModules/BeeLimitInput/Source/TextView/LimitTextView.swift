@@ -7,13 +7,9 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 @IBDesignable
 open class LimitTextView: UITextView,LimitInputProtocol {
-
-    private let disposeBag = DisposeBag()
 
     public var preIR: IR? = nil
 
@@ -118,7 +114,6 @@ extension LimitTextView{
         delegate = nil
         inset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         buildNotifications()
-        buildPlaceHolder()
     }
 
     fileprivate func buildNotifications() {
@@ -126,10 +121,6 @@ extension LimitTextView{
                                                selector: #selector(textView(changed:)),
                                                name: UITextView.textDidChangeNotification,
                                                object: nil)
-    }
-
-    fileprivate func buildPlaceHolder() {
-        self.rx.text.map({ !($0?.isEmpty ?? true) } ).bind(to: placeholderLabel.rx.isHidden).disposed(by: disposeBag)
     }
 }
 

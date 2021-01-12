@@ -185,9 +185,8 @@ extension LimitInputProtocol {
     }
 
     func replaceWordLimit(text: String) -> String {
-        var text = text
         if text.count > wordLimit {
-            return text.slice(from: 0, to: wordLimit)
+            return text.substring(from: wordLimit)
         }
         return text
     }
@@ -196,7 +195,7 @@ extension LimitInputProtocol {
         if !self.emojiLimit {
             return text
         }
-        return text.filter({ !$0.isEmoji })
+        return text.filter({ !isEmoji(character: String($0)) })
     }
 
 }

@@ -18,55 +18,19 @@
     "ios": "9.0"
   },
   "swift_versions": "5.0",
+  "requires_arc": true,
   "subspecs": [
     {
       "name": "BeeCore",
-      "source_files": "BeeModules/BeeCore/Source/*.swift",
+      "source_files": "BeeModules/BeeCore/Source/**/*",
       "dependencies": {
-        "BeeKit/BeeExtension": [
+        "CocoaLumberjack/Swift": [
 
         ],
-        "BeeKit/BeeAppDelegate": [
-
-        ],
-        "BeeKit/BeeNavigator": [
-
-        ],
-        "BeeKit/BeeLog": [
-
-        ],
-        "Device": [
-
-        ],
-        "SnapKit": [
-
-        ],
-        "PinLayout": [
+        "MJRefresh": [
 
         ]
       }
-    },
-    {
-      "name": "BeeExtension",
-      "source_files": "BeeModules/BeeExtension/Source/**/*",
-      "dependencies": {
-        "BeeKit/BeeCompatible": [
-
-        ],
-        "SwifterSwift": [
-
-        ],
-        "RxSwift": [
-          ">= 5.0.0"
-        ],
-        "RxCocoa": [
-          ">= 5.0.0"
-        ]
-      }
-    },
-    {
-      "name": "BeeCompatible",
-      "source_files": "BeeModules/BeeCompatible/Source/*.swift"
     },
     {
       "name": "BeeAppDelegate",
@@ -81,15 +45,6 @@
       "source_files": "BeeModules/BeeTheme/Source/**/*.swift"
     },
     {
-      "name": "BeeLog",
-      "source_files": "BeeModules/BeeLog/Source/**/*.swift",
-      "dependencies": {
-        "CocoaLumberjack/Swift": [
-
-        ]
-      }
-    },
-    {
       "name": "BeeNavigationBar",
       "source_files": "BeeModules/BeeNavigationBar/Source/**/*",
       "dependencies": {
@@ -99,25 +54,8 @@
       }
     },
     {
-      "name": "BeeRefresh",
-      "source_files": "BeeModules/BeeRefresh/Source/**/*",
-      "dependencies": {
-        "BeeKit/BeeExtension": [
-
-        ],
-        "MJRefresh": [
-
-        ]
-      }
-    },
-    {
       "name": "BeePermission",
-      "source_files": "BeeModules/BeePermission/Source/**/*",
-      "dependencies": {
-        "BeeKit/BeeExtension": [
-
-        ]
-      }
+      "source_files": "BeeModules/BeePermission/Source/**/*"
     },
     {
       "name": "BeeAuto",
@@ -131,10 +69,6 @@
 
         ]
       }
-    },
-    {
-      "name": "BeeLinearView",
-      "source_files": "BeeModules/BeeLinearView/Source/**/*"
     }
   ],
   "swift_version": "5.0"

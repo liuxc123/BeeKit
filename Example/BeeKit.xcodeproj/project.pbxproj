@@ -114,6 +114,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0414BC4F25AD455A0049A5D0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		041A964025A3000F001B1462 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,13 +249,14 @@
 			isa = PBXGroup;
 			children = (
 				F196B1FE25A03D69005D5DE3 /* Application */,
+				F196B20625A03E30005D5DE3 /* Assest */,
 				F196B20025A03D9C005D5DE3 /* Config */,
-				041A964025A3000F001B1462 /* Theme */,
-				F196B24525A042B7005D5DE3 /* Navigation */,
 				F196B24425A0427B005D5DE3 /* General */,
 				F196B1FF25A03D85005D5DE3 /* Modules */,
-				F196B20625A03E30005D5DE3 /* Assest */,
+				F196B24525A042B7005D5DE3 /* Navigation */,
+				0414BC4F25AD455A0049A5D0 /* Network */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				041A964025A3000F001B1462 /* Theme */,
 			);
 			name = "Example for BeeKit";
 			path = BeeKit;
@@ -484,7 +492,6 @@
 				"${BUILT_PRODUCTS_DIR}/BEENetwork/BEENetwork.framework",
 				"${BUILT_PRODUCTS_DIR}/BeeKit/BeeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
-				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
 				"${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework",
 				"${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -506,7 +513,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEENetwork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EachNavigationBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",

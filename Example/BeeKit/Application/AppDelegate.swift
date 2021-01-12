@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BeeKit
+@_exported import BeeKit
 
 @UIApplicationMain
 class AppDelegate: BeeApplicationDelegate {
@@ -15,6 +15,7 @@ class AppDelegate: BeeApplicationDelegate {
     override var services: [ApplicationService] {
         return [
             DebugingApplicationService(),
+            ThirdApplicationService(),
             ThemeApplicationService(),
             NavigationApplicationService(),
             RootApplicationService()

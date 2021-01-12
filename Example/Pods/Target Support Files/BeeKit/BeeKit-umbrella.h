@@ -10,10 +10,9 @@
 #endif
 #endif
 
-#import "BeeExtensionHeader.h"
+#import "RefreshHeader.h"
 #import "BeeNavigationBar.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
-#import "BeeRefreshHeader.h"
 
 FOUNDATION_EXPORT double BeeKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char BeeKitVersionString[];

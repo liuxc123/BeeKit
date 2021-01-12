@@ -9,46 +9,23 @@ PODS:
   - BeeKit (1.0.0):
     - BeeKit/BeeAppDelegate (= 1.0.0)
     - BeeKit/BeeAuto (= 1.0.0)
-    - BeeKit/BeeCompatible (= 1.0.0)
     - BeeKit/BeeCore (= 1.0.0)
-    - BeeKit/BeeExtension (= 1.0.0)
     - BeeKit/BeeLimitInput (= 1.0.0)
-    - BeeKit/BeeLinearView (= 1.0.0)
-    - BeeKit/BeeLog (= 1.0.0)
     - BeeKit/BeeNavigationBar (= 1.0.0)
     - BeeKit/BeeNavigator (= 1.0.0)
     - BeeKit/BeePermission (= 1.0.0)
-    - BeeKit/BeeRefresh (= 1.0.0)
     - BeeKit/BeeTheme (= 1.0.0)
   - BeeKit/BeeAppDelegate (1.0.0)
   - BeeKit/BeeAuto (1.0.0)
-  - BeeKit/BeeCompatible (1.0.0)
   - BeeKit/BeeCore (1.0.0):
-    - BeeKit/BeeAppDelegate
-    - BeeKit/BeeExtension
-    - BeeKit/BeeLog
-    - BeeKit/BeeNavigator
-    - Device
-    - PinLayout
-    - SnapKit
-  - BeeKit/BeeExtension (1.0.0):
-    - BeeKit/BeeCompatible
-    - RxCocoa (>= 5.0.0)
-    - RxSwift (>= 5.0.0)
-    - SwifterSwift
+    - CocoaLumberjack/Swift
+    - MJRefresh
   - BeeKit/BeeLimitInput (1.0.0):
     - Smile
-  - BeeKit/BeeLinearView (1.0.0)
-  - BeeKit/BeeLog (1.0.0):
-    - CocoaLumberjack/Swift
   - BeeKit/BeeNavigationBar (1.0.0):
     - EachNavigationBar
   - BeeKit/BeeNavigator (1.0.0)
-  - BeeKit/BeePermission (1.0.0):
-    - BeeKit/BeeExtension
-  - BeeKit/BeeRefresh (1.0.0):
-    - BeeKit/BeeExtension
-    - MJRefresh
+  - BeeKit/BeePermission (1.0.0)
   - BeeKit/BeeTheme (1.0.0)
   - BEENetwork (1.0.0):
     - BEENetwork/Core (= 1.0.0)
@@ -72,7 +49,6 @@ PODS:
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
-  - Device (3.2.1)
   - DoraemonKit/Core (3.0.2)
   - DoraemonKit/WithLogger (3.0.2):
     - CocoaLumberjack
@@ -130,9 +106,12 @@ DEPENDENCIES:
   - DoraemonKit/Core (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
   - DoraemonKit/WithLogger (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
   - DoraemonKit/WithMLeaksFinder (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
+  - PinLayout
   - RxCocoa
   - RxSwift
   - RxWebKit
+  - SnapKit
+  - SwifterSwift
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -153,8 +132,6 @@ SPEC REPOS:
     - RxWebKit
     - Smile
     - SnapKit
-  trunk:
-    - Device
     - SwifterSwift
 
 EXTERNAL SOURCES:
@@ -172,11 +149,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit: c12aae797dd82f225020972d5b077d819e12014e
+  BeeKit: 7376f22e2c41dac59f84044c0e057f8694c2b707
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
-  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
   DoraemonKit: 0740089a373899c8d462df9ee824fcdd97a68da3
   EachNavigationBar: 5a35d264688f7463042c7eb71799cb232ee44df1
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
@@ -192,6 +168,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
-PODFILE CHECKSUM: 91d76f5aeb60d2e5d41ff59c9a20b500f4fcc2cb
+PODFILE CHECKSUM: 1722ea5279137a2607f9d7d0bd00609a0c8089f4
 
 COCOAPODS: 1.9.1
