@@ -51,6 +51,10 @@ public extension UIScreen {
     static var minScreenLength: CGFloat {
         min(screenWidth, screenHeight)
     }
+    /// Get the one pixle screen.
+    static var onePixle: CGFloat {
+        return CGFloat(1)/UIScreen.main.scale
+    }
     
     // MARK: - Functions
     

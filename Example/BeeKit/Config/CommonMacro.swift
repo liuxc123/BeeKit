@@ -12,15 +12,13 @@ import SwifterSwift
 // MARK: - 变量
 
 /// 屏幕宽度，会根据横竖屏的变化而变化
-public let SCREEN_WIDTH = UIScreen.main.bounds.width
+public var SCREEN_WIDTH: CGFloat { UIScreen.screenHeight }
 
 /// 屏幕高度，会根据横竖屏的变化而变化
-public let SCREEN_HEIGHT = UIScreen.main.bounds.height
+public var SCREEN_HEIGHT: CGFloat { UIScreen.screenWidth }
 
 /// 一像素尺寸
-public var OnePixle: CGFloat {
-    return CGFloat(1)/UIScreen.main.scale
-}
+public var OnePixle: CGFloat { UIScreen.onePixle }
 
 /// SafeAreaInsets
 public var GET_SAFEAREA_INSETS: UIEdgeInsets {
@@ -30,14 +28,15 @@ public var GET_SAFEAREA_INSETS: UIEdgeInsets {
     return UIEdgeInsets.zero
 }
 
+/// 导航栏高度
+public let GET_NAVIGATION_BAR_HEIGHT: CGFloat = 44
+
 /// 导航栏最大Y值
 public var GET_NAVIGATION_BAR_MAXY: CGFloat {
     var top = GET_SAFEAREA_INSETS.top
     top = top > 0 ? top : 20
-    return top + NAVIGATION_BAR_HEIGHT
+    return top + GET_NAVIGATION_BAR_HEIGHT
 }
-/// 导航栏高度
-public let NAVIGATION_BAR_HEIGHT: CGFloat = 44
 
 /// tabbar高度
 public var GET_TABBAR_HEIGHT: CGFloat {
