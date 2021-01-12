@@ -11,24 +11,11 @@ import SwifterSwift
 
 // MARK: - 变量
 
-/// 是否横竖屏，用户界面横屏了才会返回true
-public let IS_LANDSCAPE = UIApplication.shared.statusBarOrientation.isLandscape
-
 /// 屏幕宽度，会根据横竖屏的变化而变化
 public let SCREEN_WIDTH = UIScreen.main.bounds.width
 
 /// 屏幕高度，会根据横竖屏的变化而变化
 public let SCREEN_HEIGHT = UIScreen.main.bounds.height
-
-/// 屏幕宽度，跟横竖屏无关
-public var DEVICE_WIDTH: CGFloat {
-    return IS_LANDSCAPE ? UIScreen.main.bounds.height : UIScreen.main.bounds.width
-}
-
-/// 屏幕高度，跟横竖屏无关
-public var DEVICE_HEIGHT: CGFloat {
-    return IS_LANDSCAPE ? UIScreen.main.bounds.width : UIScreen.main.bounds.height
-}
 
 /// 一像素尺寸
 public var OnePixle: CGFloat {

@@ -3,12 +3,12 @@ import UIKit
 
 public protocol TextProtocol {
     /// T: String、NSAttributedString、UIColor、NSTextAlignment、UIFont、、
-    func setText<T>(_ t: T?, _ state:UIControl.State?)
+    func setText<T>(_ t: T?, _ state: UIControl.State?)
 }
 
 extension TextProtocol {
     /// T: String、NSAttributedString、UIColor、NSTextAlignment、UIFont、、
-    public func setText<T>(_ t: T?, _ state:UIControl.State?){
+    public func setText<T>(_ t: T?, _ state: UIControl.State?){
         switch self {
         case let ui as UILabel:
             switch t {

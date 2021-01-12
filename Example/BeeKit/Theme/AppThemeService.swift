@@ -29,9 +29,9 @@ public class AppThemeService {
     func themeColor(style: ThemeStyle, level: ThemeLevel) -> UIColor {
         if let hex = configs[style.rawValue]?[level.rawValue] {
             return UIColor(hexString: hex) ?? .clear
-        }else {
+        } else {
             //可以根据需求配置默认色
-            return UIColor.gray
+            return UIColor.black
         }
     }
 }

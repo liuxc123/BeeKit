@@ -48,6 +48,19 @@ class MainViewController: TableViewController, Refreshable, RefreshControllable 
 //                c.isHidden = true
 //            }
 //        }
+
+        self.bee.setupRefresh(self, tableView)
+        self.tableView.bee
+            .headerNormal { [weak self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+                    self?.bee.refreshStatus([.endRefresh(true)])
+                }
+            }
+            .footerAuto {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+                    self?.bee.refreshStatus([.endRefresh(true)])
+                }
+            }
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
