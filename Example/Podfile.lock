@@ -19,6 +19,7 @@ PODS:
   - BeeKit/BeeAuto (1.0.0)
   - BeeKit/BeeCore (1.0.0):
     - CocoaLumberjack/Swift
+    - MBProgressHUD
     - MJRefresh
     - SwifterSwift
   - BeeKit/BeeLimitInput (1.0.0):
@@ -57,6 +58,7 @@ PODS:
   - DoraemonKit/WithMLeaksFinder (3.0.2):
     - DoraemonKit/Core
   - EachNavigationBar (1.14.5)
+  - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
@@ -121,6 +123,7 @@ SPEC REPOS:
     - BEETableKit
     - CocoaLumberjack
     - EachNavigationBar
+    - MBProgressHUD
     - MJRefresh
     - Moya
     - ObjectMapper
@@ -149,12 +152,13 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit: 2f423b7196eed5b4f0a5185f1b82318650950732
+  BeeKit: 42c313731a2f2144e05a8105b41a6862c901123f
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   DoraemonKit: 0740089a373899c8d462df9ee824fcdd97a68da3
   EachNavigationBar: 5a35d264688f7463042c7eb71799cb232ee44df1
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
@@ -170,4 +174,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 80bf4c92125f41ee02122eaa9b11ee23c98800c7
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.0

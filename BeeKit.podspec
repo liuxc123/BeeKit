@@ -15,6 +15,7 @@ Pod::Spec.new do |s|
     ss.dependency 'CocoaLumberjack/Swift'
     ss.dependency 'SwifterSwift'
     ss.dependency 'MJRefresh'
+    ss.dependency 'MBProgressHUD'
   end
 
   s.subspec 'BeeAppDelegate' do |ss|

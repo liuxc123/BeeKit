@@ -15,21 +15,6 @@ class MainViewController: TableViewController, Refreshable, RefreshControllable 
         super.viewDidLoad()
         self.navigation.item.title = "Main"
 
-        self.bee.setupRefresh(self, tableView)
-        self.tableView.bee
-            .headerNormal { [weak self] in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
-                    self?.bee.refreshStatus([.endRefresh(false)])
-                    navigator.push("test".formatScheme())
-                }
-            }
-            .footerNormalBack {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
-                    self?.bee.refreshStatus([.endRefresh(false)])
-                    navigator.push("http://www.baidu.com")
-                }
-            }
-        
     }
 }
 
