@@ -12,6 +12,7 @@ import UIKit
 @_exported import PinLayout
 @_exported import BEEFormKit
 @_exported import BEETableKit
+@_exported import BEENetwork
 
 class ThirdApplicationService: NSObject, ApplicationService {
 

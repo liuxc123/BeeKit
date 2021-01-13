@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BeeKit
+import BEENetwork
 
 class MainViewController: ViewController, Refreshable, RefreshControllable {
 
@@ -22,14 +22,15 @@ class MainViewController: ViewController, Refreshable, RefreshControllable {
         view.addSubview(button)
         
         button.snp.makeConstraints { (make) in
-            make.width.height.equalTo(100)
-            make.centerY.equalToSuperview()
-            make.top.equalTo(100)
+            make.width.height.equalTo(100.auto())
+            make.centerX.equalToSuperview()
+            make.top.equalTo(100.auto())
         }
     }
     
     @objc func clickAction() {
-        let hud = BEEHUD.showLoading(message: "加载中..", view: view)
+        
+        BEEHUD.showLoading(message: "加载中..", view: view)
 
         Time.delay(5) {
             BEEHUD.showToast(message: "aaa", view: self.view)
@@ -47,32 +48,6 @@ class MainViewController: ViewController, Refreshable, RefreshControllable {
             BEEHUD.showError(message: "ddd", view: self.view)
         }
         
-        //        let hud = BEEHUD.showProgress(progress: 0, message: "加载中..", view: view)
-        //        Time.delay(1) {
-        //            hud.mode = .determinate
-        //            hud.progress = 0.1
-        //        }
-        //
-        //        Time.delay(3) {
-        //            hud.mode = .determinate
-        //            hud.progress = 0.3
-        //        }
-        //
-        //        Time.delay(5) {
-        //            hud.progress = 0.5
-        //        }
-        //
-        //        Time.delay(7) {
-        //            hud.progress = 0.7
-        //        }
-        //
-        //        Time.delay(9) {
-        //            hud.progress = 0.9
-        //        }
-        //
-        //        Time.delay(11) {
-        //            BEEHUD.showSuccess(message: "上传成功", view: self.view)
-        //        }
     }
     
 }
