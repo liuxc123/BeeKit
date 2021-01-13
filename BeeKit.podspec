@@ -9,9 +9,11 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
   s.requires_arc = true
+  s.frameworks = 'UIKit', 'Foundation'
 
   s.subspec 'BeeCore' do |ss|
     ss.source_files = 'BeeModules/BeeCore/Source/**/*'
+    ss.resources = 'BeeModules/BeeCore/Assets/**/*'
     ss.dependency 'CocoaLumberjack/Swift'
     ss.dependency 'SwifterSwift'
     ss.dependency 'MJRefresh'
@@ -47,5 +49,6 @@ Pod::Spec.new do |s|
     ss.source_files = 'BeeModules/BeeLimitInput/Source/**/*'
     ss.dependency 'Smile'
   end
+  
  
 end

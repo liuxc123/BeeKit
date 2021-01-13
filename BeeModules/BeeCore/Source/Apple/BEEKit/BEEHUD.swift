@@ -5,7 +5,7 @@ public struct BEEHUDConfig {
     
     public static var shared = BEEHUDConfig()
     
-    public var imageSucess: UIImage? = BEEHUD.bundleImage(by: "ic_tips_done")
+    public var imageSucess: UIImage? = BEEHUD.bundleImage(by: "ic_tips_error")
     public var imageInfo: UIImage? = BEEHUD.bundleImage(by: "ic_tips_error")
     public var imageError: UIImage? = BEEHUD.bundleImage(by: "ic_tips_info")
     
@@ -14,9 +14,11 @@ public struct BEEHUDConfig {
     
     public var contentColor: UIColor = UIColor.white
     public var defaultDismissDuration: TimeInterval = 2.0
-    public var offSetY: CGFloat = 80
+    public var offSetY: CGFloat = 0
     public var margin: CGFloat = 20
     public var isSquare: Bool = true
+    public var minSize: CGSize = CGSize(width: 100, height: 100)
+    public var cornerRadius: CGFloat = 5.0
     
     public var animationType: MBProgressHUDAnimation = .zoom
     public var backgroundStyle: MBProgressHUDBackgroundStyle = .solidColor
@@ -32,7 +34,7 @@ public class BEEHUD: MBProgressHUD {
         view: UIView,
         duration: TimeInterval? = nil,
         interaction: Bool = false
-    ) -> MBProgressHUD {
+    ) -> BEEHUD {
         let config = BEEHUDConfig.shared
         let hud = show(view: view, message: message, interaction: false, animated: true)
         hud.mode = .text
@@ -47,7 +49,7 @@ public class BEEHUD: MBProgressHUD {
         message: String?,
         view: UIView,
         interaction: Bool = false
-    ) -> MBProgressHUD {
+    ) -> BEEHUD {
         let hud = show(view: view, message: message, interaction: false, animated: true)
         hud.mode = .indeterminate
         return hud
@@ -59,7 +61,7 @@ public class BEEHUD: MBProgressHUD {
         view: UIView,
         duration: TimeInterval? = nil,
         interaction: Bool = false
-    ) -> MBProgressHUD {
+    ) -> BEEHUD {
         let config = BEEHUDConfig.shared
         let hud = show(view: view, message: message, interaction: false, animated: true)
         hud.mode = .customView
@@ -75,7 +77,7 @@ public class BEEHUD: MBProgressHUD {
         view: UIView,
         duration: TimeInterval? = nil,
         interaction: Bool = false
-    ) -> MBProgressHUD {
+    ) -> BEEHUD {
         let hud = show(view: view, message: message, interaction: false, animated: true)
         hud.mode = .customView
         let config = BEEHUDConfig.shared
@@ -91,7 +93,7 @@ public class BEEHUD: MBProgressHUD {
         view: UIView,
         duration: TimeInterval? = nil,
         interaction: Bool = false
-    ) -> MBProgressHUD {
+    ) -> BEEHUD {
         let hud = show(view: view, message: message, interaction: false, animated: true)
         hud.mode = .customView
         let config = BEEHUDConfig.shared
@@ -108,7 +110,7 @@ public class BEEHUD: MBProgressHUD {
         view: UIView,
         duration: TimeInterval? = nil,
         interaction: Bool = false
-    ) -> MBProgressHUD {
+    ) -> BEEHUD {
         let hud = show(view: view, message: message, interaction: false, animated: true)
         hud.mode = .customView
         let config = BEEHUDConfig.shared
@@ -119,16 +121,16 @@ public class BEEHUD: MBProgressHUD {
     }
     
     @discardableResult
-    public static func showProgress(
-        progress: Float,
-        message: String?,
-        view: UIView,
-        interaction: Bool = false
-    ) -> MBProgressHUD {
-        let hud = show(view: view, message: message, interaction: false, animated: true)
-        hud.mode = .determinate
-        hud.progress = progress
-        return hud
+    public static func hide(for view: UIView) -> Bool {
+        BEEHUD.hide(for: view, animated: true)
+    }
+    
+    public static func hideAllHUD(for view: UIView) {
+        for subview in view.subviews {
+            if subview is MBProgressHUD {
+                MBProgressHUD.hide(for: subview, animated: true)
+            }
+        }
     }
     
     private static func show(
@@ -136,11 +138,11 @@ public class BEEHUD: MBProgressHUD {
         message: String? = nil,
         interaction: Bool = false,
         animated: Bool
-    ) -> MBProgressHUD {
+    ) -> BEEHUD {
         
         MBProgressHUD.hide(for: view, animated: true)
         let config = BEEHUDConfig.shared
-        let hud = MBProgressHUD.showAdded(to: view, animated: animated)
+        let hud = BEEHUD.showAdded(to: view, animated: animated)
         if let message = message, !message.isEmpty {
             hud.label.text = message
             hud.label.textColor = config.textColor
@@ -149,6 +151,7 @@ public class BEEHUD: MBProgressHUD {
         hud.contentColor = config.contentColor
         hud.bezelView.style = config.backgroundStyle
         hud.bezelView.backgroundColor = config.backgroundColor
+        hud.bezelView.cornerRadius = config.cornerRadius
         hud.animationType = config.animationType
         hud.isUserInteractionEnabled = !interaction
         hud.isSquare = config.isSquare
@@ -157,9 +160,7 @@ public class BEEHUD: MBProgressHUD {
     }
     
     static func bundleImage(by name: String) -> UIImage? {
-        let bundlePath = Bundle(for: BEEHUD.self).resourcePath ?? "" + "/BEEHUD.bundle"
-        let resource_bundle = Bundle(path: bundlePath)
-        let image = UIImage(named: name, in: resource_bundle, compatibleWith: nil)
-        return image
+        let resource_bundle = Bundle(path: Bundle(for: BEEHUD.self).resourcePath ?? "")
+        return UIImage(named: name, in: resource_bundle, compatibleWith: nil)
     }
 }
