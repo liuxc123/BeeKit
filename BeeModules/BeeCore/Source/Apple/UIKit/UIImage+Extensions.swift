@@ -104,73 +104,7 @@ public extension UIImage {
     convenience init?(size: CGSize, color: String = "lightGray") {
         self.init(width: size.height, height: size.width, color: color)
     }
-    
-    /// Create an image from a given text.
-    ///
-    /// - Parameters:
-    ///   - text: Text.
-    ///   - font: Text font name.
-    ///   - fontSize: Text font size.
-    ///   - imageSize: Image size.
-    convenience init?(text: String, font: FontName, fontSize: CGFloat, imageSize: CGSize) {
-        UIGraphicsBeginImageContextWithOptions(imageSize, false, UIImage.screenScale())
-        
-        text.draw(at: CGPoint(x: 0.0, y: 0.0), withAttributes: [NSAttributedString.Key.font: UIFont(fontName: font, size: fontSize) as Any])
-        
-        guard let image: UIImage = UIGraphicsGetImageFromCurrentImageContext(), let cgImage = image.cgImage else {
-            UIGraphicsEndImageContext()
-            return nil
-        }
-        
-        UIGraphicsEndImageContext()
-        
-        self.init(cgImage: cgImage, scale: UIImage.screenScale(), orientation: .up)
-    }
-    
-    /// Create an image with a background color and with a text with a mask.
-    ///
-    /// - Parameters:
-    ///   - maskedText: Text to mask.
-    ///   - font: Text font name.
-    ///   - fontSize: Text font size.
-    ///   - imageSize: Image size.
-    ///   - backgroundColor: Image background color.
-    convenience init?(maskedText: String, font: FontName, fontSize: CGFloat, imageSize: CGSize, backgroundColor: UIColor) {
-        guard let fontName = UIFont(fontName: font, size: fontSize) else {
-            return nil
-        }
-        
-        let textAttributes = [NSAttributedString.Key.font: fontName]
-        let textSize = maskedText.size(withAttributes: textAttributes)
-        
-        UIGraphicsBeginImageContextWithOptions(imageSize, false, UIImage.screenScale())
-        guard let context = UIGraphicsGetCurrentContext() else {
-            return nil
-        }
-        
-        context.setFillColor(backgroundColor.cgColor)
-        
-        let path = UIBezierPath(rect: CGRect(x: 0, y: 0, width: imageSize.width, height: imageSize.height))
-        
-        context.addPath(path.cgPath)
-        context.fillPath()
-        
-        context.setBlendMode(.destinationOut)
-        
-        let center = CGPoint(x: imageSize.width / 2 - textSize.width / 2, y: imageSize.height / 2 - textSize.height / 2)
-        
-        maskedText.draw(at: center, withAttributes: textAttributes)
-        
-        guard let image: UIImage = UIGraphicsGetImageFromCurrentImageContext(), let cgImage = image.cgImage else {
-            UIGraphicsEndImageContext()
-            return nil
-        }
-        
-        UIGraphicsEndImageContext()
-        
-        self.init(cgImage: cgImage, scale: UIImage.screenScale(), orientation: .up)
-    }
-    
+
     /// Create an image from a given color.
     ///
     /// - Parameter color: Color value.

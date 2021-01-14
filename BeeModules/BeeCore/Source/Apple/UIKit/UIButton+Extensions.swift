@@ -27,6 +27,13 @@
 import Foundation
 import UIKit
 
+public enum UIButtonImagePosition: Int {
+    case left   = 0
+    case right  = 1
+    case top    = 2
+    case bottom = 3
+}
+
 // MARK: - UIButton extension
 
 /// This extesion adds some useful functions to UIButton.
@@ -87,17 +94,6 @@ public extension UIButton {
         setImage(highlightedImage, for: UIControl.State.highlighted)
     }
     
-    /// Set the title font with a size.
-    ///
-    /// - Parameters:
-    ///   - fontName: Font name from the FontName enum declared in UIFontExtension.
-    ///   - size:Font size.
-    func setTitleFont(_ fontName: FontName, size: CGFloat) {
-        if let titleLabel = titleLabel {
-            titleLabel.font = UIFont(fontName: fontName, size: size)
-        }
-    }
-    
     /// Set the title color.
     ///
     /// - Parameter color: Font color, the highlighted color will be automatically created.
@@ -113,5 +109,103 @@ public extension UIButton {
     func setTitleColor(_ color: UIColor, highlightedColor: UIColor) {
         setTitleColor(color, for: UIControl.State.normal)
         setTitleColor(highlightedColor, for: UIControl.State.highlighted)
+    }
+
+    /// Set the image position
+    ///
+    /// - Parameters:
+    ///   - position: Button image position
+    ///   - spacing: Button image and title space
+    func setImagePosition(position: UIButtonImagePosition, spacing: CGFloat) {
+
+        self.setTitle(self.currentTitle, for: .normal)
+        self.setImage(self.currentImage, for: .normal)
+
+        let imageWidth:CGFloat = (self.imageView?.image?.size.width)!
+        let imageHeight:CGFloat = (self.imageView?.image?.size.height)!
+
+        let titleStr:NSString = (self.titleLabel?.text)! as NSString
+        let font:UIFont = self.titleLabel!.font
+        let attributes = [NSAttributedString.Key.font: font]
+        let option = NSStringDrawingOptions.usesLineFragmentOrigin
+        let rect:CGRect = titleStr.boundingRect(with: CGSize(width: LONG_MAX, height: LONG_MAX), options: option, attributes: attributes , context: nil)
+
+        let labelWidth:CGFloat = rect.width
+        let labelHeight:CGFloat = rect.height
+
+        let imageOffsetX:CGFloat = (imageWidth + labelWidth) / 2.0 - imageWidth/2.0
+        let imageOffsetY:CGFloat = imageHeight / 2.0 + spacing / 2.0
+        let labelOffsetX:CGFloat = (imageWidth + labelWidth / 2.0) - (imageWidth + labelWidth)/2.0
+        let labelOffsetY:CGFloat = labelHeight / 2.0 + spacing / 2.0
+
+        let tempWidth:CGFloat = max(labelWidth, imageWidth)
+        let changedWidth:CGFloat = labelWidth + imageWidth - tempWidth
+        let tempHeight:CGFloat = max(labelHeight, imageHeight)
+        let changedHeight:CGFloat = labelHeight + imageHeight + spacing - tempHeight
+
+        switch position {
+        case .left:
+            self.imageEdgeInsets = UIEdgeInsets(top: 0, left: -spacing/2.0, bottom: 0, right: spacing/2.0)
+            self.titleEdgeInsets = UIEdgeInsets(top: 0, left: spacing/2.0, bottom: 0, right: -spacing/2.0)
+            self.contentEdgeInsets = UIEdgeInsets(top: 0, left: spacing/2.0, bottom: 0, right: spacing/2.0)
+            break
+        case .right:
+            self.imageEdgeInsets = UIEdgeInsets(top: 0, left: labelWidth + spacing/2.0, bottom: 0, right: -(labelWidth + spacing / 2.0))
+            self.titleEdgeInsets = UIEdgeInsets(top: 0, left: -(imageWidth + spacing/2), bottom: 0, right: imageWidth + spacing/2)
+            self.contentEdgeInsets = UIEdgeInsets(top: 0, left: spacing/2.0, bottom: 0, right: spacing/2.0)
+            break
+        case .top:
+            self.imageEdgeInsets = UIEdgeInsets(top: -imageOffsetY, left: imageOffsetX, bottom: imageOffsetY, right: -imageOffsetX)
+            self.titleEdgeInsets = UIEdgeInsets(top: labelOffsetY, left: -labelOffsetX, bottom: -labelOffsetY, right: labelOffsetX)
+            self.contentEdgeInsets = UIEdgeInsets(top: imageOffsetY, left: -changedWidth/2, bottom: changedHeight-imageOffsetY, right: -changedWidth/2)
+            break
+        case .bottom:
+            self.imageEdgeInsets = UIEdgeInsets(top: imageOffsetY, left: imageOffsetX, bottom: -imageOffsetY, right: -imageOffsetX)
+            self.titleEdgeInsets = UIEdgeInsets(top: -labelOffsetY, left: -labelOffsetX, bottom: labelOffsetY, right: labelOffsetX)
+            self.contentEdgeInsets = UIEdgeInsets(top: changedHeight-imageOffsetY, left: -changedWidth/2, bottom: imageOffsetY, right: -changedWidth/2)
+            break
+        }
+    }
+
+    /// Show the image loading
+    func loading(bgViewColor: UIColor = .clear,
+                 bgViewFrame: CGRect = .zero,
+                 style: UIActivityIndicatorView.Style = .gray,
+                 activityColor: UIColor = .clear) {
+        isEnabled = false
+        let activity = UIActivityIndicatorView(style: style)
+        activity.startAnimating()
+        let view = UIView()
+        view.tag = -8668
+        if bgViewFrame == .zero {
+            superview?.layoutIfNeeded()
+            view.frame = bounds
+        }else{
+            view.frame = bgViewFrame
+        }
+        if bgViewColor == .clear {
+            view.backgroundColor = bgViewColor
+        }else{
+            view.backgroundColor = backgroundColor
+        }
+        if activityColor != .clear {
+            activity.color = activityColor
+        }
+        activity.frame = view.bounds
+
+        addSubview(view)
+        view.addSubview(activity)
+    }
+
+    /// Show the image custom loading
+    func loading(_ custom:(()->Void)) {
+        isEnabled = false
+        custom()
+    }
+
+    /// Hidden the image custom loading
+    func loadingHidden(_ tag: Int = -8668) {
+        viewWithTag(tag)?.removeFromSuperview()
+        isEnabled = true
     }
 }

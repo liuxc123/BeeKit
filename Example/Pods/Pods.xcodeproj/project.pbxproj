@@ -30,11 +30,14 @@
 		03C06B62424038A960CC51A392453FAF /* DoraemonHealthBgView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4829B12B7DE3FFB66387042232B20C22 /* DoraemonHealthBgView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03E88D146EADFDD72E6FD10ED7289745 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 460EF722CEB753C81EBE60FE2FEB0B72 /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */; };
 		03FF54B2E1214D93E4220AB52A123F15 /* doraemon_close_dark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A776C7C9861009FA88BC113F9B2CE645 /* doraemon_close_dark@3x.png */; };
+		0409669925B0121E005271BD /* UIImage+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0409669825B0121E005271BD /* UIImage+Context.swift */; };
 		0419B18581F4C3F013526F8A1FECDA3D /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D22531CC3390AB65D01B9B0288DD260 /* ObservableType.swift */; };
 		041AF6A083814A16DFEDE20A3F1CB7F1 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A198ACFA2EF49773FBFCA1CCA458A4 /* UIButtonExtensions.swift */; };
 		042EC932208A4E971B871752983DEE34 /* BinaryFloatingPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B1CDF83A4A75468F2A599672F41D1D /* BinaryFloatingPointExtensions.swift */; };
 		043D69BCF45E3835F0DF2CD85CD9AC33 /* DoraemonANRTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8245E7A7150BB9631F293AFA775F0F94 /* DoraemonANRTracker.m */; };
 		044D742DCCD2F06B8EE1CE0F3EBAA7C4 /* DoraemonDBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044F6020E7FD5875A1846B75340704EA /* DoraemonDBTableViewController.m */; };
+		0461B1D225B0204E00AF122D /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461B1D125B0204E00AF122D /* Notification+Extensions.swift */; };
+		0461B1EE25B0206600AF122D /* NotificationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461B1ED25B0206600AF122D /* NotificationProtocol.swift */; };
 		04931E8E54AEAB298C559C00DFEA4DB8 /* DoraemonMockUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D076612B52EF1696F6302D111825AA8 /* DoraemonMockUploadViewController.m */; };
 		04AC31D9BFFB9FF422088E335FCC6ABC /* UITableViewController+EachNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C5134E557378B59903C5F88B15CD6A /* UITableViewController+EachNavigationBar.swift */; };
 		04EC039B25AFE48100CF6FD9 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC039A25AFE48100CF6FD9 /* Bundle+Extensions.swift */; };
@@ -522,7 +525,6 @@
 		55961DD81844B3F84EA2F761B366A894 /* DoraemonKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B0C86A8F46471654E0C24429497E546 /* DoraemonKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		55A9FE8E3A278007CA2136932089E0F8 /* UIViewController+Doraemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F62DBA8CDC5DAB9548CC7DE96F12B4A /* UIViewController+Doraemon.m */; };
 		55D717E9E788CBFD16765C3BDC2785CA /* DoraemonViewMetricsConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 33EA2E2073ACB9335BB6A0A56AC392DA /* DoraemonViewMetricsConfig.m */; };
-		56217B7FB42200276A3E0BDD393BB16A /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11984ADDD9C5415C7A50FDB456B5991 /* UINavigationBar+Extensions.swift */; };
 		56D679CEB70EDFD910AB72081FEAEEAA /* Bag+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571BBFE454BC4B6F7C0E76943CE05A45 /* Bag+Rx.swift */; };
 		5775D408E267210E2A46349040473419 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F67ACB786B5EDAAAFAB79596848DA66 /* RxCocoa.framework */; };
 		57C1ACBA203C46527055215DF36EB382 /* DoraemonHealthManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BF3F1CC76A13BA478B2A40DC80B356AB /* DoraemonHealthManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1369,7 +1371,6 @@
 		D914C7EFDBCD677912AA968576AF1C6B /* DoraemonHealthBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = DADABA7EE6654B1A18986C2B65F7CF5C /* DoraemonHealthBtnView.m */; };
 		D9246D13C5F96DA1ED2ABE0A12CB5A45 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13984053A303DB1A62DEBD7F8412584 /* TransformType.swift */; };
 		D93474983D876D44B289D9DACE1C23F8 /* TakeWhile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 217C1183A93BAEFDD756087B3255930B /* TakeWhile.swift */; };
-		D962AEA4CC1382FBF23EEE90B0B9A27D /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADDF432E233F3444A7423B4E2F903A7 /* CGPoint.swift */; };
 		D977E93C596CF4EFF6A050DD74B43153 /* MLeakedObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FDE7533AC3ADC66AEE674DADCA3F7B /* MLeakedObjectProxy.m */; };
 		D9BA5B238765E5E2D796D47246F748F3 /* UITabBarItem+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A738AF5201021F6403ED0133E52ECFFE /* UITabBarItem+Rx.swift */; };
 		DA849382C15EE2A0DD1B05EFF480FA3C /* DoraemonWeakNetworkWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CBAE3D67A0D88D62969F3D80DAB3A69E /* DoraemonWeakNetworkWindow.m */; };
@@ -1882,12 +1883,15 @@
 		03D0A80F879331BE37E133A0F4AC3B1C /* RangeReplaceableCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RangeReplaceableCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RangeReplaceableCollectionExtensions.swift; sourceTree = "<group>"; };
 		0400C91F2203F0ECEFC4E9FC3FDFD653 /* ObservableType+PrimitiveSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableType+PrimitiveSequence.swift"; path = "RxSwift/Traits/ObservableType+PrimitiveSequence.swift"; sourceTree = "<group>"; };
 		040731B8885ADDF3521FD1CA173B8540 /* UIColor+DoraemonHierarchy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+DoraemonHierarchy.h"; path = "DoraemonKit/Src/Core/Plugin/UI/Hierarchy/Function/Category/UIColor+DoraemonHierarchy.h"; sourceTree = "<group>"; };
+		0409669825B0121E005271BD /* UIImage+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Context.swift"; sourceTree = "<group>"; };
 		04344E84EF219D9428F2C24F5720BF72 /* AppServicesManager+RemoteNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AppServicesManager+RemoteNotification.swift"; path = "BeeModules/BeeAppDelegate/Source/AppServicesManager+RemoteNotification.swift"; sourceTree = "<group>"; };
 		0444BC8191272F337774EB7D565F2E56 /* UIPageViewController+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIPageViewController+MemoryLeak.h"; path = "DoraemonKit/Src/MLeaksFinder/Function/UIPageViewController+MemoryLeak.h"; sourceTree = "<group>"; };
 		04491470FD2D503C3445880B2EDA5B33 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		044CC6273B24BF821971C98EA2B57864 /* Result-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Result-Info.plist"; sourceTree = "<group>"; };
 		044D9EFFFB736774A419F2755EA7F8E4 /* DoraemonCPUUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonCPUUtil.h; path = DoraemonKit/Src/Core/Plugin/Performance/CPU/Function/DoraemonCPUUtil.h; sourceTree = "<group>"; };
 		044F6020E7FD5875A1846B75340704EA /* DoraemonDBTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonDBTableViewController.m; path = DoraemonKit/Src/Core/Plugin/Common/Sanbox/VC/DB/DoraemonDBTableViewController.m; sourceTree = "<group>"; };
+		0461B1D125B0204E00AF122D /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		0461B1ED25B0206600AF122D /* NotificationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationProtocol.swift; sourceTree = "<group>"; };
 		0461B3F80FC05957690727254D64DB36 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C2E1892308CBD70801C9FD1F528E1B /* DDLoggerNames.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDLoggerNames.m; path = Sources/CocoaLumberjack/DDLoggerNames.m; sourceTree = "<group>"; };
 		04C4C6C3D44253512DA2CE1992F71AD2 /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackFooter.h; path = MJRefresh/Base/MJRefreshBackFooter.h; sourceTree = "<group>"; };
@@ -3042,7 +3046,6 @@
 		B0844323157ECE068870F696613FDA9A /* UIViewController+Associated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Associated.swift"; path = "EachNavigationBar/Classes/UIViewController+Associated.swift"; sourceTree = "<group>"; };
 		B08F8B4E96828921BF674192FE33E01A /* FormItemLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormItemLayout.swift; path = BEEFormKit/Classes/Sources/FormItemLayout.swift; sourceTree = "<group>"; };
 		B0BEDBCC6C13D5760C37C44BDE2B6422 /* EachNavigationBar.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = EachNavigationBar.xcassets; path = EachNavigationBar/Assets/EachNavigationBar.xcassets; sourceTree = "<group>"; };
-		B11984ADDD9C5415C7A50FDB456B5991 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
 		B19D7F7728948F0B3C93B7DAFEF92CF9 /* DoraemonBacktraceLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonBacktraceLogger.m; path = DoraemonKit/Src/Core/Util/BSBacktraceLogger/DoraemonBacktraceLogger.m; sourceTree = "<group>"; };
 		B1BDE7B206D488684A85CC98BA761194 /* DoraemonXAxis.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonXAxis.h; path = DoraemonKit/Src/Core/CommonUI/Charts/DoraemonXAxis.h; sourceTree = "<group>"; };
 		B1C50EA030EF4FBF0D8422F4783132A1 /* UITableViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITableViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UITableViewExtensions.swift; sourceTree = "<group>"; };
@@ -3096,7 +3099,6 @@
 		BA7846E981A4C310625FA8BC8A931D7E /* doraemon_app_info@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_app_info@3x.png"; path = "DoraemonKit/Resource/doraemon_app_info@3x.png"; sourceTree = "<group>"; };
 		BAAE0B24C4BC4915C463EA0744F7A501 /* DoraemonANRTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonANRTracker.h; path = DoraemonKit/Src/Core/Plugin/Performance/ANR/Function/DoraemonANRTracker.h; sourceTree = "<group>"; };
 		BAB4C5CD38AC3CFCA5DBF4F052E796A2 /* UIPageControl+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPageControl+Rx.swift"; path = "RxCocoa/iOS/UIPageControl+Rx.swift"; sourceTree = "<group>"; };
-		BADDF432E233F3444A7423B4E2F903A7 /* CGPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		BB162609C3C7ADE15C25EEF7719F6853 /* DDTTYLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDTTYLogger.h; sourceTree = "<group>"; };
 		BB4FDAE720D9D65E6B5809859CAB7C9A /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		BB8002102FAEDBD718B07146E2A1CBED /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
@@ -3772,6 +3774,14 @@
 			path = Smile;
 			sourceTree = "<group>";
 		};
+		0461B1EC25B0205F00AF122D /* NotificationProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				0461B1ED25B0206600AF122D /* NotificationProtocol.swift */,
+			);
+			path = NotificationProtocol;
+			sourceTree = "<group>";
+		};
 		06F95AD88091AB1F6365B1788DE229D7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -4039,9 +4049,9 @@
 				61940DC0ED99676652F995DB7B827C58 /* UIDevice+Extensions.swift */,
 				19A91DA70B0118CC16B53F8095410C63 /* UIFont+Extensions.swift */,
 				E194F6E9DADCCE271BF9BAF208BB3310 /* UIImage+Extensions.swift */,
+				0409669825B0121E005271BD /* UIImage+Context.swift */,
 				B7F03559FDE3686AA25BA7941013B624 /* UIImageView+Extensions.swift */,
 				DEA9C8692A7A426B83B31B936E5D6B2F /* UILabel+Extensions.swift */,
-				B11984ADDD9C5415C7A50FDB456B5991 /* UINavigationBar+Extensions.swift */,
 				AA343995AB8236A2708E2BFF290ACBAF /* UIPasteboard+Extensions.swift */,
 				6E593091460944055327FF8E7CDAE566 /* UIScreen+Extensions.swift */,
 				C6881FACE041AF2E0061A6622D52331F /* UIScrollView+Extensions.swift */,
@@ -4106,6 +4116,7 @@
 		28FC6A4357A35D3144EB8025503934CA /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				0461B1EC25B0205F00AF122D /* NotificationProtocol */,
 				637C542BBE2713E9FFA71D9B3E92C664 /* AssociatedObjectProtocol */,
 				69FB4E466DF55D8F8E54F42CD7E90431 /* Then */,
 				F00B93DAC60242A48F1EC2EA30B25699 /* UserDefaultsProtocol */,
@@ -5678,14 +5689,6 @@
 			path = RxWebKit;
 			sourceTree = "<group>";
 		};
-		A47FC6D26C314751ED52BE385E2D0BBB /* CoreGraphics */ = {
-			isa = PBXGroup;
-			children = (
-				BADDF432E233F3444A7423B4E2F903A7 /* CGPoint.swift */,
-			);
-			path = CoreGraphics;
-			sourceTree = "<group>";
-		};
 		A610E62287C21E0A997A1CB92A6F5870 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -5795,6 +5798,7 @@
 				59FEF10685B8EFA10DF81AEABA57F4BA /* Collection+Extensions.swift */,
 				AFE764EF37E09992C830F949C9647AEE /* Data+Extensions.swift */,
 				35B5A073ED0A6E5AC49C425BF46917CF /* Date+Extensions.swift */,
+				0461B1D125B0204E00AF122D /* Notification+Extensions.swift */,
 				13C4F81A67DB53D3B3598BD699B1EECD /* Dictionary+Extensions.swift */,
 				20C091DCBF53470B7618C8A12D3273E3 /* FileManager+Extensions.swift */,
 				E0935A427F014A759D326FAFA411A2A7 /* NSObject+Extensions.swift */,
@@ -6212,7 +6216,6 @@
 			isa = PBXGroup;
 			children = (
 				5BE5C6927AF3081AC7594853D5A29AD1 /* BEEKit */,
-				A47FC6D26C314751ED52BE385E2D0BBB /* CoreGraphics */,
 				98CA61D92D9406CFD76BBB49308A0922 /* Foundation */,
 				990406BB823E36CDC67800B88C65DAF9 /* Protocol */,
 				1FDA84FA3BA32F1DD91D057C1CD2EF99 /* UIKit */,
@@ -7845,6 +7848,7 @@
 				132E0F619E4338E5D1B27E4C72076B3F /* Notifications.swift in Sources */,
 				0C5E11DE24DAA737704B355F5F2F3426 /* ParameterEncoding.swift in Sources */,
 				98A929C8E9012AB167672714FFD2113C /* Request.swift in Sources */,
+				0409669925B0121E005271BD /* UIImage+Context.swift in Sources */,
 				D65C254F5ABF2CB5ECEE50FE8F8E1A80 /* Response.swift in Sources */,
 				E3747EC31FCCA97D75A81FC700CF7E24 /* ResponseSerialization.swift in Sources */,
 				64744C911253C3E01461FAD7C935C8D7 /* Result.swift in Sources */,
@@ -8510,6 +8514,7 @@
 				86500C2CA998C69D90C1B2D2265E754C /* AppServicesManager+RemoteNotification.swift in Sources */,
 				68DA706C90D680C5AD174035D5C9DA76 /* AppServicesManager+SiriKitHandling.swift in Sources */,
 				6265AC310D60EA44AABD318397D2661C /* AppServicesManager+UNUserNotification.swift in Sources */,
+				0461B1D225B0204E00AF122D /* Notification+Extensions.swift in Sources */,
 				AC090A800F54D562F89703BF36F86737 /* AppServicesManager+URLOpening.swift in Sources */,
 				91669E0124A2EC25C55BCAF68FC92EAB /* AppServicesManager+WatchKitInteracting.swift in Sources */,
 				C44E157A3341A159B31599D78D0507BF /* AppServicesManager.swift in Sources */,
@@ -8530,7 +8535,6 @@
 				39AF1DC2840D4F365AD439ECC362B0CD /* BEEPassword.swift in Sources */,
 				3C0B3A158CAA2E22A09CAB11FC48C24B /* BEESystemSound.swift in Sources */,
 				6A97C5DB7376AEF758345481E78E6B72 /* BEETimer.swift in Sources */,
-				D962AEA4CC1382FBF23EEE90B0B9A27D /* CGPoint.swift in Sources */,
 				3F35C80760542A3EE43A6C5D19447DA4 /* Collection+Extensions.swift in Sources */,
 				7D33CD7F20B80F160A274468B1F73837 /* Data+Extensions.swift in Sources */,
 				EEDBB69EF55FA4B274029394A0F4293C /* Date+Extensions.swift in Sources */,
@@ -8581,7 +8585,6 @@
 				72E8F7876DA23AF09A7F29F712226B45 /* UIImage+Extensions.swift in Sources */,
 				5B97E9F31CA23DE6A062A976EEF16C1A /* UIImageView+Extensions.swift in Sources */,
 				A8C243D3B0E3F25BF5A2CA60D1B66CE0 /* UILabel+Extensions.swift in Sources */,
-				56217B7FB42200276A3E0BDD393BB16A /* UINavigationBar+Extensions.swift in Sources */,
 				1E6EDF18115627E0D8C400E49722F7FD /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				7829098A84C7A2ED8E3B4B8134FE8C8F /* UIPasteboard+Extensions.swift in Sources */,
 				7D74ECBB91111E0B9DDFD66EE00BB7AE /* UIScreen+Extensions.swift in Sources */,
@@ -8596,6 +8599,7 @@
 				356750FF655D6665469746386C695EB4 /* UIViewControllerType.swift in Sources */,
 				356B847E7C6918AC58277802E2B950CE /* UIWindow+Extensions.swift in Sources */,
 				12975B7D57818EBA6CDD9E0A98917B1E /* URLConvertible.swift in Sources */,
+				0461B1EE25B0206600AF122D /* NotificationProtocol.swift in Sources */,
 				4017A935A20DE370F8AD60986C5C4A13 /* URLMatcher.swift in Sources */,
 				22D9F9A414FBD85D6389822BBBCEF806 /* URLMatchResult.swift in Sources */,
 				380C44721DBFA2CC1001FBF46893D87C /* URLPatchComponentMatchResult.swift in Sources */,

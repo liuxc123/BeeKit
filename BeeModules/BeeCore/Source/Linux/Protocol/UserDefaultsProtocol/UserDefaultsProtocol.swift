@@ -46,8 +46,7 @@ extension UserDefaultsProtocol {
     public var array:[Any]? {
         return UserDefaults.standard.array(forKey: name)
     }
-    
-    
+
     public func save(_ value:Any?) {
         UserDefaults.standard.set(value, forKey: name)
         UserDefaults.standard.synchronize()
@@ -67,17 +66,20 @@ extension UserDefaults {
     public static func string(_ key:String) -> String? {
         return UserDefaults.standard.string(forKey: key)
     }
+    public static func stringArray(_ key:String) -> [String]? {
+        return UserDefaults.standard.stringArray(forKey: key)
+    }
     public static func array(_ key:String) -> [Any]? {
         return UserDefaults.standard.array(forKey: key)
     }
     public static func dictionary(_ key:String) -> [String : Any]? {
         return UserDefaults.standard.dictionary(forKey: key)
     }
-    public static func save(_ value:Any?, key:String) {
+    public static func save(_ value: Any?, key:String) {
         UserDefaults.standard.set(value, forKey: key)
         UserDefaults.standard.synchronize()
     }
-    public static func remove(_ key:String) {
+    public static func remove(_ key: String) {
         UserDefaults.standard.removeObject(forKey: key)
     }
 }
