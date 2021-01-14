@@ -12,9 +12,11 @@ Pod::Spec.new do |s|
 
   s.subspec 'BeeCore' do |ss|
     ss.source_files = 'BeeModules/BeeCore/Source/**/*'
+    ss.resources = 'BeeModules/BeeCore/Assets/**/*'
     ss.dependency 'CocoaLumberjack/Swift'
     ss.dependency 'SwifterSwift'
     ss.dependency 'MJRefresh'
+    ss.dependency 'MBProgressHUD'
   end
 
   s.subspec 'BeeAppDelegate' do |ss|
@@ -46,5 +48,7 @@ Pod::Spec.new do |s|
     ss.source_files = 'BeeModules/BeeLimitInput/Source/**/*'
     ss.dependency 'Smile'
   end
- 
+  
+  s.frameworks = 'UIKit', 'Foundation'
+
 end

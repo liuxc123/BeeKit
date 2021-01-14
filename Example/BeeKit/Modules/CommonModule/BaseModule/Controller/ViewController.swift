@@ -48,6 +48,7 @@ class ViewController: UIViewController {
 
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+        BEEHUD.hideAllHUD(for: view)
     }
 
     // MARK: - Setup

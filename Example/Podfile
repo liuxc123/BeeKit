@@ -5,23 +5,23 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'BeeKit_Example' do
-  pod 'BeeKit', :path => '../'
+    pod 'BeeKit', :path => '../'
 
-  pod 'RxSwift'
-  pod 'RxCocoa'
-  pod 'RxWebKit'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxWebKit'
 
-  pod 'SnapKit'
-  pod 'PinLayout'
+    pod 'SnapKit'
+    pod 'PinLayout'
 
-  pod 'BEEFormKit'
-  pod 'BEETableKit'
-  pod 'BEENetwork'
+    pod 'BEEFormKit'
+    pod 'BEETableKit'
+    pod 'BEENetwork'
 
-  # Debug
-  pod 'DoraemonKit/Core', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #必选
-  pod 'DoraemonKit/WithLogger', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #可选
-  pod 'DoraemonKit/WithMLeaksFinder', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #可选
+    # Debug
+    pod 'DoraemonKit/Core', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #必选
+    pod 'DoraemonKit/WithLogger', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #可选
+    pod 'DoraemonKit/WithMLeaksFinder', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #可选
 
   target 'BeeKit_Tests' do
     inherit! :search_paths

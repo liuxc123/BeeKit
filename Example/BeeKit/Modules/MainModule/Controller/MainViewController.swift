@@ -7,29 +7,48 @@
 //
 
 import UIKit
-import BeeKit
+import BEENetwork
 
-class MainViewController: TableViewController, Refreshable, RefreshControllable {
+class MainViewController: ViewController, Refreshable, RefreshControllable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigation.item.title = "Main"
+        
+        let button = UIButton()
+        button.setTitle("click", for: .normal)
+        button.addTarget(self, action: #selector(clickAction), for: .touchUpInside)
+        button.backgroundColor = .red
+        view.addSubview(button)
+        
+        button.snp.makeConstraints { (make) in
+            make.width.height.equalTo(100.auto())
+            make.centerX.equalToSuperview()
+            make.top.equalTo(100.auto())
+        }
+    }
+    
+    @objc func clickAction() {
+        
+        BEEHUD.showLoading(message: "加载中..", view: view)
 
-        self.bee.setupRefresh(self, tableView)
-        self.tableView.bee
-            .headerNormal { [weak self] in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
-                    self?.bee.refreshStatus([.endRefresh(false)])
-                    navigator.push("test".formatScheme())
-                }
-            }
-            .footerNormalBack {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
-                    self?.bee.refreshStatus([.endRefresh(false)])
-                    navigator.push("http://www.baidu.com")
-                }
-            }
+        Time.delay(5) {
+            BEEHUD.showToast(message: "aaa", view: self.view)
+        }
+
+        Time.delay(7) {
+            BEEHUD.showSuccess(message: "bbb", view: self.view)
+        }
+
+        Time.delay(9) {
+            BEEHUD.showInfo(message: "ccc", view: self.view)
+        }
+
+        Time.delay(12) {
+            BEEHUD.showError(message: "ddd", view: self.view)
+        }
         
     }
+    
 }
 

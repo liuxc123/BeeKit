@@ -19,10 +19,15 @@
   },
   "swift_versions": "5.0",
   "requires_arc": true,
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
   "subspecs": [
     {
       "name": "BeeCore",
       "source_files": "BeeModules/BeeCore/Source/**/*",
+      "resources": "BeeModules/BeeCore/Assets/**/*",
       "dependencies": {
         "CocoaLumberjack/Swift": [
 
@@ -31,6 +36,9 @@
 
         ],
         "MJRefresh": [
+
+        ],
+        "MBProgressHUD": [
 
         ]
       }

@@ -38,7 +38,7 @@ struct CommonNavigationMap {
     }
 
     private static func webViewControllerFactory(
-        url: URLConvertible,
+        url: BeeKit.URLConvertible,
         values: [String: Any],
         context: Any?
     ) -> UIViewController? {
