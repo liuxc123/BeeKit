@@ -1861,7 +1861,7 @@
 		03ED6A668ECE8DDC05C9973814D140C5 /* DoraemonCocoaLumberjackLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonCocoaLumberjackLogger.m; path = DoraemonKit/Src/Logger/Function/DoraemonCocoaLumberjackLogger.m; sourceTree = "<group>"; };
 		0424A5D67CE572188FBC80E889E1CEBE /* IntExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/IntExtensions.swift; sourceTree = "<group>"; };
 		0445D0C6774240F94AAC17FF1AB5C920 /* DoraemonNSUserDefaultsViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonNSUserDefaultsViewController.m; path = DoraemonKit/Src/Core/Plugin/Common/NSUserDefaults/ViewControllers/DoraemonNSUserDefaultsViewController.m; sourceTree = "<group>"; };
-		0461B3F80FC05957690727254D64DB36 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0461B3F80FC05957690727254D64DB36 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Result.framework; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0462197AE2036527DBB6406D3A051F0E /* DDTTYLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Sources/CocoaLumberjack/DDTTYLogger.m; sourceTree = "<group>"; };
 		04A20D7D330AE9A536E28C5EE472A2F0 /* doraemon_mock_up@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_mock_up@3x.png"; path = "DoraemonKit/Resource/doraemon_mock_up@3x.png"; sourceTree = "<group>"; };
 		04E90DEE6A17B124E7AF3C56C103DA0A /* NSDecimalNumberTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberTransform.swift; path = Sources/NSDecimalNumberTransform.swift; sourceTree = "<group>"; };
@@ -1916,7 +1916,7 @@
 		0CA479A547B63B9D356D5F93FDFB1B11 /* Observable+Bind.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Observable+Bind.swift"; path = "RxRelay/Observable+Bind.swift"; sourceTree = "<group>"; };
 		0CE22E7759F19461A5E11E748D9BDE26 /* AnyError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyError.swift; path = Result/AnyError.swift; sourceTree = "<group>"; };
 		0D0AC7919227AB87AFC3E606346F4AEC /* UIToolbar+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIToolbar+Extensions.swift"; sourceTree = "<group>"; };
-		0D3F3B6C7D4AD810C6DDF4A69D741EE2 /* DoraemonKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoraemonKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D3F3B6C7D4AD810C6DDF4A69D741EE2 /* DoraemonKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DoraemonKit.bundle; path = "DoraemonKit-DoraemonKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D62404EFDCEAFEBB9CE6A5298169E09 /* CocoaLumberjack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaLumberjack.release.xcconfig; sourceTree = "<group>"; };
 		0D7413ACCD04447D2678F6D0B7230D9B /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 		0DA416661D6E9DD845E7BA1DA1AAD00C /* doraemon_search@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_search@3x.png"; path = "DoraemonKit/Resource/doraemon_search@3x.png"; sourceTree = "<group>"; };
@@ -2036,7 +2036,7 @@
 		21214C84FB98A73D2A6740FEE8FE41F3 /* DoraemonCocoaLumberjackListCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonCocoaLumberjackListCell.h; path = DoraemonKit/Src/Logger/List/DoraemonCocoaLumberjackListCell.h; sourceTree = "<group>"; };
 		213D3FA0B3B09D6A4F0E3BEE8018D665 /* Parameters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parameters.swift; path = BEENetwork/Classes/MoyaSugar/Parameters.swift; sourceTree = "<group>"; };
 		21D6663203F19AB30C06692620A0155D /* UICollectionView+ARDynamicCacheHeightLayoutCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UICollectionView+ARDynamicCacheHeightLayoutCell.m"; path = "BEEFormKit/Classes/Extension/UICollectionView+ARDynamicCacheHeightLayoutCell.m"; sourceTree = "<group>"; };
-		22209D9EB38D87CD5EE1DC9F80AA1DB7 /* BEENetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BEENetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22209D9EB38D87CD5EE1DC9F80AA1DB7 /* BEENetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BEENetwork.framework; path = BEENetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		223A5AFD56A6DB1E2120EFD9294FE5A9 /* UIStackViewExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStackViewExtensions.swift; path = Sources/SwifterSwift/UIKit/UIStackViewExtensions.swift; sourceTree = "<group>"; };
 		2246A7B620A14D9D650B9DDC815948E8 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJExtension.m"; path = "MJRefresh/UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
 		224CABA94CDE8E1E6BE8869B4024B5A6 /* RxRelay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RxRelay-umbrella.h"; sourceTree = "<group>"; };
@@ -2127,7 +2127,7 @@
 		2FC0E18E98087B0AE989B09ED043E2C1 /* DoraemonMockSearchView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonMockSearchView.m; path = DoraemonKit/Src/Core/Plugin/Platform/Mock/View/Search/DoraemonMockSearchView.m; sourceTree = "<group>"; };
 		2FF676B345AF8CF7509390AEE8739AF1 /* DoraemonHierarchyPickerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonHierarchyPickerView.h; path = DoraemonKit/Src/Core/Plugin/UI/Hierarchy/UserInterface/View/DoraemonHierarchyPickerView.h; sourceTree = "<group>"; };
 		300BC415657F08497D372424B5E56B96 /* RxCocoa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxCocoa.release.xcconfig; sourceTree = "<group>"; };
-		303CF07910E0B3A7918421A94077615C /* Pods_BeeKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		303CF07910E0B3A7918421A94077615C /* Pods_BeeKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BeeKit_Tests.framework; path = "Pods-BeeKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3063E59724AF8941DB3F6B9DAA1D1393 /* DoraemonMLeaksFinderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonMLeaksFinderViewController.m; path = DoraemonKit/Src/MLeaksFinder/DoraemonMLeaksFinderViewController.m; sourceTree = "<group>"; };
 		3064E394CBA8DA348B1219ED1E08FF69 /* DoraemonNetFlowDetailViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonNetFlowDetailViewController.m; path = DoraemonKit/Src/Core/Plugin/Performance/NetFlow/Detail/DoraemonNetFlowDetailViewController.m; sourceTree = "<group>"; };
 		307AF851B272AD3E1835E13B2B7A61B5 /* DoraemonCacheManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonCacheManager.h; path = DoraemonKit/Src/Core/Cache/DoraemonCacheManager.h; sourceTree = "<group>"; };
@@ -2177,7 +2177,7 @@
 		36F652D9AEA4614410B176AD9F493887 /* DoraemonBuriedPointManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonBuriedPointManager.h; path = DoraemonKit/Src/Core/Util/BuriedPoint/DoraemonBuriedPointManager.h; sourceTree = "<group>"; };
 		37077866C6241F2A8C030E70BF29157C /* DoraemonCrashUncaughtExceptionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonCrashUncaughtExceptionHandler.h; path = DoraemonKit/Src/Core/Plugin/Performance/Crash/Function/DoraemonCrashUncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		371547C0B04F4301A12EDFE343BABE7C /* DDFileLogger.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDFileLogger.m; path = Sources/CocoaLumberjack/DDFileLogger.m; sourceTree = "<group>"; };
-		3756A9BBE41ABEE8DCBF5BCA6972C4DA /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3756A9BBE41ABEE8DCBF5BCA6972C4DA /* Moya.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Moya.framework; path = Moya.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3770A1A4B03329188AA6732D5CA50D09 /* Buffer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Buffer.swift; path = RxSwift/Observables/Buffer.swift; sourceTree = "<group>"; };
 		37DD717924EDB0F6CD8C0E426BDB6EEA /* DoraemonMockAPIModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonMockAPIModel.h; path = DoraemonKit/Src/Core/Plugin/Platform/Mock/Model/DoraemonMockAPIModel.h; sourceTree = "<group>"; };
 		37F2D9BA473A36B86BDB143D12C4D020 /* NSView+PinLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSView+PinLayout.swift"; path = "Sources/Extensions/NSView+PinLayout.swift"; sourceTree = "<group>"; };
@@ -2260,7 +2260,7 @@
 		432685EB138E1FA78FDE03C5E426A15C /* NSTextView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextView+Rx.swift"; path = "RxCocoa/macOS/NSTextView+Rx.swift"; sourceTree = "<group>"; };
 		4354334DDBB3D337E05D5D0C50253153 /* UIColor+DoraemonHierarchy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+DoraemonHierarchy.h"; path = "DoraemonKit/Src/Core/Plugin/UI/Hierarchy/Function/Category/UIColor+DoraemonHierarchy.h"; sourceTree = "<group>"; };
 		435A141D92EBA6E7775C3CB909EE2C78 /* doraemon_default@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_default@2x.png"; path = "DoraemonKit/Resource/doraemon_default@2x.png"; sourceTree = "<group>"; };
-		437AAE99247C3DED076A8095EC3AE328 /* EachNavigationBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EachNavigationBar.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		437AAE99247C3DED076A8095EC3AE328 /* EachNavigationBar.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = EachNavigationBar.bundle; path = "EachNavigationBar-EachNavigationBar.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C8C83955AD686049CD3DFC9806D1E5 /* DoraemonHierarchyFormatterTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonHierarchyFormatterTool.h; path = DoraemonKit/Src/Core/Plugin/UI/Hierarchy/Function/DoraemonHierarchyFormatterTool.h; sourceTree = "<group>"; };
 		43FB729CB95E7D24AC18AE4B8C6B1EE7 /* PinLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PinLayout.release.xcconfig; sourceTree = "<group>"; };
 		4483C424452C1BDFEBA3A250F1B2404B /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackFooter.m; path = MJRefresh/Base/MJRefreshBackFooter.m; sourceTree = "<group>"; };
@@ -2286,7 +2286,7 @@
 		472D7AEB03DD47523B94F486DB6BB702 /* DoraemonHomeFootCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonHomeFootCell.h; path = DoraemonKit/Src/Core/Entry/Home/Cell/DoraemonHomeFootCell.h; sourceTree = "<group>"; };
 		47995B70D18E4CAB46F523F2377D9EB6 /* DoraemonSubThreadUICheckPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonSubThreadUICheckPlugin.m; path = DoraemonKit/Src/Core/Plugin/Performance/SubThreadUICheck/DoraemonSubThreadUICheckPlugin.m; sourceTree = "<group>"; };
 		47CAABB19E0EEE621CCB333379C203B6 /* DoraemonViewAlignPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonViewAlignPlugin.h; path = DoraemonKit/Src/Core/Plugin/UI/ViewAlign/DoraemonViewAlignPlugin.h; sourceTree = "<group>"; };
-		47CBD751928D005DAB71AA7F687822C1 /* BEETableKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BEETableKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47CBD751928D005DAB71AA7F687822C1 /* BEETableKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BEETableKit.framework; path = BEETableKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E834226FADEB7686EE516B44F79295 /* DoraemonMemoryPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonMemoryPlugin.h; path = DoraemonKit/Src/Core/Plugin/Performance/Memory/DoraemonMemoryPlugin.h; sourceTree = "<group>"; };
 		48224EB91852C7E93C739BAAACB87D8B /* UIViewController+DoraemonUIProfile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+DoraemonUIProfile.h"; path = "DoraemonKit/Src/Core/Plugin/Performance/UIProfile/Function/UIViewController+DoraemonUIProfile.h"; sourceTree = "<group>"; };
 		4826D6FA3D3EA9A9D43F2A8E715C8EA7 /* PriorityQueue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PriorityQueue.swift; path = Platform/DataStructures/PriorityQueue.swift; sourceTree = "<group>"; };
@@ -2306,7 +2306,7 @@
 		49791348AF50C264D9BBE6D2F252F2EF /* DispatchQueueConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DispatchQueueConfiguration.swift; path = RxSwift/Schedulers/Internal/DispatchQueueConfiguration.swift; sourceTree = "<group>"; };
 		498076E4BCD9718445F0B3AB0CF1E40C /* DoraemonKitManagerCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonKitManagerCell.m; path = DoraemonKit/Src/Core/Entry/Home/Settings/KitManager/View/DoraemonKitManagerCell.m; sourceTree = "<group>"; };
 		498C8B0D666B0CB86C231F11B180FC20 /* RxScrollViewDelegateProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxScrollViewDelegateProxy.swift; path = RxCocoa/iOS/Proxies/RxScrollViewDelegateProxy.swift; sourceTree = "<group>"; };
-		49A1B30EADC8BCAF734D81E271752CDD /* PinLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PinLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A1B30EADC8BCAF734D81E271752CDD /* PinLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PinLayout.framework; path = PinLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B7DC4B8C4623AC2E03B1CC8D104FEB /* DoraemonWeakNetworkManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonWeakNetworkManager.h; path = DoraemonKit/Src/Core/Plugin/Performance/WeakNetwork/Function/DoraemonWeakNetworkManager.h; sourceTree = "<group>"; };
 		49C08428CD97BC9A0E2F14CF22BFDB24 /* DoraemonHealthAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonHealthAlertView.m; path = DoraemonKit/Src/Core/Plugin/Platform/Health/Alert/DoraemonHealthAlertView.m; sourceTree = "<group>"; };
 		49F8B02EAD31436939DC67F5A02608CF /* Bag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bag.swift; path = Platform/DataStructures/Bag.swift; sourceTree = "<group>"; };
@@ -2414,7 +2414,7 @@
 		5D1EBD71BF91E45D6E5B000216742D62 /* Debug.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debug.swift; path = RxSwift/Observables/Debug.swift; sourceTree = "<group>"; };
 		5D44E88A83469344D830DC2D1004C320 /* DoraemonMockUploadCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonMockUploadCell.h; path = DoraemonKit/Src/Core/Plugin/Platform/Mock/View/List/Cell/DoraemonMockUploadCell.h; sourceTree = "<group>"; };
 		5D6E124FEA10012AD7BDBE22CA50D4CC /* DoraemonNetFlowDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonNetFlowDataSource.h; path = DoraemonKit/Src/Core/Plugin/Performance/NetFlow/Function/DoraemonNetFlowDataSource.h; sourceTree = "<group>"; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DA8D06127CB14B7BB5B896AC4B72F68 /* DoraemonHealthInstructionsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonHealthInstructionsView.m; path = DoraemonKit/Src/Core/Plugin/Platform/Health/View/Instructions/DoraemonHealthInstructionsView.m; sourceTree = "<group>"; };
 		5DAF7060FC412B25676E881CAF1DF2C7 /* CocoaLumberjack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaLumberjack-prefix.pch"; sourceTree = "<group>"; };
 		5DB472C887908980D22FA01B233F59E7 /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
@@ -2646,7 +2646,7 @@
 		7E4587457CD876C10D3CF74558A48FF7 /* UISplitViewController+MemoryLeak.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UISplitViewController+MemoryLeak.m"; path = "DoraemonKit/Src/MLeaksFinder/Function/UISplitViewController+MemoryLeak.m"; sourceTree = "<group>"; };
 		7E9DC4E8EB32529D587F2C5F98045AF6 /* MJRefreshHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshHeader.h; path = MJRefresh/Base/MJRefreshHeader.h; sourceTree = "<group>"; };
 		7EE7875E8C5A1047799DF96666F98F5B /* Bag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bag.swift; path = Platform/DataStructures/Bag.swift; sourceTree = "<group>"; };
-		7EE9AC17A9161D4D36CFEED56A18FD6D /* doraemon_fishhook.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = doraemon_fishhook.c; path = DoraemonKit/Src/Core/Util/fishhook/doraemon_fishhook.c; sourceTree = "<group>"; };
+		7EE9AC17A9161D4D36CFEED56A18FD6D /* doraemon_fishhook.c */ = {isa = PBXFileReference; includeInIndex = 1; name = doraemon_fishhook.c; path = DoraemonKit/Src/Core/Util/fishhook/doraemon_fishhook.c; sourceTree = "<group>"; };
 		7EEFA86711BED596E144D01C28A771D3 /* DoraemonHierarchyPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonHierarchyPlugin.h; path = DoraemonKit/Src/Core/Plugin/UI/Hierarchy/DoraemonHierarchyPlugin.h; sourceTree = "<group>"; };
 		7F80363573085EF6C80169E2AA7C45C1 /* DisposeBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DisposeBase.swift; path = RxSwift/Disposables/DisposeBase.swift; sourceTree = "<group>"; };
 		802552B0775EFAFF1ABF030E52342A01 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
@@ -2654,7 +2654,7 @@
 		8030E977550C2A17A7BF1DE5ADE3CFA9 /* AnyObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyObserver.swift; path = RxSwift/AnyObserver.swift; sourceTree = "<group>"; };
 		804EB9F36BB63C978EB6E91DED3A26D1 /* DoraemonMockBaseCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonMockBaseCell.m; path = DoraemonKit/Src/Core/Plugin/Platform/Mock/View/List/Cell/DoraemonMockBaseCell.m; sourceTree = "<group>"; };
 		80668B9AEA8C5C0C81AEB0AFB7BDA8E4 /* UIView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MJExtension.m"; path = "MJRefresh/UIView+MJExtension.m"; sourceTree = "<group>"; };
-		809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		809C5FAB588354C9BA37DC3EAB8CB45C /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxSwift.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		809FCA28BB43C8972A72B147C571BDD6 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
 		80C85985DBC5A96E5AA3F4E3B3CD586C /* doraemon_align@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_align@2x.png"; path = "DoraemonKit/Resource/doraemon_align@2x.png"; sourceTree = "<group>"; };
 		810C0C9482BFE644973723A5C2903755 /* DoraemonMLeaksFinderPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonMLeaksFinderPlugin.h; path = DoraemonKit/Src/MLeaksFinder/DoraemonMLeaksFinderPlugin.h; sourceTree = "<group>"; };
@@ -2725,10 +2725,10 @@
 		8B825C1C6066F8428D2E0E665193EF3E /* doraemon_health_slide@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_health_slide@2x.png"; path = "DoraemonKit/Resource/doraemon_health_slide@2x.png"; sourceTree = "<group>"; };
 		8B9AAFCE478C3AF8ED67C24A2F7FEEFD /* DoraemonWeakNetworkInputView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonWeakNetworkInputView.h; path = DoraemonKit/Src/Core/Plugin/Performance/WeakNetwork/View/DoraemonWeakNetworkInputView.h; sourceTree = "<group>"; };
 		8BDCD605CDBE3DB248782EC320765C9C /* Screen.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Screen.swift; path = BeeModules/BeeAuto/Source/Screen.swift; sourceTree = "<group>"; };
-		8BFC08B0E12552AA17CDBD715C708222 /* DoraemonTimeProfilerCore.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = DoraemonTimeProfilerCore.c; path = DoraemonKit/Src/Core/Plugin/Performance/TimeProfiler/Function/DoraemonTimeProfilerCore.c; sourceTree = "<group>"; };
+		8BFC08B0E12552AA17CDBD715C708222 /* DoraemonTimeProfilerCore.c */ = {isa = PBXFileReference; includeInIndex = 1; name = DoraemonTimeProfilerCore.c; path = DoraemonKit/Src/Core/Plugin/Performance/TimeProfiler/Function/DoraemonTimeProfilerCore.c; sourceTree = "<group>"; };
 		8C318BDF6BF38FADE8F9192D88940E4B /* DoraemonCrashPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonCrashPlugin.m; path = DoraemonKit/Src/Core/Plugin/Performance/Crash/DoraemonCrashPlugin.m; sourceTree = "<group>"; };
 		8C5CDAB242E43C008E4377390E739927 /* DoraemonDBCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonDBCell.h; path = DoraemonKit/Src/Core/Plugin/Common/Sanbox/VC/DB/DoraemonDBCell.h; sourceTree = "<group>"; };
-		8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwifterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C81A3F6D6E88BB13C101D6462262715 /* SwifterSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwifterSwift.framework; path = SwifterSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA6729ED366FD19150141F1FD1400A9 /* CocoaLumberjack-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaLumberjack-Info.plist"; sourceTree = "<group>"; };
 		8CB2BC148B10BC1F9AC48EE164A529CE /* DoraemonCocoaLumberjackLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonCocoaLumberjackLogger.h; path = DoraemonKit/Src/Logger/Function/DoraemonCocoaLumberjackLogger.h; sourceTree = "<group>"; };
 		8CC640CD3A99EC9E3F103478B45F151A /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Sources/CocoaLumberjack/include/CocoaLumberjack/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
@@ -2796,7 +2796,7 @@
 		97297445A920E31894B22713E6918BDC /* DoraemonHealthStartingTitle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonHealthStartingTitle.m; path = DoraemonKit/Src/Core/Plugin/Platform/Health/View/Home/Detail/DoraemonHealthStartingTitle.m; sourceTree = "<group>"; };
 		97706DB70A7DB560E77C3C36CBC08FE7 /* ElementAt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementAt.swift; path = RxSwift/Observables/ElementAt.swift; sourceTree = "<group>"; };
 		978C003D656B3105882A47268DF2D7A1 /* BEEFormKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BEEFormKit-dummy.m"; sourceTree = "<group>"; };
-		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A454495D3E3E1594371B60E9C66869 /* RxCollectionViewDataSourceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RxCollectionViewDataSourceType.swift; path = RxCocoa/iOS/Protocols/RxCollectionViewDataSourceType.swift; sourceTree = "<group>"; };
 		9801E90E96C792834E9502B97FADAC39 /* Pods-BeeKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BeeKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		98069CA0679DD5DE8D823C8614D74010 /* DoraemonOscillogramWindowManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonOscillogramWindowManager.m; path = DoraemonKit/Src/Core/CommonUI/Oscillogram/DoraemonOscillogramWindowManager.m; sourceTree = "<group>"; };
@@ -2834,11 +2834,11 @@
 		9C20210F2C6D8A4F6B8DDB20626D8109 /* Pods-BeeKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BeeKit_Tests.modulemap"; sourceTree = "<group>"; };
 		9C4FD0F98380C9995CA3D7036BDF5652 /* doraemon_visual@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_visual@3x.png"; path = "DoraemonKit/Resource/doraemon_visual@3x.png"; sourceTree = "<group>"; };
 		9C6E71E7AA5A1C3F1965CC03581DBDE2 /* Switch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Switch.swift; path = RxSwift/Observables/Switch.swift; sourceTree = "<group>"; };
-		9C8FF48487CA233357E3B2F0D27A6860 /* BEEFormKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BEEFormKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C8FF48487CA233357E3B2F0D27A6860 /* BEEFormKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BEEFormKit.framework; path = BEEFormKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC874976D3B6F62147E95F91E43A744 /* ObservableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObservableType.swift; path = RxSwift/ObservableType.swift; sourceTree = "<group>"; };
 		9D5F64FC89AED57EA5BDEE3A7082A904 /* DoraemonCellSwitch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonCellSwitch.m; path = DoraemonKit/Src/Core/CommonUI/CellSwitch/DoraemonCellSwitch.m; sourceTree = "<group>"; };
 		9D60EF18AFAB8E4F5976665DE238FD95 /* BEETableKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BEETableKit-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D9BD4041B429CEE7419BF50997AF6D4 /* PinSafeArea.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PinSafeArea.swift; path = Sources/Impl/PinSafeArea.swift; sourceTree = "<group>"; };
 		9D9E7C5FDE5D59E9DA2EF5E65E47586B /* UIAlertAction+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertAction+Rx.swift"; path = "RxCocoa/iOS/UIAlertAction+Rx.swift"; sourceTree = "<group>"; };
 		9DA675349C354FD310E9EB35D03DDDBA /* DoraemonDBManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonDBManager.m; path = DoraemonKit/Src/Core/Plugin/Common/Sanbox/Util/DoraemonDBManager.m; sourceTree = "<group>"; };
@@ -2954,9 +2954,9 @@
 		AEA63C6B0639D34A8E3FA288436C6166 /* UIImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = Sources/SwifterSwift/UIKit/UIImageExtensions.swift; sourceTree = "<group>"; };
 		AED52FEFE78D122BE42B02A603327B0F /* DoraemonColorPickInfoWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonColorPickInfoWindow.h; path = DoraemonKit/Src/Core/Plugin/UI/ColorPick/Function/DoraemonColorPickInfoWindow.h; sourceTree = "<group>"; };
 		AEFADB5F2E11F07F182E7743928096AC /* doraemon_mock_detail_down@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_mock_detail_down@3x.png"; path = "DoraemonKit/Resource/doraemon_mock_detail_down@3x.png"; sourceTree = "<group>"; };
-		AF5515268E20A172D84755491B08E1CB /* EachNavigationBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EachNavigationBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5515268E20A172D84755491B08E1CB /* EachNavigationBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EachNavigationBar.framework; path = EachNavigationBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7AEF35B583C8AC199D59C3980D9374 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		AFBECB67A2196009949E219483F3F300 /* BeeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BeeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFBECB67A2196009949E219483F3F300 /* BeeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BeeKit.framework; path = BeeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02FA979F0A8D8C10194F68A169731B1 /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshNormalHeader.m; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.m; sourceTree = "<group>"; };
 		B03BD1840A887975E89680DE0B2DEA45 /* InvocableType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvocableType.swift; path = RxSwift/Schedulers/Internal/InvocableType.swift; sourceTree = "<group>"; };
 		B057B5F657CACB4CCC14886BFCD89BC1 /* DoraemonNSLogPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonNSLogPlugin.m; path = DoraemonKit/Src/Core/Plugin/Common/NSLog/DoraemonNSLogPlugin.m; sourceTree = "<group>"; };
@@ -3007,7 +3007,7 @@
 		B731C49EBD89CE95684147CB2D68E8E9 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		B746D48CF27E2868199D3D8BB8DB1EB0 /* CombineLatest+arity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CombineLatest+arity.swift"; path = "RxSwift/Observables/CombineLatest+arity.swift"; sourceTree = "<group>"; };
 		B74A14F5E8182BD03ACE0909F175E40D /* UISearchController+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UISearchController+Rx.swift"; path = "RxCocoa/iOS/UISearchController+Rx.swift"; sourceTree = "<group>"; };
-		B75F01ED7B88071D842ED0247981416C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B75F01ED7B88071D842ED0247981416C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		B77262723397002097364BF4C0CA6E5B /* doraemon_mock_filter_down@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_mock_filter_down@2x.png"; path = "DoraemonKit/Resource/doraemon_mock_filter_down@2x.png"; sourceTree = "<group>"; };
 		B7A28D3624D9166E289D1B560A03475E /* DoraemonMoveView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonMoveView.m; path = DoraemonKit/Src/Core/Plugin/UI/Hierarchy/UserInterface/View/DoraemonMoveView.m; sourceTree = "<group>"; };
 		B7B17CC3D36C63BC5AD8EBF1E2B4ADEE /* ProcessInfo+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "ProcessInfo+Extensions.swift"; sourceTree = "<group>"; };
@@ -3017,7 +3017,7 @@
 		B88CAF08D887C2D64C478701A8E3F084 /* RecursiveLock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecursiveLock.swift; path = Platform/RecursiveLock.swift; sourceTree = "<group>"; };
 		B8952983C8BEEFB93983E66B45CBC863 /* Foundation+Doraemon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Foundation+Doraemon.m"; path = "DoraemonKit/Src/Core/Category/Foundation+Doraemon.m"; sourceTree = "<group>"; };
 		B8A797A83ADB62E5F177124829C35339 /* BEEDataStructures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BEEDataStructures.swift; sourceTree = "<group>"; };
-		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjectMapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B909D0518C97C00CC14414074423C82B /* DoraemonVisualMagnifierWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonVisualMagnifierWindow.h; path = DoraemonKit/Src/Core/CommonUI/Visual/DoraemonVisualMagnifierWindow.h; sourceTree = "<group>"; };
 		B91FC29FE61878F2DA32C0C8373B306C /* TypesImpl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TypesImpl.swift; path = Sources/Impl/TypesImpl.swift; sourceTree = "<group>"; };
 		B94ECF5980F39D2AC435C0631CFB52A0 /* DoraemonCPUViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonCPUViewController.h; path = DoraemonKit/Src/Core/Plugin/Performance/CPU/DoraemonCPUViewController.h; sourceTree = "<group>"; };
@@ -3039,7 +3039,7 @@
 		BB8FB5D9B24AE2C7AD219487CB7E7252 /* PinLayout+Relative.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayout+Relative.swift"; path = "Sources/PinLayout+Relative.swift"; sourceTree = "<group>"; };
 		BBADF91143570C536CD0FC166DDB8D15 /* DoraemonColorPickMagnifyLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonColorPickMagnifyLayer.m; path = DoraemonKit/Src/Core/Plugin/UI/ColorPick/Function/DoraemonColorPickMagnifyLayer.m; sourceTree = "<group>"; };
 		BC1C2BFB532B34703453AB467FD731DA /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
-		BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC432FD48A5932251F1CAFBC4BF74894 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxCocoa.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC698729D3DEBAD242735240DE690F76 /* UITouch+MemoryLeak.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITouch+MemoryLeak.h"; path = "DoraemonKit/Src/MLeaksFinder/Function/UITouch+MemoryLeak.h"; sourceTree = "<group>"; };
 		BC6A34DFA23F30EF934D7D42E5E4A350 /* ValidationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValidationType.swift; path = Sources/Moya/ValidationType.swift; sourceTree = "<group>"; };
 		BC763E2209840D89F4C574B0837DF68D /* RxSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RxSwift-dummy.m"; sourceTree = "<group>"; };
@@ -3078,7 +3078,7 @@
 		C201C2BED480DAF4B7406AAEB6EE4E34 /* BooleanDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BooleanDisposable.swift; path = RxSwift/Disposables/BooleanDisposable.swift; sourceTree = "<group>"; };
 		C2020D15278E9980A2ACB95721388ED5 /* SCNCone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCNCone.swift; path = Sources/SwifterSwift/SceneKit/SCNCone.swift; sourceTree = "<group>"; };
 		C2140A52A9CF881243453A36A14B5344 /* doraemon_arrow_down@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_arrow_down@3x.png"; path = "DoraemonKit/Resource/doraemon_arrow_down@3x.png"; sourceTree = "<group>"; };
-		C261436D14052AE3C35F240BCD155CAC /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C261436D14052AE3C35F240BCD155CAC /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaLumberjack.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C264AA384B666ED98FF41F1D3F6A501A /* doraemon_scan_line@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_scan_line@2x.png"; path = "DoraemonKit/Resource/doraemon_scan_line@2x.png"; sourceTree = "<group>"; };
 		C2945B20F146551B16C7861D18117CCE /* DoraemonMemoryOscillogramWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonMemoryOscillogramWindow.h; path = DoraemonKit/Src/Core/Plugin/Performance/Memory/Function/DoraemonMemoryOscillogramWindow.h; sourceTree = "<group>"; };
 		C29A45FB38CB9F7852F9C604BA055CE9 /* UITableView+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView+Rx.swift"; path = "RxCocoa/iOS/UITableView+Rx.swift"; sourceTree = "<group>"; };
@@ -3180,12 +3180,12 @@
 		D10592CB2199B9B9D37BFD5B6C9B6A6F /* UIView+DoraemonViewMetrics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+DoraemonViewMetrics.m"; path = "DoraemonKit/Src/Core/Plugin/UI/ViewMetrics/Function/UIView+DoraemonViewMetrics.m"; sourceTree = "<group>"; };
 		D11C0E68EEFE81C34CD4B1CD2A49A54E /* DoraemonCopyLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonCopyLabel.h; path = DoraemonKit/Src/Core/CommonUI/Label/DoraemonCopyLabel.h; sourceTree = "<group>"; };
 		D16D59DDF555242FB2B529EC2B9BF128 /* Binder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Binder.swift; path = RxCocoa/Common/Binder.swift; sourceTree = "<group>"; };
-		D1896D9851F43425DB6409A9170E0354 /* DoraemonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DoraemonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1896D9851F43425DB6409A9170E0354 /* DoraemonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DoraemonKit.framework; path = DoraemonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1CF774F16495FBC6B85DE1C0D2893A6 /* DoraemonNetFlowHttpModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonNetFlowHttpModel.m; path = DoraemonKit/Src/Core/Plugin/Performance/NetFlow/Function/DoraemonNetFlowHttpModel.m; sourceTree = "<group>"; };
 		D1DAD877C900BC6A8D19CFAC03E5F512 /* URLPathComponent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = URLPathComponent.swift; sourceTree = "<group>"; };
 		D20B46E2C4D14C000ACA76864D20AFE6 /* Moya-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Moya-dummy.m"; sourceTree = "<group>"; };
 		D22407F8A0D5B8719234B1965D13AFC6 /* doraemon_scan_line@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_scan_line@3x.png"; path = "DoraemonKit/Resource/doraemon_scan_line@3x.png"; sourceTree = "<group>"; };
-		D22838D66383F30FD8D8E729D2B5E8E7 /* Smile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Smile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D22838D66383F30FD8D8E729D2B5E8E7 /* Smile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Smile.framework; path = Smile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27177B922A9601F94ACF2E131C5403C /* doraemon_health_slideTop@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_health_slideTop@2x.png"; path = "DoraemonKit/Resource/doraemon_health_slideTop@2x.png"; sourceTree = "<group>"; };
 		D27ED73E1BCB88B927546AD860351F90 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = BEETableKit/Classes/Operators.swift; sourceTree = "<group>"; };
 		D2A362A2DDDA5F52F5947DB415208477 /* SerialDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SerialDisposable.swift; path = RxSwift/Disposables/SerialDisposable.swift; sourceTree = "<group>"; };
@@ -3250,7 +3250,7 @@
 		DB09728F6800CED58AA8E59E25367ADC /* DoraemonHomeWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonHomeWindow.m; path = DoraemonKit/Src/Core/Entry/Home/DoraemonHomeWindow.m; sourceTree = "<group>"; };
 		DB0FA4869B43D2448DB90204B66B0A1C /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
 		DB24B20F031F68CE3D60C3B49306F290 /* UIView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MJExtension.h"; path = "MJRefresh/UIView+MJExtension.h"; sourceTree = "<group>"; };
-		DB2D9D649C825420C11FF6A856C72B1F /* Pods_BeeKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB2D9D649C825420C11FF6A856C72B1F /* Pods_BeeKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BeeKit_Example.framework; path = "Pods-BeeKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB66511464CDB93EBA5D99BFD4F83855 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = Sources/SwifterSwift/CoreGraphics/CGFloatExtensions.swift; sourceTree = "<group>"; };
 		DB6DCD31F65897F0E74437F6365CF8B4 /* DoraemonWeakNetworkPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonWeakNetworkPlugin.h; path = DoraemonKit/Src/Core/Plugin/Performance/WeakNetwork/DoraemonWeakNetworkPlugin.h; sourceTree = "<group>"; };
 		DBA8764CC7276C5781F89BC8A9ED3FC2 /* DoraemonHierarchyDetailTitleCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonHierarchyDetailTitleCell.m; path = DoraemonKit/Src/Core/Plugin/UI/Hierarchy/UserInterface/Cell/DoraemonHierarchyDetailTitleCell.m; sourceTree = "<group>"; };
@@ -3299,7 +3299,7 @@
 		E1CAEF9E9431DBD115C3D6BF1B9DDFF1 /* Pods-BeeKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BeeKit_Example-Info.plist"; sourceTree = "<group>"; };
 		E1D970D9E7BA415C606CC0690D3791EE /* Then.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Then.swift; sourceTree = "<group>"; };
 		E2034F64AD02DFEF79BD464D95ADD824 /* DoraemonHealthCountdownWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonHealthCountdownWindow.m; path = DoraemonKit/Src/Core/Plugin/Platform/Health/View/Window/DoraemonHealthCountdownWindow.m; sourceTree = "<group>"; };
-		E25BC8F464A1BB479CDD25FE4CA99735 /* BeeKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = BeeKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E25BC8F464A1BB479CDD25FE4CA99735 /* BeeKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = BeeKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E284AC37561A0732BCEDCB7C778F3AFD /* MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefresh.h; path = MJRefresh/MJRefresh.h; sourceTree = "<group>"; };
 		E285B96B6D33955EF04B7AB235F18FA5 /* Navigation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Navigation.swift; path = EachNavigationBar/Classes/Navigation.swift; sourceTree = "<group>"; };
 		E28CB301052205A1CAFC12FF2667A8F1 /* DoraemonNetFlowPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonNetFlowPlugin.h; path = DoraemonKit/Src/Core/Plugin/Performance/NetFlow/DoraemonNetFlowPlugin.h; sourceTree = "<group>"; };
@@ -3318,7 +3318,7 @@
 		E439A344B7F6D309BCD4BDABFA020BBD /* CLLocationExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CLLocationExtensions.swift; path = Sources/SwifterSwift/CoreLocation/CLLocationExtensions.swift; sourceTree = "<group>"; };
 		E457DC7C91C1B91541A845D557F4C4E7 /* BehaviorRelay+Driver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BehaviorRelay+Driver.swift"; path = "RxCocoa/Traits/Driver/BehaviorRelay+Driver.swift"; sourceTree = "<group>"; };
 		E498FFE29BBEEDC54362C9C6115009A7 /* SwifterSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwifterSwift-prefix.pch"; sourceTree = "<group>"; };
-		E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E49D6D248DD1CEE584E6776B9164A1B2 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJRefresh.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4ABD1A56694440830042EBFD61629E6 /* doraemon_check_circle_fill@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_check_circle_fill@2x.png"; path = "DoraemonKit/Resource/doraemon_check_circle_fill@2x.png"; sourceTree = "<group>"; };
 		E53289C0FF5F9D97655285DC1405A5D9 /* RandomAccessCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomAccessCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/RandomAccessCollectionExtensions.swift; sourceTree = "<group>"; };
 		E5411A74BF973B2E6E68364D86B455CA /* doraemon_more@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_more@3x.png"; path = "DoraemonKit/Resource/doraemon_more@3x.png"; sourceTree = "<group>"; };
@@ -3450,7 +3450,7 @@
 		F934C351902C758EA35EACB9492D9429 /* BidirectionalCollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BidirectionalCollectionExtensions.swift; path = Sources/SwifterSwift/SwiftStdlib/BidirectionalCollectionExtensions.swift; sourceTree = "<group>"; };
 		F97BB99511194919058FC35CD4FF6DD7 /* DoraemonMockAPIModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonMockAPIModel.m; path = DoraemonKit/Src/Core/Plugin/Platform/Mock/Model/DoraemonMockAPIModel.m; sourceTree = "<group>"; };
 		F97E5E7F57DA8C4567D2144DB782A443 /* AnyEncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyEncodable.swift; path = Sources/Moya/AnyEncodable.swift; sourceTree = "<group>"; };
-		F9B434B545E55B48B4A6718F7110AB32 /* RxWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9B434B545E55B48B4A6718F7110AB32 /* RxWebKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxWebKit.framework; path = RxWebKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BC80DAD727DB1C37DD87858D7F0658 /* InfiniteSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InfiniteSequence.swift; path = Platform/DataStructures/InfiniteSequence.swift; sourceTree = "<group>"; };
 		FA2E515012B38C56B4A64302EDACB525 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
 		FA3866ED893FA31D91C572DEDD0B861C /* doraemon_mock_up_selected@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_mock_up_selected@3x.png"; path = "DoraemonKit/Resource/doraemon_mock_up_selected@3x.png"; sourceTree = "<group>"; };
@@ -3485,7 +3485,7 @@
 		FF480ADA3DEE3B17D3B0E19036F32201 /* DoraemonChartAxis.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonChartAxis.h; path = DoraemonKit/Src/Core/CommonUI/Charts/DoraemonChartAxis.h; sourceTree = "<group>"; };
 		FF624E49BC05F457CDB6CC908A378028 /* KeyPathBinder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyPathBinder.swift; path = RxCocoa/Common/KeyPathBinder.swift; sourceTree = "<group>"; };
 		FF7B0E7B036F29E9222DD40F76D6E10A /* FormCellAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormCellAction.swift; path = BEEFormKit/Classes/Sources/FormCellAction.swift; sourceTree = "<group>"; };
-		FF8B264DFE802855D5D67E7CDDABFC3C /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF8B264DFE802855D5D67E7CDDABFC3C /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxRelay.framework; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFAE846ACAC2C03604F3B20EC3E3F130 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		FFB3E0B8D6D812E8D9833A379A84A574 /* MultiTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultiTarget.swift; path = Sources/Moya/MultiTarget.swift; sourceTree = "<group>"; };
 		FFEE52061DED547AD247A2B55479D9B1 /* PinLayout+WrapContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PinLayout+WrapContent.swift"; path = "Sources/PinLayout+WrapContent.swift"; sourceTree = "<group>"; };
@@ -4406,6 +4406,7 @@
 				6650BD7D62FFB9718571EC4CBB435CCA /* Zip+Collection.swift */,
 				DFD94FA232B40116FCFF96B5B41A5CF0 /* Support Files */,
 			);
+			name = RxSwift;
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
@@ -4438,6 +4439,7 @@
 			children = (
 				520F35EED81D59F205443D7B00A6C7C9 /* ValueProtocol.swift */,
 			);
+			name = ValueProtocol;
 			path = ValueProtocol;
 			sourceTree = "<group>";
 		};
@@ -4470,6 +4472,7 @@
 				50D67095FC2DF1E392B5B3F26F7D39FC /* URLTransform.swift */,
 				AF34FD56BFEE3307EF328DBDB311B97C /* Support Files */,
 			);
+			name = ObjectMapper;
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -4481,6 +4484,7 @@
 				146707060B016CC790214E432BACA6A1 /* WithLogger */,
 				628E25222C84D17EC3518798E6F3C3D4 /* WithMLeaksFinder */,
 			);
+			name = DoraemonKit;
 			path = DoraemonKit;
 			sourceTree = "<group>";
 		};
@@ -4531,6 +4535,7 @@
 				270249378E432361B753E14F7CE644C1 /* Utils.swift */,
 				79DB126FDEE9BA2251EF31CA63711A52 /* Support Files */,
 			);
+			name = Smile;
 			path = Smile;
 			sourceTree = "<group>";
 		};
@@ -4547,6 +4552,7 @@
 				2EE3C096EABE5AEF6CF324043D02F7AB /* Core */,
 				C5F5AA2F11D2898454284C371E82591D /* Support Files */,
 			);
+			name = Moya;
 			path = Moya;
 			sourceTree = "<group>";
 		};
@@ -4772,6 +4778,7 @@
 				083028D5DD059CE835DB4AE64693C156 /* WKWebView+Rx.swift */,
 				D1B1087FAD9C147AE6EC01C085E22D30 /* Support Files */,
 			);
+			name = RxCocoa;
 			path = RxCocoa;
 			sourceTree = "<group>";
 		};
@@ -4806,6 +4813,7 @@
 				CDF33E1D4B09AC742433AEB9DD8AB0D5 /* StatePlaceholderView.swift */,
 				9ACD5B1841235C31BE7F7EFEDE5BD30F /* ViewStateMachineState.swift */,
 			);
+			name = StatefulViewable;
 			path = StatefulViewable;
 			sourceTree = "<group>";
 		};
@@ -5016,6 +5024,7 @@
 				390AFC43214A6CCCDBA4F2CC5FA8966E /* NSAttributedString+Extensions.swift */,
 				DC80170E7DF189F5DECEB95ACD2C598E /* NSPointerArray+Extensions.swift */,
 			);
+			name = Foundation;
 			path = Foundation;
 			sourceTree = "<group>";
 		};
@@ -5038,6 +5047,7 @@
 				3B261730BF8C1CC993D015B0D27EEA3F /* RxObjectMapper */,
 				2EE99BE737C4F05B2239FDFA821A8DE1 /* Support Files */,
 			);
+			name = BEENetwork;
 			path = BEENetwork;
 			sourceTree = "<group>";
 		};
@@ -5060,6 +5070,7 @@
 				922F1AA725B2F8244D24443DE5D03DF5 /* UserDefaultsProtocol */,
 				0E9D85B9B634DAEB1AEC08774F9FB537 /* ValueProtocol */,
 			);
+			name = Protocol;
 			path = Protocol;
 			sourceTree = "<group>";
 		};
@@ -5068,6 +5079,7 @@
 			children = (
 				D76BB5870CDF5950E44B5E84D6D25112 /* CGPoint.swift */,
 			);
+			name = CoreGraphics;
 			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
@@ -5087,6 +5099,7 @@
 				936BC13D1A1FCAE6824FC5D0AC681977 /* ResultProtocol.swift */,
 				FF8DD12D9F30EEF3444270838C8A7760 /* Support Files */,
 			);
+			name = Result;
 			path = Result;
 			sourceTree = "<group>";
 		};
@@ -5179,6 +5192,7 @@
 				2EA269AE10C13BA85BD88A3B85EB4B72 /* Utils.swift */,
 				4D1B2481DFFEA9141D901806A6B0D6D5 /* Support Files */,
 			);
+			name = RxRelay;
 			path = RxRelay;
 			sourceTree = "<group>";
 		};
@@ -5205,6 +5219,7 @@
 				6A966C94ADFB26068772DDDB1F2D05DA /* UIViewController+Extensions.swift */,
 				48A60B4A902AA42DDDEB1C7525C1170D /* UIWindow+Extensions.swift */,
 			);
+			name = UIKit;
 			path = UIKit;
 			sourceTree = "<group>";
 		};
@@ -5224,6 +5239,7 @@
 				514ED2BCAE887D14CED2877373DBD3FF /* BEESystemSound.swift */,
 				AC720980E21BBC4B06B33D4D8E152567 /* BEELinearView */,
 			);
+			name = BEEKit;
 			path = BEEKit;
 			sourceTree = "<group>";
 		};
@@ -5305,6 +5321,7 @@
 				8E9A8F790BE17BA71FA45555ACB440A0 /* UILayoutSupport+Extensions.swift */,
 				6239DD202B7F69ACEB91A3600A581AD5 /* Support Files */,
 			);
+			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -5429,6 +5446,7 @@
 				BF1982507974099B7A2015FF59A2AC83 /* BEEPassword.swift */,
 				8B2E5EBBD7FC069AD3580CE31A3E51C8 /* BEETimer.swift */,
 			);
+			name = BEEKit;
 			path = BEEKit;
 			sourceTree = "<group>";
 		};
@@ -5485,6 +5503,7 @@
 				5D292AF3D47884AE91E5DBC5CF9B6840 /* Resources */,
 				812DD22F671195046B1DDF23C67B804E /* Support Files */,
 			);
+			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -5534,6 +5553,7 @@
 			children = (
 				7E362F905889A7D48FFEF3BBF9DCA231 /* UserDefaultsProtocol.swift */,
 			);
+			name = UserDefaultsProtocol;
 			path = UserDefaultsProtocol;
 			sourceTree = "<group>";
 		};
@@ -5562,6 +5582,7 @@
 				56685E74C62E4867DE73EBEE005A0831 /* String+Extensions.swift */,
 				2752246993A86261C73477BCD46DF8F7 /* Thread+Extensions.swift */,
 			);
+			name = Foundation;
 			path = Foundation;
 			sourceTree = "<group>";
 		};
@@ -5594,6 +5615,7 @@
 				7B70823ED981759E425C2F0BA2D7C932 /* Validation.swift */,
 				06DB6E04973AD8C158855EEDD049CD5A /* Support Files */,
 			);
+			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -5620,6 +5642,7 @@
 				92893D8E879F221814D0BF305D55E8AF /* TableSection.swift */,
 				610F10021D711FE11F3503DB6B61FD51 /* Support Files */,
 			);
+			name = BEETableKit;
 			path = BEETableKit;
 			sourceTree = "<group>";
 		};
@@ -5629,6 +5652,7 @@
 				DEBBBB70ABBE5EE262EFDA8DA41186F0 /* BEELinearLayout.swift */,
 				D3B0828AD8BF0FB85343CD8F5856B8CA /* BEELinearView.swift */,
 			);
+			name = BEELinearView;
 			path = BEELinearView;
 			sourceTree = "<group>";
 		};
@@ -5652,6 +5676,7 @@
 			children = (
 				1FB3C35FF856CC51AEB775FA9C059DB7 /* TextProtocol.swift */,
 			);
+			name = TextProtocol;
 			path = TextProtocol;
 			sourceTree = "<group>";
 		};
@@ -5686,6 +5711,7 @@
 				D7CC85714446D16CFCC505062839E45B /* UIView+PinLayout.swift */,
 				8914308D0EECEEC36F667D42E84134EE /* Support Files */,
 			);
+			name = PinLayout;
 			path = PinLayout;
 			sourceTree = "<group>";
 		};
@@ -5709,6 +5735,7 @@
 			children = (
 				E1D970D9E7BA415C606CC0690D3791EE /* Then.swift */,
 			);
+			name = Then;
 			path = Then;
 			sourceTree = "<group>";
 		};
@@ -5723,6 +5750,7 @@
 				0166CC108A266F9AB7479853271FCD9C /* WKNavigationDelegateEvents+Rx.swift */,
 				6C98755AEE088796C669DAC6F8C07620 /* Support Files */,
 			);
+			name = RxWebKit;
 			path = RxWebKit;
 			sourceTree = "<group>";
 		};
@@ -5785,6 +5813,7 @@
 				6465AFFA72B28FC2269D04B5B5D7ACEE /* Extension */,
 				B6C0A7E9F1DD4D433A45B1F1B5DA411D /* Support Files */,
 			);
+			name = BEEFormKit;
 			path = BEEFormKit;
 			sourceTree = "<group>";
 		};
@@ -5881,6 +5910,7 @@
 				7948BEE8CCFA05030CF953725C120288 /* Resources */,
 				2A8F7844754E697B9A80C90BDBA44FC9 /* Support Files */,
 			);
+			name = EachNavigationBar;
 			path = EachNavigationBar;
 			sourceTree = "<group>";
 		};
@@ -5948,6 +5978,7 @@
 				46A1CCD945F0E12BB04B66650C8CB840 /* StatefulViewable */,
 				B21D8D4C784BD9A25FF5F94C13D2E0F6 /* TextProtocol */,
 			);
+			name = Protocol;
 			path = Protocol;
 			sourceTree = "<group>";
 		};
@@ -5956,6 +5987,7 @@
 			children = (
 				D5FAC75BAAF37582E196EC269D527B22 /* AssociatedObjectProtocol.swift */,
 			);
+			name = AssociatedObjectProtocol;
 			path = AssociatedObjectProtocol;
 			sourceTree = "<group>";
 		};
@@ -6056,6 +6088,7 @@
 			children = (
 				D88530841E3FD317A54FB89D51DD3BD7 /* WKWebView+Extensions.swift */,
 			);
+			name = WebKit;
 			path = WebKit;
 			sourceTree = "<group>";
 		};
@@ -6069,6 +6102,7 @@
 				389A1D8F58FB91ADA93A0E8421E4C999 /* Refreshable.swift */,
 				D422381D5DEF9740713C9BAB230414C8 /* RefreshHeader.h */,
 			);
+			name = Refreshable;
 			path = Refreshable;
 			sourceTree = "<group>";
 		};
@@ -6175,6 +6209,7 @@
 				5A835DD0AC9272832C96D510B405B7E0 /* SwiftStdlib */,
 				7116122FAEAB5FA88AAB535596C0E727 /* UIKit */,
 			);
+			name = SwifterSwift;
 			path = SwifterSwift;
 			sourceTree = "<group>";
 		};
@@ -6202,6 +6237,7 @@
 				C0E44E82CC6061B740650D17AE830B69 /* Support Files */,
 				0997B929A156F0870A6F5A3DBEA05A59 /* Swift */,
 			);
+			name = CocoaLumberjack;
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
@@ -7239,7 +7275,6 @@
 			knownRegions = (
 				en,
 				Base,
-				"zh-Hans",
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = C843258464809D8A49633C6F2EC1F669 /* Products */;
@@ -9913,7 +9948,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
