@@ -69,6 +69,8 @@ public struct List<Element: Equatable>: CustomStringConvertible {
 
         return -1
     }
+
+    public init() {}
 }
 
 // MARK: - Queue struct
@@ -122,6 +124,8 @@ public struct Queue<Element: Equatable>: CustomStringConvertible {
     public func top() -> Element? {
         queue.first
     }
+
+    public init() {}
 }
 
 // MARK: - Stack struct
@@ -171,5 +175,7 @@ public struct Stack<Element: Equatable>: CustomStringConvertible {
     public mutating func push(_ element: Element) {
         stack.append(element)
     }
+
+    public init() {}
 }
 

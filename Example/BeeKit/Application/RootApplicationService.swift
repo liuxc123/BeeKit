@@ -19,9 +19,8 @@ class RootApplicationService: NSObject, ApplicationService {
     }
     
     func setupWindow() {
-        let nav = UINavigationController(rootViewController: MainViewController())
-        nav.navigation.configuration.isEnabled = true
-        self.window?.rootViewController = nav
+        let tabbar = TabBarViewController()
+        self.window?.rootViewController = tabbar
     }
 
 }
