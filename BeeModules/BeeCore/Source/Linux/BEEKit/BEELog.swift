@@ -5,7 +5,6 @@
 //  Created by liuxc on 2021/1/12.
 //
 
-import Foundation
 import CocoaLumberjack
 
 extension DDLogFlag {
@@ -71,7 +70,7 @@ public class BEELog {
     }
 
 
-    // MARK: Logging
+    // MARK: - Functions
 
     public func error(
         _ items: Any...,

@@ -17,6 +17,7 @@ target 'BeeKit_Example' do
     pod 'BEEFormKit'
     pod 'BEETableKit'
     pod 'BEENetwork'
+    pod 'PermissionKit'
 
     # Debug
     pod 'DoraemonKit/Core', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #必选

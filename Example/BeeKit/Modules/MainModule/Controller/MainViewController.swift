@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import BEENetwork
 
 class MainViewController: ViewController, Refreshable, RefreshControllable {
 
@@ -32,30 +31,6 @@ class MainViewController: ViewController, Refreshable, RefreshControllable {
     
     @objc func clickAction(_ sender: UIButton) {
 
-        sender.loading(bgViewColor: .red, activityColor: .white)
-
-        Time.delay(5) {
-            sender.loadingHidden()
-        }
-        
-//        BEEHUD.showLoading(message: "加载中..", view: view)
-//
-//        Time.delay(5) {
-//            BEEHUD.showToast(message: "aaa", view: self.view)
-//        }
-//
-//        Time.delay(7) {
-//            BEEHUD.showSuccess(message: "bbb", view: self.view)
-//        }
-//
-//        Time.delay(9) {
-//            BEEHUD.showInfo(message: "ccc", view: self.view)
-//        }
-//
-//        Time.delay(12) {
-//            BEEHUD.showError(message: "ddd", view: self.view)
-//        }
-        
     }
     
 }

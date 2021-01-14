@@ -66,6 +66,9 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - ObjectMapper (4.2.0)
+  - PermissionKit (1.2.0):
+    - PermissionKit/Core (= 1.2.0)
+  - PermissionKit/Core (1.2.0)
   - PinLayout (1.9.3)
   - Result (4.1.0)
   - RxCocoa (5.1.1):
@@ -109,6 +112,7 @@ DEPENDENCIES:
   - DoraemonKit/Core (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
   - DoraemonKit/WithLogger (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
   - DoraemonKit/WithMLeaksFinder (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
+  - PermissionKit
   - PinLayout
   - RxCocoa
   - RxSwift
@@ -127,6 +131,7 @@ SPEC REPOS:
     - MJRefresh
     - Moya
     - ObjectMapper
+    - PermissionKit
     - PinLayout
     - Result
     - RxCocoa
@@ -162,6 +167,7 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PermissionKit: f95c7f5a9899119613788104064f907623ef5e49
   PinLayout: 4d8733121f8687edcc8f00c19bf1379d12808767
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -172,6 +178,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
-PODFILE CHECKSUM: c0e25673d89a2c27e4986dac3ba55074c4aa509f
+PODFILE CHECKSUM: fa68f27f903ba27fc171b4937b0e64bfe6b8fb8b
 
 COCOAPODS: 1.9.1

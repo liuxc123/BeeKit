@@ -26,6 +26,8 @@
 		0457FF9C25AC55EE009BD675 /* CommonMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FF9B25AC55EE009BD675 /* CommonMacro.swift */; };
 		0457FFD425AC56EE009BD675 /* ThirdApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */; };
 		0457FFD825AC5722009BD675 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD725AC5722009BD675 /* TestViewController.swift */; };
+		0461B23325B02DA900AF122D /* ChineseAlertContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461B23125B02DA900AF122D /* ChineseAlertContent.swift */; };
+		0461B23425B02DA900AF122D /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461B23225B02DA900AF122D /* Permission.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -71,6 +73,8 @@
 		0457FF9B25AC55EE009BD675 /* CommonMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMacro.swift; sourceTree = "<group>"; };
 		0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdApplicationService.swift; sourceTree = "<group>"; };
 		0457FFD725AC5722009BD675 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		0461B23125B02DA900AF122D /* ChineseAlertContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseAlertContent.swift; sourceTree = "<group>"; };
+		0461B23225B02DA900AF122D /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		16DF50D9C315A9A06A6AC8A9 /* Pods-BeeKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-BeeKit_Tests/Pods-BeeKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1934F318C5D4D977B6069B08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3ABC1B4AED5CA7E03CA613A9 /* Pods-BeeKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-BeeKit_Example/Pods-BeeKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +201,15 @@
 				F196B24C25A04370005D5DE3 /* MainViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		0461B23025B02D8D00AF122D /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				0461B23225B02DA900AF122D /* Permission.swift */,
+				0461B23125B02DA900AF122D /* ChineseAlertContent.swift */,
+			);
+			path = Permission;
 			sourceTree = "<group>";
 		};
 		344010E39597992E76D1C412 /* Pods */ = {
@@ -351,6 +364,7 @@
 		F196B24425A0427B005D5DE3 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				0461B23025B02D8D00AF122D /* Permission */,
 			);
 			name = General;
 			path = "New Group";
@@ -419,10 +433,13 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 835Q4MU3RA;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 835Q4MU3RA;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -430,10 +447,9 @@
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "BeeKit" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -531,6 +547,7 @@
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/PermissionKit/PermissionKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -553,6 +570,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PermissionKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -579,6 +597,7 @@
 				F196B24D25A04370005D5DE3 /* MainViewController.swift in Sources */,
 				0457FF1925AC4FC6009BD675 /* DebugingApplicationService.swift in Sources */,
 				F1395A2625AF2FFD00FEDB82 /* ResponseHandler.swift in Sources */,
+				0461B23325B02DA900AF122D /* ChineseAlertContent.swift in Sources */,
 				0457FF5625AC524A009BD675 /* AppThemeService.swift in Sources */,
 				041A964225A30035001B1462 /* AppTheme.swift in Sources */,
 				041A966D25A311E2001B1462 /* Window.swift in Sources */,
@@ -588,6 +607,7 @@
 				F196B20E25A04172005D5DE3 /* RootApplicationService.swift in Sources */,
 				0457FFD825AC5722009BD675 /* TestViewController.swift in Sources */,
 				0457FF8325AC53BA009BD675 /* CollectionViewController.swift in Sources */,
+				0461B23425B02DA900AF122D /* Permission.swift in Sources */,
 				0457FF8825AC53BA009BD675 /* NavigationController.swift in Sources */,
 				0457FF0B25AC4B63009BD675 /* NavigationApplicationService.swift in Sources */,
 				0457FF0725AC4B3E009BD675 /* ThemeApplicationService.swift in Sources */,
@@ -745,12 +765,16 @@
 			baseConfigurationReference = 3ABC1B4AED5CA7E03CA613A9 /* Pods-BeeKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 835Q4MU3RA;
 				INFOPLIST_FILE = BeeKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -761,12 +785,16 @@
 			baseConfigurationReference = 56C1B5F9E04E5ECBCA3C1ABE /* Pods-BeeKit_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 835Q4MU3RA;
 				INFOPLIST_FILE = BeeKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -776,6 +804,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A363684CA05C49129AA68CBE /* Pods-BeeKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 835Q4MU3RA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -798,6 +827,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 16DF50D9C315A9A06A6AC8A9 /* Pods-BeeKit_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 835Q4MU3RA;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -1,6 +1,11 @@
 import UIKit
 import MBProgressHUD
 
+public typealias BEEHUDMode = MBProgressHUDMode
+public typealias BEEHUDAnimation = MBProgressHUDAnimation
+public typealias BEEHUDBackgroundStyle = MBProgressHUDBackgroundStyle
+public typealias BEEHUDCompletionBlock = MBProgressHUDCompletionBlock
+
 public struct BEEHUDConfig {
     
     public static var shared = BEEHUDConfig()
@@ -20,8 +25,8 @@ public struct BEEHUDConfig {
     public var minSize: CGSize = CGSize(width: 100, height: 100)
     public var cornerRadius: CGFloat = 5.0
     
-    public var animationType: MBProgressHUDAnimation = .zoom
-    public var backgroundStyle: MBProgressHUDBackgroundStyle = .solidColor
+    public var animationType: BEEHUDAnimation = .zoom
+    public var backgroundStyle: BEEHUDBackgroundStyle = .solidColor
     public var backgroundColor: UIColor = UIColor.black
 
 }
