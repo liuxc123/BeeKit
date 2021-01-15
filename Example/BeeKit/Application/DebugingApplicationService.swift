@@ -23,6 +23,9 @@ class DebugingApplicationService: NSObject, ApplicationService {
 
     func setupDoraemonKit() {
         #if DEBUG
+        DoraemonManager.shareInstance().addH5DoorBlock { (url) in
+            navigator.push(url)
+        }
         DoraemonManager.shareInstance().install()
         #endif
     }

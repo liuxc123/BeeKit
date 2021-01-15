@@ -19,8 +19,7 @@ class RootApplicationService: NSObject, ApplicationService {
     }
     
     func setupWindow() {
-        let tabbar = TabBarViewController()
-        self.window?.rootViewController = tabbar
+        self.window?.rootViewController = TabBarViewController()
     }
 
 }
