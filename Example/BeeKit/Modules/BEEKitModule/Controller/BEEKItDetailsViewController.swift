@@ -242,3 +242,61 @@ class BEEHUDViewController: ViewController {
 
     }
 }
+
+
+class BEERefreshableViewController: TableViewController, Refreshable, RefreshControllable, StatefulViewable {
+
+    var content: Bool = false
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigation.item.title = "Refreshable and StatefulViewable"
+
+        let emptyView = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        emptyView.backgroundColor = .blue
+        self.bee.emptyView = emptyView
+
+        let loadingView = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        loadingView.backgroundColor = .yellow
+        self.bee.loadingView = loadingView
+
+        let errorView = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        errorView.backgroundColor = .red
+        self.bee.errorView = errorView
+
+        self.bee.setupRefresh(self, tableView)
+
+        tableView.bee
+            .headerNormal { [weak self] in
+                self?.startLoading()
+                Time.delay(3) { [weak self] in
+                    self?.content = true
+                    self?.bee.refreshStatus([.endRefresh(false)])
+                    self?.bee.endLoading()
+                }
+            }
+            .footerAuto { [weak self] in
+                self?.startLoading()
+                Time.delay(3) { [weak self] in
+                    self?.content = false
+                    self?.bee.refreshStatus([.endRefresh(false)])
+                    self?.bee.endLoading(animated: true, error: NSError(domain: "error", code: 300, userInfo: nil))
+                }
+            }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupInitialViewState()
+        self.bee.refreshStatus([.beginRefresh])
+    }
+
+    var backingView: UIView {
+        return tableView
+    }
+
+    func hasContent() -> Bool {
+        return content
+    }
+}
+

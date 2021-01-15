@@ -20,7 +20,8 @@ class BEEKitListViewController: TableViewController {
         ("BEESystemSound", BEESystemSoundViewController.self),
         ("BEEPassword", BEEPasswordViewController.self),
         ("BEELinearView", BEELinearViewController.self),
-        ("BEEHUD", BEEHUDViewController.self)
+        ("BEEHUD", BEEHUDViewController.self),
+        ("Refreshable and StatefulViewable", BEERefreshableViewController.self)
     ]
 
     override func viewDidLoad() {
