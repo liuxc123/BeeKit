@@ -22,6 +22,8 @@ PODS:
     - MBProgressHUD
     - MJRefresh
     - SwifterSwift
+    - SwiftValidators
+    - SwiftyAttributes
   - BeeKit/BeeLimitInput (1.0.0):
     - Smile
   - BeeKit/BeeNavigationBar (1.0.0):
@@ -106,6 +108,8 @@ PODS:
   - SwifterSwift/SpriteKit (5.1.0)
   - SwifterSwift/SwiftStdlib (5.1.0)
   - SwifterSwift/UIKit (5.1.0)
+  - SwiftValidators (9.0.3)
+  - SwiftyAttributes (5.1.1)
 
 DEPENDENCIES:
   - BEEFormKit
@@ -147,6 +151,8 @@ SPEC REPOS:
     - Smile
     - SnapKit
     - SwifterSwift
+    - SwiftValidators
+    - SwiftyAttributes
 
 EXTERNAL SOURCES:
   BeeKit:
@@ -163,7 +169,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit: d759475717b4a65c127f621bf21ce1e140145614
+  BeeKit: 49c31ee5ee2657a822f921733a928e95d3ad8b46
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEEPopupKit: 804a66d34e1922b2f4a4575bbcf6165e9b9ecae2
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
@@ -185,7 +191,9 @@ SPEC CHECKSUMS:
   Smile: 21ff6c48e06ecfcee605cca32aedd74d5810e34a
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
+  SwiftValidators: b1cb650ce02ef6ad894f1d471f970b249c794342
+  SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
 
-PODFILE CHECKSUM: 48cda3e18e86e6b9a01a4a763b7b82e62ae2d4f8
+PODFILE CHECKSUM: b89129319bc372b52249d0099880f9e69eb715e5
 
 COCOAPODS: 1.9.1

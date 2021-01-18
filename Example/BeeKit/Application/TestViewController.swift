@@ -8,12 +8,15 @@
 
 import UIKit
 import BeeKit
+import SnapKit
 
 class TestViewController: ViewController {
 
     deinit {
         Time.remove("test_timer")
     }
+
+    let textView: LimitTextView = LimitTextView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +27,32 @@ class TestViewController: ViewController {
             return self?.bee.popDisabled ?? false
         }
 
-        let remainTime = Time.remainTime(Date.now().adding(.minute, value: 1))
-        Time.make(.callBack("test_timer", remainTime, 1, { (model) in
-            print(model.remainTime.int)
-        }))
+        view.addSubview(textView)
+        textView.snp.makeConstraints { (make) in
+            make.top.equalTo(view.snp.top).offset(88)
+            make.left.right.bottom.equalToSuperview()
+        }
+
+        textView.isEditable = false
+        textView.attributedText = "SwiftEntryKit is a presentation library for iOS. It can be used to easily display overlays within your iOS apps.".withLink(URL(string: "app://test")!)
+        textView.limitDelegate = self
+    }
+
+}
+
+extension TestViewController: UITextViewDelegate {
+
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
+        print(URL.absoluteString)
+        navigator.push(URL.absoluteString)
+        return false
+    }
+
+    @available(iOS 10.0, *)
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        print(URL.absoluteString)
+        navigator.push(URL.absoluteString)
+        return false
     }
 
 }

@@ -14,16 +14,8 @@ class Tests: XCTestCase {
     }
     
     func testExample() {
-        // This is an example of a functional test case.
-        log.info("log info something.")
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
-        }
+        XCTAssert(Validator.isURL().apply("http://www.baidu.com/index.html"), "Pass")
+        XCTAssert(Validator.exactLength(4).apply("True"), "Pass")
     }
     
 }

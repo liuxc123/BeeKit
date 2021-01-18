@@ -20,7 +20,7 @@ extension Navigator: NavigationProtocol {
     public static var that: NavigatorType? = nil
 
     /// 用于缓存scheme
-    public static var scheme: String = "beekit"
+    public static var scheme: String = "app"
 }
 
 extension String {

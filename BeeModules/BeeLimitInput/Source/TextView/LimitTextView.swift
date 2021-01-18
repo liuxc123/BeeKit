@@ -62,7 +62,7 @@ open class LimitTextView: UITextView,LimitInputProtocol {
     private var inputHelp: LimitTextViewExecutor?
 
     /// 替换系统delegate
-    override open var delegate: UITextViewDelegate? {
+    open var limitDelegate: UITextViewDelegate? {
         get { return inputHelp }
         set {
             inputHelp = LimitTextViewExecutor(delegate: newValue)

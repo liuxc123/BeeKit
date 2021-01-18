@@ -32,7 +32,7 @@ open class LimitTextField: UITextField,LimitInputProtocol {
 
     private var inputHelp: LimitTextFieldExecutor?
 
-    override open var delegate: UITextFieldDelegate? {
+    public var limitDelegate: UITextFieldDelegate? {
         get { return inputHelp }
         set { inputHelp = LimitTextFieldExecutor(delegate: newValue)
             super.delegate = inputHelp
