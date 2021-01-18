@@ -5,9 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/BeeKit.svg?style=flat)](https://cocoapods.org/pods/BeeKit)
 [![Platform](https://img.shields.io/cocoapods/p/BeeKit.svg?style=flat)](https://cocoapods.org/pods/BeeKit)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## 目录
+- [CocoaPods](#CocoaPods)
+- [BeeKit核心组件](#BeeKit核心组件)
 
 ## Requirements
 
@@ -19,7 +19,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'BeeKit'
 ```
-
 ## Author
 
 liuxc123, lxc_work@126.com
