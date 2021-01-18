@@ -45,6 +45,8 @@ PODS:
     - Moya
     - ObjectMapper
     - RxSwift (>= 5.0.0)
+  - BEEPopupKit (1.0.0):
+    - QuickLayout
   - BEETableKit (1.0.0)
   - CocoaLumberjack (3.7.0):
     - CocoaLumberjack/Core (= 3.7.0)
@@ -70,6 +72,7 @@ PODS:
     - PermissionKit/Core (= 1.2.0)
   - PermissionKit/Core (1.2.0)
   - PinLayout (1.9.3)
+  - QuickLayout (3.0.0)
   - Result (4.1.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
@@ -108,6 +111,7 @@ DEPENDENCIES:
   - BEEFormKit
   - BeeKit (from `../`)
   - BEENetwork
+  - BEEPopupKit
   - BEETableKit
   - DoraemonKit/Core (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
   - DoraemonKit/WithLogger (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
@@ -124,6 +128,7 @@ SPEC REPOS:
     - Alamofire
     - BEEFormKit
     - BEENetwork
+    - BEEPopupKit
     - BEETableKit
     - CocoaLumberjack
     - EachNavigationBar
@@ -133,6 +138,7 @@ SPEC REPOS:
     - ObjectMapper
     - PermissionKit
     - PinLayout
+    - QuickLayout
     - Result
     - RxCocoa
     - RxRelay
@@ -159,6 +165,7 @@ SPEC CHECKSUMS:
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
   BeeKit: d759475717b4a65c127f621bf21ce1e140145614
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
+  BEEPopupKit: 804a66d34e1922b2f4a4575bbcf6165e9b9ecae2
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   DoraemonKit: 0740089a373899c8d462df9ee824fcdd97a68da3
@@ -169,6 +176,7 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PermissionKit: f95c7f5a9899119613788104064f907623ef5e49
   PinLayout: 4d8733121f8687edcc8f00c19bf1379d12808767
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -178,6 +186,6 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
-PODFILE CHECKSUM: fa68f27f903ba27fc171b4937b0e64bfe6b8fb8b
+PODFILE CHECKSUM: 48cda3e18e86e6b9a01a4a763b7b82e62ae2d4f8
 
 COCOAPODS: 1.9.1

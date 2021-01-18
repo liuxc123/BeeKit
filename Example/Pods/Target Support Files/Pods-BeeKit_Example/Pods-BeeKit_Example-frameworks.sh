@@ -199,6 +199,7 @@ fi
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BEENetwork/BEENetwork.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BEEPopupKit/BEEPopupKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BeeKit/BeeKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework"
@@ -209,6 +210,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PermissionKit/PermissionKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Result/Result.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework"
@@ -221,6 +223,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BEENetwork/BEENetwork.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/BEEPopupKit/BEEPopupKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/BeeKit/BeeKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework"
@@ -230,6 +233,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PermissionKit/PermissionKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Result/Result.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework"
