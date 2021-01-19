@@ -10,9 +10,9 @@ public struct BEEHUDConfig {
     
     public static var shared = BEEHUDConfig()
     
-    public var imageSucess: UIImage? = BEEHUD.bundleImage(by: "ic_tips_error")
-    public var imageInfo: UIImage? = BEEHUD.bundleImage(by: "ic_tips_error")
-    public var imageError: UIImage? = BEEHUD.bundleImage(by: "ic_tips_info")
+    public var imageSucess: UIImage? = BEEHUD.bundleImage(by: "ic_tips_error")?.template
+    public var imageInfo: UIImage? = BEEHUD.bundleImage(by: "ic_tips_error")?.template
+    public var imageError: UIImage? = BEEHUD.bundleImage(by: "ic_tips_info")?.template
     
     public var textColor: UIColor = UIColor.white
     public var textFont: UIFont = .systemFont(ofSize: 16)
@@ -87,6 +87,7 @@ public class BEEHUD: MBProgressHUD {
         hud.mode = .customView
         let config = BEEHUDConfig.shared
         let imageView = UIImageView(image: config.imageInfo)
+        imageView.tintColor = config.contentColor
         hud.customView = imageView
         hud.hide(animated: true, afterDelay: duration ?? config.defaultDismissDuration)
         return hud

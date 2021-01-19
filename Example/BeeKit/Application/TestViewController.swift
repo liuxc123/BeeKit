@@ -13,10 +13,6 @@ import BEEPopupKit
 
 class TestViewController: ViewController {
 
-    deinit {
-        Time.remove("test_timer")
-    }
-
     let textView: LimitTextView = LimitTextView()
 
     override func viewDidLoad() {
