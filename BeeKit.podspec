@@ -36,6 +36,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'BeeNavigationBar' do |ss|
     ss.source_files = 'BeeModules/BeeNavigationBar/Source/**/*'
+    ss.dependency 'BeeKit/BeeCore'
     ss.dependency 'EachNavigationBar'
   end
   
@@ -49,6 +50,7 @@ Pod::Spec.new do |s|
   
   s.subspec 'BeeLimitInput' do |ss|
     ss.source_files = 'BeeModules/BeeLimitInput/Source/**/*'
+    ss.dependency 'BeeKit/BeeCore'
     ss.dependency 'Smile'
   end
 end
