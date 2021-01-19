@@ -149,6 +149,7 @@ public class BEEHUD: MBProgressHUD {
         }
         guard let keywindow = UIApplication.shared.keyWindow else {
             assert(false, "application no key window")
+            return UIWindow()
         }
         return keywindow
     }
