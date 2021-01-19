@@ -39,10 +39,6 @@ Pod::Spec.new do |s|
     ss.dependency 'BeeKit/BeeCore'
     ss.dependency 'EachNavigationBar'
   end
-  
-  s.subspec 'BeePermission' do |ss|
-    ss.source_files = 'BeeModules/BeePermission/Source/**/*'
-  end
 
   s.subspec 'BeeAuto' do |ss|
     ss.source_files = 'BeeModules/BeeAuto/Source/**/*'
