@@ -402,7 +402,6 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				0457FF1825AC4FC6009BD675 /* DebugingApplicationService.swift */,
-				0457FF0A25AC4B63009BD675 /* NavigationApplicationService.swift */,
 				F196B20D25A04172005D5DE3 /* RootApplicationService.swift */,
 				0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */,
 				0457FFD725AC5722009BD675 /* TestViewController.swift */,
@@ -444,6 +443,7 @@
 		F196B24525A042B7005D5DE3 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				0457FF0A25AC4B63009BD675 /* NavigationApplicationService.swift */,
 				F196B24725A04317005D5DE3 /* CommonNavigationMap.swift */,
 				F196B24625A04316005D5DE3 /* NavigationMap.swift */,
 			);
