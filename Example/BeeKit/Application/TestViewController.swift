@@ -9,6 +9,7 @@
 import UIKit
 import BeeKit
 import SnapKit
+import BEEPopupKit
 
 class TestViewController: ViewController {
 
@@ -43,15 +44,21 @@ class TestViewController: ViewController {
 extension TestViewController: UITextViewDelegate {
 
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
-        print(URL.absoluteString)
-        navigator.push(URL.absoluteString)
+        let alert = BEEAlertView(title: "跳转", message: "地址:\(URL.absoluteString)")
+        alert.addAction(BEEAlertAction(title: "确定", style: .default, handler: { (action) in
+            navigator.push(URL.absoluteString)
+        }))
+        alert.show()
         return false
     }
 
     @available(iOS 10.0, *)
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
-        print(URL.absoluteString)
-        navigator.push(URL.absoluteString)
+        let alert = BEEAlertView(title: "跳转", message: "地址:\(URL.absoluteString)")
+        alert.addAction(BEEAlertAction(title: "确定", style: .default, handler: { (action) in
+            navigator.push(URL.absoluteString)
+        }))
+        alert.show()
         return false
     }
 

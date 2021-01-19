@@ -34,7 +34,7 @@ open class LimitTextView: UITextView,LimitInputProtocol {
     public lazy var placeholderLabel: UILabel = {
         let item = UILabel()
         item.numberOfLines = 0
-        item.font = UIFont.systemFont(ofSize: 15)
+        item.font = font
         item.textColor = UIColor.gray.withAlphaComponent(0.7)
         self.addSubview(item)
         self.setValue(item, forKeyPath: "_placeholderLabel")
@@ -59,6 +59,13 @@ open class LimitTextView: UITextView,LimitInputProtocol {
         get{ return placeholderLabel.text }
     }
 
+    /// 字体设置
+    open override var font: UIFont? {
+        didSet {
+            placeholderLabel.font = font
+        }
+    }
+
     private var inputHelp: LimitTextViewExecutor?
 
     /// 替换系统delegate
@@ -71,13 +78,13 @@ open class LimitTextView: UITextView,LimitInputProtocol {
     }
 
     /// 更新内间距
-    open var inset: UIEdgeInsets = .zero {
+    open override var contentInset: UIEdgeInsets {
         didSet {
-            contentInset = .zero
             scrollIndicatorInsets = .zero
             contentOffset = .zero
-            textContainerInset = inset
+            textContainerInset = contentInset
             textContainer.lineFragmentPadding = 0
+            setNeedsLayout()
         }
     }
 
@@ -93,6 +100,12 @@ open class LimitTextView: UITextView,LimitInputProtocol {
     public override func awakeFromNib() {
         super.awakeFromNib()
         buildConfig()
+    }
+
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        placeholderLabel.sizeThatFits(CGSize(width: self.width - contentInset.horizontal, height: .infinity))
+        placeholderLabel.frame.origin = CGPoint(x: contentInset.left, y: contentInset.top)
     }
 
     override open func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
@@ -112,7 +125,8 @@ extension LimitTextView{
 
     func buildConfig() {
         delegate = nil
-        inset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+        contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+        font = UIFont.systemFont(ofSize: 16)
         buildNotifications()
     }
 

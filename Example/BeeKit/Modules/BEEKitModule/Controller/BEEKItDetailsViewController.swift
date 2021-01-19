@@ -300,3 +300,41 @@ class BEERefreshableViewController: TableViewController, Refreshable, RefreshCon
     }
 }
 
+class BEEInputViewController: ViewController {
+
+    lazy var textField: LimitTextField = {
+        let textField = LimitTextField()
+        textField.placeholder = "placeholder"
+        textField.clearButtonMode = .whileEditing
+        textField.backgroundColor = .yellow
+        return textField
+    }()
+
+    lazy var textView: LimitTextView = {
+        let textView = LimitTextView()
+        textView.placeholder = "placeholder"
+        textView.backgroundColor = .yellow
+        textView.isScrollEnabled = false
+        return textView
+    }()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigation.item.title = "BEEInput"
+
+        view.addSubview(textField)
+        view.addSubview(textView)
+
+        textField.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(88)
+            make.height.equalTo(50)
+        }
+
+        textView.snp.makeConstraints { (make) in
+            make.top.equalTo(textField.snp.bottom).offset(10)
+            make.left.right.equalToSuperview()
+            make.height.greaterThanOrEqualTo(50)
+        }
+    }
+}
