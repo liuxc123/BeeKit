@@ -300,13 +300,20 @@ class BEERefreshableViewController: TableViewController, Refreshable, RefreshCon
     }
 }
 
-class BEEInputViewController: ViewController {
+class BEEInputViewController: ViewController, UISearchBarDelegate {
 
     lazy var textField: LimitTextField = {
         let textField = LimitTextField()
         textField.placeholder = "placeholder"
         textField.clearButtonMode = .whileEditing
         textField.backgroundColor = .yellow
+
+        textField.wordLimit = 5
+        textField.emojiLimit = true
+        textField.setTextDidChangeEvent { (text) in
+            print(text)
+        }
+
         return textField
     }()
 
@@ -315,7 +322,22 @@ class BEEInputViewController: ViewController {
         textView.placeholder = "placeholder"
         textView.backgroundColor = .yellow
         textView.isScrollEnabled = false
+        textView.wordLimit = 5
+        textView.emojiLimit = true
+        textView.setTextDidChangeEvent { (text) in
+            print(text)
+        }
         return textView
+    }()
+
+    lazy var searchBar: LimitSearchBar = {
+        let searchBar = LimitSearchBar()
+        searchBar.wordLimit = 5
+        searchBar.emojiLimit = true
+        searchBar.setTextDidChangeEvent { (text) in
+            print(text)
+        }
+        return searchBar
     }()
 
     override func viewDidLoad() {
@@ -324,6 +346,7 @@ class BEEInputViewController: ViewController {
 
         view.addSubview(textField)
         view.addSubview(textView)
+        view.addSubview(searchBar)
 
         textField.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
@@ -333,6 +356,12 @@ class BEEInputViewController: ViewController {
 
         textView.snp.makeConstraints { (make) in
             make.top.equalTo(textField.snp.bottom).offset(10)
+            make.left.right.equalToSuperview()
+            make.height.greaterThanOrEqualTo(50)
+        }
+
+        searchBar.snp.makeConstraints { (make) in
+            make.top.equalTo(textView.snp.bottom).offset(10)
             make.left.right.equalToSuperview()
             make.height.greaterThanOrEqualTo(50)
         }

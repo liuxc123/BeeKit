@@ -124,7 +124,7 @@ open class LimitTextView: UITextView,LimitInputProtocol {
 extension LimitTextView{
 
     func buildConfig() {
-        delegate = nil
+        limitDelegate = nil
         contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         font = UIFont.systemFont(ofSize: 16)
         buildNotifications()

@@ -10,7 +10,6 @@ import UIKit
 
 public struct LimitInputMatch {
     var code: (_ text: String) -> Bool
-    
     public init(rule: @escaping (_ text: String) -> Bool) {
         self.code = rule
     }
@@ -26,4 +25,3 @@ public struct LimitInputMatch {
         }
     }
 }
-

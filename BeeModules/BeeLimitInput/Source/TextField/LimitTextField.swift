@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-open class LimitTextField: UITextField,LimitInputProtocol {
+open class LimitTextField: UITextField, LimitInputProtocol {
 
     public var preIR: IR? = nil
 
@@ -72,7 +72,7 @@ open class LimitTextField: UITextField,LimitInputProtocol {
 extension LimitTextField{
 
     func buildConfig() {
-        delegate = nil
+        limitDelegate = nil
         buildNotifications()
     }
 
