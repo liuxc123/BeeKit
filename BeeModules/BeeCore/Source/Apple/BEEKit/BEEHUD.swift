@@ -28,6 +28,8 @@ public struct BEEHUDConfig {
     public var animationType: BEEHUDAnimation = .zoom
     public var backgroundStyle: BEEHUDBackgroundStyle = .solidColor
     public var backgroundColor: UIColor = UIColor.black
+    public var defaultLoadingText: String = "加载中..."
+    public var defaultWindow: UIWindow?
 
 }
 
@@ -36,7 +38,7 @@ public class BEEHUD: MBProgressHUD {
     @discardableResult
     public static func showToast(
         message: String?,
-        view: UIView,
+        view: UIView = defaultWindow(),
         duration: TimeInterval? = nil,
         interaction: Bool = false
     ) -> BEEHUD {
@@ -51,8 +53,8 @@ public class BEEHUD: MBProgressHUD {
 
     @discardableResult
     public static func showLoading(
-        message: String?,
-        view: UIView,
+        message: String? = BEEHUDConfig.shared.defaultLoadingText,
+        view: UIView = defaultWindow(),
         interaction: Bool = false
     ) -> BEEHUD {
         let hud = show(view: view, message: message, interaction: false, animated: true)
@@ -63,7 +65,7 @@ public class BEEHUD: MBProgressHUD {
     @discardableResult
     public static func showSuccess(
         message: String?,
-        view: UIView,
+        view: UIView = defaultWindow(),
         duration: TimeInterval? = nil,
         interaction: Bool = false
     ) -> BEEHUD {
@@ -79,7 +81,7 @@ public class BEEHUD: MBProgressHUD {
     @discardableResult
     public static func showInfo(
         message: String?,
-        view: UIView,
+        view: UIView = defaultWindow(),
         duration: TimeInterval? = nil,
         interaction: Bool = false
     ) -> BEEHUD {
@@ -96,7 +98,7 @@ public class BEEHUD: MBProgressHUD {
     @discardableResult
     public static func showError(
         message: String?,
-        view: UIView,
+        view: UIView = defaultWindow(),
         duration: TimeInterval? = nil,
         interaction: Bool = false
     ) -> BEEHUD {
@@ -113,7 +115,7 @@ public class BEEHUD: MBProgressHUD {
     public static func showImage(
         image: UIImage?,
         message: String?,
-        view: UIView,
+        view: UIView = defaultWindow(),
         duration: TimeInterval? = nil,
         interaction: Bool = false
     ) -> BEEHUD {
@@ -138,9 +140,19 @@ public class BEEHUD: MBProgressHUD {
             }
         }
     }
+
+    public static func defaultWindow() -> UIWindow {
+        if let defaultWindow = BEEHUDConfig.shared.defaultWindow {
+            return defaultWindow
+        }
+        guard let keywindow = UIApplication.shared.keyWindow else {
+            assert(false, "application no key window")
+        }
+        return keywindow
+    }
     
     private static func show(
-        view: UIView,
+        view: UIView = defaultWindow(),
         message: String? = nil,
         interaction: Bool = false,
         animated: Bool

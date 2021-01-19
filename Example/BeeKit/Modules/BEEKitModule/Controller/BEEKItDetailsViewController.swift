@@ -207,7 +207,7 @@ class BEEHUDViewController: ViewController {
         super.viewDidLoad()
         self.navigation.item.title = "BEEHUD"
 
-        let hud = BEEHUD.showLoading(message: "加载中...", view: view)
+        let hud = BEEHUD.showLoading()
 
         Time.delay(3) {
             hud.mode = .determinate
@@ -225,19 +225,19 @@ class BEEHUDViewController: ViewController {
         }
 
         Time.delay(10) {
-            BEEHUD.showSuccess(message: "Success", view: self.view)
+            BEEHUD.showSuccess(message: "Success")
         }
 
         Time.delay(13) {
-            BEEHUD.showInfo(message: "Info", view: self.view)
+            BEEHUD.showInfo(message: "Info")
         }
 
         Time.delay(16) {
-            BEEHUD.showError(message: "Error", view: self.view)
+            BEEHUD.showError(message: "Error")
         }
 
         Time.delay(18) {
-            BEEHUD.showToast(message: "toast", view: self.view)
+            BEEHUD.showToast(message: "toast")
         }
 
     }
