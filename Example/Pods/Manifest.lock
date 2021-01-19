@@ -47,7 +47,7 @@ PODS:
     - Moya
     - ObjectMapper
     - RxSwift (>= 5.0.0)
-  - BEEPopupKit (1.0.0):
+  - BEEPopupKit (1.0.1):
     - QuickLayout
   - BEETableKit (1.0.0)
   - CocoaLumberjack (3.7.0):
@@ -171,7 +171,7 @@ SPEC CHECKSUMS:
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
   BeeKit: 49c31ee5ee2657a822f921733a928e95d3ad8b46
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
-  BEEPopupKit: 804a66d34e1922b2f4a4575bbcf6165e9b9ecae2
+  BEEPopupKit: 6b61c1c7bd443d1adc7c5e57c4bf02fd6c37cb89
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   DoraemonKit: 0740089a373899c8d462df9ee824fcdd97a68da3

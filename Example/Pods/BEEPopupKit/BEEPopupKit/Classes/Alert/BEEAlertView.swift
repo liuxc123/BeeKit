@@ -173,13 +173,9 @@ open class BEEAlertView {
                 
                 accessibilityIdentifier: action.title) {
                     if action.disabled { return }
-                if action.canAutoHide {
                     BEEPopupKit.dismiss(.displayed) {
                         action.completion?(action)
                     }
-                } else {
-                    action.completion?(action)
-                }
             }
             buttonContents.append(buttonContent)
         }
