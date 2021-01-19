@@ -247,7 +247,6 @@
 		2550B408EF306E05ED36C6AAB6837BF1 /* ControlProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26B5B543841C2313E7219F4DEA3121 /* ControlProperty.swift */; };
 		256621863084571253B6BDEA07747EDE /* doraemon_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5346D4325421E130E032DCC16657922C /* doraemon_close@3x.png */; };
 		2567EC7CCB6626B5F1FD9616EDD5CCFC /* DoraemonDeleteLocalDataPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A688B07764745011EF1D1ADFB6820FA /* DoraemonDeleteLocalDataPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2576F0CE2AFFF6C98BD639861554A149 /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4069D6BDB8CDC1EB57335A80E2845F3D /* Notification+Extensions.swift */; };
 		2579D191C7C87A55F47FBC6B1A941AD5 /* BEEApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFAD86CB8DE883F153EA1BC8A22A15A /* BEEApp.swift */; };
 		2590C7530A42F4B613DA245763BA196E /* DoraemonHierarchyDetailViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D3C7DDA90FAE175C310197EFD71C2A8 /* DoraemonHierarchyDetailViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		25CAEB1D35BC3EAD705467DC2ED74074 /* Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32393566A304F85EFDAC29F1B79FD615 /* Repeat.swift */; };
@@ -2534,7 +2533,6 @@
 		3FB7E8C7339FB0F27AF529554081C332 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Sources/Moya/MultipartFormData.swift; sourceTree = "<group>"; };
 		3FB82648C34715FEC1D6D1469CD39BA7 /* SwiftValidators-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftValidators-umbrella.h"; sourceTree = "<group>"; };
 		3FD25F8390B949A6670891AB62FF0BB4 /* DDFileLogger+Buffering.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Buffering.h"; path = "Sources/CocoaLumberjack/include/CocoaLumberjack/DDFileLogger+Buffering.h"; sourceTree = "<group>"; };
-		4069D6BDB8CDC1EB57335A80E2845F3D /* Notification+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		40834D6A4AE45253B0FEAF4E3780555E /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = RxCocoa/Deprecated.swift; sourceTree = "<group>"; };
 		4090E34A06FFA0EA502FC10592B24AD4 /* DoraemonMockSearchView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonMockSearchView.m; path = DoraemonKit/Src/Core/Plugin/Platform/Mock/View/Search/DoraemonMockSearchView.m; sourceTree = "<group>"; };
 		409B999423422F5AC9909269675250B1 /* doraemon_health_slide@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_health_slide@2x.png"; path = "DoraemonKit/Resource/doraemon_health_slide@2x.png"; sourceTree = "<group>"; };
@@ -6220,7 +6218,6 @@
 				8993A352C560EB92F1D239A0CC47A333 /* Date+Extensions.swift */,
 				BC00BB3305BDEA7742A3F6D53B478A03 /* Dictionary+Extensions.swift */,
 				2575A476FB6039B068E6BF5159947BEF /* FileManager+Extensions.swift */,
-				4069D6BDB8CDC1EB57335A80E2845F3D /* Notification+Extensions.swift */,
 				BB8ED1B7B8EF86BBCCC426BF3E62F1E8 /* NSObject+Extensions.swift */,
 				D20EB088FCBAE52C207F1526E1C1535D /* Number+Extensions.swift */,
 				1EC0821E23DA35F90AF419154DEECF8A /* ProcessInfo+Extensions.swift */,
@@ -8850,7 +8847,6 @@
 				514FE96FCEC5430D53101E507D0EA786 /* Navigator.swift in Sources */,
 				32178159C57BBE5DCF25C423A95A87AC /* NavigatorDelegate.swift in Sources */,
 				249025D19D3C778B5DD11043DA76B712 /* NavigatorType.swift in Sources */,
-				2576F0CE2AFFF6C98BD639861554A149 /* Notification+Extensions.swift in Sources */,
 				D82A13CC654DE134F5B2A84516FE18D0 /* NotificationProtocol.swift in Sources */,
 				645CF45A1534BFFBBC4E1C5DC057154E /* NSAttributedString+Extensions.swift in Sources */,
 				36F8F33D4A0C4294C39F15DF497D77CB /* NSObject+Extensions.swift in Sources */,
