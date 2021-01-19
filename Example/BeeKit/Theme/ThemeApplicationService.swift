@@ -15,8 +15,6 @@ class ThemeApplicationService: NSObject, ApplicationService {
 
         setupTheme()
 
-        setupHUD()
-
         return true
     }
 
@@ -26,13 +24,6 @@ class ThemeApplicationService: NSObject, ApplicationService {
         } else {
             ThemeManager.shared.changeTheme(to: .light)
         }
-    }
-
-    func setupHUD() {
-        BEEHUDConfig.shared.backgroundStyle = .solidColor
-        BEEHUDConfig.shared.backgroundColor = .white
-        BEEHUDConfig.shared.contentColor = .black
-        BEEHUDConfig.shared.animationType = .zoomIn
     }
 
 }

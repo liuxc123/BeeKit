@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
   s.requires_arc = true
+  s.frameworks = 'UIKit', 'Foundation'
 
   s.subspec 'BeeCore' do |ss|
     ss.source_files = 'BeeModules/BeeCore/Source/**/*'
@@ -50,7 +51,4 @@ Pod::Spec.new do |s|
     ss.source_files = 'BeeModules/BeeLimitInput/Source/**/*'
     ss.dependency 'Smile'
   end
-  
-  s.frameworks = 'UIKit', 'Foundation'
-
 end
