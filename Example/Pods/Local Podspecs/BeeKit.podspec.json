@@ -54,6 +54,10 @@
       "source_files": "BeeModules/BeeAppDelegate/Source/*.swift"
     },
     {
+      "name": "BeeAuto",
+      "source_files": "BeeModules/BeeAuto/Source/**/*"
+    },
+    {
       "name": "BeeNavigator",
       "source_files": "BeeModules/BeeNavigator/Source/**/*.swift"
     },
@@ -65,23 +69,21 @@
       "name": "BeeNavigationBar",
       "source_files": "BeeModules/BeeNavigationBar/Source/**/*",
       "dependencies": {
+        "BeeKit/BeeCore": [
+
+        ],
         "EachNavigationBar": [
 
         ]
       }
     },
     {
-      "name": "BeePermission",
-      "source_files": "BeeModules/BeePermission/Source/**/*"
-    },
-    {
-      "name": "BeeAuto",
-      "source_files": "BeeModules/BeeAuto/Source/**/*"
-    },
-    {
       "name": "BeeLimitInput",
       "source_files": "BeeModules/BeeLimitInput/Source/**/*",
       "dependencies": {
+        "BeeKit/BeeCore": [
+
+        ],
         "Smile": [
 
         ]

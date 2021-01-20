@@ -367,3 +367,4 @@ class BEEInputViewController: ViewController, UISearchBarDelegate {
         }
     }
 }
+

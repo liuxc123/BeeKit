@@ -92,6 +92,7 @@ open class BEEAlertView {
         attributes.exitAnimation = .init(
             fade: .init(from: 1, to: 0, duration: 0.2)
         )
+        attributes.positionConstraints.keyboardRelation = .bind(offset: .init(bottom: 10, screenEdgeResistance: .none))
         return attributes
     }()
 
@@ -173,7 +174,11 @@ open class BEEAlertView {
                 
                 accessibilityIdentifier: action.title) {
                     if action.disabled { return }
-                    BEEPopupKit.dismiss(.displayed) {
+                    if action.canAutoHide {
+                        BEEPopupKit.dismiss(.displayed) {
+                            action.completion?(action)
+                        }
+                    } else {
                         action.completion?(action)
                     }
             }
