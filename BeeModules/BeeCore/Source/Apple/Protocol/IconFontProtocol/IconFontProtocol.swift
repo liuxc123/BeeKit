@@ -1,8 +1,7 @@
 /***** 模块文档 *****
- * IconFont 协议 和链式调用
+ * IconFont 协议 
  * 使用swift_iconfont.py 脚本生成图标文件
  */
-
 
 import Foundation
 import UIKit

@@ -64,7 +64,7 @@ final class TabBarViewController: TabBarController {
             }
 
             let nav = NavgationController(rootViewController: vc)
-            nav.navigation.configuration.isEnabled = true
+            AppThemeService.themeNavigationBar(nav: nav)
             viewControllers.append(nav)
         }
 
