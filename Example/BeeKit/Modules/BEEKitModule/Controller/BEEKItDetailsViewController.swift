@@ -368,3 +368,15 @@ class BEEInputViewController: ViewController, UISearchBarDelegate {
     }
 }
 
+class BEEIconFontViewController: ViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigation.item.title = "BEEIconFont"
+
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 88, width: view.bounds.width, height: 300))
+        imageView.iconfont(BEEIconFont.tback(50))
+        imageView.contentMode = .center
+        view.addSubview(imageView)
+    }
+}

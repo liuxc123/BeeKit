@@ -34,6 +34,8 @@
 		04B1832D25B0410000368FAA /* BEEKItDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1832C25B0410000368FAA /* BEEKItDetailsViewController.swift */; };
 		04B1833F25B133BD00368FAA /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1833D25B133BD00368FAA /* Permission.swift */; };
 		04B1834025B133BD00368FAA /* ChineseAlertContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1833E25B133BD00368FAA /* ChineseAlertContent.swift */; };
+		04DDB8A225B82902006E83EC /* BEEIconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDB8A025B82902006E83EC /* BEEIconFont.swift */; };
+		04DDB8A325B82902006E83EC /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DDB8A125B82902006E83EC /* iconfont.ttf */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -85,6 +87,8 @@
 		04B1832C25B0410000368FAA /* BEEKItDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEKItDetailsViewController.swift; sourceTree = "<group>"; };
 		04B1833D25B133BD00368FAA /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		04B1833E25B133BD00368FAA /* ChineseAlertContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseAlertContent.swift; sourceTree = "<group>"; };
+		04DDB8A025B82902006E83EC /* BEEIconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEEIconFont.swift; sourceTree = "<group>"; };
+		04DDB8A125B82902006E83EC /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		16DF50D9C315A9A06A6AC8A9 /* Pods-BeeKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-BeeKit_Tests/Pods-BeeKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1934F318C5D4D977B6069B08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3ABC1B4AED5CA7E03CA613A9 /* Pods-BeeKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-BeeKit_Example/Pods-BeeKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -287,6 +291,15 @@
 			path = Permission;
 			sourceTree = "<group>";
 		};
+		04DDB89B25B828F6006E83EC /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				04DDB8A025B82902006E83EC /* BEEIconFont.swift */,
+				04DDB8A125B82902006E83EC /* iconfont.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		344010E39597992E76D1C412 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +427,7 @@
 		F196B20625A03E30005D5DE3 /* Assest */ = {
 			isa = PBXGroup;
 			children = (
+				04DDB89B25B828F6006E83EC /* Font */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -523,6 +537,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				041A965025A30353001B1462 /* AppTheme.plist in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				04DDB8A325B82902006E83EC /* iconfont.ttf in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +691,7 @@
 				0457FF8625AC53BA009BD675 /* TabBarController.swift in Sources */,
 				F196B20225A03DC1005D5DE3 /* AppEnv.swift in Sources */,
 				0457FFD425AC56EE009BD675 /* ThirdApplicationService.swift in Sources */,
+				04DDB8A225B82902006E83EC /* BEEIconFont.swift in Sources */,
 				0457FF5025AC51AE009BD675 /* AppThemeService+NavigationBar.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				F196B24825A04317005D5DE3 /* NavigationMap.swift in Sources */,

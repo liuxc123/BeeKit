@@ -14,7 +14,7 @@ public extension Bundle{
     static func bundle(_ forClass: AnyClass, _ from: String? = nil) -> Bundle? {
         let bundle = Bundle(for: forClass)
         guard let bundleURL = bundle.url(forResource: from, withExtension: "bundle") else {
-            assertionFailure("👉👉👉\(from ?? "") - 无法找到 Bundle  👻")
+//            assertionFailure("👉👉👉\(from ?? "") - 无法找到 Bundle  👻")
             return nil
         }
         return Bundle(url: bundleURL)
