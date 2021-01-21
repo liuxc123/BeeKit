@@ -2,7 +2,7 @@
 # coding=utf-8
 
 
-__author__ = 'LCD'
+__author__ = 'liuxc'
 
 
 import re
