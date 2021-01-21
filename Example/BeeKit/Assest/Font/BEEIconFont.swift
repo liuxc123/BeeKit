@@ -1,7 +1,7 @@
 
     import Foundation
     import UIKit
-    import BeeKit
+    import BeeKit_Swift
 
     public enum BEEIconFont {
         class Help {}

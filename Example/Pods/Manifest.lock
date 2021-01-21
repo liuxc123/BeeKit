@@ -6,31 +6,31 @@ PODS:
   - BEEFormKit/Core (1.0.0):
     - BEEFormKit/Extension
   - BEEFormKit/Extension (1.0.0)
-  - BeeKit (1.0.0):
-    - BeeKit/BeeAppDelegate (= 1.0.0)
-    - BeeKit/BeeAuto (= 1.0.0)
-    - BeeKit/BeeCore (= 1.0.0)
-    - BeeKit/BeeLimitInput (= 1.0.0)
-    - BeeKit/BeeNavigationBar (= 1.0.0)
-    - BeeKit/BeeNavigator (= 1.0.0)
-    - BeeKit/BeeTheme (= 1.0.0)
-  - BeeKit/BeeAppDelegate (1.0.0)
-  - BeeKit/BeeAuto (1.0.0)
-  - BeeKit/BeeCore (1.0.0):
+  - BeeKit-Swift (1.0.0):
+    - BeeKit-Swift/BeeAppDelegate (= 1.0.0)
+    - BeeKit-Swift/BeeAuto (= 1.0.0)
+    - BeeKit-Swift/BeeCore (= 1.0.0)
+    - BeeKit-Swift/BeeLimitInput (= 1.0.0)
+    - BeeKit-Swift/BeeNavigationBar (= 1.0.0)
+    - BeeKit-Swift/BeeNavigator (= 1.0.0)
+    - BeeKit-Swift/BeeTheme (= 1.0.0)
+  - BeeKit-Swift/BeeAppDelegate (1.0.0)
+  - BeeKit-Swift/BeeAuto (1.0.0)
+  - BeeKit-Swift/BeeCore (1.0.0):
     - CocoaLumberjack/Swift
     - MBProgressHUD
     - MJRefresh
     - SwifterSwift
     - SwiftValidators
     - SwiftyAttributes
-  - BeeKit/BeeLimitInput (1.0.0):
-    - BeeKit/BeeCore
+  - BeeKit-Swift/BeeLimitInput (1.0.0):
+    - BeeKit-Swift/BeeCore
     - Smile
-  - BeeKit/BeeNavigationBar (1.0.0):
-    - BeeKit/BeeCore
+  - BeeKit-Swift/BeeNavigationBar (1.0.0):
+    - BeeKit-Swift/BeeCore
     - EachNavigationBar
-  - BeeKit/BeeNavigator (1.0.0)
-  - BeeKit/BeeTheme (1.0.0)
+  - BeeKit-Swift/BeeNavigator (1.0.0)
+  - BeeKit-Swift/BeeTheme (1.0.0)
   - BEENetwork (1.0.0):
     - BEENetwork/Core (= 1.0.0)
   - BEENetwork/Core (1.0.0):
@@ -113,7 +113,7 @@ PODS:
 
 DEPENDENCIES:
   - BEEFormKit
-  - BeeKit (from `../`)
+  - BeeKit-Swift (from `../`)
   - BEENetwork
   - BEEPopupKit
   - BEETableKit
@@ -155,7 +155,7 @@ SPEC REPOS:
     - SwiftyAttributes
 
 EXTERNAL SOURCES:
-  BeeKit:
+  BeeKit-Swift:
     :path: "../"
   DoraemonKit:
     :git: https://gitee.com/yixiangboy/DoraemonKit.git
@@ -169,7 +169,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit: cc7dec8e35b6f6119ad49759f2150c8ea06e8ebb
+  BeeKit-Swift: 9d90ca0e3641810fe4db5f1a94b1d990fce4d178
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEEPopupKit: f89008414f3691b15ba21c20e2d6f385773ca542
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
@@ -194,6 +194,6 @@ SPEC CHECKSUMS:
   SwiftValidators: b1cb650ce02ef6ad894f1d471f970b249c794342
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
 
-PODFILE CHECKSUM: 48cda3e18e86e6b9a01a4a763b7b82e62ae2d4f8
+PODFILE CHECKSUM: e3decb3fc0a5c520bd076c69b3efd83e40fd7286
 
 COCOAPODS: 1.9.1

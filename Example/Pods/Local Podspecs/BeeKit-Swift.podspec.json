@@ -69,7 +69,7 @@
       "name": "BeeNavigationBar",
       "source_files": "BeeModules/BeeNavigationBar/Source/**/*",
       "dependencies": {
-        "BeeKit/BeeCore": [
+        "BeeKit-Swift/BeeCore": [
 
         ],
         "EachNavigationBar": [
@@ -81,7 +81,7 @@
       "name": "BeeLimitInput",
       "source_files": "BeeModules/BeeLimitInput/Source/**/*",
       "dependencies": {
-        "BeeKit/BeeCore": [
+        "BeeKit-Swift/BeeCore": [
 
         ],
         "Smile": [

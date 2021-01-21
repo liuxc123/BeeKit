@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
-  s.name             = 'BeeKit'
+  s.name             = 'BeeKit-Swift'
   s.version          = '1.0.0'
   s.summary          = 'BeeKit 功能组件集合'
-  s.homepage         = 'https://github.com/liuxc123/BeeKit'
+  s.homepage         = 'https://github.com/liuxc123/BeeKit-Swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'liuxc123' => 'lxc_work@126.com' }
   s.source           = { :git => 'https://github.com/liuxc123/BeeKit.git', :tag => s.version.to_s }
@@ -40,13 +40,13 @@ Pod::Spec.new do |s|
   
   s.subspec 'BeeNavigationBar' do |ss|
     ss.source_files = 'BeeModules/BeeNavigationBar/Source/**/*'
-    ss.dependency 'BeeKit/BeeCore'
+    ss.dependency 'BeeKit-Swift/BeeCore'
     ss.dependency 'EachNavigationBar'
   end
   
   s.subspec 'BeeLimitInput' do |ss|
     ss.source_files = 'BeeModules/BeeLimitInput/Source/**/*'
-    ss.dependency 'BeeKit/BeeCore'
+    ss.dependency 'BeeKit-Swift/BeeCore'
     ss.dependency 'Smile'
   end
 end

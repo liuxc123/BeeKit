@@ -33,6 +33,8 @@ import Foundation
 
 // MARK: - Global functions
 
+#if canImport(UIKit)
+
 /// Create an UIColor or NSColor in format RGBA.
 ///
 /// - Parameters:
@@ -41,12 +43,8 @@ import Foundation
 ///   - blue: Blue value.
 ///   - alpha: Alpha value.
 /// - Returns: Returns the created UIColor or NSColor.
-public func RGBA(_ red: Int, _ green: Int, _ blue: Int, _ alpha: Float) -> Color {
-    #if canImport(UIKit)
-        return Color(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
-    #elseif canImport(AppKit)
-        return Color(calibratedRed: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
-    #endif
+public func UIColorRGBAMake(_ red: Int, _ green: Int, _ blue: Int, _ alpha: Float) -> Color {
+    return Color(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: CGFloat(alpha))
 }
 
 /// Create an UIColor or NSColor in format ARGB.
@@ -57,8 +55,8 @@ public func RGBA(_ red: Int, _ green: Int, _ blue: Int, _ alpha: Float) -> Color
 ///   - green: Green value.
 ///   - blue: Blue value.
 /// - Returns: Returns the created UIColor or NSColor.
-public func ARGB( _ alpha: Float, _ red: Int, _ green: Int, _ blue: Int) -> Color {
-    RGBA(red, green, blue, alpha)
+public func UIColorARGBMake( _ alpha: Float, _ red: Int, _ green: Int, _ blue: Int) -> Color {
+    UIColorRGBAMake(red, green, blue, alpha)
 }
 
 /// Create an UIColor or NSColor in format RGB.
@@ -68,13 +66,44 @@ public func ARGB( _ alpha: Float, _ red: Int, _ green: Int, _ blue: Int) -> Colo
 ///   - green: Green value.
 ///   - blue: Blue value.
 /// - Returns: Returns the created UIColor or NSColor.
-public func RGB(_ red: Int, _ green: Int, _ blue: Int) -> Color {
-    #if canImport(UIKit)
-        return Color(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-    #elseif canImport(AppKit)
-        return Color(calibratedRed: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-    #endif
+public func UIColorRGBMake(_ red: Int, _ green: Int, _ blue: Int) -> Color {
+    return Color(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
 }
+
+/// Create an light and dark UIColor or NSColor in format UIColor.
+///
+/// - Parameters:
+///   - light: UIColor or NSColor value.
+///   - dark: UIColor or NSColor value.
+/// - Returns: Returns the created UIColor or NSColor.
+public func UIColorHexMake( _ hex: String) -> Color {
+    return Color(hex: hex)
+}
+
+/// Create an light and dark UIColor or NSColor in format UIColor.
+///
+/// - Parameters:
+///   - light: UIColor or NSColor value.
+///   - dark: UIColor or NSColor value.
+/// - Returns: Returns the created UIColor or NSColor.
+public func UIColorMake(light: Color, dark: Color = .clear) -> Color? {
+    if #available(iOS 13, *) {
+        return Color.init { (traits) -> Color in
+            switch traits.userInterfaceStyle {
+            case .light, .unspecified:
+                return light
+            case .dark:
+                return dark
+            @unknown default:
+                return light
+            }
+        }
+    } else {
+        return light
+    }
+}
+
+#endif
 
 // MARK: - UIColor or NSColor extension
 
@@ -281,6 +310,32 @@ public extension Color {
         #endif
     }
 
+    /// Create a light color and dark from a HEX string.
+    ///
+    /// - Parameter lightHex: light HEX string.
+    /// - Parameter darkHex: dark HEX string.
+    /// - Returns: Returns the created UIColor or NSColor.
+    convenience init?(lightHex: String, darkHex: String) {
+        #if canImport(UIKit)
+            if #available(iOS 13, *) {
+                self.init { (traits) -> UIColor in
+                    switch traits.userInterfaceStyle {
+                    case .light, .unspecified:
+                        return UIColor(hex: lightHex)
+                    case .dark:
+                        return UIColor(hex: darkHex)
+                    @unknown default:
+                        return UIColor(hex: lightHex)
+                    }
+                }
+            } else {
+                self.init(hex: lightHex)
+            }
+        #elseif canImport(AppKit)
+            self.init(hex: lightHex, alpha: lightAlpha)
+        #endif
+    }
+
     /// A good contrasting color, it will be either black or white.
     ///
     /// - Returns: Returns the color.
@@ -393,6 +448,8 @@ public extension Color {
             }
         }
     #endif
+
+    /// Create an UIColor or NSColor from a given string. Example: "blue" or hex string.
 
     /// Used the retrive the color from the string color ("blue" or "red").
     ///

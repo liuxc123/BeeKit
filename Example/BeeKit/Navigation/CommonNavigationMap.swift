@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import BeeKit
+import BeeKit_Swift
 
 struct CommonNavigationMap {
 
@@ -38,7 +38,7 @@ struct CommonNavigationMap {
     }
 
     private static func webViewControllerFactory(
-        url: BeeKit.URLConvertible,
+        url: BeeKit_Swift.URLConvertible,
         values: [String: Any],
         context: Any?
     ) -> UIViewController? {

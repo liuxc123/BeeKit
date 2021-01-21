@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BeeKit
+import BeeKit_Swift
 
 class NavigationApplicationService: NSObject, ApplicationService {
 

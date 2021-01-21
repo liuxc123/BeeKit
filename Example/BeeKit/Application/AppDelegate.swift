@@ -7,7 +7,7 @@
 //
 
 import UIKit
-@_exported import BeeKit
+@_exported import BeeKit_Swift
 
 @UIApplicationMain
 class AppDelegate: BeeApplicationDelegate {

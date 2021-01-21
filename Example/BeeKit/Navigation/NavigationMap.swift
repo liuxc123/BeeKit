@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import BeeKit
+import BeeKit_Swift
 
 public let navigator = Navigator()
 

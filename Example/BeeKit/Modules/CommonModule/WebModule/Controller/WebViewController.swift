@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import BeeKit
+import BeeKit_Swift
 import WebKit
 import RxSwift
 import RxCocoa

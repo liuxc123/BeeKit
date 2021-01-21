@@ -93,7 +93,7 @@
 		1934F318C5D4D977B6069B08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3ABC1B4AED5CA7E03CA613A9 /* Pods-BeeKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-BeeKit_Example/Pods-BeeKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3B8B5B5023F00AA8D75ACE93 /* Pods_BeeKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		51F55130B59791861A6941B0 /* BeeKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BeeKit.podspec; path = ../BeeKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		51F55130B59791861A6941B0 /* BeeKit-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "BeeKit-Swift.podspec"; path = "../BeeKit-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		56C1B5F9E04E5ECBCA3C1ABE /* Pods-BeeKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Example.release.xcconfig"; path = "Target Support Files/Pods-BeeKit_Example/Pods-BeeKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BeeKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -385,7 +385,7 @@
 		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				51F55130B59791861A6941B0 /* BeeKit.podspec */,
+				51F55130B59791861A6941B0 /* BeeKit-Swift.podspec */,
 				1934F318C5D4D977B6069B08 /* README.md */,
 			);
 			name = "Podspec Metadata";
@@ -606,7 +606,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEENetwork/BEENetwork.framework",
 				"${BUILT_PRODUCTS_DIR}/BEEPopupKit/BEEPopupKit.framework",
-				"${BUILT_PRODUCTS_DIR}/BeeKit/BeeKit.framework",
+				"${BUILT_PRODUCTS_DIR}/BeeKit-Swift/BeeKit_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework",
 				"${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework",
@@ -633,7 +633,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEENetwork.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEEPopupKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeeKit_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EachNavigationBar.framework",

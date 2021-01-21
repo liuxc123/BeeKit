@@ -64,15 +64,3 @@ public let UIFontMake: (CGFloat) -> UIFont = { UIFont.systemFont(ofSize: $0).aut
 public let UIFontItalicMake: (CGFloat) -> UIFont = { UIFont.italicSystemFont(ofSize: $0).auto() }
 public let UIFontBoldMake: (CGFloat) -> UIFont = { UIFont.boldSystemFont(ofSize: $0.auto()) }
 public let UIFontBoldWithFont: (UIFont) -> UIFont = { UIFont.boldSystemFont(ofSize: $0.pointSize).auto() }
-
-
-// MARK: UIColor
-
-// 颜色相关的宏
-public let UIColorMake: (_ r: CGFloat, _ g: CGFloat, _ b: CGFloat) -> UIColor = { r, g, b in
-    return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1.0)
-}
-public let UIColorRGBAMake: (_ r: CGFloat, _ g: CGFloat, _ b: CGFloat, _ a: CGFloat) -> UIColor = { r, g, b, a in
-    return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a/1.0)
-}
-public let UIColorHexMake: (_ hexString: String) -> UIColor = { UIColor(hexString: $0) ?? UIColor.clear }

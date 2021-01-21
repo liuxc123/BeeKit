@@ -55,6 +55,14 @@ public extension UIScreen {
     static var onePixle: CGFloat {
         return CGFloat(1)/UIScreen.main.scale
     }
+
+    /// Get the safeAreaInsets.
+    static var safeAreaInsets: UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.keyWindow?.safeAreaInsets ?? .zero
+        }
+        return .zero
+    }
     
     // MARK: - Functions
     
