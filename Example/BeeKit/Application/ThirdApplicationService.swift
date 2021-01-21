@@ -16,6 +16,11 @@ class ThirdApplicationService: NSObject, ApplicationService {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
+        if #available(iOS 13.0, *) {
+            UIColor { (traitCollection) -> UIColor in
+                return UIColor.black
+            }
+        }
         return true
     }
 
