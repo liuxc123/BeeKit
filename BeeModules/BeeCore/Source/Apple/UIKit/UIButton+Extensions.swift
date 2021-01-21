@@ -1,6 +1,6 @@
 //
 //  UIButton+Extensions.swift
-//  BEEKit-Swift
+//  BeeKit-Swift
 //
 //  The MIT License (MIT)
 //
