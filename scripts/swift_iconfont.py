@@ -82,6 +82,7 @@ def make_swift(path_output, classname, arr, pod_key):
     swift = """
     import Foundation
     import UIKit
+    import BeeKit_Swift
 
     public enum %s {
         class Help {}
