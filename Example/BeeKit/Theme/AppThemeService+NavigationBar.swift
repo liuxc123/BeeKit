@@ -10,6 +10,8 @@ import UIKit
 import BEEPopupKit
 import BeeKit_Swift
 
+
+
 extension AppThemeService {
 
     static func themeNavigationBar(nav: UINavigationController) {
@@ -17,7 +19,7 @@ extension AppThemeService {
         nav.navigation.configuration.titleTextAttributes = [.font: UIFontMake(17)]
         nav.navigation.configuration.isShadowHidden = true
         nav.navigation.configuration.isTranslucent = false
-        nav.navigation.configuration.backItem = UINavigationController.Configuration.BackItem(style: .image(UIImage.iconfont(BEEIconFont.tback(24), color: .black)), tintColor: UIColor(lightHex: "#000000", darkHex: "#ffffff"))
+        nav.navigation.configuration.backItem = UINavigationController.Configuration.BackItem(style: .image(UIImage.iconfont(BEEIconFont.tback(24), color: .black)), tintColor: UIColor(light: .black, dark: .white))
     }
 }
 

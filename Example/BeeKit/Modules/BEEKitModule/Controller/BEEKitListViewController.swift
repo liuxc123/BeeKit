@@ -23,6 +23,7 @@ class BEEKitListViewController: TableViewController {
         ("BEEHUD", BEEHUDViewController.self),
         ("BEEInput", BEEInputViewController.self),
         ("BEEIconFont", BEEIconFontViewController.self),
+        ("BEETheme", BEEThemeViewController.self),
         ("Refreshable and StatefulViewable", BEERefreshableViewController.self)
     ]
 
@@ -31,17 +32,13 @@ class BEEKitListViewController: TableViewController {
         self.navigation.item.title = "BeeKit"
         setupForm()
     }
-
-    fileprivate func extractedFunc(_ data: (String, UIViewController.Type)) -> TableRow<DemoListTableViewCell> {
-        return TableRow<DemoListTableViewCell>(value: data.0)
-    }
     
     func setupForm() {
 
         let section = TableSection()
 
         for data in dataSource {
-            let row = extractedFunc(data)
+            let row = TableRow<DemoListTableViewCell>(value: data.0)
                 .on(.click) { (options) in
                     navigator.push(data.1.init())
                 }

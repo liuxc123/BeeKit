@@ -375,8 +375,58 @@ class BEEIconFontViewController: ViewController {
         self.navigation.item.title = "BEEIconFont"
 
         let imageView = UIImageView(frame: CGRect(x: 0, y: 88, width: view.bounds.width, height: 300))
-        imageView.iconfont(BEEIconFont.tback(50))
+        imageView.iconfont(BEEIconFont.tback(50), color: UIColor(light: .black, dark: .white))
         imageView.contentMode = .center
         view.addSubview(imageView)
+
+    }
+}
+
+class BEEThemeViewController: ViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigation.item.title = "BEETheme"
+        self.navigation.bar.theme.titleTextAttributes = ThemeProvider<[NSAttributedString.Key : Any]>({ style in
+            switch style {
+            case .dark:
+                return [.font: UIFontMake(17), .foregroundColor: UIColor.white]
+            default:
+                return [.font: UIFontMake(17), .foregroundColor: UIColor.black]
+            }
+        })
+        self.navigation.bar.theme.backgroundColor = UIColorTheme(.surfaceColor)
+        self.navigation.bar.theme.tintColor = UIColorTheme(.onPrimaryColor)
+        self.navigation.bar.theme.tintColor = UIColorTheme(.onPrimaryColor)
+        let backImage = UIImage.iconfont(BEEIconFont.tback(24), color: .black)
+        self.navigation.item.backBarButtonItem = UIBarButtonItem(image: backImage, style: .done, target: nil, action: nil)
+
+        let label = UILabel(frame: CGRect(x: 0, y: 88, width: view.bounds.width, height: 300))
+        label.textAlignment = .center
+        view.addSubview(label)
+        label.theme.backgroundColor = ThemeProvider<UIColor>({ style in
+            switch style {
+            case .dark:
+                return .blue
+            default:
+                return .yellow
+            }
+        })
+
+        label.theme.attributedText = ThemeProvider<NSAttributedString>({ style in
+            let text = "文本内容".withFont(UIFontMake(17))
+            switch style {
+            case .dark:
+                return text.withTextColor(.white)
+            default:
+                return text.withTextColor(.black)
+            }
+        })
+    }
+
+    @objc func changeTheme() {
+        let currentTheme = ThemeManager.shared.currentThemeStyle
+        ThemeManager.shared.changeTheme(to: currentTheme == .light ? .dark : .light)
+        self.navigationController?.navigation.configuration.barTintColor = .yellow
     }
 }

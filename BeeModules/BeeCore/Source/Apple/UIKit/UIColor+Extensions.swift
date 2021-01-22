@@ -332,9 +332,27 @@ public extension Color {
                 self.init(hex: lightHex)
             }
         #elseif canImport(AppKit)
-            self.init(hex: lightHex, alpha: lightAlpha)
+            self.init(hex: lightHex)
         #endif
     }
+    #if canImport(UIKit)
+    convenience init(light: UIColor, dark: UIColor = .clear) {
+        if #available(iOS 13, *) {
+            self.init { (traits) -> UIColor in
+                switch traits.userInterfaceStyle {
+                case .light, .unspecified:
+                    return light
+                case .dark:
+                    return dark
+                @unknown default:
+                    return light
+                }
+            }
+        } else {
+            self.init(hex: light.hex)
+        }
+    }
+    #endif
 
     /// A good contrasting color, it will be either black or white.
     ///
