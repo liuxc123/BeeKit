@@ -398,12 +398,13 @@ class BEEThemeViewController: ViewController {
         self.navigation.bar.theme.backgroundColor = UIColorTheme(.surfaceColor)
         self.navigation.bar.theme.tintColor = UIColorTheme(.onPrimaryColor)
         self.navigation.bar.theme.tintColor = UIColorTheme(.onPrimaryColor)
-        let backImage = UIImage.iconfont(BEEIconFont.tback(24), color: .black)
-        self.navigation.item.backBarButtonItem = UIBarButtonItem(image: backImage, style: .done, target: nil, action: nil)
+        self.navigation.item.backBarButtonItem = UIBarButtonItem(image: UIImage.iconfont(BEEIconFont.tback(24), color: .black), style: .done, target: nil, action: nil)
+        self.navigation.item.rightBarButtonItem = UIBarButtonItem(title: "切换主题", style: .done, target: self, action: #selector(changeTheme))
 
         let label = UILabel(frame: CGRect(x: 0, y: 88, width: view.bounds.width, height: 300))
         label.textAlignment = .center
         view.addSubview(label)
+
         label.theme.backgroundColor = ThemeProvider<UIColor>({ style in
             switch style {
             case .dark:
@@ -412,7 +413,6 @@ class BEEThemeViewController: ViewController {
                 return .yellow
             }
         })
-
         label.theme.attributedText = ThemeProvider<NSAttributedString>({ style in
             let text = "文本内容".withFont(UIFontMake(17))
             switch style {
@@ -427,6 +427,5 @@ class BEEThemeViewController: ViewController {
     @objc func changeTheme() {
         let currentTheme = ThemeManager.shared.currentThemeStyle
         ThemeManager.shared.changeTheme(to: currentTheme == .light ? .dark : .light)
-        self.navigationController?.navigation.configuration.barTintColor = .yellow
     }
 }
