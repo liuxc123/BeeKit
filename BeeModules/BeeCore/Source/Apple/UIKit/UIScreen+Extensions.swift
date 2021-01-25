@@ -47,6 +47,7 @@ public extension UIScreen {
     static var maxScreenLength: CGFloat {
         max(screenWidth, screenHeight)
     }
+
     /// Get the minimum screen length.
     static var minScreenLength: CGFloat {
         min(screenWidth, screenHeight)
@@ -62,6 +63,31 @@ public extension UIScreen {
             return UIApplication.shared.keyWindow?.safeAreaInsets ?? .zero
         }
         return .zero
+    }
+
+    /// Get the statusBar.
+    static var statusBar: CGSize {
+        return CGSize(width: screenWidth, height: safeAreaInsets.top)
+    }
+
+    /// Get the navBar.
+    static var navBar: CGSize {
+        return CGSize(width: screenWidth, height: 44)
+    }
+
+    /// Get the  topBar with statusBar + navBar.
+    static var topBar: CGSize {
+        return CGSize.init(width: screenWidth, height: safeAreaInsets.top + navBar.height)
+    }
+
+    /// Get the tabBar.
+    static var tabBar: CGSize {
+        return CGSize.init(width: screenWidth, height: 49)
+    }
+
+    /// Get the tabBar + safeAreaInsets.bottom
+    static var bottomBar: CGSize {
+        return CGSize.init(width: screenWidth, height: safeAreaInsets.bottom + tabBar.height)
     }
     
     // MARK: - Functions
@@ -85,5 +111,35 @@ public extension UIScreen {
     /// - Returns: Returns a GCSize with the fixed screen size.
     static func fixedScreenSize() -> CGSize {
         UIScreen.main.bounds.size
+    }
+
+    /// 获取某个视图控制器的布局安全距离
+    /// - Parameter viewController: 视图控制器
+    static func safeAreaInsets(for viewController: UIViewController) -> UIEdgeInsets {
+        if #available(iOS 11.0, *) {
+            return viewController.view.safeAreaInsets
+        } else {
+            return safeAreaInsets
+        }
+    }
+
+    /// 获取某个视图控制器的顶部栏（状态栏+导航栏）的高度
+    /// - Parameter viewController: 视图控制器
+    func topBarHeight(for viewController: UIViewController?) -> CGFloat {
+        if let nav = viewController as? UINavigationController {
+            var h = nav.navigationBar.frame.size.height
+            h += UIScreen.safeAreaInsets(for: nav).top
+            return h
+        } else if let vc = viewController {
+            return UIScreen.safeAreaInsets(for: vc).top + (vc.navigationController?.navigationBar.frame.size.height ?? UIScreen.navBar.height)
+        } else {
+            return 0
+        }
+    }
+
+    /// 获取某个视图控制器的底部栏（Tabbar和底部安全区域）高度
+    /// - Parameter viewController: 视图控制器
+    func bottomBarHeight(for viewController: UIViewController) -> CGFloat {
+        return UIScreen.safeAreaInsets(for: viewController).bottom + (viewController.tabBarController?.tabBar.frame.height ?? UIScreen.tabBar.height)
     }
 }

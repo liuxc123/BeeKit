@@ -53,8 +53,9 @@ class ViewController: UIViewController {
 
     // MARK: - Setup
 
+    // 子类继承 || 重写
     open func setupUI() {
-        /// 子类重写
+
     }
 
     open func setupTheme() {
@@ -62,14 +63,12 @@ class ViewController: UIViewController {
     }
 
     open func setupNavigationBar() {
-        /// 子类继承
+        AppThemeService.themeNavigationBar(vc: self)
     }
 
     open func setupNotification() {
 
     }
-
-    // MARK: - Layout
 
     open func setupLayout() {
         /// 子类重写
