@@ -12,7 +12,7 @@ import BEETableKit
 class UIKitListViewController: TableViewController {
 
     let dataSource: [(String, UIViewController.Type)] = [
-        
+        ("UIScreen", UIScreenViewController.self)
     ]
 
     override func viewDidLoad() {

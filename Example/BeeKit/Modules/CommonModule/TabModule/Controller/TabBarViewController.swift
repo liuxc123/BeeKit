@@ -36,6 +36,7 @@ final class TabBarViewController: TabBarController {
     override public func viewDidLoad() {
         super.viewDidLoad()
         setupControllers()
+        setupTheme()
     }
 
     private func setupControllers() {
@@ -69,6 +70,10 @@ final class TabBarViewController: TabBarController {
         }
 
         self.viewControllers = viewControllers
+    }
+
+    func setupTheme() {
+        AppThemeService.themeTabBar(vc: self)
     }
 }
 

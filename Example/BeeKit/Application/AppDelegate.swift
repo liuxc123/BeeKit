@@ -14,11 +14,11 @@ class AppDelegate: BeeApplicationDelegate {
 
     override var services: [ApplicationService] {
         return [
-            DebugingApplicationService(),
             ThirdApplicationService(),
             ThemeApplicationService(),
+            RootApplicationService(),
             NavigationApplicationService(),
-            RootApplicationService()
+            DebugingApplicationService()
         ]
     }
     

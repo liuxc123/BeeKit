@@ -182,6 +182,17 @@ public extension UIDevice {
         case "iPhone12,3":      return "iPhone 11 Pro"
         // iPhone 11 Pro
         case "iPhone12,5":      return "iPhone 11 Pro Max"
+        // iPhone SE2
+        case "iPhone12,8":      return "iPhone SE2"
+        // iPhone 12 Mini
+        case "iPhone13,1":      return "iPhone 12 Mini"
+        // iPhone 12
+        case "iPhone13,2":      return "iPhone 12"
+        // iPhone 12 Pro
+        case "iPhone13,3":      return "iPhone 12 Pro"
+        // iPhone 12 Pro Max
+        case "iPhone13,4":      return "iPhone 12 Pro Max"
+            
         // iPod touch
         case "iPod1,1":         return "iPod touch (1st generation)"
         case "iPod2,1":         return "iPod touch (2nd generation)"

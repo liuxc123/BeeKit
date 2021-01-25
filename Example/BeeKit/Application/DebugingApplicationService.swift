@@ -12,9 +12,15 @@ class DebugingApplicationService: NSObject, ApplicationService {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
 
+        setupTouch()
+
         setupDoraemonKit()
 
         return true
+    }
+
+    func setupTouch() {
+        self.window?.activateTouch()
     }
 
     func setupDoraemonKit() {
@@ -23,4 +29,6 @@ class DebugingApplicationService: NSObject, ApplicationService {
         }
         DoraemonManager.shareInstance().install()
     }
+
+
 }

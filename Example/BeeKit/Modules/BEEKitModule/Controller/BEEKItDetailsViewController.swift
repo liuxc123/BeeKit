@@ -375,7 +375,12 @@ class BEEIconFontViewController: ViewController {
         self.navigation.item.title = "BEEIconFont"
 
         let imageView = UIImageView(frame: CGRect(x: 0, y: 88, width: view.bounds.width, height: 300))
-        imageView.iconfont(BEEIconFont.tback(50), color: UIColor(light: .black, dark: .white))
+        imageView.theme.image = ThemeProvider<UIImage>({ (style) -> UIImage in
+            switch style {
+            case .dark: return UIImage.iconfont(BEEIconFont.tback(50), color: .white)
+            default: return UIImage.iconfont(BEEIconFont.tback(50), color: .black)
+            }
+        })
         imageView.contentMode = .center
         view.addSubview(imageView)
 
@@ -396,7 +401,6 @@ class BEEThemeViewController: ViewController {
             }
         })
         self.navigation.bar.theme.backgroundColor = UIColorTheme(.surfaceColor)
-        self.navigation.bar.theme.tintColor = UIColorTheme(.onPrimaryColor)
         self.navigation.bar.theme.tintColor = UIColorTheme(.onPrimaryColor)
         self.navigation.item.backBarButtonItem = UIBarButtonItem(image: UIImage.iconfont(BEEIconFont.tback(24), color: .black), style: .done, target: nil, action: nil)
         self.navigation.item.rightBarButtonItem = UIBarButtonItem(title: "切换主题", style: .done, target: self, action: #selector(changeTheme))
