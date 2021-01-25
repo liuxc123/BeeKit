@@ -7,7 +7,7 @@
 
 import UIKit
 
-final public class BEEAlertMessageView: UIView {
+final public class BEEAlertMessageView: UIView, EntryAppearanceDescriptor {
 
     // MARK: Props
 
@@ -47,8 +47,8 @@ final public class BEEAlertMessageView: UIView {
 
         setupButtonScrollView()
         setupButtonStackView()
-        setupButtonBarView(with: message.buttonBarContent)
         setupCustomActionSequenceView(with: message.customAction)
+        setupButtonBarView(with: message.buttonBarContent)
 
         setupCancelStackView()
         setupCancelSpaceView(with: message.cancelSpaceContent)
@@ -62,9 +62,14 @@ final public class BEEAlertMessageView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    var bottomCornerRadius: CGFloat = 0 {
+        didSet {
+            adjustRoundCornersIfNecessary()
+        }
+    }
+
     func setupContentStackView() {
         contentStackView = UIStackView()
-        contentStackView.clipsToBounds = true
         contentStackView.axis = .vertical
         contentStackView.alignment = .fill
         contentStackView.distribution = .fill
@@ -73,7 +78,6 @@ final public class BEEAlertMessageView: UIView {
 
     private func setupHeaderView(with message: BEEAlertMessage) {
         headerContentView = UIView()
-        headerContentView.clipsToBounds = true
         contentStackView.addArrangedSubview(headerContentView)
 
         headerView = BEEAlertHeaderView(with: message)
@@ -94,7 +98,6 @@ final public class BEEAlertMessageView: UIView {
 
     private func setupButtonStackView() {
         buttonStackView = UIStackView()
-        buttonStackView.clipsToBounds = true
         buttonStackView.axis = .vertical
         buttonScrollView.addSubview(buttonStackView)
     }
@@ -131,7 +134,6 @@ final public class BEEAlertMessageView: UIView {
     private func setupCancelButtonBarView(with content: BEEProperty.ButtonBarContent?) {
         let content = content ?? BEEProperty.ButtonBarContent(with: [], separatorColor: .clear)
         cancelButtonBarView = BEEButtonBarView(with: content)
-        cancelButtonBarView.clipsToBounds = true
         cancelStackView.addArrangedSubview(cancelButtonBarView)
     }
 
@@ -154,6 +156,14 @@ final public class BEEAlertMessageView: UIView {
         cancelButtonBarView.expand()
     }
 
+    private func adjustRoundCornersIfNecessary() {
+        let size = CGSize(width: bottomCornerRadius, height: bottomCornerRadius)
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: .bottom, cornerRadii: size)
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        layer.mask = maskLayer
+    }
+
     private func setupInterfaceStyle() {
         self.headerSeparatorView?.backgroundColor = message.buttonBarContent.separatorColor.color(for: traitCollection, mode: message.displayMode)
     }
@@ -165,6 +175,7 @@ final public class BEEAlertMessageView: UIView {
     public override func layoutSubviews() {
         super.layoutSubviews()
         headerMaxHeightConstraint.constant = headerMaxHeight
+        adjustRoundCornersIfNecessary()
     }
 }
 

@@ -53,6 +53,7 @@ open class BEEActionSheetView {
     public var message: String!
     public var attributedMessage: NSAttributedString?
     public var imageName: String!
+    public var imageSize: CGSize?
     public var customHeaderView: UIView?
     public var customActionSequenceView: UIView?
 
@@ -86,7 +87,7 @@ open class BEEActionSheetView {
         return attributes
     }()
 
-    public func show() {
+    public func show(view: UIView? = nil) {
         let titleContent = BEEProperty.LabelContent(
             text: title,
             attributedText: attributedTitle,
@@ -115,7 +116,7 @@ open class BEEActionSheetView {
             imageContent = BEEProperty.ImageContent(
                 imageName: imageName,
                 displayMode: config.displayMode,
-                size: config.imageSize,
+                size: imageSize ?? config.imageSize,
                 contentMode: .scaleAspectFit,
                 accessibilityIdentifier: "image"
             )
@@ -169,10 +170,10 @@ open class BEEActionSheetView {
                     if action.disabled { return }
                     if action.canAutoHide {
                         BEEPopupKit.dismiss(.displayed) {
-                            action.completion?(action)
+                            action.handler?(action)
                         }
                     } else {
-                        action.completion?(action)
+                        action.handler?(action)
                     }
             }
             buttonContents.append(buttonContent)
@@ -218,11 +219,17 @@ open class BEEActionSheetView {
                 accessibilityIdentifier: action.title) {
                     if action.disabled { return }
                     if action.canAutoHide {
-                        BEEPopupKit.dismiss(.displayed) {
-                            action.completion?(action)
+                        if let presentView = view {
+                            BEEPopupKit.dismiss(form: presentView, descriptor: .displayed) {
+                                action.handler?(action)
+                            }
+                        } else {
+                            BEEPopupKit.dismiss(.displayed) {
+                                action.handler?(action)
+                            }
                         }
                     } else {
-                        action.completion?(action)
+                        action.handler?(action)
                     }
             }
             cancelButtonContents.append(buttonContent)
@@ -253,7 +260,11 @@ open class BEEActionSheetView {
         )
         let contentView = BEEAlertMessageView(with: alertMessage)
 
-        BEEPopupKit.display(entry: contentView, using: attributes)
+        if let presentView = view {
+            BEEPopupKit.display(entry: contentView, using: attributes, presentView: presentView)
+        } else {
+            BEEPopupKit.display(entry: contentView, using: attributes)
+        }
     }
 
 }

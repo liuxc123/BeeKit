@@ -1362,7 +1362,6 @@
 		C7A84A163668F6B667762BEE2E27A0ED /* DoraemonSubThreadUICheckListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E880FE13E88CE73DEB044DF4D1426A0 /* DoraemonSubThreadUICheckListCell.m */; };
 		C7E6C81DCAEF28D43E57B54E6B3BFE3A /* DoraemonNetFlowSummaryTypeDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD2958A66D378D4C6675E55EF48FB2B /* DoraemonNetFlowSummaryTypeDataView.m */; };
 		C8153A1570CBF723CB09258E1F984F6E /* DoraemonHealthEndInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AB88D98A83506FE072DBFED5A69521 /* DoraemonHealthEndInputView.m */; };
-		C8206356997515F2B2088542F9AC075D /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED132BCEA707707307714FC3A144B0DF /* Collection+Extensions.swift */; };
 		C82E78E0EE586ED73BDE7D63430233B4 /* DoraemonQRCodeViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 13C9D824303E3466CAABDD63CACC1347 /* DoraemonQRCodeViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C87EA81E22363AD23B959C18710BBA45 /* DoraemonKitManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DF6E72C08119746B788FDB4DA96A418 /* DoraemonKitManagerViewController.m */; };
 		C88E350DB3454013F3C7956F5C995CC6 /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC605EEC0B2A73F4A02A40B84D5381B /* Sequence.swift */; };
@@ -3739,7 +3738,6 @@
 		ED041B44D43EF90055DE9DC69A05EC92 /* NSImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSImageExtensions.swift; path = Sources/SwifterSwift/AppKit/NSImageExtensions.swift; sourceTree = "<group>"; };
 		ED0D787B508B24988C3D4900DE11DF2D /* DoraemonMLeaksFinderListViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonMLeaksFinderListViewController.m; path = DoraemonKit/Src/MLeaksFinder/List/DoraemonMLeaksFinderListViewController.m; sourceTree = "<group>"; };
 		ED1087F0689A63A13D78B5FDEEA3E7C6 /* doraemon_h5@3x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_h5@3x.png"; path = "DoraemonKit/Resource/doraemon_h5@3x.png"; sourceTree = "<group>"; };
-		ED132BCEA707707307714FC3A144B0DF /* Collection+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		ED29CC3CEA987A2E3C19FFD23B5E7ACA /* DoraemonMemoryOscillogramViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonMemoryOscillogramViewController.m; path = DoraemonKit/Src/Core/Plugin/Performance/Memory/Function/DoraemonMemoryOscillogramViewController.m; sourceTree = "<group>"; };
 		ED3DFF289E8DB187270808B9D1C68B4D /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
 		ED5158DCE59E6E735374A622EE1862B4 /* SCNCone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCNCone.swift; path = Sources/SwifterSwift/SceneKit/SCNCone.swift; sourceTree = "<group>"; };
@@ -5056,7 +5054,6 @@
 			isa = PBXGroup;
 			children = (
 				0F1AFCFC747BAA2289EB5979452231DC /* Array+Extensions.swift */,
-				ED132BCEA707707307714FC3A144B0DF /* Collection+Extensions.swift */,
 				39A819E5B540EEF3904E90DD6EA0913A /* Data+Extensions.swift */,
 				861EFCC1B32E47176842DA66D89EB390 /* Date+Extensions.swift */,
 				2E7D18C98947CD34158E5D5DD6EB5647 /* Dictionary+Extensions.swift */,
@@ -8807,7 +8804,6 @@
 				5A2E031C6974547ED3556C7C6F01F83D /* BEESystemSound.swift in Sources */,
 				E43CDFB787DBCCAF04FCC3B726BD1356 /* BEETimer.swift in Sources */,
 				605A66221553242A20CFDE393D985931 /* Bundle+Extensions.swift in Sources */,
-				C8206356997515F2B2088542F9AC075D /* Collection+Extensions.swift in Sources */,
 				B0FA5AE9C4A7CBDC1272382DE7A4C925 /* Data+Extensions.swift in Sources */,
 				B2DC04169C061AE8949ABFD959A452C9 /* Date+Extensions.swift in Sources */,
 				D8429FEA70590CAD59975DA127E8930F /* Dictionary+Extensions.swift in Sources */,

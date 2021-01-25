@@ -13,6 +13,7 @@ class UIScreenViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigation.item.title = "UIScreen"
 
         log.info("width: \(UIScreen.screenWidth)")
         log.info("height: \(UIScreen.screenHeight)")
@@ -24,6 +25,6 @@ class UIScreenViewController: ViewController {
         log.info("tabBar: \(UIScreen.tabBar)")
         log.info("bottomBar: \(UIScreen.bottomBar)")
 
+        
     }
-
 }

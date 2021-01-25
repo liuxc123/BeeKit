@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0413013525BEBE6D00F96D1E /* UIKitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413013425BEBE6D00F96D1E /* UIKitDetailViewController.swift */; };
+		0413019325BEC7D900F96D1E /* FoundationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413019225BEC7D900F96D1E /* FoundationDetailViewController.swift */; };
 		041A964225A30035001B1462 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A964125A30035001B1462 /* AppTheme.swift */; };
 		041A965025A30353001B1462 /* AppTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = 041A964F25A30353001B1462 /* AppTheme.plist */; };
 		041A966D25A311E2001B1462 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041A966C25A311E2001B1462 /* Window.swift */; };
@@ -62,6 +63,7 @@
 
 /* Begin PBXFileReference section */
 		0413013425BEBE6D00F96D1E /* UIKitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitDetailViewController.swift; sourceTree = "<group>"; };
+		0413019225BEC7D900F96D1E /* FoundationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationDetailViewController.swift; sourceTree = "<group>"; };
 		041A964125A30035001B1462 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		041A964F25A30353001B1462 /* AppTheme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppTheme.plist; sourceTree = "<group>"; };
 		041A966C25A311E2001B1462 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				04B182E425B031B900368FAA /* FoundationListViewController.swift */,
+				0413019225BEC7D900F96D1E /* FoundationDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -680,6 +683,7 @@
 				041A966D25A311E2001B1462 /* Window.swift in Sources */,
 				0457FF1125AC4E39009BD675 /* AppContants.swift in Sources */,
 				04B182DE25B0319100368FAA /* BEEKitListViewController.swift in Sources */,
+				0413019325BEC7D900F96D1E /* FoundationDetailViewController.swift in Sources */,
 				0457FF8425AC53BA009BD675 /* TableViewController.swift in Sources */,
 				04B1833F25B133BD00368FAA /* Permission.swift in Sources */,
 				F196B24925A04317005D5DE3 /* CommonNavigationMap.swift in Sources */,
