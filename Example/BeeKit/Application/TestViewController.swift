@@ -30,6 +30,7 @@ class TestViewController: ViewController {
             make.left.right.bottom.equalToSuperview()
         }
 
+        textView.theme.backgroundColor = UIColorTheme(.backgroundColor)
         textView.isEditable = false
         textView.attributedText = "SwiftEntryKit is a presentation library for iOS. It can be used to easily display overlays within your iOS apps.".withLink(URL(string: "app://test")!)
         textView.limitDelegate = self
