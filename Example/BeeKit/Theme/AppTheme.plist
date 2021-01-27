@@ -26,31 +26,35 @@
 		<string>#AAAAAA</string>
 		<key>borderColor</key>
 		<string>#BDBDBD</string>
+		<key>separatorColor</key>
+		<string>d9d9d9</string>
 	</dict>
 	<key>dark</key>
 	<dict>
 		<key>primaryColor</key>
-		<string>#191919</string>
+		<string>#ffffff</string>
 		<key>primaryColorVariant</key>
-		<string>#191919</string>
+		<string>#d9d9d9</string>
 		<key>secondaryColor</key>
-		<string>#191919</string>
+		<string>#a6a6a6</string>
 		<key>thirdColor</key>
 		<string>#191919</string>
 		<key>backgroundColor</key>
-		<string>#191919</string>
+		<string>#333333</string>
 		<key>surfaceColor</key>
-		<string>#191919</string>
+		<string>#0a0a0a</string>
 		<key>onPrimaryColor</key>
-		<string>#f0f0f0</string>
+		<string>#ffffff</string>
 		<key>onSecondaryColor</key>
-		<string>#f0f0f0</string>
+		<string>#d9d9d9</string>
 		<key>onThirdColor</key>
-		<string>#f0f0f0</string>
+		<string>#a6a6a6</string>
 		<key>onPlaceholderColor</key>
 		<string>#AAAAAA</string>
 		<key>borderColor</key>
-		<string>#BDBDBD</string>
+		<string>#404040</string>
+		<key>separatorColor</key>
+		<string>#262626</string>
 	</dict>
 </dict>
 </plist>

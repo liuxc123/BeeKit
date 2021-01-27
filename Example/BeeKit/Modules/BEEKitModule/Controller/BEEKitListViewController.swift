@@ -30,6 +30,7 @@ class BEEKitListViewController: TableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigation.item.title = "BeeKit"
+        self.tableView.theme.separatorColor = UIColorTheme(.separatorColor)
         setupForm()
     }
     
