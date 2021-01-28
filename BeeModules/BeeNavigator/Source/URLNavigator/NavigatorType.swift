@@ -79,6 +79,10 @@ public protocol NavigatorType {
     @discardableResult
     func popViewController(_ animated: Bool) -> UIViewController?
 
+    /// pop to root viewController
+    @discardableResult
+    func popToRootViewController(_ animated: Bool) -> [UIViewController]?
+
     /// Dismiss top viewController
     func dismiss(_ animated: Bool, completion: (() -> Void)?)
 
@@ -154,6 +158,12 @@ extension NavigatorType {
     public func popViewController(_ animated: Bool) -> UIViewController? {
         guard let navigationController = UIViewController.topMost?.navigationController else { return nil }
         return navigationController.popViewController(animated: animated)
+    }
+
+    @discardableResult
+    public func popToRootViewController(_ animated: Bool) -> [UIViewController]? {
+        guard let navigationController = UIViewController.topMost?.navigationController else { return nil }
+        return navigationController.popToRootViewController(animated: animated)
     }
 
     public func dismiss(_ animated: Bool, completion: (() -> Void)?) {
