@@ -49,6 +49,10 @@
 		044D742DCCD2F06B8EE1CE0F3EBAA7C4 /* DoraemonDBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A80D67022A01E5F520DA41047F83D /* DoraemonDBTableViewController.m */; };
 		04530F808A268EEFC8E9B9B3E2B0902A /* MJRefreshBackFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 96E83532677E081A63313862152B7806 /* MJRefreshBackFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04931E8E54AEAB298C559C00DFEA4DB8 /* DoraemonMockUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F15FDA18CE2BC248EC141DCE63063B1 /* DoraemonMockUploadViewController.m */; };
+		04DAC46525C25AE400C1D37A /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAC46425C25AE400C1D37A /* UserDefaultsBacked.swift */; };
+		04DAC48625C25C7900C1D37A /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAC48525C25C7900C1D37A /* AnyOptional.swift */; };
+		04DAC4C525C25DFC00C1D37A /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAC4C425C25DFC00C1D37A /* NibLoadable.swift */; };
+		04DAC52125C25E4600C1D37A /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAC52025C25E4600C1D37A /* NibOwnerLoadable.swift */; };
 		04E0E1004BCE0648EE58197786A8DCF2 /* doraemon_logo_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5901EB65FF61A112A9C87CD1B1F03D5B /* doraemon_logo_dark@2x.png */; };
 		04FBAEFFF5F472A980E05194F9186A2C /* ObservableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8AF35BDABC5D085CB9DBE4AC64949E1 /* ObservableType.swift */; };
 		053101816AB7475F80B17CE1D1DEE23A /* Float+StringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3B8C22BDBE5CD893BF2C7843FAE74E /* Float+StringConvertible.swift */; };
@@ -2083,6 +2087,10 @@
 		049BD4FED152DF3449EA27C63074D76B /* SwiftyAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BD61980DA25E1DB5E7D2DFB3D2BEB6 /* DoraemonMockUploadListView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonMockUploadListView.h; path = DoraemonKit/Src/Core/Plugin/Platform/Mock/View/List/ListView/DoraemonMockUploadListView.h; sourceTree = "<group>"; };
 		04CE6E77449FB097C083F38A3245A923 /* PublishSubject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PublishSubject.swift; path = RxSwift/Subjects/PublishSubject.swift; sourceTree = "<group>"; };
+		04DAC46425C25AE400C1D37A /* UserDefaultsBacked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsBacked.swift; sourceTree = "<group>"; };
+		04DAC48525C25C7900C1D37A /* AnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyOptional.swift; sourceTree = "<group>"; };
+		04DAC4C425C25DFC00C1D37A /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		04DAC52025C25E4600C1D37A /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
 		04FCDEC3ABE82445C8A452C511E4BABF /* doraemon_check_circle_fill@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_check_circle_fill@2x.png"; path = "DoraemonKit/Resource/doraemon_check_circle_fill@2x.png"; sourceTree = "<group>"; };
 		050EAF20D054F50E9B2A0360B2D0DE85 /* doraemon_close_white@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_close_white@2x.png"; path = "DoraemonKit/Resource/doraemon_close_white@2x.png"; sourceTree = "<group>"; };
 		0514B7B04564A69EE2578AA53F155A7E /* ObservableConvertibleType+Signal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ObservableConvertibleType+Signal.swift"; path = "RxCocoa/Traits/Signal/ObservableConvertibleType+Signal.swift"; sourceTree = "<group>"; };
@@ -4217,6 +4225,23 @@
 			path = BEENetwork;
 			sourceTree = "<group>";
 		};
+		04DAC48425C25C6300C1D37A /* AnyOptional */ = {
+			isa = PBXGroup;
+			children = (
+				04DAC48525C25C7900C1D37A /* AnyOptional.swift */,
+			);
+			path = AnyOptional;
+			sourceTree = "<group>";
+		};
+		04DAC4C325C25DEE00C1D37A /* NibProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				04DAC4C425C25DFC00C1D37A /* NibLoadable.swift */,
+				04DAC52025C25E4600C1D37A /* NibOwnerLoadable.swift */,
+			);
+			path = NibProtocol;
+			sourceTree = "<group>";
+		};
 		09CCE8C2A32E3090E55C9FB7823572AB /* SwiftyAttributes */ = {
 			isa = PBXGroup;
 			children = (
@@ -4763,6 +4788,7 @@
 		339A6FE322CD93B0A77304EAFF8767D0 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				04DAC4C325C25DEE00C1D37A /* NibProtocol */,
 				BBC41778CD2AA971E9E7C719F4063F0F /* IconFontProtocol */,
 				76B3EABFDB030E90F44CDE340512BEAF /* Refreshable */,
 				F39749AEEC0DAA8AF1293D9BAF2A8A63 /* StatefulViewable */,
@@ -4843,6 +4869,7 @@
 			isa = PBXGroup;
 			children = (
 				D8F0DECDF79563C51D6082A3DC4DB419 /* UserDefaultsProtocol.swift */,
+				04DAC46425C25AE400C1D37A /* UserDefaultsBacked.swift */,
 			);
 			path = UserDefaultsProtocol;
 			sourceTree = "<group>";
@@ -6241,6 +6268,7 @@
 		9718DB3CBAD7C0757AFF8DD03CECA0CC /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				04DAC48425C25C6300C1D37A /* AnyOptional */,
 				123743911DED866092DD52F14EC88CE2 /* AssociatedObjectProtocol */,
 				B6BB7B0B6677A4AB54CCB6C5101582B9 /* NotificationProtocol */,
 				D09138393FE7A75F6C7BF047B12A1AF9 /* Then */,
@@ -8626,6 +8654,7 @@
 				B5C98F72FAC74F3B6ADA19610D80CECC /* AppServicesManager+ExtensionTypes.swift in Sources */,
 				B29C0AAC446F226F7DBCF86F9FDD75BB /* AppServicesManager+HandlingActions.swift in Sources */,
 				ED7E04B9789EA1440F7ED48F8FBA5390 /* AppServicesManager+HealthKitInteracting.swift in Sources */,
+				04DAC4C525C25DFC00C1D37A /* NibLoadable.swift in Sources */,
 				0F25FDBCBDBE8FE9A324CAF2A23E9C0F /* AppServicesManager+InterfaceGeometry.swift in Sources */,
 				820BA88C4F8C7F5E1EBFD3F0057C9A9F /* AppServicesManager+RemoteNotification.swift in Sources */,
 				926D60D3F53FE805DE2EDF6D41493C7C /* AppServicesManager+SiriKitHandling.swift in Sources */,
@@ -8696,6 +8725,7 @@
 				B9C78861C26EE51B2747E5A1BFEAE736 /* Then.swift in Sources */,
 				9AB2671F0C3FAB0F3C1F6BC49B7B478E /* Thread+Extensions.swift in Sources */,
 				07E5EF208014D41648846EB0BD536CC5 /* UIBarButtonItem+Extensions.swift in Sources */,
+				04DAC52125C25E4600C1D37A /* NibOwnerLoadable.swift in Sources */,
 				22A321ABEE24AE50D4B230D879D5A497 /* UIButton+Extensions.swift in Sources */,
 				BF2342A823DB2A8C057F3A373E6D93BD /* UIColor+Extensions.swift in Sources */,
 				10961989957520D14DCF7D9D1E51732C /* UIDevice+Extensions.swift in Sources */,
@@ -8703,6 +8733,8 @@
 				D691E6CAF74360D0F44DBC9221B08148 /* UIImage+Context.swift in Sources */,
 				DC602311824965587A7865E2B40D250C /* UIImage+Extensions.swift in Sources */,
 				63E4BC3E19EE0CA5C1124805B82B1239 /* UIImageView+Extensions.swift in Sources */,
+				04DAC48625C25C7900C1D37A /* AnyOptional.swift in Sources */,
+				04DAC46525C25AE400C1D37A /* UserDefaultsBacked.swift in Sources */,
 				CB49D5F56503B7E847D5FE56C6325047 /* UILabel+Extensions.swift in Sources */,
 				65AA802355FD3EAE49DF4D535BA54A8E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				79C452B5B1646894868387D2391D2564 /* UIPasteboard+Extensions.swift in Sources */,
