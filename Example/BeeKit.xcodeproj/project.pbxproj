@@ -28,6 +28,8 @@
 		0457FF9C25AC55EE009BD675 /* CommonMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FF9B25AC55EE009BD675 /* CommonMacro.swift */; };
 		0457FFD425AC56EE009BD675 /* ThirdApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */; };
 		0457FFD825AC5722009BD675 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD725AC5722009BD675 /* TestViewController.swift */; };
+		047E389F25C2A64C008EDD4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A125C2A64C008EDD4C /* Localizable.strings */; };
+		047E38A925C2A70C008EDD4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A725C2A70C008EDD4C /* Info.plist */; };
 		04B182D025B0307100368FAA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B182CF25B0307100368FAA /* TabBarViewController.swift */; };
 		04B182DE25B0319100368FAA /* BEEKitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B182DD25B0319100368FAA /* BEEKitListViewController.swift */; };
 		04B182E525B031B900368FAA /* FoundationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B182E425B031B900368FAA /* FoundationListViewController.swift */; };
@@ -83,6 +85,11 @@
 		0457FF9B25AC55EE009BD675 /* CommonMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMacro.swift; sourceTree = "<group>"; };
 		0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdApplicationService.swift; sourceTree = "<group>"; };
 		0457FFD725AC5722009BD675 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		047E387D25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		047E387E25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		047E38A025C2A64C008EDD4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		047E38A425C2A651008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		047E38A825C2A70C008EDD4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
 		04B182CF25B0307100368FAA /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		04B182DD25B0319100368FAA /* BEEKitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEKitListViewController.swift; sourceTree = "<group>"; };
 		04B182E425B031B900368FAA /* FoundationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationListViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +107,6 @@
 		51F55130B59791861A6941B0 /* BeeKit-Swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "BeeKit-Swift.podspec"; path = "../BeeKit-Swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		56C1B5F9E04E5ECBCA3C1ABE /* Pods-BeeKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Example.release.xcconfig"; path = "Target Support Files/Pods-BeeKit_Example/Pods-BeeKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* BeeKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -366,7 +372,8 @@
 		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD41AFB9204008FA782 /* Info.plist */,
+				047E38A725C2A70C008EDD4C /* Info.plist */,
+				047E38A125C2A64C008EDD4C /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -523,6 +530,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 607FACC71AFB9204008FA782;
 			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
@@ -541,10 +549,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				047E389F25C2A64C008EDD4C /* Localizable.strings in Resources */,
 				041A965025A30353001B1462 /* AppTheme.plist in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				04DDB8A325B82902006E83EC /* iconfont.ttf in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				047E38A925C2A70C008EDD4C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,10 +739,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		047E38A125C2A64C008EDD4C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				047E38A025C2A64C008EDD4C /* en */,
+				047E38A425C2A651008EDD4C /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		047E38A725C2A70C008EDD4C /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				047E38A825C2A70C008EDD4C /* Base */,
+			);
+			name = Info.plist;
+			sourceTree = "<group>";
+		};
 		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				607FACDA1AFB9204008FA782 /* Base */,
+				047E387E25C2A4AB008EDD4C /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -741,6 +769,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				607FACDF1AFB9204008FA782 /* Base */,
+				047E387D25C2A4AB008EDD4C /* zh-Hans */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
