@@ -48,6 +48,7 @@
 		043D69BCF45E3835F0DF2CD85CD9AC33 /* DoraemonANRTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF832E84057354B745540DD921387C1 /* DoraemonANRTracker.m */; };
 		044D742DCCD2F06B8EE1CE0F3EBAA7C4 /* DoraemonDBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A80D67022A01E5F520DA41047F83D /* DoraemonDBTableViewController.m */; };
 		04530F808A268EEFC8E9B9B3E2B0902A /* MJRefreshBackFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 96E83532677E081A63313862152B7806 /* MJRefreshBackFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		047E377C25C28A52008EDD4C /* BEEError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E377B25C28A52008EDD4C /* BEEError.swift */; };
 		04931E8E54AEAB298C559C00DFEA4DB8 /* DoraemonMockUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F15FDA18CE2BC248EC141DCE63063B1 /* DoraemonMockUploadViewController.m */; };
 		04DAC46525C25AE400C1D37A /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAC46425C25AE400C1D37A /* UserDefaultsBacked.swift */; };
 		04DAC48625C25C7900C1D37A /* AnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAC48525C25C7900C1D37A /* AnyOptional.swift */; };
@@ -2082,6 +2083,7 @@
 		04561596409B1B59C8C94ED3B869E4EE /* DoraemonStatisticsUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonStatisticsUtil.m; path = DoraemonKit/Src/Core/Util/DoraemonStatisticsUtil.m; sourceTree = "<group>"; };
 		0461B3F80FC05957690727254D64DB36 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0465C450766FD9A4ED6567C84F68D1C7 /* QuickLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QuickLayout-dummy.m"; sourceTree = "<group>"; };
+		047E377B25C28A52008EDD4C /* BEEError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEError.swift; sourceTree = "<group>"; };
 		048B1D547518D40B49F82F570604D0AD /* doraemon_health_start@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_health_start@2x.png"; path = "DoraemonKit/Resource/doraemon_health_start@2x.png"; sourceTree = "<group>"; };
 		04969F3FA03E2C348E3CFE81722A417D /* AppServicesManager+SiriKitHandling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AppServicesManager+SiriKitHandling.swift"; path = "BeeModules/BeeAppDelegate/Source/AppServicesManager+SiriKitHandling.swift"; sourceTree = "<group>"; };
 		049BD4FED152DF3449EA27C63074D76B /* SwiftyAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -6988,6 +6990,7 @@
 				78DFCF67F21CAB8910EC666D56544625 /* BEELog.swift */,
 				57512A8016F4F954398EE9B343580473 /* BEEPassword.swift */,
 				91B0212CD68933570A57FB8DA1D5BF1A /* BEETimer.swift */,
+				047E377B25C28A52008EDD4C /* BEEError.swift */,
 			);
 			path = BEEKit;
 			sourceTree = "<group>";
@@ -8680,6 +8683,7 @@
 				77FA9D620619BA2EAA0A10169B641FD4 /* BEETimer.swift in Sources */,
 				109842FAFE1D31AB1E1BED6B4ED3D37F /* Bundle+Extensions.swift in Sources */,
 				72135132E1FB81F79DC0D3F374933B7C /* Data+Extensions.swift in Sources */,
+				047E377C25C28A52008EDD4C /* BEEError.swift in Sources */,
 				97D30D7C95680B7BE87FFF1D0636ABB7 /* Date+Extensions.swift in Sources */,
 				EF2DF6069222C32CCE68C6CBF49D0830 /* Dictionary+Extensions.swift in Sources */,
 				E67EFCBF6F7F6FA480A715B866D6F012 /* FDFullscreenPopGesture+Bee.swift in Sources */,

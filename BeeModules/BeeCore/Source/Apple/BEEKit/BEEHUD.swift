@@ -43,7 +43,8 @@ public class BEEHUD: MBProgressHUD {
         view: UIView = defaultWindow(),
         duration: TimeInterval? = nil,
         interaction: Bool = BEEHUDConfig.shared.defaultToastInteraction
-    ) -> BEEHUD {
+    ) -> BEEHUD? {
+        guard let message = message, !message.isEmpty else { return nil }
         let config = BEEHUDConfig.shared
         let hud = show(view: view, message: message, interaction: interaction, animated: true)
         hud.mode = .text
