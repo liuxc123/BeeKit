@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BeeKit-Swift'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'BeeKit 功能组件集合'
   s.homepage         = 'https://github.com/liuxc123/BeeKit-Swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
