@@ -48,6 +48,9 @@
 		043D69BCF45E3835F0DF2CD85CD9AC33 /* DoraemonANRTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EF832E84057354B745540DD921387C1 /* DoraemonANRTracker.m */; };
 		044D742DCCD2F06B8EE1CE0F3EBAA7C4 /* DoraemonDBTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548A80D67022A01E5F520DA41047F83D /* DoraemonDBTableViewController.m */; };
 		04530F808A268EEFC8E9B9B3E2B0902A /* MJRefreshBackFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 96E83532677E081A63313862152B7806 /* MJRefreshBackFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		046B916825C3FC3E000E2531 /* BEELabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B916725C3FC3E000E2531 /* BEELabel.swift */; };
+		046B918825C3FD76000E2531 /* BEEPreferencesExplorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B918725C3FD76000E2531 /* BEEPreferencesExplorer.swift */; };
+		046B91A825C3FF00000E2531 /* Enumerable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046B91A725C3FF00000E2531 /* Enumerable.swift */; };
 		047E377C25C28A52008EDD4C /* BEEError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E377B25C28A52008EDD4C /* BEEError.swift */; };
 		04931E8E54AEAB298C559C00DFEA4DB8 /* DoraemonMockUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F15FDA18CE2BC248EC141DCE63063B1 /* DoraemonMockUploadViewController.m */; };
 		04DAC46525C25AE400C1D37A /* UserDefaultsBacked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAC46425C25AE400C1D37A /* UserDefaultsBacked.swift */; };
@@ -2083,6 +2086,9 @@
 		04561596409B1B59C8C94ED3B869E4EE /* DoraemonStatisticsUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DoraemonStatisticsUtil.m; path = DoraemonKit/Src/Core/Util/DoraemonStatisticsUtil.m; sourceTree = "<group>"; };
 		0461B3F80FC05957690727254D64DB36 /* Result.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Result.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0465C450766FD9A4ED6567C84F68D1C7 /* QuickLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QuickLayout-dummy.m"; sourceTree = "<group>"; };
+		046B916725C3FC3E000E2531 /* BEELabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEELabel.swift; sourceTree = "<group>"; };
+		046B918725C3FD76000E2531 /* BEEPreferencesExplorer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEPreferencesExplorer.swift; sourceTree = "<group>"; };
+		046B91A725C3FF00000E2531 /* Enumerable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerable.swift; sourceTree = "<group>"; };
 		047E377B25C28A52008EDD4C /* BEEError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEError.swift; sourceTree = "<group>"; };
 		048B1D547518D40B49F82F570604D0AD /* doraemon_health_start@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "doraemon_health_start@2x.png"; path = "DoraemonKit/Resource/doraemon_health_start@2x.png"; sourceTree = "<group>"; };
 		04969F3FA03E2C348E3CFE81722A417D /* AppServicesManager+SiriKitHandling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AppServicesManager+SiriKitHandling.swift"; path = "BeeModules/BeeAppDelegate/Source/AppServicesManager+SiriKitHandling.swift"; sourceTree = "<group>"; };
@@ -4227,6 +4233,14 @@
 			path = BEENetwork;
 			sourceTree = "<group>";
 		};
+		046B920425C3FF42000E2531 /* Enumerable */ = {
+			isa = PBXGroup;
+			children = (
+				046B91A725C3FF00000E2531 /* Enumerable.swift */,
+			);
+			path = Enumerable;
+			sourceTree = "<group>";
+		};
 		04DAC48425C25C6300C1D37A /* AnyOptional */ = {
 			isa = PBXGroup;
 			children = (
@@ -6261,8 +6275,10 @@
 			children = (
 				2C6D6907C72A06BDD2A955D500C2EBE5 /* BEEBiometrics.swift */,
 				45C826B77CBB7A9E70007A193F590101 /* BEEHUD.swift */,
-				D864A9F54F9D0B0E2D7F4DC44C88E927 /* BEESystemSound.swift */,
+				046B916725C3FC3E000E2531 /* BEELabel.swift */,
 				9254A267C068C23EAA8DBBAEF91E3DBD /* BEELinearView */,
+				046B918725C3FD76000E2531 /* BEEPreferencesExplorer.swift */,
+				D864A9F54F9D0B0E2D7F4DC44C88E927 /* BEESystemSound.swift */,
 			);
 			path = BEEKit;
 			sourceTree = "<group>";
@@ -6270,6 +6286,7 @@
 		9718DB3CBAD7C0757AFF8DD03CECA0CC /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				046B920425C3FF42000E2531 /* Enumerable */,
 				04DAC48425C25C6300C1D37A /* AnyOptional */,
 				123743911DED866092DD52F14EC88CE2 /* AssociatedObjectProtocol */,
 				B6BB7B0B6677A4AB54CCB6C5101582B9 /* NotificationProtocol */,
@@ -8675,6 +8692,7 @@
 				055F0DF14022DECA45A8D3B07FB6919B /* BEEHUD.swift in Sources */,
 				17389CF06EF19962B9AD28F6BF94DFD0 /* BeeKit-Swift-dummy.m in Sources */,
 				22C03F6EC0B73CDEAFFFDB8B6F22E8AA /* BEEKit.swift in Sources */,
+				046B91A825C3FF00000E2531 /* Enumerable.swift in Sources */,
 				CAE771C1937C196E4E46B3E8BF1C4815 /* BEELinearLayout.swift in Sources */,
 				8B4A438EFB164447241A3143E6240872 /* BEELinearView.swift in Sources */,
 				BEF6FAFAE94EFAB2A01B77A7242EB175 /* BEELog.swift in Sources */,
@@ -8714,6 +8732,7 @@
 				0388D89464EFCA6D5A315151B19ED0C4 /* NSPointerArray+Extensions.swift in Sources */,
 				EE3CD57706E77B34A12D69EBC08D6E9F /* Number+Extensions.swift in Sources */,
 				9431CE31CCBA4C788421873FB43B12B5 /* ProcessInfo+Extensions.swift in Sources */,
+				046B918825C3FD76000E2531 /* BEEPreferencesExplorer.swift in Sources */,
 				A78DA7A2DAAA6075F1AF0D7C1A9E8C15 /* Refresh.swift in Sources */,
 				95DD89FD2CFEADE831D3876EF419651E /* Refreshable.swift in Sources */,
 				AFFA8C826846FA07BCB27C9C23A7D55B /* Screen.swift in Sources */,
@@ -8739,6 +8758,7 @@
 				63E4BC3E19EE0CA5C1124805B82B1239 /* UIImageView+Extensions.swift in Sources */,
 				04DAC48625C25C7900C1D37A /* AnyOptional.swift in Sources */,
 				04DAC46525C25AE400C1D37A /* UserDefaultsBacked.swift in Sources */,
+				046B916825C3FC3E000E2531 /* BEELabel.swift in Sources */,
 				CB49D5F56503B7E847D5FE56C6325047 /* UILabel+Extensions.swift in Sources */,
 				65AA802355FD3EAE49DF4D535BA54A8E /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				79C452B5B1646894868387D2391D2564 /* UIPasteboard+Extensions.swift in Sources */,
