@@ -28,6 +28,7 @@
 		0457FF9C25AC55EE009BD675 /* CommonMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FF9B25AC55EE009BD675 /* CommonMacro.swift */; };
 		0457FFD425AC56EE009BD675 /* ThirdApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */; };
 		0457FFD825AC5722009BD675 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD725AC5722009BD675 /* TestViewController.swift */; };
+		047A7F9B25C92E0200BAFD11 /* UIKitAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */; };
 		047E389F25C2A64C008EDD4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A125C2A64C008EDD4C /* Localizable.strings */; };
 		047E38A925C2A70C008EDD4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A725C2A70C008EDD4C /* Info.plist */; };
 		04B182D025B0307100368FAA /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B182CF25B0307100368FAA /* TabBarViewController.swift */; };
@@ -85,6 +86,7 @@
 		0457FF9B25AC55EE009BD675 /* CommonMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMacro.swift; sourceTree = "<group>"; };
 		0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdApplicationService.swift; sourceTree = "<group>"; };
 		0457FFD725AC5722009BD675 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitAnimationViewController.swift; sourceTree = "<group>"; };
 		047E387D25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		047E387E25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		047E38A025C2A64C008EDD4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			children = (
 				04B182EB25B031DA00368FAA /* UIKitListViewController.swift */,
 				0413013425BEBE6D00F96D1E /* UIKitDetailViewController.swift */,
+				047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -712,6 +715,7 @@
 				0457FF5025AC51AE009BD675 /* AppThemeService+Custom.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				F196B24825A04317005D5DE3 /* NavigationMap.swift in Sources */,
+				047A7F9B25C92E0200BAFD11 /* UIKitAnimationViewController.swift in Sources */,
 				0413013525BEBE6D00F96D1E /* UIKitDetailViewController.swift in Sources */,
 				0457FF9C25AC55EE009BD675 /* CommonMacro.swift in Sources */,
 				04B182D025B0307100368FAA /* TabBarViewController.swift in Sources */,

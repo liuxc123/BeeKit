@@ -24,7 +24,5 @@ class UIScreenViewController: ViewController {
         log.info("topBar: \(UIScreen.topBar)")
         log.info("tabBar: \(UIScreen.tabBar)")
         log.info("bottomBar: \(UIScreen.bottomBar)")
-
-        
     }
 }

@@ -24,6 +24,7 @@ class BEEKitListViewController: TableViewController {
         ("BEEInput", BEEInputViewController.self),
         ("BEEIconFont", BEEIconFontViewController.self),
         ("BEETheme", BEEThemeViewController.self),
+        ("BEELabel", BEELabelViewController.self),
         ("Refreshable and StatefulViewable", BEERefreshableViewController.self)
     ]
 

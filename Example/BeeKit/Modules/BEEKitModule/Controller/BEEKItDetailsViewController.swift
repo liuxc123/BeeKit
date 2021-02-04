@@ -433,3 +433,23 @@ class BEEThemeViewController: ViewController {
         ThemeManager.shared.changeTheme(to: currentTheme == .light ? .dark : .light)
     }
 }
+
+class BEELabelViewController: ViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigation.item.title = "BEELabel"
+
+        let label = BEELabel()
+        label.textInsets = UIEdgeInsets(inset: 20)
+        label.numberOfLines = 0
+        label.text = "自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒"
+        label.backgroundColor = .yellow
+        view.addSubview(label)
+
+        label.snp.makeConstraints { (make) in
+            make.top.equalTo(88)
+            make.left.right.equalToSuperview()
+        }
+    }
+}

@@ -12,6 +12,10 @@ import BEETableKit
 class UIKitListViewController: TableViewController {
 
     let dataSource: [(String, UIViewController.Type)] = [
+        ("CAShapeLayer", CAShapeLayerViewController.self),
+        ("CATextLayer", CATextLayerViewController.self),
+        ("CAGradientLayer", CAGradientLayerViewController.self),
+        ("CAReplicatorLayer", CAReplicatorLayerViewController.self),
         ("UIScreen", UIScreenViewController.self)
     ]
 
