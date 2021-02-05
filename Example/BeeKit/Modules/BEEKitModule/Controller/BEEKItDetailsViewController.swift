@@ -448,7 +448,7 @@ class BEELabelViewController: ViewController {
         view.addSubview(label)
 
         label.snp.makeConstraints { (make) in
-            make.top.equalTo(88)
+            make.top.equalTo(88) 
             make.left.right.equalToSuperview()
         }
     }

@@ -7,6 +7,7 @@
 //
 
 import PermissionKit
+import BeeKit_Swift
 
 public struct ChineseAlertContent: PermissionAlertContentSource {
     
@@ -15,7 +16,7 @@ public struct ChineseAlertContent: PermissionAlertContentSource {
     public func title(_ status: AlertStatus) -> String {
         switch status {
         case .prepare(let name):
-            return "\(Bundle.main.appName) 想要使用你的 \(name) 权限"
+            return "\(BEEApp.name) 想要使用你的 \(name) 权限"
             
         case .denied(let name):
             return "\(name) 的权限被拒绝"
@@ -62,12 +63,5 @@ public struct ChineseAlertContent: PermissionAlertContentSource {
         case .disabled:
             return ""
         }
-    }
-}
-
-fileprivate extension Bundle {
-    
-    var appName: String {
-        return Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? ""
     }
 }

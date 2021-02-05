@@ -45,7 +45,7 @@ enum Permission {
                 
             case .calendar:
                 mode = Provider.calendar
-                mode.alias = { "カレンダー" }
+                mode.alias = { "日历" }
                 
             case .reminder:
                 mode = Provider.reminder
@@ -53,7 +53,7 @@ enum Permission {
                 
             case .contacts:
                 mode = Provider.contacts
-                mode.alias = { "주소록" }
+                mode.alias = { "通讯录" }
                 
             case .speech:
                 mode = Provider.speech
