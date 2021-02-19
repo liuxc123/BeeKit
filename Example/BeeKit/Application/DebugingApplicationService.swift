@@ -6,7 +6,9 @@
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
+#if DEBUG
 import DoraemonKit
+#endif
 
 class DebugingApplicationService: NSObject, ApplicationService {
 
@@ -20,15 +22,20 @@ class DebugingApplicationService: NSObject, ApplicationService {
     }
 
     func setupTouch() {
+        #if DEBUG
         self.window?.activateTouch()
+        #endif
     }
 
     func setupDoraemonKit() {
+        #if DEBUG
         DoraemonManager.shareInstance().addH5DoorBlock { (url) in
             navigator.push(url)
         }
         DoraemonManager.shareInstance().install()
+        #endif
     }
 
 
 }
+
