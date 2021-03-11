@@ -45,13 +45,6 @@ open class LimitTextField: UITextField,LimitInputProtocol {
     public var matchs: [LimitInputMatch] = LimitInput.matchs
     /// 菜单禁用项
     public var disables: [LimitInputDisableState] = LimitInput.disables
-    /// 设置占位文本偏移
-    public var placeholderEdgeInsets: UIEdgeInsets = .zero
-    /// 占位文本控件
-    public lazy var placeholderLabel: UILabel? = {
-        return self.value(forKey: "_placeholderLabel") as? UILabel
-    }()
-
 
     private var inputHelp: LimitTextFieldExecutor?
 
@@ -60,13 +53,6 @@ open class LimitTextField: UITextField,LimitInputProtocol {
         set { inputHelp = LimitTextFieldExecutor(delegate: newValue)
             super.delegate = inputHelp
         }
-    }
-
-    open override var isEditing: Bool {
-        if placeholderEdgeInsets != .zero {
-            drawPlaceholder(in: self.bounds)
-        }
-        return super.isEditing
     }
 
     override open func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
@@ -85,35 +71,6 @@ open class LimitTextField: UITextField,LimitInputProtocol {
     open override func awakeFromNib() {
         super.awakeFromNib()
         buildConfig()
-    }
-
-    open override func drawPlaceholder(in rect: CGRect) {
-        super.drawPlaceholder(in: rect)
-        guard placeholderEdgeInsets != .zero, var labelFarme = placeholderLabel?.frame else{ return }
-
-        if !(placeholderEdgeInsets.top == 0 && placeholderEdgeInsets.bottom == 0) {
-            if placeholderEdgeInsets.top != 0 && placeholderEdgeInsets.bottom != 0 {
-                labelFarme.origin.y = placeholderEdgeInsets.top
-                labelFarme.size.height = rect.height - placeholderEdgeInsets.top - placeholderEdgeInsets.bottom
-            } else if placeholderEdgeInsets.top != 0 {
-                labelFarme.origin.y = placeholderEdgeInsets.top
-            } else if placeholderEdgeInsets.bottom == 0 {
-                labelFarme.origin.y = rect.height - labelFarme.height - placeholderEdgeInsets.bottom
-            }
-        }
-
-        if !(placeholderEdgeInsets.left == 0 && placeholderEdgeInsets.right == 0) {
-            if placeholderEdgeInsets.left != 0 && placeholderEdgeInsets.right != 0 {
-                labelFarme.origin.x = placeholderEdgeInsets.right
-                labelFarme.size.width = rect.width - placeholderEdgeInsets.left - placeholderEdgeInsets.right
-            } else if placeholderEdgeInsets.left != 0 {
-                labelFarme.origin.x = placeholderEdgeInsets.left
-            } else if placeholderEdgeInsets.right == 0 {
-                labelFarme.origin.x = rect.width - placeholderEdgeInsets.left - placeholderEdgeInsets.right
-            }
-        }
-
-        placeholderLabel?.frame = labelFarme
     }
 
     /// MARK: - Deinitialized
