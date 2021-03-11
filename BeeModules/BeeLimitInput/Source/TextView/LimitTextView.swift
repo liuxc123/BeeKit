@@ -1,27 +1,42 @@
-//
-//  LimitTextView.swift
-//  LimitInput
-//
-//  Created by liuxc on 2019/10/16.
-//  Copyright © 2019 liuxc. All rights reserved.
-//
+/*
+ |-| Copyright (c) 2018 linhay <is.linhay@outlook.com>
+ |-| LimitInputKit https://github.com/linhay/LimitInputKit
+ |-|
+ |-| Permission is hereby granted, free of charge, to any person obtaining a copy
+ |-| of this software and associated documentation files (the "Software"), to deal
+ |-| in the Software without restriction, including without limitation the rights
+ |-| to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ |-| copies of the Software, and to permit persons to whom the Software is
+ |-| furnished to do so, subject to the following conditions:
+ |-|
+ |-| The above copyright notice and this permission notice shall be included in
+ |-| all copies or substantial portions of the Software.
+ |-|
+ |-| THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ |-| IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ |-| FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ |-| AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ |-| LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ |-| OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ |-| THE SOFTWARE.
+ */
 
 import UIKit
 
-@IBDesignable
-open class LimitTextView: UITextView,LimitInputProtocol {
+public class LimitTextView: UITextView,LimitInputProtocol {
 
     public var preIR: IR? = nil
 
-    /// 表情限制
-    public var emojiLimit: Bool = LimitInput.emojiLimit
-    /// 表情限制回调
-    public var emojiLimitEvent: ((String) -> ())? = nil
     /// 字数限制
     public var wordLimit: Int = LimitInput.wordLimit
     /// 文字超出字符限制执行
     public var overWordLimitEvent: ((String) -> ())? = LimitInput.overWordLimitEvent
-    // 完成输入
+    /// 表情限制
+    public var emojiLimit: Bool = LimitInput.emojiLimit
+    /// 表情限制回调
+    public var emojiLimitEvent: ((String) -> ())? = nil
+
+    /// 完成输入
     public var textDidChangeEvent: ((_ text: String)->())? = nil
     /// 文字替换
     public var replaces: [LimitInputReplace] = LimitInput.replaces
@@ -34,10 +49,10 @@ open class LimitTextView: UITextView,LimitInputProtocol {
     public lazy var placeholderLabel: UILabel = {
         let item = UILabel()
         item.numberOfLines = 0
-        item.font = font
+        item.font = UIFontMake(15)
         item.textColor = UIColor.gray.withAlphaComponent(0.7)
         self.addSubview(item)
-        self.setValue(item, forKeyPath: "_placeholderLabel")
+        self.setValue(item, forKey: "_placeholderLabel")
         return item
     }()
 
@@ -59,32 +74,23 @@ open class LimitTextView: UITextView,LimitInputProtocol {
         get{ return placeholderLabel.text }
     }
 
-    /// 字体设置
-    open override var font: UIFont? {
+    /// 更新内间距
+    open var inset: UIEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0) {
         didSet {
-            placeholderLabel.font = font
+            contentInset = .zero
+            scrollIndicatorInsets = .zero
+            contentOffset = .zero
+            textContainerInset = inset
+            textContainer.lineFragmentPadding = 0
         }
     }
 
     private var inputHelp: LimitTextViewExecutor?
 
-    /// 替换系统delegate
-    open var limitDelegate: UITextViewDelegate? {
+    override open var delegate: UITextViewDelegate? {
         get { return inputHelp }
-        set {
-            inputHelp = LimitTextViewExecutor(delegate: newValue)
+        set { inputHelp = LimitTextViewExecutor(delegate: newValue)
             super.delegate = inputHelp
-        }
-    }
-
-    /// 更新内间距
-    open override var contentInset: UIEdgeInsets {
-        didSet {
-            scrollIndicatorInsets = .zero
-            contentOffset = .zero
-            textContainerInset = contentInset
-            textContainer.lineFragmentPadding = 0
-            setNeedsLayout()
         }
     }
 
@@ -102,19 +108,12 @@ open class LimitTextView: UITextView,LimitInputProtocol {
         buildConfig()
     }
 
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        placeholderLabel.sizeThatFits(CGSize(width: self.width - contentInset.horizontal, height: .infinity))
-        placeholderLabel.frame.origin = CGPoint(x: contentInset.left, y: contentInset.top)
-    }
-
     override open func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
         return canPerformAction(self, text: text, action: action) ? super.canPerformAction(action, withSender: sender) : false
     }
 
     //MARK: - Deinitialized
     deinit {
-        self.delegate = nil
         NotificationCenter.default.removeObserver(self)
     }
 
@@ -124,9 +123,7 @@ open class LimitTextView: UITextView,LimitInputProtocol {
 extension LimitTextView{
 
     func buildConfig() {
-        limitDelegate = nil
-        contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
-        font = UIFont.systemFont(ofSize: 16)
+        delegate = nil
         buildNotifications()
     }
 
@@ -140,14 +137,17 @@ extension LimitTextView{
 
 extension LimitTextView {
     @objc private func textView(changed not: Notification) {
-        guard let input = not.object as? LimitTextView, self === input else { return }
-        guard let ir = textDidChange(input: input, text: input.text) else {
-            input.textDidChangeEvent?(input.text ?? "")
-            return
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            guard let input = not.object as? LimitTextView, self === input else { return }
+            guard let ir = self.textDidChange(input: input, text: input.text) else {
+                input.textDidChangeEvent?(input.text ?? "")
+                return
+            }
+            input.text = ir.text
+            (input as UITextInput).selectedRange = ir.range
+            input.textDidChangeEvent?(ir.text)
         }
-        input.text = ir.text
-        (input as UITextInput).selectedRange = ir.range
-        input.textDidChangeEvent?(ir.text)
     }
-
 }
+

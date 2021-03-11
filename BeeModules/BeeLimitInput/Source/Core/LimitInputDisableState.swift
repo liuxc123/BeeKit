@@ -1,9 +1,8 @@
 //
 //  LimitInputDisableState.swift
-//  LimitInput
+//  BLFoundation
 //
-//  Created by liuxc on 2019/10/16.
-//  Copyright © 2019 liuxc. All rights reserved.
+//  Created by linhey on 2018/10/26.
 //
 
 import UIKit
@@ -60,7 +59,6 @@ public enum LimitInputDisableState: String,CaseIterable {
     case accessibilityPauseSpeaking = "_accessibilityPauseSpeaking:"
     case share = "_share:"
 }
-
 
 
 

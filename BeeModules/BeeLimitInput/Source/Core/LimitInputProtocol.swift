@@ -1,10 +1,25 @@
-//
-//  LimitInputProtocol.swift
-//  AwesomeProject
-//
-//  Created by liuxc on 2019/10/16.
-//  Copyright © 2019 liuxc. All rights reserved.
-//
+/*
+ |-| Copyright (c) 2018 linhay <is.linhay@outlook.com>
+ |-| LimitInputKit https://github.com/linhay/LimitInputKit
+ |-|
+ |-| Permission is hereby granted, free of charge, to any person obtaining a copy
+ |-| of this software and associated documentation files (the "Software"), to deal
+ |-| in the Software without restriction, including without limitation the rights
+ |-| to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ |-| copies of the Software, and to permit persons to whom the Software is
+ |-| furnished to do so, subject to the following conditions:
+ |-|
+ |-| The above copyright notice and this permission notice shall be included in
+ |-| all copies or substantial portions of the Software.
+ |-|
+ |-| THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ |-| IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ |-| FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ |-| AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ |-| LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ |-| OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ |-| THE SOFTWARE.
+ */
 
 import UIKit
 import Smile
@@ -15,9 +30,9 @@ extension UITextInput {
         set {
             let beginning = beginningOfDocument
             guard let range = newValue,
-                let start = position(from: beginning, offset: range.location),
-                let end = position(from: beginning, offset: range.location + range.length)
-                else { return }
+                  let start = position(from: beginning, offset: range.location),
+                  let end = position(from: beginning, offset: range.location + range.length)
+            else { return }
             let selectionRange = textRange(from: start, to: end)
             self.selectedTextRange = selectionRange
         }
@@ -28,7 +43,6 @@ extension UITextInput {
             return NSRange(location: location, length: length)
         }
     }
-
 }
 
 public protocol LimitInputProtocol: NSObjectProtocol {
@@ -65,6 +79,11 @@ public extension LimitInputProtocol {
     func setTextDidChangeEvent(_ event: @escaping (_ text: String)->()) {
         self.textDidChangeEvent = event
     }
+
+    func setEmojiLimitEvent(_ event: @escaping (_ text: String)->()) {
+        self.emojiLimitEvent = event
+    }
+
 }
 
 extension LimitInputProtocol {
@@ -129,12 +148,13 @@ extension LimitInputProtocol {
     /// - Parameters:
     ///   - input: 输入控件
     ///   - text: 文本
-    func textDidChange(input: UITextInput, text: String) -> IR? {
+    public func textDidChange(input: UITextInput, text: String) -> IR? {
         guard input.markedTextRange == nil, let range = input.selectedRange else { return nil }
-        let ir = replaceWordLimit(text: text)
-        let ir0 = replaceEmojiLimit(text: ir)
-        let ir1 = replaces(ir: IR(text: ir0, range: range))
-        let ir2 = match(text: ir1.text) ? ir1 : preIR
+        let ir = replaceWordLimit(ir: IR(text: text, range: range))
+        let ir0 = replaceEmojiLimit(ir: ir)
+        let ir1 = replaces(ir: ir0)
+        let ir2 = match(text: ir1.text) ? ir1 : self.preIR ?? IR(text: "", range: NSRange(location: 0, length: 0))
+        if self.preIR?.text == ir2.text { return nil }
         return ir2
     }
 
@@ -146,11 +166,16 @@ extension LimitInputProtocol {
     ///   - string: 待输入文本
     /// - Returns: 能否输入
     public func shouldChange(input: UITextInput, range: NSRange, string: String) -> Bool {
-
-        guard let allRange = input.textRange(from: input.beginningOfDocument, to: input.endOfDocument),
-            let text = input.text(in: allRange) else {
+        if string.isEmpty { return true }
+        guard input.markedTextRange == nil, let allRange = input.textRange(from: input.beginningOfDocument, to: input.endOfDocument),
+              let text = input.text(in: allRange) else {
             return true
         }
+
+        let ir1 = getAfterInputText(string: text, text: string, range: range)
+        let ir2 = replaces(ir: ir1)
+
+        if !match(text: ir2.text) { return false }
 
         /// 表情限制
         if Smile.containsEmoji(string: string) && emojiLimit {
@@ -158,8 +183,10 @@ extension LimitInputProtocol {
             return false
         }
 
-        self.preIR = IR(text: text, range: range)
+        // 处理字符限制
+        if ir2.text.count > wordLimit { return false }
 
+        self.preIR = ir1
         return true
     }
 
@@ -176,7 +203,7 @@ extension LimitInputProtocol {
         for item in replaces {
             let list = text.components(separatedBy: item.key)
             guard list.count > 1 else { continue }
-            offset += list.count * abs(item.value.utf16.count - item.key.utf16.count)
+            offset += list.count * (item.value.utf16.count - item.key.utf16.count)
             text = list.joined(separator: item.value)
         }
 
@@ -184,23 +211,35 @@ extension LimitInputProtocol {
         return IR(text: text, range: range)
     }
 
-    func replaceWordLimit(text: String) -> String {
-        var text = text
+    func replaceWordLimit(ir: IR) -> IR {
+        var text = ir.text
+        var range = ir.range
         if text.count > wordLimit {
-            return text.slice(from: 0, to: wordLimit)
+            text.slice(from: 0, to: wordLimit)
         }
-        return text
+        range.length = 0
+        range.location = wordLimit
+        return IR(text: text, range: range)
     }
 
-    func replaceEmojiLimit(text: String) -> String {
-        if !self.emojiLimit {
-            return text
-        }
-        return text.filter({ !$0.isEmoji })
+    func replaceEmojiLimit(ir: IR) -> IR {
+        if !self.emojiLimit { return ir }
+        var text = ir.text
+        var range = ir.range
+        var offset = 0
+
+        text = text.filter({ (char) -> Bool in
+            let isEmoji = Smile.isEmoji(character: String(char))
+            offset -= 1
+            return !isEmoji
+        })
+
+        range.length = 0
+        range.location = text.count
+        return IR(text: text, range: range)
     }
 
 }
-
 public extension LimitInputProtocol {
 
     /// 判断输入是否合法的
@@ -212,8 +251,8 @@ public extension LimitInputProtocol {
         if text.isEmpty { return true }
 
         if text.count > wordLimit {
-          overWordLimitEvent?(text)
-          return false
+            overWordLimitEvent?(text)
+            return false
         }
 
         for item in matchs {
@@ -250,5 +289,26 @@ public extension LimitInputProtocol {
 }
 
 
+extension String {
 
+    @discardableResult
+    mutating func slice(from start: Int, to end: Int) -> String {
+        guard end >= start else { return self }
+        if let str = self[safe: start..<end] {
+            self = str
+        }
+        return self
+    }
 
+    /// SwifterSwift: Safely subscript string within a half-open range.
+    ///
+    ///        "Hello World!"[safe: 6..<11] -> "World"
+    ///        "Hello World!"[safe: 21..<110] -> nil
+    ///
+    /// - Parameter range: Half-open range.
+    subscript(safe range: CountableRange<Int>) -> String? {
+        guard let lowerIndex = index(startIndex, offsetBy: max(0, range.lowerBound), limitedBy: endIndex) else { return nil }
+        guard let upperIndex = index(lowerIndex, offsetBy: range.upperBound - range.lowerBound, limitedBy: endIndex) else { return nil }
+        return String(self[lowerIndex..<upperIndex])
+    }
+}

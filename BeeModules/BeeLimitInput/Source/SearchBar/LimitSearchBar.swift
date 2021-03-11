@@ -1,31 +1,48 @@
-//
-//  LimitSearchBar.swift
-//  LimitInput
-//
-//  Created by liuxc on 2019/10/16.
-//  Copyright © 2019 liuxc. All rights reserved.
-//
+/*
+ |-| Copyright (c) 2018 linhay <is.linhay@outlook.com>
+ |-| LimitInputKit https://github.com/linhay/LimitInputKit
+ |-|
+ |-| Permission is hereby granted, free of charge, to any person obtaining a copy
+ |-| of this software and associated documentation files (the "Software"), to deal
+ |-| in the Software without restriction, including without limitation the rights
+ |-| to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ |-| copies of the Software, and to permit persons to whom the Software is
+ |-| furnished to do so, subject to the following conditions:
+ |-|
+ |-| The above copyright notice and this permission notice shall be included in
+ |-| all copies or substantial portions of the Software.
+ |-|
+ |-| THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ |-| IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ |-| FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ |-| AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ |-| LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ |-| OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ |-| THE SOFTWARE.
+ */
 
 import UIKit
 
-@IBDesignable
-open class LimitSearchBar: UISearchBar, LimitInputProtocol {
+public class LimitSearchBar: UISearchBar,LimitInputProtocol {
 
     /// 调整至iOS11之前的风格(高度调整)
     public static var isEnbleOldStyleBefore11 = true
 
     public var preIR: IR? = nil
 
-    /// 表情限制
-    public var emojiLimit: Bool = LimitInput.emojiLimit
-    /// 表情限制回调
-    public var emojiLimitEvent: ((String) -> ())? = nil
+    public var replacementList: [(key: String, value: String)] = []
+
     /// 字数限制
     public var wordLimit: Int = LimitInput.wordLimit
     /// 文字超出字符限制执行
     public var overWordLimitEvent: ((String) -> ())? = LimitInput.overWordLimitEvent
-    // 完成输入
+    /// 表情限制
+    public var emojiLimit: Bool = LimitInput.emojiLimit
+    /// 表情限制回调
+    public var emojiLimitEvent: ((String) -> ())? = nil
+    /// 完成输入
     public var textDidChangeEvent: ((_ text: String)->())? = nil
+    
     /// 文字替换
     public var replaces: [LimitInputReplace] = LimitInput.replaces
     /// 判断输入是否合法的
@@ -34,7 +51,7 @@ open class LimitSearchBar: UISearchBar, LimitInputProtocol {
     public var disables: [LimitInputDisableState] = LimitInput.disables
     /// 设置占位文本偏移
     public var placeholderEdgeInsets: UIEdgeInsets = .zero
-
+    
     /// 调整至iOS11之前的风格(高度调整)
     public var isEnbleOldStyleBefore11 = LimitSearchBar.isEnbleOldStyleBefore11 {
         didSet{
@@ -54,7 +71,7 @@ open class LimitSearchBar: UISearchBar, LimitInputProtocol {
     public var placeholderColor: UIColor? {
         get{
             guard let attr = searchField?.attributedPlaceholder?.attributes(at: 0, effectiveRange: nil),
-                let color = attr[NSAttributedString.Key.foregroundColor] as? UIColor else{ return searchField?.textColor }
+                  let color = attr[NSAttributedString.Key.foregroundColor] as? UIColor else{ return searchField?.textColor }
             return color
         }
         set {
@@ -74,7 +91,7 @@ open class LimitSearchBar: UISearchBar, LimitInputProtocol {
     public var placeholderFont: UIFont? {
         get{
             guard let attr = searchField?.attributedPlaceholder?.attributes(at: 0, effectiveRange: nil),
-                let ft = attr[.font] as? UIFont else{ return searchField?.font }
+                  let ft = attr[.font] as? UIFont else{ return searchField?.font }
             return ft
         }
         set {
@@ -104,19 +121,20 @@ open class LimitSearchBar: UISearchBar, LimitInputProtocol {
 
     /// 输入控件
     public lazy var searchField: UITextField? = {
-        if #available(iOS 13.0, *) {
-            return searchTextField
-        }
-        let subViews = subviews.flatMap { $0.subviews }
-        guard let textField = (subViews.filter { $0 is UITextField }).first as? UITextField else {
+        if #available(iOS 13, *) {
+            for view in self.subviews {
+                if view is UITextField {
+                    return view as? UITextField
+                }
+            }
             return nil
         }
-        return textField
+        return self.value(forKey: "_searchField") as? UITextField
     }()
 
     private var inputHelp: LimitSearchBarExecutor?
 
-    public var limitDelegate: UISearchBarDelegate? {
+    public override var delegate: UISearchBarDelegate? {
         get { return inputHelp }
         set { inputHelp = LimitSearchBarExecutor(delegate: newValue)
             super.delegate = inputHelp
@@ -125,7 +143,7 @@ open class LimitSearchBar: UISearchBar, LimitInputProtocol {
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        limitDelegate = nil
+        delegate = nil
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -134,7 +152,7 @@ open class LimitSearchBar: UISearchBar, LimitInputProtocol {
 
     public override func awakeFromNib() {
         super.awakeFromNib()
-        limitDelegate = nil
+        delegate = nil
     }
 
     public override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
@@ -142,4 +160,3 @@ open class LimitSearchBar: UISearchBar, LimitInputProtocol {
     }
 
 }
-
