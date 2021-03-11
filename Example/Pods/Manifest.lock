@@ -6,31 +6,31 @@ PODS:
   - BEEFormKit/Core (1.0.0):
     - BEEFormKit/Extension
   - BEEFormKit/Extension (1.0.0)
-  - BeeKit-Swift (1.0.0):
-    - BeeKit-Swift/BeeAppDelegate (= 1.0.0)
-    - BeeKit-Swift/BeeAuto (= 1.0.0)
-    - BeeKit-Swift/BeeCore (= 1.0.0)
-    - BeeKit-Swift/BeeLimitInput (= 1.0.0)
-    - BeeKit-Swift/BeeNavigationBar (= 1.0.0)
-    - BeeKit-Swift/BeeNavigator (= 1.0.0)
-    - BeeKit-Swift/BeeTheme (= 1.0.0)
-  - BeeKit-Swift/BeeAppDelegate (1.0.0)
-  - BeeKit-Swift/BeeAuto (1.0.0)
-  - BeeKit-Swift/BeeCore (1.0.0):
+  - BeeKit-Swift (1.0.1):
+    - BeeKit-Swift/BeeAppDelegate (= 1.0.1)
+    - BeeKit-Swift/BeeAuto (= 1.0.1)
+    - BeeKit-Swift/BeeCore (= 1.0.1)
+    - BeeKit-Swift/BeeLimitInput (= 1.0.1)
+    - BeeKit-Swift/BeeNavigationBar (= 1.0.1)
+    - BeeKit-Swift/BeeNavigator (= 1.0.1)
+    - BeeKit-Swift/BeeTheme (= 1.0.1)
+  - BeeKit-Swift/BeeAppDelegate (1.0.1)
+  - BeeKit-Swift/BeeAuto (1.0.1)
+  - BeeKit-Swift/BeeCore (1.0.1):
     - CocoaLumberjack/Swift
     - MBProgressHUD
     - MJRefresh
     - SwifterSwift
     - SwiftValidators
     - SwiftyAttributes
-  - BeeKit-Swift/BeeLimitInput (1.0.0):
+  - BeeKit-Swift/BeeLimitInput (1.0.1):
     - BeeKit-Swift/BeeCore
     - Smile
-  - BeeKit-Swift/BeeNavigationBar (1.0.0):
+  - BeeKit-Swift/BeeNavigationBar (1.0.1):
     - BeeKit-Swift/BeeCore
     - EachNavigationBar
-  - BeeKit-Swift/BeeNavigator (1.0.0)
-  - BeeKit-Swift/BeeTheme (1.0.0)
+  - BeeKit-Swift/BeeNavigator (1.0.1)
+  - BeeKit-Swift/BeeTheme (1.0.1)
   - BEENetwork (1.0.0):
     - BEENetwork/Core (= 1.0.0)
   - BEENetwork/Core (1.0.0):
@@ -169,7 +169,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit-Swift: 507fa5cf5cc4e9bfedfda01930463b5db431d3ff
+  BeeKit-Swift: 7e5b40bea7b08071e0a350b7042a58647eaabd55
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEEPopupKit: e68c2677f260d4b315c436ddb39106ba5666935c
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
