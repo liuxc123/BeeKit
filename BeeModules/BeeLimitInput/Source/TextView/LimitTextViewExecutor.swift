@@ -30,10 +30,9 @@ class LimitTextViewExecutor: LimitInputDelegate, UITextViewDelegate {
         return value
     }
 
-
     @available(iOS 2.0, *)
     public func textViewDidChange(_ textView: UITextView){
-        textInputDelegate?.textDidChange?(textView)
+        textInputDelegate?.textViewDidChange?(textView)
     }
 
     //选中textView 或者输入内容的时候调用
