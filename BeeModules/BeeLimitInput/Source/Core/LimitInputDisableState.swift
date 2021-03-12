@@ -1,10 +1,3 @@
-//
-//  LimitInputDisableState.swift
-//  BLFoundation
-//
-//  Created by linhey on 2018/10/26.
-//
-
 import UIKit
 
 /// 禁用状态

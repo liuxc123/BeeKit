@@ -300,7 +300,7 @@ class BEERefreshableViewController: TableViewController, Refreshable, RefreshCon
     }
 }
 
-class BEEInputViewController: ViewController, UISearchBarDelegate {
+class BEEInputViewController: ViewController, UISearchBarDelegate, UITextViewDelegate, UITextFieldDelegate {
 
     lazy var textField: LimitTextField = {
         let textField = LimitTextField()
@@ -310,6 +310,7 @@ class BEEInputViewController: ViewController, UISearchBarDelegate {
 
         textField.wordLimit = 5
         textField.emojiLimit = true
+        textField.limitDelegate = self
         textField.setTextDidChangeEvent { (text) in
             print(text)
         }
@@ -322,8 +323,9 @@ class BEEInputViewController: ViewController, UISearchBarDelegate {
         textView.placeholder = "placeholder"
         textView.backgroundColor = .yellow
         textView.isScrollEnabled = false
-        textView.wordLimit = 5
+        textView.wordLimit = 20
         textView.emojiLimit = true
+        textView.limitDelegate = self
         textView.setTextDidChangeEvent { (text) in
             print(text)
         }
@@ -332,8 +334,22 @@ class BEEInputViewController: ViewController, UISearchBarDelegate {
 
     lazy var searchBar: LimitSearchBar = {
         let searchBar = LimitSearchBar()
+        searchBar.isEnbleOldStyleBefore11 = true
         searchBar.wordLimit = 5
         searchBar.emojiLimit = true
+        searchBar.limitDelegate = self
+        searchBar.setTextDidChangeEvent { (text) in
+            print(text)
+        }
+        return searchBar
+    }()
+
+    lazy var searchBar2: LimitSearchBar = {
+        let searchBar = LimitSearchBar()
+        searchBar.isEnbleOldStyleBefore11 = false
+        searchBar.wordLimit = 5
+        searchBar.emojiLimit = true
+        searchBar.limitDelegate = self
         searchBar.setTextDidChangeEvent { (text) in
             print(text)
         }
@@ -347,6 +363,7 @@ class BEEInputViewController: ViewController, UISearchBarDelegate {
         view.addSubview(textField)
         view.addSubview(textView)
         view.addSubview(searchBar)
+        view.addSubview(searchBar2)
 
         textField.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview()
@@ -365,7 +382,14 @@ class BEEInputViewController: ViewController, UISearchBarDelegate {
             make.left.right.equalToSuperview()
             make.height.greaterThanOrEqualTo(50)
         }
+
+        searchBar2.snp.makeConstraints { (make) in
+            make.top.equalTo(searchBar.snp.bottom).offset(10)
+            make.left.right.equalToSuperview()
+            make.height.greaterThanOrEqualTo(50)
+        }
     }
+
 }
 
 class BEEIconFontViewController: ViewController {

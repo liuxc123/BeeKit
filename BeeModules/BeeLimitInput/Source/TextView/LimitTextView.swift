@@ -1,26 +1,3 @@
-/*
- |-| Copyright (c) 2018 linhay <is.linhay@outlook.com>
- |-| LimitInputKit https://github.com/linhay/LimitInputKit
- |-|
- |-| Permission is hereby granted, free of charge, to any person obtaining a copy
- |-| of this software and associated documentation files (the "Software"), to deal
- |-| in the Software without restriction, including without limitation the rights
- |-| to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- |-| copies of the Software, and to permit persons to whom the Software is
- |-| furnished to do so, subject to the following conditions:
- |-|
- |-| The above copyright notice and this permission notice shall be included in
- |-| all copies or substantial portions of the Software.
- |-|
- |-| THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- |-| IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- |-| FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- |-| AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- |-| LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- |-| OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
- |-| THE SOFTWARE.
- */
-
 import UIKit
 
 public class LimitTextView: UITextView,LimitInputProtocol {
@@ -49,7 +26,7 @@ public class LimitTextView: UITextView,LimitInputProtocol {
     public lazy var placeholderLabel: UILabel = {
         let item = UILabel()
         item.numberOfLines = 0
-        item.font = UIFontMake(15)
+        item.font = UIFont.systemFont(ofSize: 15)
         item.textColor = UIColor.gray.withAlphaComponent(0.7)
         self.addSubview(item)
         self.setValue(item, forKey: "_placeholderLabel")
@@ -75,7 +52,7 @@ public class LimitTextView: UITextView,LimitInputProtocol {
     }
 
     /// 更新内间距
-    open var inset: UIEdgeInsets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0) {
+    open var inset: UIEdgeInsets = .zero {
         didSet {
             contentInset = .zero
             scrollIndicatorInsets = .zero
@@ -87,10 +64,10 @@ public class LimitTextView: UITextView,LimitInputProtocol {
 
     private var inputHelp: LimitTextViewExecutor?
 
-    override open var delegate: UITextViewDelegate? {
+    open var limitDelegate: UITextViewDelegate? {
         get { return inputHelp }
         set { inputHelp = LimitTextViewExecutor(delegate: newValue)
-            super.delegate = inputHelp
+            self.delegate = inputHelp
         }
     }
 
@@ -123,7 +100,8 @@ public class LimitTextView: UITextView,LimitInputProtocol {
 extension LimitTextView{
 
     func buildConfig() {
-        delegate = nil
+        limitDelegate = nil
+        inset = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
         buildNotifications()
     }
 

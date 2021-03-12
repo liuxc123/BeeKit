@@ -64,7 +64,7 @@ public class LimitSearchBar: UISearchBar,LimitInputProtocol {
         }
     }
 
-    /// 是否sz设置过iOS11之前的风格
+    /// 是否设置过iOS11之前的风格
     var isSetedOldStyleBefore11 = false
 
     /// 占位文字颜色
@@ -121,29 +121,28 @@ public class LimitSearchBar: UISearchBar,LimitInputProtocol {
 
     /// 输入控件
     public lazy var searchField: UITextField? = {
-        if #available(iOS 13, *) {
-            for view in self.subviews {
-                if view is UITextField {
-                    return view as? UITextField
-                }
-            }
+        if #available(iOS 13.0, *) {
+            return searchTextField
+        }
+        let subViews = subviews.flatMap { $0.subviews }
+        guard let textField = (subViews.filter { $0 is UITextField }).first as? UITextField else {
             return nil
         }
-        return self.value(forKey: "_searchField") as? UITextField
+        return textField
     }()
 
     private var inputHelp: LimitSearchBarExecutor?
 
-    public override var delegate: UISearchBarDelegate? {
+    open var limitDelegate: UISearchBarDelegate? {
         get { return inputHelp }
         set { inputHelp = LimitSearchBarExecutor(delegate: newValue)
-            super.delegate = inputHelp
+            self.delegate = inputHelp
         }
     }
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        delegate = nil
+        limitDelegate = nil
     }
 
     public required init?(coder aDecoder: NSCoder) {
@@ -152,7 +151,7 @@ public class LimitSearchBar: UISearchBar,LimitInputProtocol {
 
     public override func awakeFromNib() {
         super.awakeFromNib()
-        delegate = nil
+        limitDelegate = nil
     }
 
     public override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
