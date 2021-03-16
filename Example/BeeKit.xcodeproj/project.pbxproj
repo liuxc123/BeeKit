@@ -455,8 +455,8 @@
 			isa = PBXGroup;
 			children = (
 				045AC7E52600850A00214C04 /* R.generated.swift */,
-				04DDB89B25B828F6006E83EC /* Font */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				04DDB89B25B828F6006E83EC /* Font */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 			);
@@ -597,7 +597,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/BeeKit/Assets/R.generated.swift",
+				$SRCROOT/BeeKit/Assets/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

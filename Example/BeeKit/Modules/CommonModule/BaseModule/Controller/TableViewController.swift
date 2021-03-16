@@ -41,6 +41,7 @@ class TableViewController: ViewController {
 
     override func setupTheme() {
         super.setupTheme()
+        tableView.theme.separatorColor = UIColorTheme(.separatorColor)
         tableView.theme.backgroundColor = UIColorTheme(.groupedBackgroundColor)
     }
 }
