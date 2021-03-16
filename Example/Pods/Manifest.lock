@@ -55,6 +55,7 @@ PODS:
   - CocoaLumberjack/Core (3.7.0)
   - CocoaLumberjack/Swift (3.7.0):
     - CocoaLumberjack/Core
+  - Device (3.2.1)
   - DoraemonKit/Core (3.0.2)
   - DoraemonKit/WithLogger (3.0.2):
     - CocoaLumberjack
@@ -62,8 +63,13 @@ PODS:
   - DoraemonKit/WithMLeaksFinder (3.0.2):
     - DoraemonKit/Core
   - EachNavigationBar (1.14.5)
+  - IQKeyboardManagerSwift (6.5.6)
+  - Kingfisher (4.10.1)
+  - LookinServer (1.0.0)
+  - lottie-ios (3.1.9)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.5.0)
+  - MonkeyKing (2.1.0)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
   - Moya/Core (13.0.1):
@@ -75,9 +81,20 @@ PODS:
   - PermissionKit/Core (1.2.0)
   - PinLayout (1.9.3)
   - QuickLayout (3.0.0)
+  - R.swift (5.3.1):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - ReachabilitySwift (4.3.1)
   - Result (4.1.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxGesture (3.0.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxReachability (1.0.0):
+    - ReachabilitySwift (~> 4.3.1)
+    - RxCocoa (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
@@ -117,12 +134,21 @@ DEPENDENCIES:
   - BEENetwork
   - BEEPopupKit
   - BEETableKit
+  - Device
   - DoraemonKit/Core (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
   - DoraemonKit/WithLogger (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
   - DoraemonKit/WithMLeaksFinder (from `https://gitee.com/yixiangboy/DoraemonKit.git`, tag `3.0.2`)
+  - IQKeyboardManagerSwift
+  - Kingfisher
+  - LookinServer
+  - lottie-ios
+  - MonkeyKing
   - PermissionKit
   - PinLayout
+  - R.swift
   - RxCocoa
+  - RxGesture
+  - RxReachability
   - RxSwift
   - RxWebKit
   - SnapKit
@@ -135,16 +161,27 @@ SPEC REPOS:
     - BEEPopupKit
     - BEETableKit
     - CocoaLumberjack
+    - Device
     - EachNavigationBar
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - LookinServer
+    - lottie-ios
     - MBProgressHUD
     - MJRefresh
+    - MonkeyKing
     - Moya
     - ObjectMapper
     - PermissionKit
     - PinLayout
     - QuickLayout
+    - R.swift
+    - R.swift.Library
+    - ReachabilitySwift
     - Result
     - RxCocoa
+    - RxGesture
+    - RxReachability
     - RxRelay
     - RxSwift
     - RxWebKit
@@ -174,17 +211,28 @@ SPEC CHECKSUMS:
   BEEPopupKit: e68c2677f260d4b315c436ddb39106ba5666935c
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
   CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
+  Device: 0738862dd8a30856b4bd9e21cb9b728873d21392
   DoraemonKit: 0740089a373899c8d462df9ee824fcdd97a68da3
   EachNavigationBar: 5a35d264688f7463042c7eb71799cb232ee44df1
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
+  lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  MonkeyKing: 1656e3e01911b5f72f988d4496c1cc988d0c009c
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PermissionKit: f95c7f5a9899119613788104064f907623ef5e49
   PinLayout: 4d8733121f8687edcc8f00c19bf1379d12808767
   QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
+  R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
+  RxReachability: 21d3e96f39bc166a21c357e923f47dec148ca97b
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxWebKit: a3085e7cd8b57182b452692686675702474014dd
@@ -194,6 +242,6 @@ SPEC CHECKSUMS:
   SwiftValidators: b1cb650ce02ef6ad894f1d471f970b249c794342
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
 
-PODFILE CHECKSUM: b09452235f3fc7f0a0384901f0accc4d72a9e195
+PODFILE CHECKSUM: 566002326e4a2ac373871bf0e97abac6a53afbdc
 
 COCOAPODS: 1.10.1

@@ -29,6 +29,9 @@
 		0457FFD425AC56EE009BD675 /* ThirdApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */; };
 		0457FFD825AC5722009BD675 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD725AC5722009BD675 /* TestViewController.swift */; };
 		045AC5E826005EF400214C04 /* BusinessNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC5E726005EF400214C04 /* BusinessNavigationMap.swift */; };
+		045AC6B226007C5900214C04 /* ReachabilityApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC6B126007C5900214C04 /* ReachabilityApplicationService.swift */; };
+		045AC79B2600819000214C04 /* SocialApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC79A2600819000214C04 /* SocialApplicationService.swift */; };
+		045AC7E62600850A00214C04 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7E52600850A00214C04 /* R.generated.swift */; };
 		047A7F9B25C92E0200BAFD11 /* UIKitAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */; };
 		047E389F25C2A64C008EDD4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A125C2A64C008EDD4C /* Localizable.strings */; };
 		047E38A925C2A70C008EDD4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A725C2A70C008EDD4C /* Info.plist */; };
@@ -88,6 +91,9 @@
 		0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdApplicationService.swift; sourceTree = "<group>"; };
 		0457FFD725AC5722009BD675 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		045AC5E726005EF400214C04 /* BusinessNavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessNavigationMap.swift; sourceTree = "<group>"; };
+		045AC6B126007C5900214C04 /* ReachabilityApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityApplicationService.swift; sourceTree = "<group>"; };
+		045AC79A2600819000214C04 /* SocialApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApplicationService.swift; sourceTree = "<group>"; };
+		045AC7E52600850A00214C04 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitAnimationViewController.swift; sourceTree = "<group>"; };
 		047E387D25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		047E387E25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -169,7 +175,6 @@
 		0457FF7625AC5332009BD675 /* CommonModule */ = {
 			isa = PBXGroup;
 			children = (
-				04B182CD25B0304700368FAA /* TabModule */,
 				0457FF4C25AC50C0009BD675 /* BaseModule */,
 				0457FF7725AC538B009BD675 /* WebModule */,
 			);
@@ -361,7 +366,7 @@
 			isa = PBXGroup;
 			children = (
 				F196B1FE25A03D69005D5DE3 /* Application */,
-				F196B20625A03E30005D5DE3 /* Assest */,
+				F196B20625A03E30005D5DE3 /* Assets */,
 				F196B20025A03D9C005D5DE3 /* Config */,
 				04B1833B25B133BD00368FAA /* General */,
 				F196B1FF25A03D85005D5DE3 /* Modules */,
@@ -412,12 +417,14 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				F196B20D25A04172005D5DE3 /* RootApplicationService.swift */,
-				0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */,
-				0457FF0A25AC4B63009BD675 /* NavigationApplicationService.swift */,
-				0457FF0625AC4B3E009BD675 /* ThemeApplicationService.swift */,
 				0457FF1825AC4FC6009BD675 /* DebugingApplicationService.swift */,
+				0457FF0A25AC4B63009BD675 /* NavigationApplicationService.swift */,
+				045AC6B126007C5900214C04 /* ReachabilityApplicationService.swift */,
+				F196B20D25A04172005D5DE3 /* RootApplicationService.swift */,
+				045AC79A2600819000214C04 /* SocialApplicationService.swift */,
 				0457FFD725AC5722009BD675 /* TestViewController.swift */,
+				0457FF0625AC4B3E009BD675 /* ThemeApplicationService.swift */,
+				0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -426,6 +433,7 @@
 			isa = PBXGroup;
 			children = (
 				0457FF7625AC5332009BD675 /* CommonModule */,
+				04B182CD25B0304700368FAA /* TabModule */,
 				04B182D725B030DA00368FAA /* BEEKitModule */,
 				04B182D625B030D300368FAA /* FoundationModule */,
 				04B182D525B030CD00368FAA /* UIKitModule */,
@@ -443,15 +451,16 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
-		F196B20625A03E30005D5DE3 /* Assest */ = {
+		F196B20625A03E30005D5DE3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				045AC7E52600850A00214C04 /* R.generated.swift */,
 				04DDB89B25B828F6006E83EC /* Font */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 			);
-			path = Assest;
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		F196B24525A042B7005D5DE3 /* Navigation */ = {
@@ -472,6 +481,7 @@
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "BeeKit_Example" */;
 			buildPhases = (
 				B7DF3A47A8C8981BE00EEDA1 /* [CP] Check Pods Manifest.lock */,
+				045AC79E2600828B00214C04 /* ShellScript */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
@@ -574,6 +584,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		045AC79E2600828B00214C04 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$SRCROOT/BeeKit/Assets/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/BeeKit/Assets/R.generated.swift\"\n";
+		};
 		8D8D796A51F7B5C283540029 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,17 +659,26 @@
 				"${BUILT_PRODUCTS_DIR}/BEEPopupKit/BEEPopupKit.framework",
 				"${BUILT_PRODUCTS_DIR}/BeeKit-Swift/BeeKit_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/Device/Device.framework",
 				"${BUILT_PRODUCTS_DIR}/DoraemonKit/DoraemonKit.framework",
 				"${BUILT_PRODUCTS_DIR}/EachNavigationBar/EachNavigationBar.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${PODS_ROOT}/LookinServer/LookinServer.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MonkeyKing/MonkeyKing.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/PermissionKit/PermissionKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PinLayout/PinLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/QuickLayout/QuickLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxReachability/RxReachability.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxWebKit/RxWebKit.framework",
@@ -649,6 +687,7 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftValidators/SwiftValidators.framework",
 				"${BUILT_PRODUCTS_DIR}/SwifterSwift/SwifterSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyAttributes/SwiftyAttributes.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -657,17 +696,26 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEEPopupKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BeeKit_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Device.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoraemonKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EachNavigationBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MonkeyKing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PermissionKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PinLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QuickLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxReachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxWebKit.framework",
@@ -676,6 +724,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftValidators.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwifterSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyAttributes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -706,8 +755,10 @@
 				F196B20E25A04172005D5DE3 /* RootApplicationService.swift in Sources */,
 				0457FFD825AC5722009BD675 /* TestViewController.swift in Sources */,
 				045AC5E826005EF400214C04 /* BusinessNavigationMap.swift in Sources */,
+				045AC79B2600819000214C04 /* SocialApplicationService.swift in Sources */,
 				0457FF8325AC53BA009BD675 /* CollectionViewController.swift in Sources */,
 				0457FF8825AC53BA009BD675 /* NavigationController.swift in Sources */,
+				045AC6B226007C5900214C04 /* ReachabilityApplicationService.swift in Sources */,
 				04B182EC25B031DA00368FAA /* UIKitListViewController.swift in Sources */,
 				04B1832D25B0410000368FAA /* BEEKItDetailsViewController.swift in Sources */,
 				0457FF0B25AC4B63009BD675 /* NavigationApplicationService.swift in Sources */,
@@ -719,6 +770,7 @@
 				0457FF5025AC51AE009BD675 /* AppThemeService+Custom.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				F196B24825A04317005D5DE3 /* NavigationMap.swift in Sources */,
+				045AC7E62600850A00214C04 /* R.generated.swift in Sources */,
 				047A7F9B25C92E0200BAFD11 /* UIKitAnimationViewController.swift in Sources */,
 				0413013525BEBE6D00F96D1E /* UIKitDetailViewController.swift in Sources */,
 				0457FF9C25AC55EE009BD675 /* CommonMacro.swift in Sources */,

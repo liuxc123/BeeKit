@@ -1,13 +1,16 @@
 source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
 platform :ios, '9.0'
+use_frameworks!
 
 target 'BeeKit_Example' do
     pod 'BeeKit-Swift', :path => '../'
 
+    # 必备组件
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'RxWebKit'
+    pod 'RxGesture'
+    pod 'RxReachability'
 
     pod 'SnapKit'
     pod 'PinLayout'
@@ -15,10 +18,44 @@ target 'BeeKit_Example' do
     pod 'BEEPopupKit'
     pod 'BEEFormKit'
     pod 'BEETableKit'
+
+    # Networking
     pod 'BEENetwork'
+    pod 'Kingfisher'
+
+    # 自定义动图加载
+    pod 'lottie-ios'
+
+    # DataBase
+#    pod 'WCDB.swift'
+
+    # UI
+  #  pod 'YYText'
+  #  pod 'AMPopTip'
+  #  pod 'JXSegmentedView'
+  #  pod 'JXPagingView'
+  #  pod 'JXPhotoBrowser'
+  #  pod 'FSPagerView'
+  #  pod 'EBBannerView'
+  #  pod 'BRPickerView'
+  #  pod 'SwipeCellKit'
+  #  pod 'FSCalendar'
+  #  pod 'FloatingPanel'
+  #  pod 'SkeletonView'
+  #  pod 'Hero'
+  #  pod 'FFPopup'
+
+    # 工具
+    pod 'Device'
     pod 'PermissionKit'
+    pod 'IQKeyboardManagerSwift'
+    pod 'R.swift'
+
+    # 社会化分享 && 支付
+    pod 'MonkeyKing'
 
     # Debug
+    pod 'LookinServer', :configurations => ['Debug']
     pod 'DoraemonKit/Core', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #必选
     pod 'DoraemonKit/WithLogger', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #可选
     pod 'DoraemonKit/WithMLeaksFinder', :git => "https://gitee.com/yixiangboy/DoraemonKit.git", :tag => '3.0.2', :configurations => ['Debug'] #可选

@@ -1,3 +1,5 @@
+// https://github.com/pchelnikov/PluggableAppDelegate
+
 import UIKit
 import UserNotifications
 

@@ -30,9 +30,14 @@ class BEEKitListViewController: TableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigation.item.title = "BeeKit"
         self.tableView.theme.separatorColor = UIColorTheme(.separatorColor)
         setupForm()
+    }
+
+    override func setupNavigationBar() {
+        super.setupNavigationBar()
+        self.navigation.item.title = "BeeKit"
+
     }
     
     func setupForm() {
@@ -48,5 +53,7 @@ class BEEKitListViewController: TableViewController {
         }
         tableDirector.append(section: section)
     }
+
+
     
 }

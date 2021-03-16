@@ -18,6 +18,8 @@ class AppDelegate: ApplicationDelegate {
             ThemeApplicationService(),
             RootApplicationService(),
             NavigationApplicationService(),
+            ReachabilityApplicationService(),
+            SocialApplicationService(),
             DebugingApplicationService()
         ]
     }

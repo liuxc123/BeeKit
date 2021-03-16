@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SwifterSwift
+import BeeKit_Swift
 
 // MARK: - 变量
 
@@ -21,27 +21,16 @@ public var SCREEN_HEIGHT: CGFloat { UIScreen.screenWidth }
 public var OnePixle: CGFloat { UIScreen.onePixle }
 
 /// SafeAreaInsets
-public var GET_SAFEAREA_INSETS: UIEdgeInsets {
-    if #available(iOS 11.0, *) {
-        return UIApplication.shared.keyWindow?.safeAreaInsets ?? UIEdgeInsets.zero
-    }
-    return UIEdgeInsets.zero
-}
+public var GET_SAFEAREA_INSETS: UIEdgeInsets { return UIScreen.safeAreaInsets }
 
 /// 导航栏高度
-public let GET_NAVIGATION_BAR_HEIGHT: CGFloat = 44
+public var GET_NAVIGATION_BAR_HEIGHT: CGFloat { return UIScreen.navBar.height }
 
 /// 导航栏最大Y值
-public var GET_NAVIGATION_BAR_MAXY: CGFloat {
-    var top = GET_SAFEAREA_INSETS.top
-    top = top > 0 ? top : 20
-    return top + GET_NAVIGATION_BAR_HEIGHT
-}
+public var GET_NAVIGATION_BAR_MAXY: CGFloat { return UIScreen.topBar.height }
 
 /// tabbar高度
-public var GET_TABBAR_HEIGHT: CGFloat {
-    return 49.0 + GET_SAFEAREA_INSETS.bottom
-}
+public var GET_TABBAR_HEIGHT: CGFloat { return UIScreen.bottomBar.height }
 
 
 // MARK: - 方法-创建器
