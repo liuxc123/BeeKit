@@ -38,6 +38,9 @@
 		045AC88F2600912700214C04 /* UIImage+ImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC88A2600912700214C04 /* UIImage+ImageCompress.m */; };
 		045AC8902600912700214C04 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC88D2600912700214C04 /* UIImage+FixOrientation.m */; };
 		045AC8A32600936100214C04 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC8A22600936100214C04 /* HTTPResponse.swift */; };
+		045AC8EE2600AF1300214C04 /* SPScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC8EB2600AF1300214C04 /* SPScanManager.m */; };
+		045AC8EF2600AF1300214C04 /* SPScanCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC8EC2600AF1300214C04 /* SPScanCodeGenerator.m */; };
+		045AC8F02600AF1300214C04 /* SPScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC8ED2600AF1300214C04 /* SPScanResult.m */; };
 		047A7F9B25C92E0200BAFD11 /* UIKitAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */; };
 		047E389F25C2A64C008EDD4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A125C2A64C008EDD4C /* Localizable.strings */; };
 		047E38A925C2A70C008EDD4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A725C2A70C008EDD4C /* Info.plist */; };
@@ -109,6 +112,12 @@
 		045AC88D2600912700214C04 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
 		045AC897260091D000214C04 /* BeeKit-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeeKit-Bridging-Header.h"; sourceTree = "<group>"; };
 		045AC8A22600936100214C04 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
+		045AC8E82600AF1300214C04 /* SPScanManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPScanManager.h; sourceTree = "<group>"; };
+		045AC8E92600AF1300214C04 /* SPScanResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPScanResult.h; sourceTree = "<group>"; };
+		045AC8EA2600AF1300214C04 /* SPScanCodeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPScanCodeGenerator.h; sourceTree = "<group>"; };
+		045AC8EB2600AF1300214C04 /* SPScanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPScanManager.m; sourceTree = "<group>"; };
+		045AC8EC2600AF1300214C04 /* SPScanCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPScanCodeGenerator.m; sourceTree = "<group>"; };
+		045AC8ED2600AF1300214C04 /* SPScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPScanResult.m; sourceTree = "<group>"; };
 		047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitAnimationViewController.swift; sourceTree = "<group>"; };
 		047E387D25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		047E387E25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -279,6 +288,27 @@
 			path = UIImage;
 			sourceTree = "<group>";
 		};
+		045AC8AD2600AEDA00214C04 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				045AC8E72600AF1300214C04 /* SPScanning */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		045AC8E72600AF1300214C04 /* SPScanning */ = {
+			isa = PBXGroup;
+			children = (
+				045AC8EA2600AF1300214C04 /* SPScanCodeGenerator.h */,
+				045AC8EC2600AF1300214C04 /* SPScanCodeGenerator.m */,
+				045AC8E82600AF1300214C04 /* SPScanManager.h */,
+				045AC8EB2600AF1300214C04 /* SPScanManager.m */,
+				045AC8E92600AF1300214C04 /* SPScanResult.h */,
+				045AC8ED2600AF1300214C04 /* SPScanResult.m */,
+			);
+			path = SPScanning;
+			sourceTree = "<group>";
+		};
 		04B182CD25B0304700368FAA /* TabModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +389,7 @@
 		04B1833B25B133BD00368FAA /* General */ = {
 			isa = PBXGroup;
 			children = (
+				045AC8AD2600AEDA00214C04 /* CustomUI */,
 				045AC8862600911A00214C04 /* Extension */,
 				04B1833C25B133BD00368FAA /* Permission */,
 			);
@@ -802,6 +833,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045AC8F02600AF1300214C04 /* SPScanResult.m in Sources */,
 				0457FF9025AC5414009BD675 /* PageModel.swift in Sources */,
 				045AC88F2600912700214C04 /* UIImage+ImageCompress.m in Sources */,
 				04B1831125B035B900368FAA /* DemoListTableViewCell.swift in Sources */,
@@ -825,12 +857,14 @@
 				045AC79B2600819000214C04 /* SocialApplicationService.swift in Sources */,
 				0457FF8325AC53BA009BD675 /* CollectionViewController.swift in Sources */,
 				0457FF8825AC53BA009BD675 /* NavigationController.swift in Sources */,
+				045AC8EE2600AF1300214C04 /* SPScanManager.m in Sources */,
 				045AC6B226007C5900214C04 /* ReachabilityApplicationService.swift in Sources */,
 				045AC8A32600936100214C04 /* HTTPResponse.swift in Sources */,
 				04B182EC25B031DA00368FAA /* UIKitListViewController.swift in Sources */,
 				04B1832D25B0410000368FAA /* BEEKItDetailsViewController.swift in Sources */,
 				0457FF0B25AC4B63009BD675 /* NavigationApplicationService.swift in Sources */,
 				045AC8902600912700214C04 /* UIImage+FixOrientation.m in Sources */,
+				045AC8EF2600AF1300214C04 /* SPScanCodeGenerator.m in Sources */,
 				0457FF0725AC4B3E009BD675 /* ThemeApplicationService.swift in Sources */,
 				0457FF8625AC53BA009BD675 /* TabBarController.swift in Sources */,
 				F196B20225A03DC1005D5DE3 /* AppEnv.swift in Sources */,
