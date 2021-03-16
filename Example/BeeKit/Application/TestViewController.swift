@@ -32,7 +32,15 @@ class TestViewController: ViewController {
 
         textView.theme.backgroundColor = UIColorTheme(.backgroundColor)
         textView.isEditable = false
-        textView.attributedText = "click".localized.withLink(URL(string: "app://test")!)
+        let attributedText = NSMutableAttributedString()
+        attributedText.append("新开Test页面".localized.withLink(URL(string: "test".formatScheme())!).withFont(UIFontMake(16)))
+        attributedText.append("\n返回首页".localized.withLink(URL(string: "beekit".formatScheme())!).withFont(UIFontMake(16)))
+        attributedText.append("\n返回Foundation页面".localized.withLink(URL(string: "foundation".formatScheme())!).withFont(UIFontMake(16)))
+        attributedText.append("\n返回UIKit页面".localized.withLink(URL(string: "uikit".formatScheme())!).withFont(UIFontMake(16)))
+
+        let style = NSMutableParagraphStyle()
+        style.lineSpacing = 8
+        textView.attributedText = attributedText.withParagraphStyle(style)
         textView.limitDelegate = self
     }
 
@@ -43,7 +51,10 @@ extension TestViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
         let alert = BEEAlertView(title: "跳转", message: "地址:\(URL.absoluteString)")
         alert.addAction(BEEAlertAction(title: "确定", style: .default, handler: { (action) in
-            navigator.push(URL.absoluteString)
+            if navigator.push(URL.absoluteString) != nil {
+                return
+            }
+            navigator.open(URL.absoluteString)
         }))
         alert.show()
         return false
@@ -53,7 +64,10 @@ extension TestViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         let alert = BEEAlertView(title: "跳转", message: "地址:\(URL.absoluteString)")
         alert.addAction(BEEAlertAction(title: "确定", style: .default, handler: { (action) in
-            navigator.push(URL.absoluteString)
+            if navigator.push(URL.absoluteString) != nil {
+                return
+            }
+            navigator.open(URL.absoluteString)
         }))
         alert.show()
         return false

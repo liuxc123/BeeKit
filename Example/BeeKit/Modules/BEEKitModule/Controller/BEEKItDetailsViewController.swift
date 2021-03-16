@@ -28,6 +28,7 @@ class BEEAppViewController: ViewController {
                 log.verbose("Is not first start!")
             }
         }
+
     }
 }
 
@@ -306,8 +307,8 @@ class BEEInputViewController: ViewController, UISearchBarDelegate, UITextViewDel
         let textField = LimitTextField()
         textField.placeholder = "placeholder"
         textField.clearButtonMode = .whileEditing
-        textField.backgroundColor = .yellow
-
+        textField.theme.textColor = UIColorTheme(.onPrimaryColor)
+        textField.theme.backgroundColor = UIColorTheme(.backgroundColor)
         textField.wordLimit = 5
         textField.emojiLimit = true
         textField.limitDelegate = self
@@ -321,10 +322,12 @@ class BEEInputViewController: ViewController, UISearchBarDelegate, UITextViewDel
     lazy var textView: LimitTextView = {
         let textView = LimitTextView()
         textView.placeholder = "placeholder"
-        textView.backgroundColor = .yellow
         textView.isScrollEnabled = false
         textView.wordLimit = 20
         textView.emojiLimit = true
+        textView.theme.backgroundColor = UIColorTheme(.backgroundColor)
+        textView.theme.textColor = UIColorTheme(.onPrimaryColor)
+        textView.placeholderLabel.theme.textColor = UIColorTheme(.placeholderTextColor)
         textView.limitDelegate = self
         textView.setTextDidChangeEvent { (text) in
             print(text)
@@ -335,6 +338,7 @@ class BEEInputViewController: ViewController, UISearchBarDelegate, UITextViewDel
     lazy var searchBar: LimitSearchBar = {
         let searchBar = LimitSearchBar()
         searchBar.isEnbleOldStyleBefore11 = true
+        searchBar.theme.backgroundColor = UIColorTheme(.backgroundColor)
         searchBar.wordLimit = 5
         searchBar.emojiLimit = true
         searchBar.limitDelegate = self
@@ -347,6 +351,7 @@ class BEEInputViewController: ViewController, UISearchBarDelegate, UITextViewDel
     lazy var searchBar2: LimitSearchBar = {
         let searchBar = LimitSearchBar()
         searchBar.isEnbleOldStyleBefore11 = false
+        searchBar.theme.backgroundColor = UIColorTheme(.backgroundColor)
         searchBar.wordLimit = 5
         searchBar.emojiLimit = true
         searchBar.limitDelegate = self
@@ -400,10 +405,7 @@ class BEEIconFontViewController: ViewController {
 
         let imageView = UIImageView(frame: CGRect(x: 0, y: 88, width: view.bounds.width, height: 300))
         imageView.theme.image = ThemeProvider<UIImage>({ (style) -> UIImage in
-            switch style {
-            case .dark: return UIImage.iconfont(BEEIconFont.tback(50), color: .white)
-            default: return UIImage.iconfont(BEEIconFont.tback(50), color: .black)
-            }
+            return UIImage.iconfont(BEEIconFont.tback(50), color: UIColorTheme(style, level: .onPrimaryColor))
         })
         imageView.contentMode = .center
         view.addSubview(imageView)
@@ -417,14 +419,9 @@ class BEEThemeViewController: ViewController {
         super.viewDidLoad()
         self.navigation.item.title = "BEETheme"
         self.navigation.bar.theme.titleTextAttributes = ThemeProvider<[NSAttributedString.Key : Any]>({ style in
-            switch style {
-            case .dark:
-                return [.font: UIFontMake(17), .foregroundColor: UIColor.white]
-            default:
-                return [.font: UIFontMake(17), .foregroundColor: UIColor.black]
-            }
+            return [.font: UIFontMake(17), .foregroundColor: UIColorTheme(style, level: .onPrimaryColor)]
         })
-        self.navigation.bar.theme.backgroundColor = UIColorTheme(.surfaceColor)
+        self.navigation.bar.theme.backgroundColor = UIColorTheme(.backgroundColor)
         self.navigation.bar.theme.tintColor = UIColorTheme(.onPrimaryColor)
         self.navigation.item.backBarButtonItem = UIBarButtonItem(image: UIImage.iconfont(BEEIconFont.tback(24), color: .black), style: .done, target: nil, action: nil)
         self.navigation.item.rightBarButtonItem = UIBarButtonItem(title: "切换主题", style: .done, target: self, action: #selector(changeTheme))
@@ -442,13 +439,7 @@ class BEEThemeViewController: ViewController {
             }
         })
         label.theme.attributedText = ThemeProvider<NSAttributedString>({ style in
-            let text = "文本内容".withFont(UIFontMake(17))
-            switch style {
-            case .dark:
-                return text.withTextColor(.white)
-            default:
-                return text.withTextColor(.black)
-            }
+            return "文本内容".withFont(UIFontMake(17)).withTextColor(UIColorTheme(style, level: .onPrimaryColor))
         })
     }
 
@@ -468,7 +459,7 @@ class BEELabelViewController: ViewController {
         label.textInsets = UIEdgeInsets(inset: 20)
         label.numberOfLines = 0
         label.text = "自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒自适应呢绒"
-        label.backgroundColor = .yellow
+        label.theme.textColor = UIColorTheme(.onPrimaryColor)
         view.addSubview(label)
 
         label.snp.makeConstraints { (make) in

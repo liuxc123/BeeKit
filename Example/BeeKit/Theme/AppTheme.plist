@@ -4,57 +4,131 @@
 <dict>
 	<key>light</key>
 	<dict>
+		<key>grayColor</key>
+		<string>#8E8E93</string>
+		<key>grayColor2</key>
+		<string>#AEAEB2</string>
+		<key>grayColor3</key>
+		<string>#C7C7CC</string>
+		<key>grayColor4</key>
+		<string>#D1D1D6</string>
+		<key>grayColor5</key>
+		<string>#E5E5EA</string>
+		<key>grayColor6</key>
+		<string>#F2F2F7</string>
 		<key>primaryColor</key>
-		<string>#FFCC00</string>
-		<key>primaryColorVariant</key>
-		<string>#FA7D00</string>
+		<string>#FFFFFF</string>
 		<key>secondaryColor</key>
-		<string>#2E8EE2</string>
-		<key>thirdColor</key>
-		<string>#00B9CE</string>
-		<key>backgroundColor</key>
-		<string>#ffffff</string>
-		<key>surfaceColor</key>
-		<string>#ffffff</string>
-		<key>onPrimaryColor</key>
 		<string>#272727</string>
-		<key>onSecondaryColor</key>
+		<key>thirdColor</key>
 		<string>#666666</string>
-		<key>onThirdColor</key>
+		<key>forthColor</key>
 		<string>#999999</string>
-		<key>onPlaceholderColor</key>
-		<string>#AAAAAA</string>
-		<key>borderColor</key>
-		<string>#BDBDBD</string>
+		<key>onPrimaryColor</key>
+		<string>#000000</string>
+		<key>onSecondaryColor</key>
+		<string>#3C3C43</string>
+		<key>onThirdColor</key>
+		<string>#3C3C43</string>
+		<key>onForthColor</key>
+		<string>#3C3C43</string>
+		<key>linkColor</key>
+		<string>#007AFF</string>
+		<key>placeholderTextColor</key>
+		<string>#3C3C43</string>
 		<key>separatorColor</key>
+		<string>#3C3C43</string>
+		<key>opaqueSeparatorColor</key>
+		<string>#C6C6C8</string>
+		<key>borderColor</key>
 		<string>d9d9d9</string>
+		<key>backgroundColor</key>
+		<string>#FFFFFF</string>
+		<key>secondaryBackgroundColor</key>
+		<string>#F2F2F7</string>
+		<key>groupedBackgroundColor</key>
+		<string>#F2F2F7</string>
+		<key>secondaryGroupedBackgroundColor</key>
+		<string>#FFFFFF</string>
+		<key>thirdGroupedBackgroundColor</key>
+		<string>#F2F2F7</string>
+		<key>fillColor</key>
+		<string>#787880</string>
+		<key>secondaryFillColor</key>
+		<string>#787880</string>
+		<key>thirdFillColor</key>
+		<string>#767680</string>
+		<key>fouthFillColor</key>
+		<string>#747480</string>
+		<key>lightTextColor</key>
+		<string>#FFFFFF</string>
+		<key>darkTextColor</key>
+		<string>#000000</string>
 	</dict>
 	<key>dark</key>
 	<dict>
+		<key>grayColor</key>
+		<string>#8E8E93</string>
+		<key>grayColor2</key>
+		<string>#636366</string>
+		<key>grayColor3</key>
+		<string>#48484A</string>
+		<key>grayColor4</key>
+		<string>#3A3A3C</string>
+		<key>grayColor5</key>
+		<string>#2C2C2E</string>
+		<key>grayColor6</key>
+		<string>#1C1C1E</string>
 		<key>primaryColor</key>
-		<string>#ffffff</string>
-		<key>primaryColorVariant</key>
-		<string>#d9d9d9</string>
+		<string>#FFFFFF</string>
 		<key>secondaryColor</key>
-		<string>#a6a6a6</string>
+		<string>#272727</string>
 		<key>thirdColor</key>
-		<string>#191919</string>
-		<key>backgroundColor</key>
-		<string>#333333</string>
-		<key>surfaceColor</key>
-		<string>#0a0a0a</string>
+		<string>#666666</string>
+		<key>forthColor</key>
+		<string>#999999</string>
 		<key>onPrimaryColor</key>
-		<string>#ffffff</string>
+		<string>#FFFFFF</string>
 		<key>onSecondaryColor</key>
-		<string>#d9d9d9</string>
+		<string>#EBEBF5</string>
 		<key>onThirdColor</key>
-		<string>#a6a6a6</string>
-		<key>onPlaceholderColor</key>
-		<string>#AAAAAA</string>
-		<key>borderColor</key>
-		<string>#404040</string>
+		<string>#EBEBF5</string>
+		<key>onForthColor</key>
+		<string>#EBEBF5</string>
+		<key>linkColor</key>
+		<string>#0984FF</string>
+		<key>placeholderTextColor</key>
+		<string>#EBEBF5</string>
 		<key>separatorColor</key>
-		<string>#262626</string>
+		<string>#545458</string>
+		<key>opaqueSeparatorColor</key>
+		<string>#38383A</string>
+		<key>borderColor</key>
+		<string>d9d9d9</string>
+		<key>backgroundColor</key>
+		<string>#000000</string>
+		<key>secondaryBackgroundColor</key>
+		<string>#1C1C1E</string>
+		<key>thirdBackgroundColor</key>
+		<string>#2C2C2E</string>
+		<key>groupedBackgroundColor</key>
+		<string>#000000</string>
+		<key>secondaryGroupedBackgroundColor</key>
+		<string>#1C1C1E</string>
+		<key>thirdGroupedBackgroundColor</key>
+		<string>#2C2C2E</string>
+		<key>fillColor</key>
+		<string>#787880</string>
+		<key>secondaryFillColor</key>
+		<string>#787880</string>
+		<key>thirdFillColor</key>
+		<string>#767680</string>
+		<key>fouthFillColor</key>
+		<string>#767680</string>
+		<key>lightTextColor</key>
+		<string>#FFFFFF</string>
+		<key>darkTextColor</key>
+		<string>#000000</string>
 	</dict>
 </dict>
 </plist>

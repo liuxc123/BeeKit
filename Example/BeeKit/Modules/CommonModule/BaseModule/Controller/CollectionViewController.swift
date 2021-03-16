@@ -40,6 +40,6 @@ class CollectionViewController: ViewController {
 
     override func setupTheme() {
         super.setupTheme()
-        collectionView.theme.backgroundColor = UIColorTheme(.backgroundColor)
+        collectionView.theme.backgroundColor = UIColorTheme(.groupedBackgroundColor)
     }
 }

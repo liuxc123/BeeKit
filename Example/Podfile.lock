@@ -7,30 +7,30 @@ PODS:
     - BEEFormKit/Extension
   - BEEFormKit/Extension (1.0.0)
   - BeeKit-Swift (1.0.1):
-    - BeeKit-Swift/BeeAppDelegate (= 1.0.1)
-    - BeeKit-Swift/BeeAuto (= 1.0.1)
-    - BeeKit-Swift/BeeCore (= 1.0.1)
-    - BeeKit-Swift/BeeLimitInput (= 1.0.1)
-    - BeeKit-Swift/BeeNavigationBar (= 1.0.1)
-    - BeeKit-Swift/BeeNavigator (= 1.0.1)
-    - BeeKit-Swift/BeeTheme (= 1.0.1)
-  - BeeKit-Swift/BeeAppDelegate (1.0.1)
-  - BeeKit-Swift/BeeAuto (1.0.1)
-  - BeeKit-Swift/BeeCore (1.0.1):
+    - BeeKit-Swift/AppDelegate (= 1.0.1)
+    - BeeKit-Swift/Auto (= 1.0.1)
+    - BeeKit-Swift/Base (= 1.0.1)
+    - BeeKit-Swift/LimitInput (= 1.0.1)
+    - BeeKit-Swift/NavigationBar (= 1.0.1)
+    - BeeKit-Swift/Navigator (= 1.0.1)
+    - BeeKit-Swift/Theme (= 1.0.1)
+  - BeeKit-Swift/AppDelegate (1.0.1)
+  - BeeKit-Swift/Auto (1.0.1)
+  - BeeKit-Swift/Base (1.0.1):
     - CocoaLumberjack/Swift
     - MBProgressHUD
     - MJRefresh
     - SwifterSwift
     - SwiftValidators
     - SwiftyAttributes
-  - BeeKit-Swift/BeeLimitInput (1.0.1):
-    - BeeKit-Swift/BeeCore
+  - BeeKit-Swift/LimitInput (1.0.1):
+    - BeeKit-Swift/Base
     - Smile
-  - BeeKit-Swift/BeeNavigationBar (1.0.1):
-    - BeeKit-Swift/BeeCore
+  - BeeKit-Swift/NavigationBar (1.0.1):
+    - BeeKit-Swift/Base
     - EachNavigationBar
-  - BeeKit-Swift/BeeNavigator (1.0.1)
-  - BeeKit-Swift/BeeTheme (1.0.1)
+  - BeeKit-Swift/Navigator (1.0.1)
+  - BeeKit-Swift/Theme (1.0.1)
   - BEENetwork (1.0.0):
     - BEENetwork/Core (= 1.0.0)
   - BEENetwork/Core (1.0.0):
@@ -169,7 +169,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit-Swift: 7e5b40bea7b08071e0a350b7042a58647eaabd55
+  BeeKit-Swift: 66512ab194811bb2901584cb52af6fd080961c20
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEEPopupKit: e68c2677f260d4b315c436ddb39106ba5666935c
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
@@ -194,6 +194,6 @@ SPEC CHECKSUMS:
   SwiftValidators: b1cb650ce02ef6ad894f1d471f970b249c794342
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
 
-PODFILE CHECKSUM: e3decb3fc0a5c520bd076c69b3efd83e40fd7286
+PODFILE CHECKSUM: b09452235f3fc7f0a0384901f0accc4d72a9e195
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1

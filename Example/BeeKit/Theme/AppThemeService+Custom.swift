@@ -21,14 +21,9 @@ extension AppThemeService {
 
     static func themeNavigationBar(vc: UIViewController) {
         vc.navigation.bar.theme.titleTextAttributes = ThemeProvider<[NSAttributedString.Key : Any]>({ style in
-            switch style {
-            case .dark:
-                return [.font: UIFontMake(17), .foregroundColor: UIColor.white]
-            default:
-                return [.font: UIFontMake(17), .foregroundColor: UIColor.black]
-            }
+            return [.font: UIFontMake(17), .foregroundColor: UIColorTheme(style, level: .onPrimaryColor)]
         })
-        vc.navigation.bar.theme.backgroundColor = UIColorTheme(.surfaceColor)
+        vc.navigation.bar.theme.backgroundColor = UIColorTheme(.backgroundColor)
         vc.navigation.bar.theme.tintColor = UIColorTheme(.onPrimaryColor)
         vc.navigation.item.backBarButtonItem = UIBarButtonItem(image: UIImage.iconfont(BEEIconFont.tback(24), color: .black), style: .done, target: nil, action: nil)
     }

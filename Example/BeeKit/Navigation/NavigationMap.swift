@@ -20,7 +20,7 @@ extension Navigator: NavigationProtocol {
     public static var that: NavigatorType? = nil
 
     /// 用于缓存scheme
-    public static var scheme: String = "app"
+    public static var scheme: String = "beekit"
 }
 
 extension String {
@@ -43,6 +43,7 @@ struct NavigationMap {
     /// 注册页面
     static func initialize(navigator: NavigatorType) {
         CommonNavigationMap.initialize(navigator: navigator)
+        BusinessNavigationMap.initialize(navigator: navigator)
     }
 }
 

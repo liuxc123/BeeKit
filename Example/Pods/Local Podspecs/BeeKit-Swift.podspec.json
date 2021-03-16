@@ -25,9 +25,9 @@
   ],
   "subspecs": [
     {
-      "name": "BeeCore",
-      "source_files": "BeeModules/BeeCore/Source/**/*",
-      "resources": "BeeModules/BeeCore/Assets/**/*",
+      "name": "Base",
+      "source_files": "Components/Base/Source/**/*",
+      "resources": "Components/Base/Assets/**/*",
       "dependencies": {
         "CocoaLumberjack/Swift": [
 
@@ -50,26 +50,22 @@
       }
     },
     {
-      "name": "BeeAppDelegate",
-      "source_files": "BeeModules/BeeAppDelegate/Source/*.swift"
+      "name": "AppDelegate",
+      "source_files": "Components/AppDelegate/Source/*.swift"
     },
     {
-      "name": "BeeAuto",
-      "source_files": "BeeModules/BeeAuto/Source/**/*"
+      "name": "Auto",
+      "source_files": "Components/Auto/Source/**/*"
     },
     {
-      "name": "BeeNavigator",
-      "source_files": "BeeModules/BeeNavigator/Source/**/*.swift"
+      "name": "Navigator",
+      "source_files": "Components/Navigator/Source/**/*.swift"
     },
     {
-      "name": "BeeTheme",
-      "source_files": "BeeModules/BeeTheme/Source/**/*.swift"
-    },
-    {
-      "name": "BeeNavigationBar",
-      "source_files": "BeeModules/BeeNavigationBar/Source/**/*",
+      "name": "NavigationBar",
+      "source_files": "Components/NavigationBar/Source/**/*",
       "dependencies": {
-        "BeeKit-Swift/BeeCore": [
+        "BeeKit-Swift/Base": [
 
         ],
         "EachNavigationBar": [
@@ -78,10 +74,14 @@
       }
     },
     {
-      "name": "BeeLimitInput",
-      "source_files": "BeeModules/BeeLimitInput/Source/**/*",
+      "name": "Theme",
+      "source_files": "Components/Theme/Source/**/*.swift"
+    },
+    {
+      "name": "LimitInput",
+      "source_files": "Components/LimitInput/Source/**/*",
       "dependencies": {
-        "BeeKit-Swift/BeeCore": [
+        "BeeKit-Swift/Base": [
 
         ],
         "Smile": [

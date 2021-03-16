@@ -50,17 +50,17 @@ final class TabBarViewController: TabBarController {
             case .beekit:
                 vc = BEEKitListViewController()
                 vc.hidesBottomBarWhenPushed = false
-                vc.tabBarItem = UITabBarItem(title: "BeeKit", image: mode.unselectImage?.original, selectedImage: mode.selectImage?.original)
+                vc.tabBarItem = UITabBarItem(title: "BeeKit", image: mode.unselectImage?.template, selectedImage: mode.selectImage?.template)
                 vc.tabBarItem.tag = mode.rawValue
             case .foundation:
                 vc = FoundationListViewController()
                 vc.hidesBottomBarWhenPushed = false
-                vc.tabBarItem = UITabBarItem(title: "Foundation", image: mode.unselectImage?.original, selectedImage: mode.selectImage?.original)
+                vc.tabBarItem = UITabBarItem(title: "Foundation", image: mode.unselectImage?.template, selectedImage: mode.selectImage?.template)
                 vc.tabBarItem.tag = mode.rawValue
             case .uikit:
                 vc = UIKitListViewController()
                 vc.hidesBottomBarWhenPushed = false
-                vc.tabBarItem = UITabBarItem(title: "UIKit", image: mode.unselectImage?.original, selectedImage: mode.selectImage?.original)
+                vc.tabBarItem = UITabBarItem(title: "UIKit", image: mode.unselectImage?.template, selectedImage: mode.selectImage?.template)
                 vc.tabBarItem.tag = mode.rawValue
             }
 

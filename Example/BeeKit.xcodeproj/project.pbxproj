@@ -28,6 +28,7 @@
 		0457FF9C25AC55EE009BD675 /* CommonMacro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FF9B25AC55EE009BD675 /* CommonMacro.swift */; };
 		0457FFD425AC56EE009BD675 /* ThirdApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */; };
 		0457FFD825AC5722009BD675 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457FFD725AC5722009BD675 /* TestViewController.swift */; };
+		045AC5E826005EF400214C04 /* BusinessNavigationMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC5E726005EF400214C04 /* BusinessNavigationMap.swift */; };
 		047A7F9B25C92E0200BAFD11 /* UIKitAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */; };
 		047E389F25C2A64C008EDD4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A125C2A64C008EDD4C /* Localizable.strings */; };
 		047E38A925C2A70C008EDD4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A725C2A70C008EDD4C /* Info.plist */; };
@@ -86,6 +87,7 @@
 		0457FF9B25AC55EE009BD675 /* CommonMacro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMacro.swift; sourceTree = "<group>"; };
 		0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdApplicationService.swift; sourceTree = "<group>"; };
 		0457FFD725AC5722009BD675 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		045AC5E726005EF400214C04 /* BusinessNavigationMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessNavigationMap.swift; sourceTree = "<group>"; };
 		047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitAnimationViewController.swift; sourceTree = "<group>"; };
 		047E387D25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		047E387E25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -147,7 +149,6 @@
 		041A964025A3000F001B1462 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				0457FF0625AC4B3E009BD675 /* ThemeApplicationService.swift */,
 				041A964125A30035001B1462 /* AppTheme.swift */,
 				041A964F25A30353001B1462 /* AppTheme.plist */,
 				0457FF5525AC524A009BD675 /* AppThemeService.swift */,
@@ -411,9 +412,11 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				0457FF1825AC4FC6009BD675 /* DebugingApplicationService.swift */,
 				F196B20D25A04172005D5DE3 /* RootApplicationService.swift */,
 				0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */,
+				0457FF0A25AC4B63009BD675 /* NavigationApplicationService.swift */,
+				0457FF0625AC4B3E009BD675 /* ThemeApplicationService.swift */,
+				0457FF1825AC4FC6009BD675 /* DebugingApplicationService.swift */,
 				0457FFD725AC5722009BD675 /* TestViewController.swift */,
 			);
 			path = Application;
@@ -454,9 +457,9 @@
 		F196B24525A042B7005D5DE3 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				0457FF0A25AC4B63009BD675 /* NavigationApplicationService.swift */,
 				F196B24725A04317005D5DE3 /* CommonNavigationMap.swift */,
 				F196B24625A04316005D5DE3 /* NavigationMap.swift */,
+				045AC5E726005EF400214C04 /* BusinessNavigationMap.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				F196B24925A04317005D5DE3 /* CommonNavigationMap.swift in Sources */,
 				F196B20E25A04172005D5DE3 /* RootApplicationService.swift in Sources */,
 				0457FFD825AC5722009BD675 /* TestViewController.swift in Sources */,
+				045AC5E826005EF400214C04 /* BusinessNavigationMap.swift in Sources */,
 				0457FF8325AC53BA009BD675 /* CollectionViewController.swift in Sources */,
 				0457FF8825AC53BA009BD675 /* NavigationController.swift in Sources */,
 				04B182EC25B031DA00368FAA /* UIKitListViewController.swift in Sources */,
@@ -895,7 +899,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				OTHER_SWIFT_FLAGS = "-D DEBUG $(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.beekit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -915,7 +919,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.beekit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
