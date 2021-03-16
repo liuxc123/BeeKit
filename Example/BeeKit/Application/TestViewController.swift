@@ -10,6 +10,9 @@ import UIKit
 import BeeKit_Swift
 import SnapKit
 import BEEPopupKit
+import RxSwift
+import RxCocoa
+import BEENetwork
 
 class TestViewController: ViewController {
 
@@ -42,6 +45,31 @@ class TestViewController: ViewController {
         style.lineSpacing = 8
         textView.attributedText = attributedText.withParagraphStyle(style)
         textView.limitDelegate = self
+
+
+//        let params: [String : Any] = ["phone": "13233334444", "password": "web123"]
+//        NetworkService.request(HTTPRequest.request(route: .post("/login"), params: params))
+//            .subscribe(onSuccess: { data in
+//                print(data)
+//            }, onError: { error in
+//                print(error)
+//            })
+//            .disposed(by: disposeBag)
+
+        let target = HTTPRequest.request(route: .get("/version/check"), params: nil, loading: false)
+
+        let configuration = Configuration()
+        let manager = NetworkManager(configuration: configuration)
+        manager.provider
+            .rx
+            .request(MultiTarget(target))
+            .mapObject(HTTPResponse.self)
+            .asObservable()
+            .subscribe(onNext: { (data) in
+                print(data)
+            }, onError: { (e) in
+                print(e.localizedDescription)
+            }).disposed(by: disposeBag)
     }
 
 }

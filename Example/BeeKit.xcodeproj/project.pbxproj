@@ -32,6 +32,12 @@
 		045AC6B226007C5900214C04 /* ReachabilityApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC6B126007C5900214C04 /* ReachabilityApplicationService.swift */; };
 		045AC79B2600819000214C04 /* SocialApplicationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC79A2600819000214C04 /* SocialApplicationService.swift */; };
 		045AC7E62600850A00214C04 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC7E52600850A00214C04 /* R.generated.swift */; };
+		045AC84B26008F1100214C04 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC84A26008F1100214C04 /* NetworkService.swift */; };
+		045AC87B26008F4600214C04 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC87A26008F4600214C04 /* HTTPHeader.swift */; };
+		045AC8832600906100214C04 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC8822600906100214C04 /* HTTPRequest.swift */; };
+		045AC88F2600912700214C04 /* UIImage+ImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC88A2600912700214C04 /* UIImage+ImageCompress.m */; };
+		045AC8902600912700214C04 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC88D2600912700214C04 /* UIImage+FixOrientation.m */; };
+		045AC8A32600936100214C04 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AC8A22600936100214C04 /* HTTPResponse.swift */; };
 		047A7F9B25C92E0200BAFD11 /* UIKitAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */; };
 		047E389F25C2A64C008EDD4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A125C2A64C008EDD4C /* Localizable.strings */; };
 		047E38A925C2A70C008EDD4C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A725C2A70C008EDD4C /* Info.plist */; };
@@ -94,6 +100,15 @@
 		045AC6B126007C5900214C04 /* ReachabilityApplicationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityApplicationService.swift; sourceTree = "<group>"; };
 		045AC79A2600819000214C04 /* SocialApplicationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialApplicationService.swift; sourceTree = "<group>"; };
 		045AC7E52600850A00214C04 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		045AC84A26008F1100214C04 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		045AC87A26008F4600214C04 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		045AC8822600906100214C04 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		045AC88A2600912700214C04 /* UIImage+ImageCompress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageCompress.m"; sourceTree = "<group>"; };
+		045AC88B2600912700214C04 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		045AC88C2600912700214C04 /* UIImage+ImageCompress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageCompress.h"; sourceTree = "<group>"; };
+		045AC88D2600912700214C04 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
+		045AC897260091D000214C04 /* BeeKit-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BeeKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		045AC8A22600936100214C04 /* HTTPResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
 		047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitAnimationViewController.swift; sourceTree = "<group>"; };
 		047E387D25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		047E387E25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -218,6 +233,52 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		045AC84926008EF500214C04 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				045AC87926008F2600214C04 /* HTTP */,
+				045AC84A26008F1100214C04 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		045AC87926008F2600214C04 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				045AC87A26008F4600214C04 /* HTTPHeader.swift */,
+				045AC8822600906100214C04 /* HTTPRequest.swift */,
+				045AC8A22600936100214C04 /* HTTPResponse.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		045AC8862600911A00214C04 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				045AC8872600912700214C04 /* UIKit */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		045AC8872600912700214C04 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				045AC8882600912700214C04 /* UIImage */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		045AC8882600912700214C04 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				045AC88B2600912700214C04 /* UIImage+FixOrientation.h */,
+				045AC88D2600912700214C04 /* UIImage+FixOrientation.m */,
+				045AC88C2600912700214C04 /* UIImage+ImageCompress.h */,
+				045AC88A2600912700214C04 /* UIImage+ImageCompress.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		04B182CD25B0304700368FAA /* TabModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +359,7 @@
 		04B1833B25B133BD00368FAA /* General */ = {
 			isa = PBXGroup;
 			children = (
+				045AC8862600911A00214C04 /* Extension */,
 				04B1833C25B133BD00368FAA /* Permission */,
 			);
 			path = General;
@@ -371,6 +433,7 @@
 				04B1833B25B133BD00368FAA /* General */,
 				F196B1FF25A03D85005D5DE3 /* Modules */,
 				F196B24525A042B7005D5DE3 /* Navigation */,
+				045AC84926008EF500214C04 /* Network */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				041A964025A3000F001B1462 /* Theme */,
 			);
@@ -422,9 +485,9 @@
 				045AC6B126007C5900214C04 /* ReachabilityApplicationService.swift */,
 				F196B20D25A04172005D5DE3 /* RootApplicationService.swift */,
 				045AC79A2600819000214C04 /* SocialApplicationService.swift */,
-				0457FFD725AC5722009BD675 /* TestViewController.swift */,
 				0457FF0625AC4B3E009BD675 /* ThemeApplicationService.swift */,
 				0457FFD325AC56EE009BD675 /* ThirdApplicationService.swift */,
+				0457FFD725AC5722009BD675 /* TestViewController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -454,6 +517,7 @@
 		F196B20625A03E30005D5DE3 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				045AC897260091D000214C04 /* BeeKit-Bridging-Header.h */,
 				045AC7E52600850A00214C04 /* R.generated.swift */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				04DDB89B25B828F6006E83EC /* Font */,
@@ -739,6 +803,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0457FF9025AC5414009BD675 /* PageModel.swift in Sources */,
+				045AC88F2600912700214C04 /* UIImage+ImageCompress.m in Sources */,
 				04B1831125B035B900368FAA /* DemoListTableViewCell.swift in Sources */,
 				0457FF1925AC4FC6009BD675 /* DebugingApplicationService.swift in Sources */,
 				0457FF5625AC524A009BD675 /* AppThemeService.swift in Sources */,
@@ -748,8 +813,10 @@
 				041A966D25A311E2001B1462 /* Window.swift in Sources */,
 				0457FF1125AC4E39009BD675 /* AppContants.swift in Sources */,
 				04B182DE25B0319100368FAA /* BEEKitListViewController.swift in Sources */,
+				045AC84B26008F1100214C04 /* NetworkService.swift in Sources */,
 				0413019325BEC7D900F96D1E /* FoundationDetailViewController.swift in Sources */,
 				0457FF8425AC53BA009BD675 /* TableViewController.swift in Sources */,
+				045AC87B26008F4600214C04 /* HTTPHeader.swift in Sources */,
 				04B1833F25B133BD00368FAA /* Permission.swift in Sources */,
 				F196B24925A04317005D5DE3 /* CommonNavigationMap.swift in Sources */,
 				F196B20E25A04172005D5DE3 /* RootApplicationService.swift in Sources */,
@@ -759,9 +826,11 @@
 				0457FF8325AC53BA009BD675 /* CollectionViewController.swift in Sources */,
 				0457FF8825AC53BA009BD675 /* NavigationController.swift in Sources */,
 				045AC6B226007C5900214C04 /* ReachabilityApplicationService.swift in Sources */,
+				045AC8A32600936100214C04 /* HTTPResponse.swift in Sources */,
 				04B182EC25B031DA00368FAA /* UIKitListViewController.swift in Sources */,
 				04B1832D25B0410000368FAA /* BEEKItDetailsViewController.swift in Sources */,
 				0457FF0B25AC4B63009BD675 /* NavigationApplicationService.swift in Sources */,
+				045AC8902600912700214C04 /* UIImage+FixOrientation.m in Sources */,
 				0457FF0725AC4B3E009BD675 /* ThemeApplicationService.swift in Sources */,
 				0457FF8625AC53BA009BD675 /* TabBarController.swift in Sources */,
 				F196B20225A03DC1005D5DE3 /* AppEnv.swift in Sources */,
@@ -775,6 +844,7 @@
 				0413013525BEBE6D00F96D1E /* UIKitDetailViewController.swift in Sources */,
 				0457FF9C25AC55EE009BD675 /* CommonMacro.swift in Sources */,
 				04B182D025B0307100368FAA /* TabBarViewController.swift in Sources */,
+				045AC8832600906100214C04 /* HTTPRequest.swift in Sources */,
 				0457FF8725AC53BA009BD675 /* ViewController.swift in Sources */,
 				0457FF7A25AC538B009BD675 /* WebViewController.swift in Sources */,
 			);
@@ -954,6 +1024,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.beekit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeeKit/Assets/BeeKit-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -974,6 +1045,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.liuxc.beekit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "BeeKit/Assets/BeeKit-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};

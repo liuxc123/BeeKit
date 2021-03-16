@@ -26,8 +26,9 @@ target 'BeeKit_Example' do
     # 自定义动图加载
     pod 'lottie-ios'
 
-    # DataBase
+    # 存储
 #    pod 'WCDB.swift'
+#    pod 'KeychainAccess'
 
     # UI
   #  pod 'YYText'
