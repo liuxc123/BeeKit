@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.frameworks = 'UIKit', 'Foundation'
 
-  s.subspec 'BeeCore' do |ss|
-    ss.source_files = 'BeeModules/BeeCore/Source/**/*'
-    ss.resources = 'BeeModules/BeeCore/Assets/**/*'
+  s.subspec 'Base' do |ss|
+    ss.source_files = 'Components/Base/Source/**/*'
+    ss.resources = 'Components/Base/Assets/**/*'
     ss.dependency 'CocoaLumberjack/Swift'
     ss.dependency 'SwifterSwift'
     ss.dependency 'SwiftValidators'
@@ -22,31 +22,31 @@ Pod::Spec.new do |s|
     ss.dependency 'MBProgressHUD'
   end
 
-  s.subspec 'BeeAppDelegate' do |ss|
-    ss.source_files = 'BeeModules/BeeAppDelegate/Source/*.swift'
+  s.subspec 'AppDelegate' do |ss|
+    ss.source_files = 'Components/AppDelegate/Source/*.swift'
   end
 
-  s.subspec 'BeeAuto' do |ss|
-    ss.source_files = 'BeeModules/BeeAuto/Source/**/*'
+  s.subspec 'Auto' do |ss|
+    ss.source_files = 'Components/Auto/Source/**/*'
   end
 
-  s.subspec 'BeeNavigator' do |ss|
-    ss.source_files = 'BeeModules/BeeNavigator/Source/**/*.swift'
+  s.subspec 'Navigator' do |ss|
+    ss.source_files = 'Components/Navigator/Source/**/*.swift'
   end
 
-  s.subspec 'BeeTheme' do |ss|
-    ss.source_files = 'BeeModules/BeeTheme/Source/**/*.swift'
-  end
-  
-  s.subspec 'BeeNavigationBar' do |ss|
-    ss.source_files = 'BeeModules/BeeNavigationBar/Source/**/*'
-    ss.dependency 'BeeKit-Swift/BeeCore'
+  s.subspec 'NavigationBar' do |ss|
+    ss.source_files = 'Components/NavigationBar/Source/**/*'
+    ss.dependency 'BeeKit-Swift/Base'
     ss.dependency 'EachNavigationBar'
   end
-  
-  s.subspec 'BeeLimitInput' do |ss|
-    ss.source_files = 'BeeModules/BeeLimitInput/Source/**/*'
-    ss.dependency 'BeeKit-Swift/BeeCore'
+
+  s.subspec 'Theme' do |ss|
+    ss.source_files = 'Components/Theme/Source/**/*.swift'
+  end
+
+  s.subspec 'LimitInput' do |ss|
+    ss.source_files = 'Components/LimitInput/Source/**/*'
+    ss.dependency 'BeeKit-Swift/Base'
     ss.dependency 'Smile'
   end
 end
