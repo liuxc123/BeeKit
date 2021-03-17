@@ -548,7 +548,7 @@ public extension String {
     func matches(pattern: String, options: NSRegularExpression.Options) -> Bool {
         let regex = try? NSRegularExpression(pattern: pattern, options: options)
         let result = regex?.matches(in: self, options: NSRegularExpression.MatchingOptions(rawValue: 0), range: NSRange(location: 0, length: self.count))
-        return result != nil
+        return result?.count ?? 0 > 0
     }
     
     /// Returns a new string containing matching regular expressions replaced with the template string.
