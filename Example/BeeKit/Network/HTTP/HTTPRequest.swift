@@ -49,7 +49,7 @@ extension HTTPRequest: SugarTargetType {
         return HTTPHeader.http_header
     }
 
-    public var task: Task {
+    public var task: Moya.Task {
         switch self {
 
         case .request(_, _, _, _):

@@ -8,6 +8,7 @@
 
 import UIKit
 import BEETableKit
+import Schedule
 
 class BEEKitListViewController: TableViewController {
 
@@ -53,7 +54,5 @@ class BEEKitListViewController: TableViewController {
         }
         tableDirector.append(section: section)
     }
-
-
     
 }

@@ -13,23 +13,7 @@ import BEEPopupKit
 
 class TestViewController: ViewController {
 
-    let textView: LimitTextView = LimitTextView()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigation.item.title = "test"
-        self.bee.pop(disabled: true)
-
-        navigation.bar.backBarButtonItem?.shouldBack = { [weak self] item in
-            return self?.bee.popDisabled ?? false
-        }
-
-        view.addSubview(textView)
-        textView.snp.makeConstraints { (make) in
-            make.top.equalTo(view.snp.top).offset(88)
-            make.left.right.bottom.equalToSuperview()
-        }
-
+    lazy var textView: LimitTextView = LimitTextView().then { (textView) in
         textView.theme.backgroundColor = UIColorTheme(.backgroundColor)
         textView.isEditable = false
         let attributedText = NSMutableAttributedString()
@@ -42,6 +26,21 @@ class TestViewController: ViewController {
         style.lineSpacing = 8
         textView.attributedText = attributedText.withParagraphStyle(style)
         textView.limitDelegate = self
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigation.item.title = "test"
+        self.bee.pop(disabled: true)
+        navigation.bar.backBarButtonItem?.shouldBack = { [weak self] item in
+            return self?.bee.popDisabled ?? false
+        }
+
+        view.addSubview(textView)
+        textView.snp.makeConstraints { (make) in
+            make.top.equalTo(view.snp.top).offset(88)
+            make.left.right.bottom.equalToSuperview()
+        }
     }
 
 }

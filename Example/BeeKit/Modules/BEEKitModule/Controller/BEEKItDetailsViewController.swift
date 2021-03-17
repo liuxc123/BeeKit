@@ -8,6 +8,8 @@
 
 import UIKit
 import BeeKit_Swift
+import Schedule
+import BEETableKit
 
 class BEEAppViewController: ViewController {
 
@@ -63,20 +65,75 @@ class BEEBiometricsViewController: ViewController {
     }
 }
 
-class BEETimerViewController: ViewController {
+class BEETimerViewController: TableViewController {
 
-    deinit {
-        Time.remove("BEETimerViewController_timer")
-    }
+    var dataSource: [Date] = []
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigation.item.title = "BEETimer"
 
-        let remainTime = Time.remainTime(Date.now().adding(.day, value: 2))
-        Time.make(.callBack("BEETimerViewController_timer", remainTime, 1, { (model) in
-            log.verbose("\(model.month)月\(model.day)天\(model.hour)时\(model.minute)分\(model.second)秒")
-        }))
+        var array: [Date] = []
+         (1..<30).forEach { (index) in
+            array.append(Date.now().adding(.minute, value: index))
+        }
+        dataSource = array
+        setupForm()
+    }
+
+    func setupForm() {
+
+        let section = TableSection()
+
+        for data in dataSource {
+            let row = TableRow<TimerListTableViewCell>(value: data)
+            section.append(row: row)
+        }
+        tableDirector.append(section: section)
+    }
+}
+
+final class TimerListTableViewCell: UITableViewCell, ConfigurableCell {
+
+    var task: Schedule.Task?
+
+    static var defaultHeight: CGFloat? {
+        return 50
+    }
+
+    func configure(with data: Date) {
+        accessoryType = .disclosureIndicator
+        detailTextLabel?.text = nil
+        setupTime(data: data)
+        task = Plan.every(1.second).do { [weak self] (task) in
+            self?.setupTime(data: data)
+        }
+    }
+
+    func setupTime(data: Date) {
+        let count = data.secondsSince(Date.now()).int
+        textLabel?.text = count.string
+        if count <= 0 {
+            task?.cancel()
+            textLabel?.text = "已完成"
+        }
+    }
+
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectionStyle = .none
+        self.theme.backgroundColor = UIColorTheme(.backgroundColor)
+        self.textLabel?.theme.textColor = UIColorTheme(.onPrimaryColor)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        task = nil
     }
 }
 

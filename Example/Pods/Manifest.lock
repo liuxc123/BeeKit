@@ -20,6 +20,7 @@ PODS:
     - CocoaLumberjack/Swift
     - MBProgressHUD
     - MJRefresh
+    - Schedule
     - SwifterSwift
     - SwiftValidators
     - SwiftyAttributes
@@ -102,6 +103,7 @@ PODS:
   - RxWebKit (1.0.2):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
+  - Schedule (2.1.0)
   - Smile (2.0.0)
   - SnapKit (4.2.0)
   - SwifterSwift (5.1.0):
@@ -185,6 +187,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxWebKit
+    - Schedule
     - Smile
     - SnapKit
     - SwifterSwift
@@ -206,7 +209,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit-Swift: 66512ab194811bb2901584cb52af6fd080961c20
+  BeeKit-Swift: 9b9da57eeff2bd021c20ca0a5f0abad83f94e7b6
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEEPopupKit: e68c2677f260d4b315c436ddb39106ba5666935c
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
@@ -236,12 +239,13 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxWebKit: a3085e7cd8b57182b452692686675702474014dd
+  Schedule: 00e6d7bbdbdb000fd1f51a7d10e9f88a8c451fda
   Smile: 21ff6c48e06ecfcee605cca32aedd74d5810e34a
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
   SwiftValidators: b1cb650ce02ef6ad894f1d471f970b249c794342
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
 
-PODFILE CHECKSUM: 566002326e4a2ac373871bf0e97abac6a53afbdc
+PODFILE CHECKSUM: 12aa5b46f688dd43be1619d022d1bfddfdd38f7d
 
 COCOAPODS: 1.10.1
