@@ -28,6 +28,8 @@ class TestViewController: ViewController {
         textView.limitDelegate = self
     }
 
+    var task: Schedule.Task?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         navigation.item.title = "test"
@@ -41,6 +43,18 @@ class TestViewController: ViewController {
             make.top.equalTo(view.snp.top).offset(88)
             make.left.right.bottom.equalToSuperview()
         }
+
+        task = Plan.every(5.second).do(action: { (task) in
+            print("do action")
+        })
+
+        task?.addAction({ (task) in
+            print("action1")
+        })
+
+        task?.addAction({ (task) in
+            print("action2")
+        })
     }
 
 }

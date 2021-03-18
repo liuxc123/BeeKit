@@ -72,6 +72,7 @@
 		04744E422AB0387A44A6B8AC93BF15F8 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591670AD9426E9A59E957BB0B439DD3F /* Device.swift */; };
 		048EA4987629762722FCA3E7E5F186D4 /* Completable+AndThen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700B1B6283ED412196B51E0CBF339FB /* Completable+AndThen.swift */; };
 		04931E8E54AEAB298C559C00DFEA4DB8 /* DoraemonMockUploadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC496EBFD3F64435DB5C7BBF60F03254 /* DoraemonMockUploadViewController.m */; };
+		04A3364726031DB000E06A16 /* BEELayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A3364626031DB000E06A16 /* BEELayout.swift */; };
 		04D873678BDDAC751D6F34FB95983C86 /* MJRefreshConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D036A95AD1387C066FE16211C2B0006 /* MJRefreshConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04F63BF6649832446FAF98C3727F1FF2 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49E3612EDF9155C6FA7B79AE0DD3E34 /* Map.swift */; };
 		0510A4FB79EA3F40FFF7B23FFCB9A729 /* TextProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F73273E89A14F2ED0A74F161D18481 /* TextProtocol.swift */; };
@@ -1852,7 +1853,6 @@
 		E5F6ACACDF29D937A21E7DEC85A13E3E /* ReachabilitySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E95B2A24A4C372BDDFC95BE9C2B8CB /* ReachabilitySwift-dummy.m */; };
 		E5F8833263DA133AA46FAA7C9023A25F /* BEETextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E8877E37859ACCAEBEB3A6736E4D8E /* BEETextField.swift */; };
 		E60AB9D4EAC8831CD4ED9019E7EAD356 /* DoraemonMockManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5360D6C54B3E00CE6DD5A5CF5FEB740A /* DoraemonMockManager.m */; };
-		E61312AEDD0BBD4DB7B2360F5156A08B /* BEETimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504CE15902190DD767D1629281EC32D /* BEETimer.swift */; };
 		E62125D7FEE94B7352F2172D53DA77D4 /* MapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EBE201F676CB494B7EC8C0F29BC9EF /* MapError.swift */; };
 		E625C6BE47614CC5F1B303AB31C44628 /* DoraemonYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5E0E726E905A2385FCFA6BB9E7DB70 /* DoraemonYAxis.m */; };
 		E6599A689D5A85C3A0982E5929A2A20C /* BEEError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138C4C98C4375455BA315930DF1FD3C0 /* BEEError.swift */; };
@@ -2546,6 +2546,7 @@
 		048AF82BAA25039F0C180B4C0C1B3D26 /* BEETableKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BEETableKit-Info.plist"; sourceTree = "<group>"; };
 		049BD4FED152DF3449EA27C63074D76B /* SwiftyAttributes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyAttributes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		049FA410A4AEAA71BAB0093A25C93E9C /* DoraemonSubThreadUICheckPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonSubThreadUICheckPlugin.h; path = DoraemonKit/Src/Core/Plugin/Performance/SubThreadUICheck/DoraemonSubThreadUICheckPlugin.h; sourceTree = "<group>"; };
+		04A3364626031DB000E06A16 /* BEELayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEELayout.swift; sourceTree = "<group>"; };
 		04A453100B67A7CB66F9C4A55208FF63 /* NSTextField+Rx.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSTextField+Rx.swift"; path = "RxCocoa/macOS/NSTextField+Rx.swift"; sourceTree = "<group>"; };
 		04C6D6EE895BCF8826384942D00D0A66 /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationView.swift"; sourceTree = "<group>"; };
 		04C7D99391AA5E215E96B98BBB7D071A /* DDASLLogCapture.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DDASLLogCapture.m; path = Sources/CocoaLumberjack/DDASLLogCapture.m; sourceTree = "<group>"; };
@@ -3393,7 +3394,6 @@
 		64B916EF1D2F9D629542C4567927F5A9 /* EnumOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumOperators.swift; path = Sources/EnumOperators.swift; sourceTree = "<group>"; };
 		64F1479750F29C83DE890E1B5F2BC5B5 /* FillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/FillNode.swift"; sourceTree = "<group>"; };
 		64F1A2A8B98DA281DBD50261E2022BD4 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
-		6504CE15902190DD767D1629281EC32D /* BEETimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BEETimer.swift; sourceTree = "<group>"; };
 		6504F5174D0E9AF86CA8E1F8EE05BB6C /* DoraemonMockBaseCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DoraemonMockBaseCell.h; path = DoraemonKit/Src/Core/Plugin/Platform/Mock/View/List/Cell/DoraemonMockBaseCell.h; sourceTree = "<group>"; };
 		652783B1974E9173A5D01707CFA58F72 /* CocoaLumberjack.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaLumberjack.modulemap; sourceTree = "<group>"; };
 		653CF417DE05664F4CE6A204EA055BC0 /* RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RxSwift.debug.xcconfig; sourceTree = "<group>"; };
@@ -8365,8 +8365,8 @@
 				5F7CC894B9A160E7FC27B977DB2349E0 /* BEEPassword.swift */,
 				19F4DEDB76DE51EBD974922AB9A1F60F /* BEEPreferencesExplorer.swift */,
 				D38B4934168E462BB513763CCD5A6B17 /* BEESystemSound.swift */,
-				6504CE15902190DD767D1629281EC32D /* BEETimer.swift */,
 				EE22891EA319AF6FF4F5554A3DFC0E46 /* BEELinearView */,
+				04A3364626031DB000E06A16 /* BEELayout.swift */,
 			);
 			name = BEEKit;
 			path = Components/Base/Source/BEEKit;
@@ -11597,7 +11597,7 @@
 				9552BDFBEA754DFB3C2362C863CF2013 /* BEEPassword.swift in Sources */,
 				1203B08064A147362CB5A92915E28F50 /* BEEPreferencesExplorer.swift in Sources */,
 				3F819EDA58704288583743B1BC3D5DE0 /* BEESystemSound.swift in Sources */,
-				E61312AEDD0BBD4DB7B2360F5156A08B /* BEETimer.swift in Sources */,
+				04A3364726031DB000E06A16 /* BEELayout.swift in Sources */,
 				EFCFC8FA29F2A86206B4483BA303D7C6 /* Bundle+Extensions.swift in Sources */,
 				4D7F93568AB34B113538F242C480D22F /* Data+Extensions.swift in Sources */,
 				C8DCBF8AB3006305E2D3CB906FBC00FD /* Date+Extensions.swift in Sources */,

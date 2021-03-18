@@ -251,7 +251,7 @@ class BEELinearViewController: ViewController {
             .view(c)
             .done()
 
-        Time.delay(5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             UIView.animate(withDuration: 0.3) {
                 b.isHidden = true
             }
@@ -267,34 +267,34 @@ class BEEHUDViewController: ViewController {
 
         let hud = BEEHUD.showLoading()
 
-        Time.delay(3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             hud.mode = .determinate
             hud.progress = 0.3
         }
 
-        Time.delay(6) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
             hud.mode = .determinate
             hud.progress = 0.7
         }
 
-        Time.delay(9) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 9) {
             hud.mode = .determinate
             hud.progress = 0.9
         }
 
-        Time.delay(10) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
             BEEHUD.showSuccess(message: "Success")
         }
 
-        Time.delay(13) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 13) {
             BEEHUD.showInfo(message: "Info")
         }
 
-        Time.delay(16) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 16) {
             BEEHUD.showError(message: "Error")
         }
 
-        Time.delay(18) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 19) {
             BEEHUD.showToast(message: "toast")
         }
 
@@ -327,7 +327,7 @@ class BEERefreshableViewController: TableViewController, Refreshable, RefreshCon
         tableView.bee
             .headerNormal { [weak self] in
                 self?.startLoading()
-                Time.delay(3) { [weak self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
                     self?.content = true
                     self?.bee.refreshStatus([.endRefresh(false)])
                     self?.bee.endLoading()
@@ -335,7 +335,7 @@ class BEERefreshableViewController: TableViewController, Refreshable, RefreshCon
             }
             .footerAuto { [weak self] in
                 self?.startLoading()
-                Time.delay(3) { [weak self] in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
                     self?.content = false
                     self?.bee.refreshStatus([.endRefresh(false)])
                     self?.bee.endLoading(animated: true, error: NSError(domain: "error", code: 300, userInfo: nil))

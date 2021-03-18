@@ -52,17 +52,22 @@ public class BEELog {
     // MARK: Initialize
 
     init() {
-        // TTY = Xcode console
-        DDTTYLogger.sharedInstance?.do {
-            $0.logFormatter = LogFormatter()
-            $0.colorsEnabled = false /*true*/ // Note: doesn't work in Xcode 8
-            $0.setForegroundColor(DDMakeColor(30, 121, 214), backgroundColor: nil, for: .info)
-            $0.setForegroundColor(DDMakeColor(50, 143, 72), backgroundColor: nil, for: .debug)
-            DDLog.add($0)
-        }
+
+        if #available(iOS 10.0, *) {
+            DDOSLogger.sharedInstance.do {
+                $0.logFormatter = LogFormatter()
+                DDLog.add($0)
+            }
+        } else {
+            DDTTYLogger.sharedInstance?.do {
+                $0.logFormatter = LogFormatter()
+                DDLog.add($0)
+            }
+        } // Uses os_log
 
         // File logger
         DDFileLogger().do {
+            $0.logFormatter = LogFormatter()
             $0.rollingFrequency = TimeInterval(60 * 60 * 24)  // 24 hours
             $0.logFileManager.maximumNumberOfLogFiles = 7
             DDLog.add($0)
