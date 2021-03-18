@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
     ss.dependency 'SwiftyAttributes'
     ss.dependency 'MJRefresh'
     ss.dependency 'MBProgressHUD'
+    ss.dependency 'Schedule'
   end
 
   s.subspec 'AppDelegate' do |ss|
