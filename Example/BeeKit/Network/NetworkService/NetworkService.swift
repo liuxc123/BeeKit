@@ -80,17 +80,17 @@ extension Moya.Response {
         guard let model = try? response.mapObject(BaseModel.self) else {
             throw BEEError(domain: "网络错误，请稍后再试！", code: 5000, userInfo: nil)
         }
-        if model.code != 0 {
+
+        if model.code != 2000 {
             throw BEEError(domain: "网络错误，请稍后再试！", code: model.code, userInfo: nil)
         }
-
 
         var JSONData: Data!
         if let data = model.data, JSONSerialization.isValidJSONObject(data) {
             do {
                 JSONData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
             } catch {
-                JSONData = Data()
+                throw BEEError(domain: "网络错误，请稍后再试！", code: model.code, userInfo: nil)
             }
         }
         

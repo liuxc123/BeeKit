@@ -59,13 +59,14 @@ class TestViewController: ViewController {
         NetworkManager.default.provider.rx
             .request(MultiTarget(target))
             .mapResponse()
+            .mapJSON()
 //            .mapObject(TokenModel.self)
-//            .catchError({ (error) in
-//                if let error = error as? Moya.MoyaError {
-//                    return .error(BEEError(domain: "网络错误，请稍后再试！", code: error.errorCode, userInfo: error.errorUserInfo))
-//                }
-//                return .error(error)
-//            })
+            .catchError({ (error) in
+                if let error = error as? Moya.MoyaError {
+                    return .error(BEEError(domain: "网络错误，请稍后再试！", code: error.errorCode, userInfo: error.errorUserInfo))
+                }
+                return .error(error)
+            })
             .observeOn(MainScheduler.asyncInstance)
             .subscribe (onSuccess: { (model) in
                 print(model)
