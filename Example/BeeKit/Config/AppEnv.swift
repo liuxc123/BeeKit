@@ -22,7 +22,7 @@ public class Envs: EnvsProtocol {
     }
 
     /// app内部版本号（ v1.0.4 code=5 ）
-    static let appCode: Int = 5
+    static let appCode: Int = 3
 
 }
 

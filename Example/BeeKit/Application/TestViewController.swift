@@ -12,6 +12,7 @@ import SnapKit
 import BEEPopupKit
 import RxSwift
 import RxCocoa
+import BEENetwork
 
 class TestViewController: ViewController {
 
@@ -46,35 +47,24 @@ class TestViewController: ViewController {
             make.left.right.bottom.equalToSuperview()
         }
 
-//        NetworkService.login(phone: "13233334444", password: "web123")
-//            .subscribe (onSuccess: { (model) in
-//                print(model)
-//            }, onError: { (error) in
-//                print(error.localizedDescription)
-//            })
-//            .disposed(by: disposeBag)
 
-        let params: [String : Any] = ["phone": "13233334444", "password": "web123567"]
-        let target = HTTPRequest.request(route: .post("/login"), params: params)
-        NetworkManager.default.provider.rx
-            .request(MultiTarget(target))
+        let configuration = Configuration()
+        configuration.plugins.append(LoggingPlugin())
+        let manager = NetworkManager(configuration: configuration)
+
+        let target = HTTPRequest.request(route: .get("/version/check"), params: nil, loading: false)
+        manager.provider.rx.request(MultiTarget(target))
             .mapResponse()
-            .mapJSON()
-//            .mapObject(TokenModel.self)
-            .catchError({ (error) in
-                if let error = error as? Moya.MoyaError {
-                    return .error(BEEError(domain: "网络错误，请稍后再试！", code: error.errorCode, userInfo: error.errorUserInfo))
-                }
-                return .error(error)
-            })
-            .observeOn(MainScheduler.asyncInstance)
+            .mapString()
             .subscribe (onSuccess: { (model) in
                 print(model)
+                BEEHUD.showToast(message: model)
             }, onError: { (error) in
                 print(error.localizedDescription)
                 BEEHUD.showToast(message: error.localizedDescription)
             })
-            .disposed(by: disposeBag)
+            .disposed(by: self.disposeBag)
+
     }
 
 }

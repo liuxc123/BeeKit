@@ -16,25 +16,10 @@ import BeeKit_Swift
 
 public struct NetworkService {
 
-    static func createManager() -> NetworkManager {
-        let configuration = Configuration()
-        return NetworkManager(configuration: configuration)
-    }
-
-    // TODO: 登录
-    static func login(phone: String, password: String) -> Single<TokenModel> {
-        let params: [String : Any] = ["phone": phone, "password": password]
-        let target = HTTPRequest.request(route: .post("/login"), params: params)
+    static func request(target: MultiTarget) -> Single<Response> {
         return NetworkManager.default.provider.rx
             .request(MultiTarget(target))
             .mapResponse()
-            .catchError({ (error) -> Single<Response> in
-                if let error = error as? Moya.MoyaError {
-                    return .error(BEEError(domain: "网络错误，请稍后再试！", code: error.errorCode, userInfo: error.errorUserInfo))
-                }
-                return .error(error)
-            })
-            .mapObject(TokenModel.self)
     }
 }
 
@@ -58,18 +43,21 @@ struct TokenModel: Mappable {
 }
 
 
-struct BaseModel: Mappable {
+private struct BaseModel: Mappable {
 
-    var code: Int = 0
+    var status: Int = 0
+    var msg: String = ""
+    var time: String = ""
     var data: Any?
 
     init?(map: Map) {}
     mutating func mapping(map: Map) {
-        code <- map["code"]
+        status <- map["status"]
+        msg <- map["msg"]
+        time <- map["time"]
         data <- map["data"]
     }
 }
-
 
 extension Moya.Response {
 
@@ -81,8 +69,8 @@ extension Moya.Response {
             throw BEEError(domain: "网络错误，请稍后再试！", code: 5000, userInfo: nil)
         }
 
-        if model.code != 2000 {
-            throw BEEError(domain: "网络错误，请稍后再试！", code: model.code, userInfo: nil)
+        if model.status != 2000 {
+            throw BEEError(domain: model.msg, code: model.status, userInfo: nil)
         }
 
         var JSONData: Data!
@@ -90,7 +78,7 @@ extension Moya.Response {
             do {
                 JSONData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
             } catch {
-                throw BEEError(domain: "网络错误，请稍后再试！", code: model.code, userInfo: nil)
+                throw BEEError(domain: "网络错误，请稍后再试！", code: model.status, userInfo: nil)
             }
         }
         
@@ -102,6 +90,12 @@ extension ObservableType where Element == Response {
 
     public func mapResponse() -> Observable<Element> {
         return flatMap { Observable.just(try $0.mapResponse()) }
+                .catchError({ (error) in
+                    if let error = error as? Moya.MoyaError {
+                        return .error(BEEError(domain: "网络错误，请稍后再试！", code: error.errorCode, userInfo: error.errorUserInfo))
+                    }
+                    return .error(error)
+                })
     }
 }
 
@@ -109,5 +103,11 @@ extension PrimitiveSequence where Trait == SingleTrait, Element == Response {
 
     public func mapResponse() -> Single<Element> {
         return flatMap { .just(try $0.mapResponse()) }
+            .catchError({ (error) in
+                if let error = error as? Moya.MoyaError {
+                    return .error(BEEError(domain: "网络错误，请稍后再试！", code: error.errorCode, userInfo: error.errorUserInfo))
+                }
+                return .error(error)
+            })
     }
 }

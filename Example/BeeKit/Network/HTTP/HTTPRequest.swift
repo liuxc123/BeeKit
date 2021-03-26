@@ -73,7 +73,6 @@ extension HTTPRequest: SugarTargetType {
             return (loading, message)
         }
     }
-
 }
 
 

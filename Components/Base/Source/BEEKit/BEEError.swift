@@ -25,4 +25,8 @@ public struct BEEError : LocalizedError {
     public var localizedDescription: String? {
         return domain
     }
+
+    public var errorDescription: String? {
+        return domain
+    }
 }

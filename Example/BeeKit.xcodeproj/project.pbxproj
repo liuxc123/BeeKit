@@ -53,6 +53,8 @@
 		04D92C19260C26D90054FFBA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D92C18260C26D90054FFBA /* NetworkService.swift */; };
 		04DDB8A225B82902006E83EC /* BEEIconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDB8A025B82902006E83EC /* BEEIconFont.swift */; };
 		04DDB8A325B82902006E83EC /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DDB8A125B82902006E83EC /* iconfont.ttf */; };
+		04EE57CB260DB2CA00FAE23D /* NetworkService+User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE57CA260DB2CA00FAE23D /* NetworkService+User.swift */; };
+		04EE57D1260DB54000FAE23D /* LoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE57D0260DB54000FAE23D /* LoggingPlugin.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -132,6 +134,8 @@
 		04D92C18260C26D90054FFBA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		04DDB8A025B82902006E83EC /* BEEIconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEEIconFont.swift; sourceTree = "<group>"; };
 		04DDB8A125B82902006E83EC /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
+		04EE57CA260DB2CA00FAE23D /* NetworkService+User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+User.swift"; sourceTree = "<group>"; };
+		04EE57D0260DB54000FAE23D /* LoggingPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingPlugin.swift; sourceTree = "<group>"; };
 		16DF50D9C315A9A06A6AC8A9 /* Pods-BeeKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-BeeKit_Tests/Pods-BeeKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1934F318C5D4D977B6069B08 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3ABC1B4AED5CA7E03CA613A9 /* Pods-BeeKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-BeeKit_Example/Pods-BeeKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -254,6 +258,7 @@
 			children = (
 				045AC87A26008F4600214C04 /* HTTPHeader.swift */,
 				045AC8822600906100214C04 /* HTTPRequest.swift */,
+				04EE57D0260DB54000FAE23D /* LoggingPlugin.swift */,
 			);
 			path = HTTP;
 			sourceTree = "<group>";
@@ -406,6 +411,7 @@
 			isa = PBXGroup;
 			children = (
 				04D92C18260C26D90054FFBA /* NetworkService.swift */,
+				04EE57CA260DB2CA00FAE23D /* NetworkService+User.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -862,9 +868,11 @@
 				F196B20E25A04172005D5DE3 /* RootApplicationService.swift in Sources */,
 				045AC5E826005EF400214C04 /* BusinessNavigationMap.swift in Sources */,
 				045AC79B2600819000214C04 /* SocialApplicationService.swift in Sources */,
+				04EE57D1260DB54000FAE23D /* LoggingPlugin.swift in Sources */,
 				0457FF8325AC53BA009BD675 /* CollectionViewController.swift in Sources */,
 				0457FF8825AC53BA009BD675 /* NavigationController.swift in Sources */,
 				045AC8EE2600AF1300214C04 /* SPScanManager.m in Sources */,
+				04EE57CB260DB2CA00FAE23D /* NetworkService+User.swift in Sources */,
 				045AC6B226007C5900214C04 /* ReachabilityApplicationService.swift in Sources */,
 				04B182EC25B031DA00368FAA /* UIKitListViewController.swift in Sources */,
 				04B1832D25B0410000368FAA /* BEEKItDetailsViewController.swift in Sources */,

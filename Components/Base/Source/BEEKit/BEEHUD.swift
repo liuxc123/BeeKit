@@ -169,6 +169,7 @@ public class BEEHUD: MBProgressHUD {
             hud.label.text = message
             hud.label.textColor = config.textColor
             hud.label.font = config.textFont
+            hud.label.numberOfLines = 0
         }
         hud.contentColor = config.contentColor
         hud.bezelView.style = config.backgroundStyle
