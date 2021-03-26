@@ -192,7 +192,7 @@ extension LimitInputProtocol {
         var text = ir.text
         var range = ir.range
         if text.count > wordLimit {
-            text.slice(from: 0, to: wordLimit)
+            text.slice(from: 0, length: wordLimit)
         }
         range.length = 0
         range.location = wordLimit

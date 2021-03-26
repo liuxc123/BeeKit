@@ -50,6 +50,7 @@
 		04B1832D25B0410000368FAA /* BEEKItDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1832C25B0410000368FAA /* BEEKItDetailsViewController.swift */; };
 		04B1833F25B133BD00368FAA /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1833D25B133BD00368FAA /* Permission.swift */; };
 		04B1834025B133BD00368FAA /* ChineseAlertContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1833E25B133BD00368FAA /* ChineseAlertContent.swift */; };
+		04D92C19260C26D90054FFBA /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D92C18260C26D90054FFBA /* NetworkService.swift */; };
 		04DDB8A225B82902006E83EC /* BEEIconFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DDB8A025B82902006E83EC /* BEEIconFont.swift */; };
 		04DDB8A325B82902006E83EC /* iconfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04DDB8A125B82902006E83EC /* iconfont.ttf */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -128,6 +129,7 @@
 		04B1832C25B0410000368FAA /* BEEKItDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BEEKItDetailsViewController.swift; sourceTree = "<group>"; };
 		04B1833D25B133BD00368FAA /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		04B1833E25B133BD00368FAA /* ChineseAlertContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChineseAlertContent.swift; sourceTree = "<group>"; };
+		04D92C18260C26D90054FFBA /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		04DDB8A025B82902006E83EC /* BEEIconFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BEEIconFont.swift; sourceTree = "<group>"; };
 		04DDB8A125B82902006E83EC /* iconfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = iconfont.ttf; sourceTree = "<group>"; };
 		16DF50D9C315A9A06A6AC8A9 /* Pods-BeeKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-BeeKit_Tests/Pods-BeeKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 		045AC84926008EF500214C04 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				04D92C17260C26C40054FFBA /* NetworkService */,
 				045AC87926008F2600214C04 /* HTTP */,
 			);
 			path = Network;
@@ -399,6 +402,14 @@
 			path = Permission;
 			sourceTree = "<group>";
 		};
+		04D92C17260C26C40054FFBA /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				04D92C18260C26D90054FFBA /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
 		04DDB89B25B828F6006E83EC /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -555,8 +566,8 @@
 		F196B24525A042B7005D5DE3 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				F196B24725A04317005D5DE3 /* CommonNavigationMap.swift */,
 				F196B24625A04316005D5DE3 /* NavigationMap.swift */,
+				F196B24725A04317005D5DE3 /* CommonNavigationMap.swift */,
 				045AC5E726005EF400214C04 /* BusinessNavigationMap.swift */,
 			);
 			path = Navigation;
@@ -686,7 +697,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/BeeKit/Assets/R.generated.swift",
+				$SRCROOT/BeeKit/Assets/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -842,6 +853,7 @@
 				041A966D25A311E2001B1462 /* Window.swift in Sources */,
 				0457FF1125AC4E39009BD675 /* AppContants.swift in Sources */,
 				04B182DE25B0319100368FAA /* BEEKitListViewController.swift in Sources */,
+				04D92C19260C26D90054FFBA /* NetworkService.swift in Sources */,
 				0413019325BEC7D900F96D1E /* FoundationDetailViewController.swift in Sources */,
 				0457FF8425AC53BA009BD675 /* TableViewController.swift in Sources */,
 				045AC87B26008F4600214C04 /* HTTPHeader.swift in Sources */,

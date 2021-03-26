@@ -10,6 +10,8 @@ import UIKit
 import BeeKit_Swift
 import SnapKit
 import BEEPopupKit
+import RxSwift
+import RxCocoa
 
 class TestViewController: ViewController {
 
@@ -44,17 +46,34 @@ class TestViewController: ViewController {
             make.left.right.bottom.equalToSuperview()
         }
 
-        task = Plan.every(5.second).do(action: { (task) in
-            print("do action")
-        })
+//        NetworkService.login(phone: "13233334444", password: "web123")
+//            .subscribe (onSuccess: { (model) in
+//                print(model)
+//            }, onError: { (error) in
+//                print(error.localizedDescription)
+//            })
+//            .disposed(by: disposeBag)
 
-        task?.addAction({ (task) in
-            print("action1")
-        })
-
-        task?.addAction({ (task) in
-            print("action2")
-        })
+        let params: [String : Any] = ["phone": "13233334444", "password": "web123567"]
+        let target = HTTPRequest.request(route: .post("/login"), params: params)
+        NetworkManager.default.provider.rx
+            .request(MultiTarget(target))
+            .mapResponse()
+//            .mapObject(TokenModel.self)
+//            .catchError({ (error) in
+//                if let error = error as? Moya.MoyaError {
+//                    return .error(BEEError(domain: "网络错误，请稍后再试！", code: error.errorCode, userInfo: error.errorUserInfo))
+//                }
+//                return .error(error)
+//            })
+            .observeOn(MainScheduler.asyncInstance)
+            .subscribe (onSuccess: { (model) in
+                print(model)
+            }, onError: { (error) in
+                print(error.localizedDescription)
+                BEEHUD.showToast(message: error.localizedDescription)
+            })
+            .disposed(by: disposeBag)
     }
 
 }

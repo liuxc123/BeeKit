@@ -31,13 +31,13 @@ public extension EnvsProtocol {
 
     static var base_url: String {
         switch Envs.envMode {
-        case .dev: return "http://******"
+        case .dev: return "http://dev.api.fleet.webus.vip:12321/fleet/api/v1/mobile"
         }
     }
 
     static var h5_url: String {
         switch Envs.envMode {
-        case .dev: return "http://******"
+        case .dev: return "http://dev.app.fleeth5.webus.vip:12321"
         }
     }
 
