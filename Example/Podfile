@@ -3,6 +3,8 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'BeeKit_Example' do
+
+    # 必备组件
     pod 'BeeKit-Swift', :path => '../'
 
     # 必备组件
@@ -11,10 +13,11 @@ target 'BeeKit_Example' do
     pod 'RxWebKit'
     pod 'RxGesture'
     pod 'RxReachability'
+    pod 'RxViewController'
 
+    # UI
     pod 'SnapKit'
     pod 'PinLayout'
-
     pod 'BEEPopupKit'
     pod 'BEEFormKit'
     pod 'BEETableKit'
@@ -31,11 +34,14 @@ target 'BeeKit_Example' do
 #    pod 'KeychainAccess'
 
     # UI
+  #  pod 'IBPCollectionViewCompositionalLayout'
+  #  pod 'DiffableDataSources'
   #  pod 'YYText'
   #  pod 'AMPopTip'
   #  pod 'JXSegmentedView'
   #  pod 'JXPagingView'
   #  pod 'JXPhotoBrowser'
+  #  pod 'Lantern'
   #  pod 'FSPagerView'
   #  pod 'EBBannerView'
   #  pod 'BRPickerView'
@@ -54,6 +60,12 @@ target 'BeeKit_Example' do
 
     # 社会化分享 && 支付
     pod 'MonkeyKing'
+
+    # 自定义动图加载
+#    pod 'lottie-ios'
+
+    # Misc.
+#    pod 'Transporter' # StateMachine
 
     # Debug
     pod 'LookinServer', :configurations => ['Debug']
