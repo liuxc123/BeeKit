@@ -91,3 +91,36 @@ class UIColorViewController: TableViewController {
         tableDirector.append(section: section)
     }
 }
+
+class UIResponderViewController: ViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigation.item.title = "UIResponder"
+    }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print(#function)
+    }
+
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print(#function)
+    }
+
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print(#function)
+    }
+
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print(#function)
+    }
+    
+}
+
+class MoveView: UIView {
+
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        return self
+    }
+
+}

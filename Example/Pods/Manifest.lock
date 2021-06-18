@@ -8,14 +8,14 @@ PODS:
   - BEEFormKit/Extension (1.0.0)
   - BeeKit-Swift (1.0.1):
     - BeeKit-Swift/AppDelegate (= 1.0.1)
-    - BeeKit-Swift/Auto (= 1.0.1)
+    - BeeKit-Swift/AutoInch (= 1.0.1)
     - BeeKit-Swift/Base (= 1.0.1)
     - BeeKit-Swift/LimitInput (= 1.0.1)
     - BeeKit-Swift/NavigationBar (= 1.0.1)
     - BeeKit-Swift/Navigator (= 1.0.1)
     - BeeKit-Swift/Theme (= 1.0.1)
   - BeeKit-Swift/AppDelegate (1.0.1)
-  - BeeKit-Swift/Auto (1.0.1)
+  - BeeKit-Swift/AutoInch (1.0.1)
   - BeeKit-Swift/Base (1.0.1):
     - CocoaLumberjack/Swift
     - MBProgressHUD
@@ -156,7 +156,7 @@ DEPENDENCIES:
   - SnapKit
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - BEEFormKit
     - BEENetwork
@@ -209,7 +209,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BEEFormKit: 03f5fc3a9c2642b0ccfab55261c093337f43387f
-  BeeKit-Swift: 9b9da57eeff2bd021c20ca0a5f0abad83f94e7b6
+  BeeKit-Swift: ada8f92e4842bbc624904d52e9f08c55cf9430b3
   BEENetwork: 3d6ac8411fd3a721e3c43d50666a1305b431d6cd
   BEEPopupKit: e68c2677f260d4b315c436ddb39106ba5666935c
   BEETableKit: bc5127fff06769d0833162973bd6011fc994309c
@@ -246,6 +246,6 @@ SPEC CHECKSUMS:
   SwiftValidators: b1cb650ce02ef6ad894f1d471f970b249c794342
   SwiftyAttributes: e3e13891ddac3c62b3d7798d5c3969cea88e62bb
 
-PODFILE CHECKSUM: 12aa5b46f688dd43be1619d022d1bfddfdd38f7d
+PODFILE CHECKSUM: e4373bda8611000341d31870bf0b6213257d5018
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.7.5

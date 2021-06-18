@@ -17,7 +17,8 @@ class UIKitListViewController: TableViewController {
         ("CAGradientLayer", CAGradientLayerViewController.self),
         ("CAReplicatorLayer", CAReplicatorLayerViewController.self),
         ("UIScreen", UIScreenViewController.self),
-        ("UIColor", UIColorViewController.self)
+        ("UIColor", UIColorViewController.self),
+        ("UIResponder", UIResponderViewController.self)
     ]
 
     override func viewDidLoad() {

@@ -13,7 +13,7 @@ target 'BeeKit_Example' do
     pod 'RxWebKit'
     pod 'RxGesture'
     pod 'RxReachability'
-    pod 'RxViewController'
+#    pod 'RxViewController'
 
     # UI
     pod 'SnapKit'

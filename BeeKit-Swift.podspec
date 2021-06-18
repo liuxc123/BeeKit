@@ -27,8 +27,8 @@ Pod::Spec.new do |s|
     ss.source_files = 'Components/AppDelegate/Source/*.swift'
   end
 
-  s.subspec 'Auto' do |ss|
-    ss.source_files = 'Components/Auto/Source/**/*'
+  s.subspec 'AutoInch' do |ss|
+    ss.source_files = 'Components/AutoInch/Source/**/*'
   end
 
   s.subspec 'Navigator' do |ss|
