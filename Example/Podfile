@@ -7,7 +7,7 @@ target 'BeeKit_Example' do
     # 必备组件
     pod 'BeeKit-Swift', :path => '../'
 
-    # 必备组件
+    # Rx
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'RxWebKit'
@@ -51,6 +51,7 @@ target 'BeeKit_Example' do
   #  pod 'SkeletonView'
   #  pod 'Hero'
   #  pod 'FFPopup'
+  #  pod 'Guider'
 
     # 工具
     pod 'Device'
@@ -65,7 +66,7 @@ target 'BeeKit_Example' do
 #    pod 'lottie-ios'
 
     # Misc.
-#    pod 'Transporter' # StateMachine
+#    pod 'Transporter' # StateMachine 状态机
 
     # Debug
     pod 'LookinServer', :configurations => ['Debug']

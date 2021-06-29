@@ -38,6 +38,8 @@
 		045AC8EE2600AF1300214C04 /* SPScanManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC8EB2600AF1300214C04 /* SPScanManager.m */; };
 		045AC8EF2600AF1300214C04 /* SPScanCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC8EC2600AF1300214C04 /* SPScanCodeGenerator.m */; };
 		045AC8F02600AF1300214C04 /* SPScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 045AC8ED2600AF1300214C04 /* SPScanResult.m */; };
+		045EC165268055F10090CF56 /* RunloopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045EC164268055F10090CF56 /* RunloopViewController.swift */; };
+		045EC167268060C00090CF56 /* DispatchQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045EC166268060C00090CF56 /* DispatchQueueViewController.swift */; };
 		0466CCF926019ADE00247628 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0466CCF826019ADE00247628 /* TestViewController.swift */; };
 		047A7F9B25C92E0200BAFD11 /* UIKitAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */; };
 		047E389F25C2A64C008EDD4C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047E38A125C2A64C008EDD4C /* Localizable.strings */; };
@@ -116,6 +118,8 @@
 		045AC8EB2600AF1300214C04 /* SPScanManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPScanManager.m; sourceTree = "<group>"; };
 		045AC8EC2600AF1300214C04 /* SPScanCodeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPScanCodeGenerator.m; sourceTree = "<group>"; };
 		045AC8ED2600AF1300214C04 /* SPScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPScanResult.m; sourceTree = "<group>"; };
+		045EC164268055F10090CF56 /* RunloopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunloopViewController.swift; sourceTree = "<group>"; };
+		045EC166268060C00090CF56 /* DispatchQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueViewController.swift; sourceTree = "<group>"; };
 		0466CCF826019ADE00247628 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		047A7F9A25C92E0200BAFD11 /* UIKitAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitAnimationViewController.swift; sourceTree = "<group>"; };
 		047E387D25C2A4AB008EDD4C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -366,6 +370,8 @@
 			children = (
 				04B182E425B031B900368FAA /* FoundationListViewController.swift */,
 				0413019225BEC7D900F96D1E /* FoundationDetailViewController.swift */,
+				045EC166268060C00090CF56 /* DispatchQueueViewController.swift */,
+				045EC164268055F10090CF56 /* RunloopViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -850,6 +856,7 @@
 				0457FF9025AC5414009BD675 /* PageModel.swift in Sources */,
 				0466CCF926019ADE00247628 /* TestViewController.swift in Sources */,
 				045AC88F2600912700214C04 /* UIImage+ImageCompress.m in Sources */,
+				045EC167268060C00090CF56 /* DispatchQueueViewController.swift in Sources */,
 				04B1831125B035B900368FAA /* DemoListTableViewCell.swift in Sources */,
 				0457FF1925AC4FC6009BD675 /* DebugingApplicationService.swift in Sources */,
 				0457FF5625AC524A009BD675 /* AppThemeService.swift in Sources */,
@@ -874,6 +881,7 @@
 				045AC8EE2600AF1300214C04 /* SPScanManager.m in Sources */,
 				04EE57CB260DB2CA00FAE23D /* NetworkService+User.swift in Sources */,
 				045AC6B226007C5900214C04 /* ReachabilityApplicationService.swift in Sources */,
+				045EC165268055F10090CF56 /* RunloopViewController.swift in Sources */,
 				04B182EC25B031DA00368FAA /* UIKitListViewController.swift in Sources */,
 				04B1832D25B0410000368FAA /* BEEKItDetailsViewController.swift in Sources */,
 				0457FF0B25AC4B63009BD675 /* NavigationApplicationService.swift in Sources */,
